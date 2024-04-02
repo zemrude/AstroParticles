@@ -1,0 +1,32 @@
+lightbox: true
+project:
+  type: book
+  output-dir: docs 
+book:
+  title: "AstroParticles"
+  author: "J. A. Aguilar"
+  site-url: https://www.iihe.ac.be/~aguilar/docs/index.html
+  search: true
+  
+  downloads: [pdf]
+  date: "1/31/2024"
+  chapters:
+    - index.qmd
+    - chap1.qmd
+    - chap2.qmd
+    - chap3.qmd
+    - chap4.qmd
+    - chap5.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+jupyter: python3
+
+format:
+  html:
+    theme: 
+    - cosmo 
+  pdf: default
+   
+

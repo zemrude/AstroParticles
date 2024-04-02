@@ -1,0 +1,19 @@
+# Preface {.unnumbered}
+
+This is a book on astroparticle physics created from markdown and executable code in `python`.
+
+## Why Python?
+Although certainly is not a requirement to understand the physics processes involved in astroparticle phenomena, it is beneficial to resolve numerically some of the proposed problems in order to better assimilate the concepts discussed during this course. The python programming language is used as a tool for constructing these numerical solutions. The advantage is that there exist complete mathematical libraries  (`numpy/scipy`) for python, astronomical and analysis toolboxes (`astropy/healpy`), as well as powerful graphical visualization frameworks (matplotlib), which make it possible to easily construct problem solvers in a matter of minutes along with its graphical output. The idea is also to familiarize with what has become one of the most popular analysis tools in the high-energy physics as well as in the astronomy communities.
+A long this week we will use the following python modules related with astroparticle physics:
+
+
+* `astropy`
+* `healpy`
+* `gammapy`
+* `crdb`
+  
+**References will be added**
+
+
+### Disclaimer and Acknowledgments
+These notes are far from original work. I limited myself to read the literature on the subject, assimilate and also re-elaborate concepts into what I hope is a coherent story, useful to give a feeling of how wonderful our universe and Nature are. There is an endless list of people that inspired these notes and many references. Particularly, we acknowledge: T.K. Gaisser, F. Halzen, K. Hanson, Alexander Kappes, Carlos de los Heros, Stefano Gabici, T. Montaruli, and a long etc.

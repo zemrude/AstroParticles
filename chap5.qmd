@@ -1,0 +1,307 @@
+# Dark Matter {.unnumbered}
+## Existance of Dark Matter
+
+There are several hints or proves of the existance of additional matter not visible. 
+
+### 1. The mass-to-light ratios
+
+The sun has a ratio of $\frac{M_{\odot}}{\mathcal{L}_{\odot}} \sim 1$ Our milky way $M_{MW}/\mathcal{L}_{MW} \sim 10$. Galaxy cluster $M_{cluster}/\mathcal{L}_{cluster} \sim 500$
+
+#### The virial theorem
+Apart from the mass-to-light rations another evidance of missing mass came from two different ways of estimating the mass of galaxie clusters. For that let's review what is the virial theorem:
+
+In a system made of particles (like galaxies) with momemtum the scalar G is defined by the equation:
+
+$$ G = \sum_{k = 1}^{N} \vec{p}_k\vec{r}_k $$
+
+where $\vec{p}_k$ is the momemtum of the $k$ particule and $\vec{r}_k$ its possition. 
+The average of the time derivative of $G$ is 0 in bound systems, ie, in systems that are holding together forever, like galaxies in galaxy cluster bound by gravity. The virial theorem states that in systems where $G$ is constant, ($\langle \mathrm{d} G/\mathrm{d} t \rangle_\tau = 0$), then:
+
+$$\langle T \rangle = - \frac{1}{2} \sum^{N}_{k=1}   \langle \vec{F}_k  \cdot \vec{r}_k \rangle $$
+
+Zwicky was the first to use the virial theorem to infer the existence of unseen matter 
+while examining the Coma galaxy cluster in 1933. In a common case the potential of a system can be described:
+
+$$V(r_{kj}) =  \alpha r_{kj}^n$$
+
+where the total potential energy is:
+
+$$V_{TOT} = \sum_{k = 1}^N \sum_{j > k} V (r_{kj}) $$
+
+and so the virial theorem can be rewriten as:
+
+$$\langle T \rangle = - \frac{1}{2} \sum^{N}_{k=1}   \langle \vec{F}_k  \cdot \vec{r}_k \rangle =  \frac{1}{2} \sum^{N}_{k=1}\sum_{j > k} \frac{\mathrm{d} V}{\mathrm{d}r} r_{kj} = \frac{1}{2} \sum^{N}_{k=1}\sum_{j > k} n \alpha r_{kj}^{n-1} r_{kj}$$
+
+$$2\langle T \rangle = n \langle V_{TOT} \rangle $$
+
+in the particular case of gravitational systems we have that $n = -1$. Ie, by measuring the kinetic energy of the system, we can infer the total gravitational potential and hence the mass:
+
+$$\langle V_{TOT} \rangle = - G_N \frac{M_{TOT}^2}{\langle r \rangle}$$
+
+while the total kinetic energy can be written as
+
+$$\langle T \rangle = \frac{1}{2}M_{TOT}\langle v^2 \rangle$$
+
+so we can extract the total mass as:
+
+$$M_{TOT} \simeq \frac{\langle r \rangle \langle v^2 \rangle}{G_N} \gg \sum m_{galaxies} $$
+
+which for the Coma cluster turned out to be much more than the mass estimated just by simply counting the galaxies in the cluster.
+
+####  About Zwicky
+
+Fritz Zwicky was a prolific scientist and made important contributions in many areas of astronomy but he is rather unknown. 
+He coined the term dark matter, supernova and predicted the existence of neutron stars (2 years after the discovery of the neutron)… 
+He also proposed an alternative cosmology explaining the red-shift as tired light.
+
+He also believed in re-arranging the planets in the solar system using rockets to make them habitable.
+
+
+### 2. The rotational curves of Galaxies
+In Kelperian systems, like our solar system, where most of the mass is at the center one can infer the centripital force of a mass orbiting the system as: 
+
+
+$$\frac{m v^2}{r} = G \frac{m M}{r^2}$$
+
+where $M$ is the inner mass. In this case the velocity of the orbiting masses $m$ is expected to follow $v \propto 1/\sqrt{r}$. In the case of spiral galaxies, where the total mass is at the center, the velocity of external objects (like our Sun), was expected to follow the same trend, however it was obsevered that most of the spiral galaxies had rotational velocities of $v \sim \mathrm{cte}$. It can be deducted that there is matter density (a halo) that should follow $\rho \propto r^{-2}$ in order to explain the constant mass.
+
+Vera Rubin measured the rotation curves of large number of galaxies up to 110 kpc. They all showed the similar behavoir proving that this was an universal feature. 
+
+#### About Vera
+More info on Vera Rubin can be found on [wikipedia](https://en.wikipedia.org/wiki/Vera_Rubin).
+
+### 3. Gravitational lensing
+
+In general relativity, the presence of matter (energy density) can curve spacetime, and the path of a light ray will be deflected as a result. This process is called gravitational lensing and in many cases can be described in analogy to the deflection of light by (e.g. glass) lenses in optics.
+
+The angle of deviation from gravitational lensing is given by:
+
+$$\alpha = \frac{4GM}{c^2 b}$$
+    
+where $b$ is the impact parameter or the closest distance.
+
+The analysis of the distance in this figure gives the relation:
+
+$$D_{LS} \sin \frac{\alpha}{2} = \frac{1}{2}(D_s \sin \theta_1 - D_s \sin \theta_s)$$
+
+making small angle approximations gives: 
+
+$$\alpha D_{LS} = D_s (\theta_1 - \theta_s)$$
+
+therefore
+
+$$\theta_s = \theta_1 - \frac{4GM}{c^2}\frac{D_{LS}}{D_s D_L}\frac{1}{\theta_1}$$
+
+in the particular case of a colinearity between the source and the lens, ie $\theta_s = 0$, we have:
+
+$$\theta_1 \equiv \theta_E = \left(\frac{4GM}{c^2}\frac{D_{LS}}{D_s D_L}\right)^{1/2}$$
+
+which is known as the Einstein ring
+
+
+### 4. Cosmic Microwave Background
+
+As we show the microwave background radiation can be decomposed just like sound from a musical instrument can be broken into harmonics. From the features of its *power spectrum*, i.e. the amount of radiation associated to each frequency, astrophysicists can calculate the quantity of dark matter contained in the Universe. As we saw in Lecture 2, the current cosmological model $\Lambda$CDM, has the following components for matter and dark energy:
+
+$$\Omega_\Lambda \simeq 0.70, \;\;\; \Omega_{m} \simeq 0.30$$
+
+### 5. Big Bang nucleusintesis (BBN)
+
+It is known that the elements observed in the Universe were created in either of two ways:
+
+* Light elements (deuterium, helium, and lithium) were produced in the first few minutes of the Big Bang
+* Heavier elements than helium are thought to have an stellar origin and be formed much later in the history of the Universe.
+
+Roughly three minutes after the Big Bang itself, the temperature of the Universe who was at roughly $10^{32}$ K cooled down to approximately $10^9$ Kelvin when nucleosynthesis, or the production of light elements, could take place. The prediction of light elements as function of the baryon density can be seen in this plot:
+
+![](images/BBN.png)
+
+As can be seen the predictions depend strongly on the baryon density (ie neutrons and protons) at the time of the nucleosynthesis. In particular they depend on the relative abundance of baryons relative to radiation, the baryon-to-photon ratio. Since the photon energy density is well known from the CMB, the observations of primordial abundances of the isotopes of hydrogen, helium and lithium provide a strong constraint on the baryon density. The estimate of baryon density is then $\Omega_b h^2 \simeq 0.02$
+
+## Dark matter?
+
+In January 1860 the French mathematician Urbain Le Verrier announces the discovery of a new planet that he named Vulcan between Mercury and the Sun (following his earlier successful prediction of Neptune in 1856) explaining the precession of Mercury. 
+During years, amateur astronomers claimed to have seen the planet. However we know now the precession is explained by Einsteins gravity.
+
+Today, the search continues for these so-called vulcanoid asteroids. None have been found yet and searches have ruled out asteroids larger than about 6 km. Neither SOHO nor STEREO have detected a planet inside the orbit of Mercury so far.
+
+### Modified Newtonian Dynamics (MoND)
+
+What if the mass discrepancy can be solved without "adding" matter. In 1983  Mordehai Milgrom proposed that a modified newtonian dynanics could explain the dynamics of galaxies in the small acceleration regime. In MOND, violation of Newton's Laws occurs at extremely small accelerations, characteristic of galaxies yet far below anything typically encountered in the Solar System or on Earth.
+
+### The Bullet Cluster
+
+It is usually quoted as the “irrefutable proof of CDM” it consists on two colliding galaxy clusters. At a statistical significance of 8$\sigma$, it was found that the spatial offset of the center of the total mass from the center of the baryonic mass peaks cannot be explained with an alteration of the gravitational force law alone
+
+[Here](http://backreaction.blogspot.be/2017/01/the-bullet-cluster-as-evidence-against.html) is an interesting post from theorist Sabine Hossenfelder about recents papers on the Bullet Cluster and its implication on the Dark Matter nature of the mass discrepancy:
+
+## Dark Matter Candidates
+
+### Introduction
+
+Assuming that Dark Matter exists, there are some conditions this matter must satify. It must:
+
+* stable at least for the life time of the Universe.
+* not interacting electromagnetically (it is dark).
+* Can interact weakily
+* it must have a density of $\Omega_{DM} \sim 0.2$ since:
+$$\Omega_{matter} = \Omega_{baryon} + \Omega_{\nu HDM} + \Omega_{CDM} \simeq 0.05 + 0.01 + 0.24 = 0.30 $$ 
+
+
+### The Boltzman equation
+
+Imagine that dark matter is a non-interacting, non-relativistic particle with number density given $n_\chi \propto a^{-3}$. As the universe expands the density is diluting according to:
+
+$$\frac{d n_\chi}{dt} = - 3 H n_\chi$$
+
+Since $H = da/dt$. Now let's imagine that dark matter is in thermal equilibrium with the standard model, we are talking here about "chemical" equilibrium in which particles interact and convert among each other while keeping the *total number of particles*. Ie, in this case it will mean that dark matter particles annihilate to SM ($\chi \chi \rightarrow f\bar{f}$) and SM particles produce dark matter particles ($f\bar{f} \rightarrow \chi \chi $).
+Dark matter annihilation happens at the rate that depends on the square of dark matter number density (because we need 2 DM particles) and the thermally average annihilation cross-section, so we can add this term in the equation above $n^2_\chi \langle \sigma_{A} v_\chi \rangle $. On the contrary, the convertion of SM particles to DM can be is produced as a rate of  $-n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle$. At equilibrium, both processes must compensate so we can write:
+
+$$n^2_{\chi, eq} \langle \sigma_{A} v_\chi \rangle = n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle$$
+
+which leads us to the Boltzman equation written as:
+
+$$\frac{\mathrm{d} n_\chi}{\mathrm{d}t} = - 3 H n_\chi  - \langle \sigma_{A} v_\chi \rangle (n^2_\chi - n^2_{\chi, eq})$$
+
+### Thermal freeze-out and the WIMP "miracle"
+
+From the boltzman equation is easy to see what would happen in an Universe with no expansion, $H = 0$. It is clear that if $n^2_\chi > n^2_{\chi,eq}$ annihilation will dominate until the number of $\chi$ particles drops to its equilibrium value. If the universe is expanding, but the expansion is slow, we still can ignore the term $-3Hn_\chi$ but temperature will change and it will change the number density in equilibrium. For cold dark matter, like not relativistic wimps with mass $M_\chi \gg T$, this follow the equilibrium density function from the Boltzmann relation:
+
+$$n_{\chi, eq}(T)  = \left(\frac{M_\chi T}{2\pi}\right)^{3/2} \exp \left(\frac{-M_\chi}{T}\right)$$
+
+In other words, the number density of dark matter drops as the tempeture goes down and Universe expands. (Hot dark matter on the other hand will be $n^{HDM}_\chi(T) \sim T^3$)
+What happens is that annihilation processes
+like $\chi \chi \rightarrow f\bar{f}$ happen easily, but because $\chi$ is heavy, inverse annihilation processes like $f\bar{f} \rightarrow \chi\chi$ happen only very rarely (with photons on the tail of the momentum distribution).
+
+At some point the expansion of the Universe becomes important and we no longer can ignore the term $-3Hn_\chi$. As $n_\chi$ becomes smaller, the expansion rate becomes more important that the annihilation term that depends on $n^2_\chi$. Dark matter particles are separated away from each other and they cannot annihilate. This is the freeze-out of dark matter. At that moment the number density of dark matter becomes estable in a solution called the freeze-out abundance.
+
+In a radiation dominated Universe the expansion of the Universe is given by:
+
+$$ H(T) \propto \frac{T^2}{M_{Pl}} $$
+
+where $M_{PL}$ is the plank mass. So according to the Boltzman equation, in an expanding Universe the moment of the freeze-out is given by the condition:
+
+
+$$n_\chi(T_{fo}) \langle \sigma_{A} v_\chi \rangle =  3H(T_{fo}) $$
+
+where we can assume that $n_\chi = n_{\chi,eq}$. After the freeze-out, the number density changes scales with $a(t)^{-3}$ but also $T$ scales with $a(t)^{-1}$ so the number density of dark matter particles today can be written as:
+
+$$n_\chi(T_0) \sim n_\chi(T_{fo})\left(\frac{T_0}{T_{fo}}\right)^3 \sim \left(\frac{T_0}{T_{fo}}\right)^3 \times \frac{T_{fo}^2/M_{Pl}}{\langle \sigma_{A} v_\chi \rangle} $$
+
+The mass density is then, $\rho_\chi = M_\chi n_\chi$ and dividing by the critical energy gives:
+
+$$\Omega_\chi = \frac{\rho_\chi}{\rho_c} \sim \frac{10^{-25}}{\langle \sigma_{A} v_\chi \rangle} \rm{cm}^3\rm{s}^{-1}$$
+
+Finding the right relic density of dark matter is the same as finding the right value of $\langle \sigma_{A} v_\chi \rangle$. As it happens this values turns out to be in the same range expected for the weak interactions. This is called the WIMP miracle...
+
+### Direct detection
+
+The differential rate per unit detector mass is given by:
+
+$$\frac{\mathrm{d}R}{\mathrm{d} E_R} = \frac{n_\chi}{m_N} \Biggl\langle v \frac{\mathrm{d}\sigma}{\mathrm{d}E_R}\Biggr\rangle$$
+
+
+As can be seen the rate depends on the dark matter density since $n_\chi = \rho_\chi/m_\chi$, the velocity of DM, $v$ and their differential cross-section.
+
+The recoil energy can be measured by this three different techniques:
+
+* Phonon/Thermal: vibration (seen as rise in T) in a crystal due to the recoiled of the nucleus impacted by the WIMP.
+* Ionization: an electron is pushed away from its nucleus. A magnetic field drives the electron to a charge detector
+* Scintillation: an electron absorbs energy in the interaction. A short time after, it de-excites and emits a photon.
+
+
+### Indirect detection
+
+The flux of particles observed in a indirect detector using $\gamma$-rays or neutrinos can be deducted from this formula:
+
+$$\frac{\mathrm{d}\Phi_x}{\mathrm{d}E_x} = \frac{1}{4\pi} \frac{\langle \sigma_A v \rangle}{2m_\chi^2} \frac{\mathrm{d} N_x}{\mathrm{d}E_x} \int_0^{\Delta \Omega} \mathrm{d} \Omega \int_{l.o.s} \rho_\chi^2(r(s,\Psi, \theta)) \mathrm{d} s$$
+
+where $x$ = $\gamma$-rays, $\nu$. The J-Factor is the integral of the density square (we need two dark matter particles to annihilate) along the line of sight. There are many halo models in the market. Simulations favor that the DM collapse give “cuspy” profiles, i.e. more peaked (good for enhancing the signal). Observations of rotation curves of galaxies favor “cored” profiles, i.e. constant density cores
+Substructure not well resolved below $\sim 10^5 M_\odot$, which may have an important effect due to the $\rho^2$ dependency of signal
+Effect of baryons is still unclear:
+
+* steepening through adiabatic contraction
+* flattening through star bursts
+
+### Targets for indirect detection
+
+**Dwarf Galaxies:**
+* clean (low star formation)
+* largest mass-to-light ratio
+* boost factors irrelevant
+* about 25 known dwarf satellites of MW
+* best limits for $\langle \sigma_A v \rangle$: already at natural scale for small masses (~10 GeV) with Fermi-LAT
+
+
+**Galaxy Cluster:**
+* Largest gravitationally bound objects in the Universe
+* Dark matter dominated
+* Substructure is quite uncertain
+* Boost factors could be very large, making them competitive with dwarf galaxies in the most optimistic cases
+* Astrophysical background could be important (AGNs, CR interacting with hadronic material…)
+
+**Isotropic emission:**
+* Spectrum: power law from 200 MeV to 100 GeV with γ=2.4)
+* Mainly due to extragalactic unresolved sources: starburst and normal galaxies, galaxy clusters, shocks by the assembly or large scale structures
+* Detection of DM difficult, but upper bounds can be set assuming  contributions from these populations, able to discard the PAMELA excess DM interpretation
+
+
+**Galactic Center:**
+
+* Brightest source of DM by two orders of magnitude
+* Large astrophysical background
+* For GeV searches also interaction of CRs with molecular material in the inner Galaxy
+* Searches focused slightly off the most inner GC
+* More effect of the DM profile, since it is closer
+
+**Sun and Earth**
+* Only visibles in neutrinos.
+* Low or intexistant background
+* Less effects on the Halo model profiles
+* Dark Matter is accumulated as an effect of the capturing of dark matter, these searches can prove the $\sigma_{\chi N}$
+
+***Absorption in the Sun***
+
+The mean free path of neutrinos in the Sun is given by:
+
+$$ \lambda = \frac{A_H}{N_A\rho \sigma} = \frac{ 1\; \mathrm{mol}}{6.023 \times 10^{23}\; \mathrm{mol/gr} 1.6 \times 10^5\; \mathrm{gr/cm}^3 0.686\times 10^{-38}\; \mathrm{cm}^{2}/\mathrm{GeV} 5000 \;\mathrm{GeV}} = 3.0 \times 10^5 \mathrm{\; cm} \ll 7 \times 10^{10} \mathrm{cm}  = R_\odot$$ 
+
+
+### Capturing of DM in local celestial bodies 
+
+Dark Matter in the Sun or Earth is accumulated by scattering processes of DM followed by gravitational capture of DM. It is not the relic density that we can find for instance at the Center of the Galaxy or other astrophysical places like Dwarf Galaxies, etc. Let's assume $N$ to be the number of DM particles in a celestial body. The equation that govern the evolution of this density can be described as:
+
+$$\frac{\mathrm{d} N}{\mathrm{d}t} = C_c - C_A N^2 - C_E N$$
+
+The various elements of this equation are:
+
+* $C_E$ is the "evaporation" of dark matter, it is the escape of DM due to their thermal velociy being equivalent to the escape velocity of the celestial body. The Sun's escape velocity is $v_{esc} \simeq 1156$ km/s. Assuming DM particles sink into the core of the Sun and gain the thermal velocity the typical velocity is:
+
+$$v_\chi  \simeq c \left(\frac{1 \mathrm{keV}}{m_\chi}\right)^{1/2} \geq  v_{esc}^{\odot} \rightarrow m_\chi \leq 0.1 \mathrm{GeV} $$ 
+
+only for very low masses the evaporation term is important.
+
+* $C_A$ is the annihilation term which depends on the factor $\langle \sigma_A v \rangle$ and an effective volume. 
+
+* $C_c$ is the capture term and it depends on the DM-nucleon cross-sections $\sigma_{\chi-N}$. For capture in the Earth the main contribution comes from the spin-independent cross-section which is quadratically proportional to $A^2$ of the elements in Earth. It is also proportional to the DM flux, ie (for the Sun):
+$$ C_c \sim \frac{\rho_\chi}{m_\chi}v_\chi \left(\frac{M_\odot}{m_N}\right)\sigma_{\chi-N}$$
+
+
+By solving the equation above (ignoring the evaporation term) we can express the total annihilation rate $\Gamma_A$ is expressed as:
+
+$$\Gamma_A = \frac{1}{2}C_A N^2 = \frac{C_c}{2}\left[\tanh(\sqrt{C_c C_A} t)\right]^2$$
+
+where $t$ is the lifetime of the celestial body. It is clear from this equation that equilibrium is reached when:
+
+$$t_{eq} \equiv \frac{1}{\sqrt{C_c C_A}} $$
+
+For the Earth, this equilibrium time is of the order of $10^{11}$ years if the spin-independent WIMP-proton cross-section is $\sigma^{SI}_{\chi - p} \sim 10^{-43} $cm$^{2}$ which is longer than the age of the solar system $t_{Earth} \sim 4.5$ Gyr. In the Sun however, most models predict $t_{eq} \ll t_\odot$ and therefore we can assume that equilibrium is reached in the Sun. 
+
+## Bibliography
+
+* PDG review on Dark Matter pdg.lbl.gov/2016/reviews/rpp2016-rev-dark-matter.pdf
+* Particle Dark Matter: Observation, Models and Searches. Gianfranco Bertone. [DOI: 10.1017/CBO9780511770739](https://www.cambridge.org/core/books/particle-dark-matter/B03C934EAB188884EFC6B02432632496)
+* Some reviews in the arxiv:
+    * https://arxiv.org/abs/hep-ph/0404175
+    * https://arxiv.org/abs/hep-ph/9506380
+    
