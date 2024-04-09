@@ -8,10 +8,10 @@ In this part we are going to review the concepts that we will use in the rest of
 
 In high energy physics and astro-particle physics it is very common to use the natural units where $\hbar = c = 1$. The correspondence between natural units and physical units can be established by use of
 
-$$\hbar = 6.58 \times 10^{-16} {\;\mathrm{ GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{ GeV} = 1.52 \times 10^{15}\;{\mathrm{ ns}^{-1}}$$
+$$\hbar = 6.58 \times 10^{-16} {\;\mathrm{GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{GeV} = 1.52 \times 10^{15}\;{\mathrm{ns}^{-1}}$$
 
 
-$$c = 30.0\;\mathrm{ cm/ns} = 1 \Rightarrow 30\;\mathrm{ cm} = 1\;\mathrm{ ns}$$
+$$c = 30.0\;\mathrm{cm/ns} = 1 \Rightarrow 30\;\mathrm{cm} = 1\;\mathrm{ns}$$
 
 In these units there is then only one fundamental dimension:
 

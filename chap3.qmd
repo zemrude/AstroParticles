@@ -339,9 +339,7 @@ At even highers energies, above 1 TeV in air, muons will also start to loose ene
 
 An approximate extrapolation formula valid when muon decay is negligible ($E_\mu > 100/\cos\theta$ GeV) and the curvature of the Earth can be neglected ($\theta < 70^{\circ}$) is given by the Gaisser parametrization:
 
-$$\frac{dN_\mu}{dE_\mu d\Omega} = \frac{0.14}\mathrm{cm^2\;s\;sr\;GeV} 
-\left(\frac{E_\mu}\mathrm{GeV}\right)^{-2.7}\left[F_\pi(E_\mu, \theta) + 
-F_K(E_\mu,\theta)\right]$$
+$$\frac{\mathrm{d}N_\mu}{\mathrm{d}E_\mu \mathrm{d}\Omega} = \frac{0.14}{\mathrm{cm^2\;s\;sr\;GeV}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7}\left[F_\pi(E_\mu, \theta) + F_K(E_\mu,\theta)\right]$$
 
 
 where $F_\pi$ and $F_K$ represent the contributions from pions and kaons, respectively:
@@ -350,20 +348,37 @@ $$F_\pi(E_\mu, \theta) = \frac{1}{1+\frac{1.1 E_\mu \cos\theta}{115 \;\mathrm{Ge
 
 $$F_K(E_\mu, \theta) = \frac{0.054}{1+\frac{1.1 E_\mu \cos\theta}{850\;\mathrm{GeV}}}$$
 
-
-##### Tutorial I: Plot the muon flux for two different angles
+:::{.callout title="Tutorial I:  Plot the muon flux for two different angles"}
 
 ```{python}
 import matplotlib.pylab as plt
 import numpy as np
-
+plt.rcParams['font.family'] = "STIXGeneral"
+plt.rcParams.update({'axes.labelsize': 20})
+plt.rcParams.update({'legend.fontsize': 20})
+plt.rcParams.update({'figure.figsize': [8, 6]})
+plt.rcParams['xtick.labelsize'] = 18
+plt.rcParams['ytick.labelsize'] = 18
+plt.rcParams['xtick.major.width'] = 1.5
+plt.rcParams['xtick.minor.width'] = 1
+plt.rcParams['xtick.major.pad'] = 8
+plt.rcParams['xtick.direction'] = 'in'
+plt.rcParams['ytick.major.size'] = 10
+plt.rcParams['ytick.minor.size'] = 5
+plt.rcParams['ytick.major.width'] = 1.5
+plt.rcParams['ytick.minor.width'] = 1
+plt.rcParams['ytick.major.pad'] = 8
+plt.rcParams['ytick.direction'] = 'in'
+plt.rcParams['legend.frameon'] = False
+plt.rcParams['lines.linewidth'] = 1.5
+plt.rcParams['axes.linewidth'] = 1.5
 
 def muons(cangle, E):
     a = 1./(1.+ 1.1*E*cangle/115.)
     b = 0.054/(1.+ 1.1*E*cangle/850.)
     return 0.14 *E**-2.7 *(a + b)
 
-fig = plt.figure(figsize=(4,3))
+fig = plt.figure(figsize=(6,6))
 ax = plt.subplot(111)
 ax.set_xscale("log")
 ax.set_yscale("log")
@@ -377,6 +392,8 @@ ax.plot(E, E**2.7*muons(np.cos(0*np.pi/180.),E), label=r"$\theta = 0^{\circ}$")
 plt.legend()
 plt.show()
 ```
+
+:::
 
 #### Measured muon flux 
 In reality below 10 GeV muon decay and energy loss become important and the Gaisser parametrization overestimates the muon flux as can be seen in the plot below:
@@ -423,9 +440,10 @@ for low energies $k = 2$ and $R \sim 1.25$
 
 * At few GeV (> $\epsilon_\mu$) muons will not decay and $\nu_e$ will be supressed as the main source of $\nu_e$ is the muon decay.
 
+::: {.callout title="Tutorial II: Plot the $\nu_\mu$ and $\nu_e$ atmospheric flux using the package `DaemonFlux` @Yanez:2023lsy"}
+
 ```{python}
 # | fig-caption: Neutrino Flux using DaemonFlux @Yanez:2023lsy
-# | code-fold: true
 
 from daemonflux import Flux
 fl = Flux(location='generic', use_calibration=True, debug=1)
@@ -455,6 +473,7 @@ ax_2.set_xlabel(r"$E_\nu$/GeV")
 ax_1.set_ylabel(r"$(E_\nu/\mathrm{ GeV})^3 \Phi_\nu (\mathrm{ GeV}\mathrm{ \;cm}^2\mathrm{ s\; sr})^{-1}$")
 ax_2.set_ylabel(r"$\Phi_{\nu_\mu} / \Phi_{\nu_e}$")
 ```
+:::
 
 
 :::{.callout-note}
@@ -472,15 +491,15 @@ and for the neutrino:
 $$E_\nu^{*} = (m_\pi^2 - m_\mu^2)/2m_\pi = 29.8\;\mathrm{MeV}$$
 
 In the laboratory system, the energies are boosted by the Lorentz factor $\gamma= E_\pi /m_\pi$, but as can be seen muon carry a much larger fraction of energy than neutrinos. 
-For energies about 1 TeV $ < E_\nu <  10^3$ TeV, the angle averaged atmospheric $\nu_\mu + {\bar \nu_\mu}$ can be approximated by a power law spectrum:
+For energies about $1\;\mathrm{TeV}< E_\nu <  10^3\;\mathrm{TeV}$, the angle averaged atmospheric $\nu_\mu + {\bar \nu_\mu}$ can be approximated by a power law spectrum:
 
-$$\frac\mathrm{{d}N_{\nu_\mu + {\bar \nu_\mu}}}\mathrm{{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6} \mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}$$
+$$\frac{\mathrm{d}N_{\nu_\mu + {\bar \nu_\mu}}}{\mathrm{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6}\mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}$$
 
 #### Fluxes as Function of Zenith
 
 Another difference with respect to the muon fluxes is their dependency with respect to the zenith angle. Since atmospheric muons are not absorved by the Earth, their spectrum spans to the whole sky. The following plot shows the calculated neutrino flux at 1,300 m depth with energies $E_\nu = 10$ GeV.
 
-![Source: [arXiv:1210.5154](http://arxiv.org/abs/1210.5154)](images/nu_zenith.png){width="40%"}
+![Source: [arXiv:1210.5154](http://arxiv.org/abs/1210.5154)](images/nu_zenith.png){fig-align="center" width="60%"}
 
 
 The peak at the horizon in the atmospheric neutrino flux is due to the so-called *secant theta effect*. This effect occurs because pions and kaons that are produced nearly skimming the Earth have more flight time in less dense atmosphere, so they have more chance to decay than interact.
@@ -502,26 +521,26 @@ When muon reaches the ground the will experience the following interactions when
 
 * **Ionization.** The continuous energy loss of muons passing through a medium as it ionize the material along the path. We saw however that ionization is mostly independent of the material, as most of them have values of $Z/A \sim 0.5$.
   
-![](images/muon_ionization.svg){width="30%"}
+![](images/muon_ionization.svg){fig-align="center" width="40%"}
 
 * **Bremsstrahlung.** Also called braking radiation. In the electric field of a nucleus or atomic electrons, muons can radiate high energy photons. If the photon has energy enough it can initiate an electromagnetic shower.
 
-![](images/muon_bremsstrahlung.svg){width="30%"}
+![](images/muon_bremsstrahlung.svg){fig-align="center" width="40%"}
 
 * **Pair production.** A muon can radiate a virtual photon which, again in the electric field of a nucleus, can convert into a real $e^+e^-$ pair. As in the case of bremsstrahlung, the pair production will initate an electromagnetic shower.
 
-![](images/muon_pair-production.svg){width="30%"}
+![](images/muon_pair-production.svg){fig-align="center" width="40%"}
 
 
 * **Photonuclear interactions.** A muon can radiate a virtual photon which directly interacts with a nucleus in the muon propagation medium. The interaction is either electromagnetic or following the fluctuation of the photon into a quark-antiquark pair (i.e. a virtual vector meson). This interaction will generate an hadronic shower. 
 
-![](images/muon_photonuclear.svg){width="30%"}
+![](images/muon_photonuclear.svg){fig-align="center" width="40%"}
 
 ### Muon Energy losses
 
 The energy losses due to ionization are continuous while in radiation processes the energy is lost in bursts along the muon path. When a muon is travelling through a dielectric medium like ice or water, it will emit cherenkov photons as wells, but due to the stochastics energy losses electromagnetic and hadronic showers are generated along the muon track. The following figure illustrates this process:
 
-![](images/muon_energylosses.svg){width="80%"}
+![](images/muon_energylosses.svg){fig-align="center" width="90%"}
 
 It is worth noting that photonuclear interactions are subdominant when compared to bremsstrahlung and pair-production, so most of the showers will be electromagnetic showers. The equation that describes the energy loss for muons at high energy can be simplified to:
 
@@ -534,18 +553,16 @@ The **critical energy** is when both losses are equal, ie $\epsilon_\mu = \alpha
 
 
 
-The following plots showd simulated muons bundles in IceCube. The stochastic energy losses are particular clear in the right figure.  
+The following plots showd simulated muons bundles in [IceCube](https:icecube.wisc.edu). The stochastic energy losses are particular clear in the right figure.  
 
-:::{.layout-ncol=3}
-![](images/musmooth.jpg)
-![](images/mustochastic.jpg)
+:::{.layout-ncol=2}
+![](images/musmooth.jpg){fig-align="center" width="40%"}
+![](images/mustochastic.jpg){fig-align="center" width="40%"}
 :::
 
 ### Muon Range
 
-
-
-By solving the energy loss equation we can estimate the range $R$ for a muon $E_\mu$, ie the underground depth this muon will reach until its energy is 0 (in reality the muon when reaching low energies will decay) (see Exercises 2):
+By solving the energy loss equation we can estimate the range $R$ for a muon $E_\mu$, ie the underground depth this muon will reach until its energy is 0 (in reality the muon when reaching low energies will decay):
 
 $$ R(E_\mu) = \frac{1}{\beta}\log\left( 1 + \frac{E_\mu}{\epsilon_\mu}\right)$$
 
@@ -555,32 +572,32 @@ $$I_\mu(>E_\mu, R) = A\left[\frac{\alpha}{\beta}(e^{\beta R} - 1)\right]^{-\gamm
 
 The plot below shows the depth-intensity muons for vertical directions. The grey-area are neutrino-induced muons (horizontal, up-wards)
 
-![](images/muon-depth.png)
+![](images/muon-depth.png){fig-align="center"}
 
 ### Neutrino Interactions
 #### Weak interaction
 
-Neutrinos feel only the weak force thus interactions with matter mediated by W and Z bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:
+Neutrinos feel only the weak force thus interactions with matter mediated by $W$ and $Z$ bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:
 
-* Neutral current (NC) interactions - exchange of Z
-* Charged current (CC) interaction - exchange of W$^{\pm}$
+* Neutral current (NC) interactions - exchange of $Z$
+* Charged current (CC) interaction - exchange of $W^{\pm}$
 
-![](images/neutrino-interactions.svg)
+![](images/neutrino-interactions.svg){fig-align="center"}
 
 Neutrinos will scatter from electrons as well as nuclear matter. 
 
-* For energies $E_\nu < 1$  GeV neutrinos interact with hadronds via **elastic** or **quasielastic scattering**.
+* For energies $E_\nu < 1 \mathrm{GeV}$ neutrinos interact with hadronds via **elastic** or **quasielastic scattering**.
 
-* For energies $E_\nu \gg 1$ GeV neutrinos do not scatter on hadronds as a compound of quarks, they start to *see* and interact directly the quarks, **Deep Inelastic Scattering**.
+* For energies $E_\nu \gg 1 \mathrm{GeV}$ neutrinos do not scatter on hadronds as a compound of quarks, they start to *see* and interact directly with the quarks, this is the so-called **Deep Inelastic Scattering**.
     
 
 ### Neutrino cross-sections at GeV energies
 
 The anti-neutrino cross-section at GeV energies is a factor ~2 lower (naively should be 3, but the factor 2 comes from the structure function of the nucleus) than the neutrino cross-section due to the helicity. 
 
-![](images/pdg_plot.gif)
+![](images/pdg_plot.gif){fig-align="center"}
 
-At $E_\nu \gg 1$ GeV the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:
+At $E_\nu \gg 1 \mathrm{GeV}$ the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:
 
 $$\sigma_{\nu p} \simeq 0.69 \times 10^{-38} \left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2$$
 $$\sigma_{\bar{\nu} p} \simeq 0.35 \times 10^{-38}\left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2$$
@@ -589,7 +606,7 @@ Sometimes the cross-section is expressed as $\nu + N$ where $N$ is the nucleon d
 
 $$N = \frac{n+p}{2}$$
 
- Earth is transparent to GeV neutrinos
+:::{.callout-note title="Earth is transparent to GeV neutrinos"}
 
 
 We are going to calculate the mean free path of neutrinos of energies of $\sim GeV$. Note that mean free path can be expressed as:
@@ -628,12 +645,13 @@ s = 1e-38 * u.cm**2
 #Mean free path:
 L = 1/(s * Nd.to(1/u.cm**3))
 
-print (f"The mean free path is: {L.to(u.km)}")
+print (f"The mean free path is: {L.to(u.km):.2f}")
 ```
+:::
 
 ### Neutrino cross-sections at TeV energies
 
-* At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum $q^2 \ll M_{W,Z}$ and so the propagator term is $\sim 1/M^2_{W,Z}$
+* At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum is $q^2 \ll M_{W,Z}$ and so the propagator term is $\sim 1/M^2_{W,Z}$
 
 * Above 10$^{4}$ GeV where the gauge-boson propagator restricts the momentum transfer to values near $M_{W,Z}$ ($\sim 1/(q^2 - M^2_{W,Z})$) and damps the cross-section increase.
 
@@ -648,7 +666,8 @@ The following shows the neutrino cross section:
 * At high energies the asymetry between neutrinos and antineutrinos is lost due to the interaction with *sea quarks* ($q\bar{q}$)
 
 * Neutrinos interact mostly with hadrons (quarks) instead of electrons due the their larger target mass. However at $E_\nu \approx 6.3$ PeV the Glashow resonance appears: ${\hbar \nu_e} + e \rightarrow W$ making the cross-section higher than the one with hadrons.
-### Earth Opaque to PeV Neutrinos
+
+:::{.callout-note title="Earth is opaque to PeV neutrinos"}
 
 * At about 100 TeV the mean free path for neutrino-nucleus scattering is about 10$^{10}$ c.m.w.e. which is about the matter thickness along the Earth diameter.
 
@@ -656,9 +675,11 @@ The following shows the neutrino cross section:
 
 * There is only one exception. A very high energy beam of $\nu_\tau$ at one side of the Earth $E\gg 1$ PeV can end up at the other side as lower energy $\nu_\tau, \nu_e,\nu_\mu$ thought the **tau regeneration** effect: $\nu_\tau \rightarrow \tau \rightarrow \nu_\tau$
 
-### Neutrino signatures in a detector
+:::
 
-![](images/nu_signatures.png)
+### Neutrino signatures in a neutrino detector
+
+![](images/nu_signatures.png){fig-align="center"}
 
 * b) In CC $\nu_e$ interactions an hadronic and EM shower initiated by the $e$ is produced. About 20% of the energy goes in the hadronic shower and 80% to the lepton and therfore to the EM shower.
 * d) In CC $\nu_\tau$ d) interaction again an hadronic and EM shower are produced as the $\tau$ decays almost inmediately to pions or other charge leptons. In the decay another $\nu_\tau$ is produced **tau regeneration effect**. At very high energyes the two showers can be separated giving a *double bang* signature or a *lollipop* if the first shower happens outside the detector.
@@ -672,13 +693,14 @@ An estimate of the detection rate of neutrino events is equivalent to calculate 
 
 $$R(E_{vis}, \theta) = \int_{E_{vis}} P_{\nu\rightarrow l} (E_\nu, E_{vis}) P_{shadow}(\theta, E_\nu) \frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu}\mathrm{ d}E_\nu$$ 
 
-where 
- * $P_{\nu\rightarrow l}(E_\nu, E_{vis})$. Probability that a neutrino interacts with an nucleus to produce a $\mu$ or an EM or hadronic cascade with a minimum energy $E_{vis}$ *visible* in the detector.
- * $P_{shadow} (\theta, E_\nu)$. Probability of neutrino with zenith angle $\theta$ and energy $E_\nu$ of being absorved by Earth.
- * ${\mathrm{ d}N_\nu}/{\mathrm{ d}E_\nu}$. Neutrino flux at the surface.
+where:
+
+* $P_{\nu\rightarrow l}(E_\nu, E_{vis})$ is the probability that a neutrino interacts with an nucleus to produce a $\mu$ or an EM or hadronic cascade with a minimum energy $E_{vis}$ *visible* in the detector.
+* $P_{shadow} (\theta, E_\nu)$. Probability of neutrino with zenith angle $\theta$ and energy $E_\nu$ of being absorved by Earth.
+* ${\mathrm{ d}N_\nu}/{\mathrm{ d}E_\nu}$. Neutrino flux at the surface.
 
 
-### Interaction probability: $P_{\nu\rightarrow l}$
+#### Interaction probability: $P_{\nu\rightarrow l}$ {.unnumbered}
 
 The probability of a neutrino to produce a lepton or shower visible in the detector can be  writen as:
 
@@ -688,7 +710,7 @@ where $r_l$ is the detection range of the produced lepton/cascade with energy $E
 
 At high energy the event rate is dominated by neutrino-induced muons due to the long range of the high energy muons.
 
-### Earth Shadow: $P_{shadow}$
+#### Earth Shadow: $P_{shadow}${.unnumbered}
 
 The mean free path of neutrinos can be expressed as $\lambda = (N_A \sigma_{tot})^{-1}$. The shadow fact then can be expressed as:
 
@@ -767,7 +789,7 @@ $$|\nu_{2}(t,x)\rangle = \sin \theta e^{ -i (E_{2} t - p_2 x) }$$
 So after a while the wave form of the $\nu_\alpha$ is given by:
 
 $$|\nu_{e}(t, x)\rangle = \cos^2 \theta e^{ -i (E_{1} t - p_1 x)  } + \sin^2 \theta e^{ -i (E_{2} t - p_2 x) } = A_e$$
-$$|\nu_{\mu}(t, x)\rangle = -sin\theta\cos \theta e^{ -i (E_{1} t - p_1 x)  } + \cos\theta\sin \theta e^{ -i (E_{2} t - p_2 x) } = A_e$$
+$$|\nu_{\mu}(t, x)\rangle = -\sin\theta\cos \theta e^{ -i (E_{1} t - p_1 x)  } + \cos\theta\sin \theta e^{ -i (E_{2} t - p_2 x) } = A_e$$
 
 
 #### Example of survival probability for the 2-flavor mixing
@@ -799,12 +821,13 @@ $$P(\nu_e \rightarrow \nu_e)  = 1 - P(\nu_e \rightarrow \nu_\mu) = 1- \sin^2 2\t
 
 Replacing $\hbar$ and $c$ the expression can be written as:
 
-$$P(\nu_e \rightarrow \nu_e)  = 1 - \sin^2 2\theta \sin^2\left[1.27 \left(\frac{\Delta m^2_{12}}\mathrm{{ eV}^2}\right)\frac{L/\rm{ km}}{E/\rm{ GeV}}\right]$$
+$$P(\nu_e \rightarrow \nu_e)  = 1 - \sin^2 2\theta \sin^2\left[1.27 \left(\frac{\Delta m^2_{12}}{\mathrm{eV}^2}\right)\frac{L/\mathrm{km}}{E/\mathrm{GeV}}\right]$$
 
 
 We assumed that the mass eigenstates are created with the same energy or momentum and so $E_i = E_j$.This assumption is not necessary and it comes from the fact we use the plane wave approximation. Using the correct formalism of wave packets the result is the same.
 
-### Tutorial III: Plot the survival probability of $\nu_e \rightarrow \nu_e$
+:::{.callout title="Tutorial III: Plot the survival probability of $\nu_e \rightarrow \nu_e$"}
+
 
 ```{python}
 import astropy.units as u
@@ -847,6 +870,7 @@ cax.set_label("Probability")
 
 ```
 
+::: 
 
 ### General case
 
@@ -924,7 +948,7 @@ $$P(\nu_\alpha \rightarrow \nu_\beta) - P({\bar \nu_\alpha} \rightarrow {\bar \n
 But this means that neutrinos oscillations can be described in terms of 6 parameters: $\theta_{12}$, $\theta_{13}$ and $\theta_{23}$ plus 2 mass-squared differences, $\Delta m_{12}^2$ and $\Delta m_{32}^2$ and one CP violating phase $\delta_{CP}$. 
 Althought we can measured the mass-squared differences in neutrino oscillation experiments, we cannot know the absolute scales nor the mass hierarchy.
 
-![Source: [arXiv:1205.2671](https://inspirehep.net/record/1114323)](https://inspirehep.net/record/1114323/files/Neutrinos_figs_3nuspic.png)
+![Source: [arXiv:1205.2671](https://inspirehep.net/record/1114323)](https://inspirehep.net/files/ce8abf20fa840b880444095bc363c6b2)
 
 Where $\Delta m_{12}^2 = \Delta m_{Sol}^2$ and $\Delta m_{31(2)}^2 = \Delta m_{atm}^2$. Sometimes $\Delta m_{atm}^2$ is defined as:
  $$\Delta m_{atm}^2  =\left| m_3^2 - \frac{(m_1^2 + m_2^2)}{2} \right|$$

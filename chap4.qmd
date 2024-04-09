@@ -1,4 +1,4 @@
-# Multimessenger Astronomy {.unnumbered}
+# Multimessenger Astronomy 
 
 ## The Beam Dump
 
@@ -928,6 +928,7 @@ $$\xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} = E^2 \Phi_\nu \sim 2.06 \time
 #I'm going to use units to avoid stupid mistakes
 import astropy.units as u
 from astropy import constants as const
+from IPython.display import display, Markdown
 
 xi = 0.48
 
@@ -936,12 +937,12 @@ icecube_flux = 2.06e-8 * u.GeV/u.cm**2/u.s/u.sr
 Ln = icecube_flux * cosmo.H0.to(1/u.s)/const.c.to(u.Mpc/u.s) * 4 * np.pi * u.sr * xi
 Ln = Ln.to(u.erg/u.Mpc**3/u.yr)
 
-print(r"$n_0 L_\nu \sim$ {0:.1e} {1}".format(Ln.value, Ln.unit.to_string("latex")))
+display(Markdown(r"$n_0 L_\nu \sim$ {0:.1e} {1}".format(Ln.value, Ln.unit.to_string("latex"))))
 ```
 
 ie, it reaches the value of:
 
-$$n_0 L_\nu \sim 10^{43} \frac\mathrm{{erg}}\mathrm{{Mpc}^3\rm{yr}}$$
+$$n_0 L_\nu \sim 10^{43} \frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}$$
 
 note that this is almost independent of the value of $xi$. We can represent this relation in a diagram now called Kowalski's plot:
 
@@ -967,7 +968,7 @@ $$E^2 \Phi^{u.l.}_\nu \leq 2 \times 10^{-9} \mathrm{ GeV} \mathrm{ cm}^{-2}\math
 so we have the 2 constrains together:
 
 
-$$n_0^{-1/3} \leq \frac{\Phi^{u.l.}}{10^{43}\frac\mathrm{{erg}}\mathrm{{Mpc}^3\rm{yr}} }$$
+$$n_0^{-1/3} \leq \frac{\Phi^{u.l.}}{10^{43}\frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}}$$
 
 which leads to the following condition on the local density of sources from the point-source upper limits:
 
@@ -977,7 +978,7 @@ flux_upperlimit = 2e-9 * u.GeV/u.cm**2 / u.s
 n0 = np.power(flux_upperlimit/Ln, -3)
 n0 = n0.to(u.Mpc**-3)
 
-print("$n_0 \geq$ {0:.1e} {1}".format(n0.value, n0.unit.to_string("latex_inline")))
+display(Markdown(r"$n_0 \geq$ {0:.1e} {1}".format(n0.value, n0.unit.to_string("latex_inline"))))
 ```
 
 #### References
