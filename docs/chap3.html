@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -202,13 +222,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Multimessenger Astronomy</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dark Matter</span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,22 +273,19 @@ window.Quarto = {
   <li><a href="#neutrino-cross-sections-at-gev-energies" id="toc-neutrino-cross-sections-at-gev-energies" class="nav-link" data-scroll-target="#neutrino-cross-sections-at-gev-energies"><span class="header-section-number">3.3.5</span> Neutrino cross-sections at GeV energies</a></li>
   <li><a href="#neutrino-cross-sections-at-tev-energies" id="toc-neutrino-cross-sections-at-tev-energies" class="nav-link" data-scroll-target="#neutrino-cross-sections-at-tev-energies"><span class="header-section-number">3.3.6</span> Neutrino cross-sections at TeV energies</a></li>
   <li><a href="#high-energy-cross-sections" id="toc-high-energy-cross-sections" class="nav-link" data-scroll-target="#high-energy-cross-sections"><span class="header-section-number">3.3.7</span> High energy Cross-Sections</a></li>
-  <li><a href="#neutrino-signatures-in-a-detector" id="toc-neutrino-signatures-in-a-detector" class="nav-link" data-scroll-target="#neutrino-signatures-in-a-detector"><span class="header-section-number">3.3.8</span> Neutrino signatures in a detector</a></li>
+  <li><a href="#neutrino-signatures-in-a-neutrino-detector" id="toc-neutrino-signatures-in-a-neutrino-detector" class="nav-link" data-scroll-target="#neutrino-signatures-in-a-neutrino-detector"><span class="header-section-number">3.3.8</span> Neutrino signatures in a neutrino detector</a></li>
   <li><a href="#event-rate-in-an-underground-experiment." id="toc-event-rate-in-an-underground-experiment." class="nav-link" data-scroll-target="#event-rate-in-an-underground-experiment."><span class="header-section-number">3.3.9</span> Event rate in an underground experiment.</a></li>
-  <li><a href="#interaction-probability-p_nurightarrow-l" id="toc-interaction-probability-p_nurightarrow-l" class="nav-link" data-scroll-target="#interaction-probability-p_nurightarrow-l"><span class="header-section-number">3.3.10</span> Interaction probability: <span class="math inline">\(P_{\nu\rightarrow l}\)</span></a></li>
-  <li><a href="#earth-shadow-p_shadow" id="toc-earth-shadow-p_shadow" class="nav-link" data-scroll-target="#earth-shadow-p_shadow"><span class="header-section-number">3.3.11</span> Earth Shadow: <span class="math inline">\(P_{shadow}\)</span></a></li>
-  <li><a href="#neutrino-oscillations" id="toc-neutrino-oscillations" class="nav-link" data-scroll-target="#neutrino-oscillations"><span class="header-section-number">3.3.12</span> Neutrino Oscillations</a></li>
-  <li><a href="#the-pmns-matrix" id="toc-the-pmns-matrix" class="nav-link" data-scroll-target="#the-pmns-matrix"><span class="header-section-number">3.3.13</span> The PMNS Matrix</a></li>
-  <li><a href="#the-2-flavor-mixing-case" id="toc-the-2-flavor-mixing-case" class="nav-link" data-scroll-target="#the-2-flavor-mixing-case"><span class="header-section-number">3.3.14</span> The 2-flavor mixing case</a></li>
-  <li><a href="#tutorial-iii-plot-the-survival-probability-of-nu_e-rightarrow-nu_e" id="toc-tutorial-iii-plot-the-survival-probability-of-nu_e-rightarrow-nu_e" class="nav-link" data-scroll-target="#tutorial-iii-plot-the-survival-probability-of-nu_e-rightarrow-nu_e"><span class="header-section-number">3.3.15</span> Tutorial III: Plot the survival probability of <span class="math inline">\(\nu_e \rightarrow \nu_e\)</span></a></li>
-  <li><a href="#general-case" id="toc-general-case" class="nav-link" data-scroll-target="#general-case"><span class="header-section-number">3.3.16</span> General case</a></li>
-  <li><a href="#about-symmetries." id="toc-about-symmetries." class="nav-link" data-scroll-target="#about-symmetries."><span class="header-section-number">3.3.17</span> About symmetries.</a></li>
-  <li><a href="#mass-hierarchy" id="toc-mass-hierarchy" class="nav-link" data-scroll-target="#mass-hierarchy"><span class="header-section-number">3.3.18</span> Mass hierarchy</a></li>
-  <li><a href="#solar-neutrinos" id="toc-solar-neutrinos" class="nav-link" data-scroll-target="#solar-neutrinos"><span class="header-section-number">3.3.19</span> Solar Neutrinos</a></li>
-  <li><a href="#atmospheric-neutrinos" id="toc-atmospheric-neutrinos" class="nav-link" data-scroll-target="#atmospheric-neutrinos"><span class="header-section-number">3.3.20</span> Atmospheric Neutrinos</a></li>
-  <li><a href="#reactor-neutrinos" id="toc-reactor-neutrinos" class="nav-link" data-scroll-target="#reactor-neutrinos"><span class="header-section-number">3.3.21</span> Reactor Neutrinos</a></li>
-  <li><a href="#neutrino-oscillations-in-matter." id="toc-neutrino-oscillations-in-matter." class="nav-link" data-scroll-target="#neutrino-oscillations-in-matter."><span class="header-section-number">3.3.22</span> Neutrino oscillations in matter.</a></li>
-  <li><a href="#tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" id="toc-tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" class="nav-link" data-scroll-target="#tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le"><span class="header-section-number">3.3.23</span> Tutorial III: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E</a></li>
+  <li><a href="#neutrino-oscillations" id="toc-neutrino-oscillations" class="nav-link" data-scroll-target="#neutrino-oscillations"><span class="header-section-number">3.3.10</span> Neutrino Oscillations</a></li>
+  <li><a href="#the-pmns-matrix" id="toc-the-pmns-matrix" class="nav-link" data-scroll-target="#the-pmns-matrix"><span class="header-section-number">3.3.11</span> The PMNS Matrix</a></li>
+  <li><a href="#the-2-flavor-mixing-case" id="toc-the-2-flavor-mixing-case" class="nav-link" data-scroll-target="#the-2-flavor-mixing-case"><span class="header-section-number">3.3.12</span> The 2-flavor mixing case</a></li>
+  <li><a href="#general-case" id="toc-general-case" class="nav-link" data-scroll-target="#general-case"><span class="header-section-number">3.3.13</span> General case</a></li>
+  <li><a href="#about-symmetries." id="toc-about-symmetries." class="nav-link" data-scroll-target="#about-symmetries."><span class="header-section-number">3.3.14</span> About symmetries.</a></li>
+  <li><a href="#mass-hierarchy" id="toc-mass-hierarchy" class="nav-link" data-scroll-target="#mass-hierarchy"><span class="header-section-number">3.3.15</span> Mass hierarchy</a></li>
+  <li><a href="#solar-neutrinos" id="toc-solar-neutrinos" class="nav-link" data-scroll-target="#solar-neutrinos"><span class="header-section-number">3.3.16</span> Solar Neutrinos</a></li>
+  <li><a href="#atmospheric-neutrinos" id="toc-atmospheric-neutrinos" class="nav-link" data-scroll-target="#atmospheric-neutrinos"><span class="header-section-number">3.3.17</span> Atmospheric Neutrinos</a></li>
+  <li><a href="#reactor-neutrinos" id="toc-reactor-neutrinos" class="nav-link" data-scroll-target="#reactor-neutrinos"><span class="header-section-number">3.3.18</span> Reactor Neutrinos</a></li>
+  <li><a href="#neutrino-oscillations-in-matter." id="toc-neutrino-oscillations-in-matter." class="nav-link" data-scroll-target="#neutrino-oscillations-in-matter."><span class="header-section-number">3.3.19</span> Neutrino oscillations in matter.</a></li>
+  <li><a href="#tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" id="toc-tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" class="nav-link" data-scroll-target="#tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le"><span class="header-section-number">3.3.20</span> Tutorial III: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E</a></li>
   </ul></li>
   <li><a href="#what-else" id="toc-what-else" class="nav-link" data-scroll-target="#what-else"><span class="header-section-number">3.4</span> What else?</a></li>
   </ul>
@@ -551,7 +568,7 @@ Critical energy for mesons, <span class="math inline">\(\pi\)</span>, <span clas
 <p>The muon energy spectrum at sea level is a direct consequence of the meson source spectrum. Unlike electrons, muons will decay before reaching the ground in the GeV energy range. The muon decay length is given by:</p>
 <p><span class="math display">\[ d_\mu = \gamma \tau_\mu c\]</span></p>
 <p>Where <span class="math inline">\(\tau_\mu\)</span> is the muon lifetime of the order of <span class="math inline">\(2.2\times 10^{-6}\)</span> s. So for a muon of 1 GeV we have:</p>
-<div id="ba5d14a1" class="cell" data-execution_count="1">
+<div id="2ed3cc06" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lifetime <span class="op">=</span> <span class="fl">2.1969811e-6</span> <span class="co"># muon lifetime in seconds</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.constants <span class="im">as</span> cte</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cspeed <span class="op">=</span> cte.c</span>
@@ -585,46 +602,71 @@ Critical energy for mesons, <span class="math inline">\(\pi\)</span>, <span clas
 <section id="analytical-approximation" class="level4" data-number="3.2.2.2">
 <h4 data-number="3.2.2.2" class="anchored" data-anchor-id="analytical-approximation"><span class="header-section-number">3.2.2.2</span> Analytical approximation</h4>
 <p>An approximate extrapolation formula valid when muon decay is negligible (<span class="math inline">\(E_\mu &gt; 100/\cos\theta\)</span> GeV) and the curvature of the Earth can be neglected (<span class="math inline">\(\theta &lt; 70^{\circ}\)</span>) is given by the Gaisser parametrization:</p>
-<p><span class="math display">\[\frac{dN_\mu}{dE_\mu d\Omega} = \frac{0.14}\mathrm{cm^2\;s\;sr\;GeV}
-\left(\frac{E_\mu}\mathrm{GeV}\right)^{-2.7}\left[F_\pi(E_\mu, \theta) +
-F_K(E_\mu,\theta)\right]\]</span></p>
+<p><span class="math display">\[\frac{\mathrm{d}N_\mu}{\mathrm{d}E_\mu \mathrm{d}\Omega} = \frac{0.14}{\mathrm{cm^2\;s\;sr\;GeV}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7}\left[F_\pi(E_\mu, \theta) + F_K(E_\mu,\theta)\right]\]</span></p>
 <p>where <span class="math inline">\(F_\pi\)</span> and <span class="math inline">\(F_K\)</span> represent the contributions from pions and kaons, respectively:</p>
 <p><span class="math display">\[F_\pi(E_\mu, \theta) = \frac{1}{1+\frac{1.1 E_\mu \cos\theta}{115 \;\mathrm{GeV}}}\]</span></p>
 <p><span class="math display">\[F_K(E_\mu, \theta) = \frac{0.054}{1+\frac{1.1 E_\mu \cos\theta}{850\;\mathrm{GeV}}}\]</span></p>
-<section id="tutorial-i-plot-the-muon-flux-for-two-different-angles" class="level5" data-number="3.2.2.2.1">
-<h5 data-number="3.2.2.2.1" class="anchored" data-anchor-id="tutorial-i-plot-the-muon-flux-for-two-different-angles"><span class="header-section-number">3.2.2.2.1</span> Tutorial I: Plot the muon flux for two different angles</h5>
-<div id="fa67af74" class="cell" data-execution_count="2">
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial I:  Plot the muon flux for two different angles">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial I: Plot the muon flux for two different angles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="1290b7a0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> muons(cangle, E):</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="fl">1.</span><span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span> <span class="fl">1.1</span><span class="op">*</span>E<span class="op">*</span>cangle<span class="op">/</span><span class="fl">115.</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="fl">0.054</span><span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span> <span class="fl">1.1</span><span class="op">*</span>E<span class="op">*</span>cangle<span class="op">/</span><span class="fl">850.</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.14</span> <span class="op">*</span>E<span class="op">**-</span><span class="fl">2.7</span> <span class="op">*</span>(a <span class="op">+</span> b)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">3</span>))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">"log"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="fl">1e-5</span>, <span class="fl">3e-1</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$E_\mu^</span><span class="sc">{2.7}</span><span class="vs"> dN_\mu/dE_\mu [cm^{-2}s^{-1} (GeV)^</span><span class="sc">{1.7}</span><span class="vs">]$"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_\mu(GeV)$"</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.arange(<span class="fl">1e0</span>, <span class="fl">1e6</span>, <span class="dv">10</span>)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.plot(E, E<span class="op">**</span><span class="fl">2.7</span><span class="op">*</span>muons(np.cos(<span class="dv">75</span><span class="op">*</span>np.pi<span class="op">/</span><span class="fl">180.</span>),E), label<span class="op">=</span><span class="vs">r"$\theta = 75^{\circ}$"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.plot(E, E<span class="op">**</span><span class="fl">2.7</span><span class="op">*</span>muons(np.cos(<span class="dv">0</span><span class="op">*</span>np.pi<span class="op">/</span><span class="fl">180.</span>),E), label<span class="op">=</span><span class="vs">r"$\theta = 0^{\circ}$"</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'axes.labelsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'legend.fontsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'figure.figsize'</span>: [<span class="dv">8</span>, <span class="dv">6</span>]})</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.size'</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.size'</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'legend.frameon'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'lines.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> muons(cangle, E):</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="fl">1.</span><span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span> <span class="fl">1.1</span><span class="op">*</span>E<span class="op">*</span>cangle<span class="op">/</span><span class="fl">115.</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="fl">0.054</span><span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span> <span class="fl">1.1</span><span class="op">*</span>E<span class="op">*</span>cangle<span class="op">/</span><span class="fl">850.</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.14</span> <span class="op">*</span>E<span class="op">**-</span><span class="fl">2.7</span> <span class="op">*</span>(a <span class="op">+</span> b)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">"log"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="fl">1e-5</span>, <span class="fl">3e-1</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$E_\mu^</span><span class="sc">{2.7}</span><span class="vs"> dN_\mu/dE_\mu [cm^{-2}s^{-1} (GeV)^</span><span class="sc">{1.7}</span><span class="vs">]$"</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_\mu(GeV)$"</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.arange(<span class="fl">1e0</span>, <span class="fl">1e6</span>, <span class="dv">10</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax.plot(E, E<span class="op">**</span><span class="fl">2.7</span><span class="op">*</span>muons(np.cos(<span class="dv">75</span><span class="op">*</span>np.pi<span class="op">/</span><span class="fl">180.</span>),E), label<span class="op">=</span><span class="vs">r"$\theta = 75^{\circ}$"</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax.plot(E, E<span class="op">**</span><span class="fl">2.7</span><span class="op">*</span>muons(np.cos(<span class="dv">0</span><span class="op">*</span>np.pi<span class="op">/</span><span class="fl">180.</span>),E), label<span class="op">=</span><span class="vs">r"$\theta = 0^{\circ}$"</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chap3_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="chap3_files/figure-html/cell-3-output-1.png" width="383" height="286" class="figure-img"></a></p>
+<p><a href="chap3_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="chap3_files/figure-html/cell-3-output-1.png" width="564" height="533" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
+</div>
+</div>
 </section>
 <section id="measured-muon-flux" class="level4" data-number="3.2.2.3">
 <h4 data-number="3.2.2.3" class="anchored" data-anchor-id="measured-muon-flux"><span class="header-section-number">3.2.2.3</span> Measured muon flux</h4>
@@ -671,9 +713,17 @@ F_K(E_\mu,\theta)\right]\]</span></p>
 <li><p>The process giving neutrino fluxes are the same as for the muons (we saw already) plus the muon decay. Taking into account the decay of pions, kaons and muons gives to a flavor ratio of: <span class="math inline">\(\nu_\mu : \nu_e = 2:1\)</span> and <span class="math inline">\(\nu_e/{\bar \nu_e} \sim \mu^+/\mu^-\)</span></p></li>
 <li><p>At few GeV (&gt; <span class="math inline">\(\epsilon_\mu\)</span>) muons will not decay and <span class="math inline">\(\nu_e\)</span> will be supressed as the main source of <span class="math inline">\(\nu_e\)</span> is the muon decay.</p></li>
 </ul>
-<div id="b81a7ca3" class="cell" data-fig-caption="Neutrino Flux using DaemonFlux @Yanez:2023lsy" data-execution_count="3">
-<details class="code-fold">
-<summary>Code</summary>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial II: Plot the $\nu_\mu$ and $\nu_e$ atmospheric flux using the package `DaemonFlux` @Yanez:2023lsy">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial II: Plot the <span class="math inline">\(\nu_\mu\)</span> and <span class="math inline">\(\nu_e\)</span> atmospheric flux using the package <code>DaemonFlux</code> <span class="citation" data-cites="Yanez:2023lsy">Yañez and Fedynitch (<a href="chap1.html#ref-Yanez:2023lsy" role="doc-biblioref">2023</a>)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="ed1706a6" class="cell" data-fig-caption="Neutrino Flux using DaemonFlux @Yanez:2023lsy" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> daemonflux <span class="im">import</span> Flux</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fl <span class="op">=</span> Flux(location<span class="op">=</span><span class="st">'generic'</span>, use_calibration<span class="op">=</span><span class="va">True</span>, debug<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>egrid <span class="op">=</span> np.logspace(<span class="dv">0</span>,<span class="dv">5</span>)</span>
@@ -701,15 +751,16 @@ F_K(E_\mu,\theta)\right]\]</span></p>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ax_2.set_xlabel(<span class="vs">r"$E_\nu$/GeV"</span>)</span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ax_1.set_ylabel(<span class="vs">r"$(E_\nu/\mathrm{ GeV})^3 \Phi_\nu (\mathrm{ GeV}\mathrm{ \;cm}^2\mathrm{ s\; sr})^{-1}$"</span>)</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>ax_2.set_ylabel(<span class="vs">r"$\Phi_{\nu_\mu} / \Phi_{\nu_e}$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>Text(0, 0.5, '$\\Phi_{\\nu_\\mu} / \\Phi_{\\nu_e}$')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chap3_files/figure-html/cell-4-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="chap3_files/figure-html/cell-4-output-2.png" width="554" height="528" class="figure-img"></a></p>
+<p><a href="chap3_files/figure-html/cell-4-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="chap3_files/figure-html/cell-4-output-2.png" width="588" height="553" class="figure-img"></a></p>
 </figure>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -733,14 +784,14 @@ Note
 <p><span class="math display">\[E_\mu^{*} = (m_\pi^2 + m_\mu^2)/2m_\pi = 109.8\;\mathrm{MeV}\]</span></p>
 <p>and for the neutrino:</p>
 <p><span class="math display">\[E_\nu^{*} = (m_\pi^2 - m_\mu^2)/2m_\pi = 29.8\;\mathrm{MeV}\]</span></p>
-<p>In the laboratory system, the energies are boosted by the Lorentz factor <span class="math inline">\(\gamma= E_\pi /m_\pi\)</span>, but as can be seen muon carry a much larger fraction of energy than neutrinos. For energies about 1 TeV $ &lt; E_&lt; 10^3$ TeV, the angle averaged atmospheric <span class="math inline">\(\nu_\mu + {\bar \nu_\mu}\)</span> can be approximated by a power law spectrum:</p>
-<p><span class="math display">\[\frac\mathrm{{d}N_{\nu_\mu + {\bar \nu_\mu}}}\mathrm{{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6} \mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}\]</span></p>
+<p>In the laboratory system, the energies are boosted by the Lorentz factor <span class="math inline">\(\gamma= E_\pi /m_\pi\)</span>, but as can be seen muon carry a much larger fraction of energy than neutrinos. For energies about <span class="math inline">\(1\;\mathrm{TeV}&lt; E_\nu &lt;  10^3\;\mathrm{TeV}\)</span>, the angle averaged atmospheric <span class="math inline">\(\nu_\mu + {\bar \nu_\mu}\)</span> can be approximated by a power law spectrum:</p>
+<p><span class="math display">\[\frac{\mathrm{d}N_{\nu_\mu + {\bar \nu_\mu}}}{\mathrm{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6}\mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}\]</span></p>
 <section id="fluxes-as-function-of-zenith" class="level4" data-number="3.2.5.1">
 <h4 data-number="3.2.5.1" class="anchored" data-anchor-id="fluxes-as-function-of-zenith"><span class="header-section-number">3.2.5.1</span> Fluxes as Function of Zenith</h4>
 <p>Another difference with respect to the muon fluxes is their dependency with respect to the zenith angle. Since atmospheric muons are not absorved by the Earth, their spectrum spans to the whole sky. The following plot shows the calculated neutrino flux at 1,300 m depth with energies <span class="math inline">\(E_\nu = 10\)</span> GeV.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/nu_zenith.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14" title="Source: arXiv:1210.5154"><img src="images/nu_zenith.png" class="img-fluid figure-img" style="width:40.0%" alt="Source: arXiv:1210.5154"></a></p>
+<p><a href="images/nu_zenith.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14" title="Source: arXiv:1210.5154"><img src="images/nu_zenith.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Source: arXiv:1210.5154"></a></p>
 <figcaption>Source: <a href="http://arxiv.org/abs/1210.5154">arXiv:1210.5154</a></figcaption>
 </figure>
 </div>
@@ -766,74 +817,115 @@ Note
 <ul>
 <li><strong>Ionization.</strong> The continuous energy loss of muons passing through a medium as it ionize the material along the path. We saw however that ionization is mostly independent of the material, as most of them have values of <span class="math inline">\(Z/A \sim 0.5\)</span>.</li>
 </ul>
-<p><a href="images/muon_ionization.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/muon_ionization.svg" class="img-fluid" style="width:30.0%"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_ionization.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/muon_ionization.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
 <ul>
 <li><strong>Bremsstrahlung.</strong> Also called braking radiation. In the electric field of a nucleus or atomic electrons, muons can radiate high energy photons. If the photon has energy enough it can initiate an electromagnetic shower.</li>
 </ul>
-<p><a href="images/muon_bremsstrahlung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/muon_bremsstrahlung.svg" class="img-fluid" style="width:30.0%"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_bremsstrahlung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/muon_bremsstrahlung.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
 <ul>
 <li><strong>Pair production.</strong> A muon can radiate a virtual photon which, again in the electric field of a nucleus, can convert into a real <span class="math inline">\(e^+e^-\)</span> pair. As in the case of bremsstrahlung, the pair production will initate an electromagnetic shower.</li>
 </ul>
-<p><a href="images/muon_pair-production.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/muon_pair-production.svg" class="img-fluid" style="width:30.0%"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_pair-production.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/muon_pair-production.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
 <ul>
 <li><strong>Photonuclear interactions.</strong> A muon can radiate a virtual photon which directly interacts with a nucleus in the muon propagation medium. The interaction is either electromagnetic or following the fluctuation of the photon into a quark-antiquark pair (i.e.&nbsp;a virtual vector meson). This interaction will generate an hadronic shower.</li>
 </ul>
-<p><a href="images/muon_photonuclear.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/muon_photonuclear.svg" class="img-fluid" style="width:30.0%"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_photonuclear.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/muon_photonuclear.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
 </section>
 <section id="muon-energy-losses" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="muon-energy-losses"><span class="header-section-number">3.3.2</span> Muon Energy losses</h3>
 <p>The energy losses due to ionization are continuous while in radiation processes the energy is lost in bursts along the muon path. When a muon is travelling through a dielectric medium like ice or water, it will emit cherenkov photons as wells, but due to the stochastics energy losses electromagnetic and hadronic showers are generated along the muon track. The following figure illustrates this process:</p>
-<p><a href="images/muon_energylosses.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/muon_energylosses.svg" class="img-fluid" style="width:80.0%"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_energylosses.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/muon_energylosses.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+</figure>
+</div>
 <p>It is worth noting that photonuclear interactions are subdominant when compared to bremsstrahlung and pair-production, so most of the showers will be electromagnetic showers. The equation that describes the energy loss for muons at high energy can be simplified to:</p>
 <p><span class="math display">\[\frac{\mathrm{ d}E_\mu}{\mathrm{ d}X} = -\alpha -\beta E_\mu\]</span></p>
 <p>where <span class="math inline">\(X\)</span> is the thickness of the material (in <span class="math inline">\(\mathrm{ g/cm}^2\)</span>), <span class="math inline">\(\alpha\)</span> is the energy loss due to ionization and <span class="math inline">\(\beta = \beta_{br} + \beta_{pair} + \beta_{ph}\)</span> are the three discrete energy loss processes: bremsstrahlung, electron-positron production and electromagnetic interaction with the nuclei. Thickness is also given sometimes in units of meters water equivalent (1 m.w.e. = <span class="math inline">\(10^2 \mathrm{\; g/cm^2}\)</span>). Due to the energy dependency of the radiative processes, higher energy muons will have more stochastic energy losses than lower energy muons.</p>
 <p>The <strong>critical energy</strong> is when both losses are equal, ie <span class="math inline">\(\epsilon_\mu = \alpha/\beta\)</span>. Typical values are <span class="math inline">\(\alpha \simeq 2 \mathrm{ \;MeV\;g}^{-1} \mathrm{ \;cm}^2\)</span> and <span class="math inline">\(\beta \simeq 4 \times 10^{-6} \;\mathrm{ g^{-1}\;cm^2}\)</span>, so <span class="math inline">\(\epsilon_\mu \approx 500\)</span> GeV.</p>
-<p>The following plots showd simulated muons bundles in IceCube. The stochastic energy losses are particular clear in the right figure.</p>
-<div class="{.layout-ncol=3}">
-<p><img src="images/musmooth.jpg" class="img-fluid"> <img src="images/mustochastic.jpg" class="img-fluid"></p>
+<p>The following plots showd simulated muons bundles in <a href="https:icecube.wisc.edu">IceCube</a>. The stochastic energy losses are particular clear in the right figure.</p>
+<div class="{.layout-ncol=2}">
+<p><img src="images/musmooth.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"> <img src="images/mustochastic.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </div>
 </section>
 <section id="muon-range" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="muon-range"><span class="header-section-number">3.3.3</span> Muon Range</h3>
-<p>By solving the energy loss equation we can estimate the range <span class="math inline">\(R\)</span> for a muon <span class="math inline">\(E_\mu\)</span>, ie the underground depth this muon will reach until its energy is 0 (in reality the muon when reaching low energies will decay) (see Exercises 2):</p>
+<p>By solving the energy loss equation we can estimate the range <span class="math inline">\(R\)</span> for a muon <span class="math inline">\(E_\mu\)</span>, ie the underground depth this muon will reach until its energy is 0 (in reality the muon when reaching low energies will decay):</p>
 <p><span class="math display">\[ R(E_\mu) = \frac{1}{\beta}\log\left( 1 + \frac{E_\mu}{\epsilon_\mu}\right)\]</span></p>
 <p>Assuming the muon spectrum at sea level can be approximated to a power law <span class="math inline">\(I_\mu(&gt;E_\mu) = AE_\mu^{-\gamma}\)</span> and using the relationship between range and energy we can write the <em>depth-intensity relation</em> (DIR):</p>
 <p><span class="math display">\[I_\mu(&gt;E_\mu, R) = A\left[\frac{\alpha}{\beta}(e^{\beta R} - 1)\right]^{-\gamma}\]</span></p>
 <p>The plot below shows the depth-intensity muons for vertical directions. The grey-area are neutrino-induced muons (horizontal, up-wards)</p>
-<p><a href="images/muon-depth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/muon-depth.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon-depth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/muon-depth.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="neutrino-interactions" class="level3" data-number="3.3.4">
 <h3 data-number="3.3.4" class="anchored" data-anchor-id="neutrino-interactions"><span class="header-section-number">3.3.4</span> Neutrino Interactions</h3>
 <section id="weak-interaction" class="level4" data-number="3.3.4.1">
 <h4 data-number="3.3.4.1" class="anchored" data-anchor-id="weak-interaction"><span class="header-section-number">3.3.4.1</span> Weak interaction</h4>
-<p>Neutrinos feel only the weak force thus interactions with matter mediated by W and Z bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:</p>
+<p>Neutrinos feel only the weak force thus interactions with matter mediated by <span class="math inline">\(W\)</span> and <span class="math inline">\(Z\)</span> bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:</p>
 <ul>
-<li>Neutral current (NC) interactions - exchange of Z</li>
-<li>Charged current (CC) interaction - exchange of W<span class="math inline">\(^{\pm}\)</span></li>
+<li>Neutral current (NC) interactions - exchange of <span class="math inline">\(Z\)</span></li>
+<li>Charged current (CC) interaction - exchange of <span class="math inline">\(W^{\pm}\)</span></li>
 </ul>
-<p><a href="images/neutrino-interactions.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/neutrino-interactions.svg" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/neutrino-interactions.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/neutrino-interactions.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
 <p>Neutrinos will scatter from electrons as well as nuclear matter.</p>
 <ul>
-<li><p>For energies <span class="math inline">\(E_\nu &lt; 1\)</span> GeV neutrinos interact with hadronds via <strong>elastic</strong> or <strong>quasielastic scattering</strong>.</p></li>
-<li><p>For energies <span class="math inline">\(E_\nu \gg 1\)</span> GeV neutrinos do not scatter on hadronds as a compound of quarks, they start to <em>see</em> and interact directly the quarks, <strong>Deep Inelastic Scattering</strong>.</p></li>
+<li><p>For energies <span class="math inline">\(E_\nu &lt; 1 \mathrm{GeV}\)</span> neutrinos interact with hadronds via <strong>elastic</strong> or <strong>quasielastic scattering</strong>.</p></li>
+<li><p>For energies <span class="math inline">\(E_\nu \gg 1 \mathrm{GeV}\)</span> neutrinos do not scatter on hadronds as a compound of quarks, they start to <em>see</em> and interact directly with the quarks, this is the so-called <strong>Deep Inelastic Scattering</strong>.</p></li>
 </ul>
 </section>
 </section>
 <section id="neutrino-cross-sections-at-gev-energies" class="level3" data-number="3.3.5">
 <h3 data-number="3.3.5" class="anchored" data-anchor-id="neutrino-cross-sections-at-gev-energies"><span class="header-section-number">3.3.5</span> Neutrino cross-sections at GeV energies</h3>
 <p>The anti-neutrino cross-section at GeV energies is a factor ~2 lower (naively should be 3, but the factor 2 comes from the structure function of the nucleus) than the neutrino cross-section due to the helicity.</p>
-<p><a href="images/pdg_plot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/pdg_plot.gif" class="img-fluid"></a></p>
-<p>At <span class="math inline">\(E_\nu \gg 1\)</span> GeV the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/pdg_plot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/pdg_plot.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>At <span class="math inline">\(E_\nu \gg 1 \mathrm{GeV}\)</span> the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:</p>
 <p><span class="math display">\[\sigma_{\nu p} \simeq 0.69 \times 10^{-38} \left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2\]</span> <span class="math display">\[\sigma_{\bar{\nu} p} \simeq 0.35 \times 10^{-38}\left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2\]</span></p>
 <p>Sometimes the cross-section is expressed as <span class="math inline">\(\nu + N\)</span> where <span class="math inline">\(N\)</span> is the nucleon definition as:</p>
 <p><span class="math display">\[N = \frac{n+p}{2}\]</span></p>
-<p>Earth is transparent to GeV neutrinos</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Earth is transparent to GeV neutrinos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Earth is transparent to GeV neutrinos
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>We are going to calculate the mean free path of neutrinos of energies of <span class="math inline">\(\sim GeV\)</span>. Note that mean free path can be expressed as:</p>
 <p><span class="math display">\[l = \frac{1}{n_N \sigma_{\nu N}}\]</span></p>
 <p>where <span class="math inline">\(n_N\)</span> is the number density of <em>nucleons</em> and not atoms. As we saw in lecture 2 we can re-express the number density as:</p>
 <p><span class="math display">\[n_N = \frac{N_A}{\mathcal{M}}\rho\]</span></p>
 <p>where <span class="math inline">\(\mathcal{M}\)</span> is the molar mass of one mole of nucleons and <span class="math inline">\(\rho\)</span> is the mass density of the medium. However, by definition a mol of nucleons has a mass of 1 g (Remember that a mol of <span class="math inline">\(^{12}C\)</span> atoms has a mass of 12 g). So, we can rewrite as <span class="math inline">\(n_N = N_A \rho\)</span>. Below there is another way to estimate the mean free path:</p>
-<div id="3c19919e" class="cell" data-execution_count="4">
+<div id="5ae5b4ea" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> ct</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Earth mass</span></span>
@@ -859,7 +951,7 @@ Note
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Mean free path:</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(s <span class="op">*</span> Nd.to(<span class="dv">1</span><span class="op">/</span>u.cm<span class="op">**</span><span class="dv">3</span>))</span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"The mean free path is: </span><span class="sc">{</span>L<span class="sc">.</span>to(u.km)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"The mean free path is: </span><span class="sc">{</span>L<span class="sc">.</span>to(u.km)<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Name   = Earth mass
   Value  = 5.972167867791379e+24
@@ -876,14 +968,16 @@ Note
   Uncertainty  = 0.0
   Unit  = m
   Reference = IAU 2015 Resolution B 3
-The mean free path is: 304808158.9154454 km</code></pre>
+The mean free path is: 304808158.92 km</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section>
 <section id="neutrino-cross-sections-at-tev-energies" class="level3" data-number="3.3.6">
 <h3 data-number="3.3.6" class="anchored" data-anchor-id="neutrino-cross-sections-at-tev-energies"><span class="header-section-number">3.3.6</span> Neutrino cross-sections at TeV energies</h3>
 <ul>
-<li><p>At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum <span class="math inline">\(q^2 \ll M_{W,Z}\)</span> and so the propagator term is <span class="math inline">\(\sim 1/M^2_{W,Z}\)</span></p></li>
+<li><p>At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum is <span class="math inline">\(q^2 \ll M_{W,Z}\)</span> and so the propagator term is <span class="math inline">\(\sim 1/M^2_{W,Z}\)</span></p></li>
 <li><p>Above 10<span class="math inline">\(^{4}\)</span> GeV where the gauge-boson propagator restricts the momentum transfer to values near <span class="math inline">\(M_{W,Z}\)</span> (<span class="math inline">\(\sim 1/(q^2 - M^2_{W,Z})\)</span>) and damps the cross-section increase.</p></li>
 </ul>
 <p><a href="images/break_cc_new.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/break_cc_new.png" class="img-fluid"></a></p>
@@ -899,15 +993,33 @@ The mean free path is: 304808158.9154454 km</code></pre>
 </div>
 <ul>
 <li><p>At high energies the asymetry between neutrinos and antineutrinos is lost due to the interaction with <em>sea quarks</em> (<span class="math inline">\(q\bar{q}\)</span>)</p></li>
-<li><p>Neutrinos interact mostly with hadrons (quarks) instead of electrons due the their larger target mass. However at <span class="math inline">\(E_\nu \approx 6.3\)</span> PeV the Glashow resonance appears: <span class="math inline">\({\hbar \nu_e} + e \rightarrow W\)</span> making the cross-section higher than the one with hadrons. ### Earth Opaque to PeV Neutrinos</p></li>
+<li><p>Neutrinos interact mostly with hadrons (quarks) instead of electrons due the their larger target mass. However at <span class="math inline">\(E_\nu \approx 6.3\)</span> PeV the Glashow resonance appears: <span class="math inline">\({\hbar \nu_e} + e \rightarrow W\)</span> making the cross-section higher than the one with hadrons.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Earth is opaque to PeV neutrinos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Earth is opaque to PeV neutrinos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
 <li><p>At about 100 TeV the mean free path for neutrino-nucleus scattering is about 10<span class="math inline">\(^{10}\)</span> c.m.w.e. which is about the matter thickness along the Earth diameter.</p></li>
 <li><p>This means that UHE neutrino observatories (like IceCube) the flux of neutrinos comming from the nadir is stronly suppressed.</p></li>
 <li><p>There is only one exception. A very high energy beam of <span class="math inline">\(\nu_\tau\)</span> at one side of the Earth <span class="math inline">\(E\gg 1\)</span> PeV can end up at the other side as lower energy <span class="math inline">\(\nu_\tau, \nu_e,\nu_\mu\)</span> thought the <strong>tau regeneration</strong> effect: <span class="math inline">\(\nu_\tau \rightarrow \tau \rightarrow \nu_\tau\)</span></p></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="neutrino-signatures-in-a-detector" class="level3" data-number="3.3.8">
-<h3 data-number="3.3.8" class="anchored" data-anchor-id="neutrino-signatures-in-a-detector"><span class="header-section-number">3.3.8</span> Neutrino signatures in a detector</h3>
-<p><a href="images/nu_signatures.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/nu_signatures.png" class="img-fluid"></a></p>
+<section id="neutrino-signatures-in-a-neutrino-detector" class="level3" data-number="3.3.8">
+<h3 data-number="3.3.8" class="anchored" data-anchor-id="neutrino-signatures-in-a-neutrino-detector"><span class="header-section-number">3.3.8</span> Neutrino signatures in a neutrino detector</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/nu_signatures.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/nu_signatures.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
 <ul>
 <li><ol start="2" type="a">
 <li>In CC <span class="math inline">\(\nu_e\)</span> interactions an hadronic and EM shower initiated by the <span class="math inline">\(e\)</span> is produced. About 20% of the energy goes in the hadronic shower and 80% to the lepton and therfore to the EM shower.</li>
@@ -927,24 +1039,29 @@ The mean free path is: 304808158.9154454 km</code></pre>
 <h3 data-number="3.3.9" class="anchored" data-anchor-id="event-rate-in-an-underground-experiment."><span class="header-section-number">3.3.9</span> Event rate in an underground experiment.</h3>
 <p>An estimate of the detection rate of neutrino events is equivalent to calculate the rate of a neutrino-induced muon/cascades flux:</p>
 <p><span class="math display">\[R(E_{vis}, \theta) = \int_{E_{vis}} P_{\nu\rightarrow l} (E_\nu, E_{vis}) P_{shadow}(\theta, E_\nu) \frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu}\mathrm{ d}E_\nu\]</span></p>
-<p>where * <span class="math inline">\(P_{\nu\rightarrow l}(E_\nu, E_{vis})\)</span>. Probability that a neutrino interacts with an nucleus to produce a <span class="math inline">\(\mu\)</span> or an EM or hadronic cascade with a minimum energy <span class="math inline">\(E_{vis}\)</span> <em>visible</em> in the detector. * <span class="math inline">\(P_{shadow} (\theta, E_\nu)\)</span>. Probability of neutrino with zenith angle <span class="math inline">\(\theta\)</span> and energy <span class="math inline">\(E_\nu\)</span> of being absorved by Earth. * <span class="math inline">\({\mathrm{ d}N_\nu}/{\mathrm{ d}E_\nu}\)</span>. Neutrino flux at the surface.</p>
-</section>
-<section id="interaction-probability-p_nurightarrow-l" class="level3" data-number="3.3.10">
-<h3 data-number="3.3.10" class="anchored" data-anchor-id="interaction-probability-p_nurightarrow-l"><span class="header-section-number">3.3.10</span> Interaction probability: <span class="math inline">\(P_{\nu\rightarrow l}\)</span></h3>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(P_{\nu\rightarrow l}(E_\nu, E_{vis})\)</span> is the probability that a neutrino interacts with an nucleus to produce a <span class="math inline">\(\mu\)</span> or an EM or hadronic cascade with a minimum energy <span class="math inline">\(E_{vis}\)</span> <em>visible</em> in the detector.</li>
+<li><span class="math inline">\(P_{shadow} (\theta, E_\nu)\)</span>. Probability of neutrino with zenith angle <span class="math inline">\(\theta\)</span> and energy <span class="math inline">\(E_\nu\)</span> of being absorved by Earth.</li>
+<li><span class="math inline">\({\mathrm{ d}N_\nu}/{\mathrm{ d}E_\nu}\)</span>. Neutrino flux at the surface.</li>
+</ul>
+<section id="interaction-probability-p_nurightarrow-l" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interaction-probability-p_nurightarrow-l">Interaction probability: <span class="math inline">\(P_{\nu\rightarrow l}\)</span></h4>
 <p>The probability of a neutrino to produce a lepton or shower visible in the detector can be writen as:</p>
 <p><span class="math display">\[P_{\nu \rightarrow l} = N_A \int_{E_{min}}^{E_\nu} \mathrm{ d}E_l \frac{\mathrm{ d}\sigma}{\mathrm{ d}E_l}r_l(E_l, E_{vis})\]</span></p>
 <p>where <span class="math inline">\(r_l\)</span> is the detection range of the produced lepton/cascade with energy <span class="math inline">\(E_l\)</span> ending with the minimal energy <span class="math inline">\(E_{vis}\)</span>, and <span class="math inline">\({\mathrm{ d}\sigma}/{\mathrm{ d}E_l}\)</span> is the neutrino cross-section to produce a lepton/cascade with energy <span class="math inline">\(E_l\)</span>.</p>
 <p>At high energy the event rate is dominated by neutrino-induced muons due to the long range of the high energy muons.</p>
 </section>
-<section id="earth-shadow-p_shadow" class="level3" data-number="3.3.11">
-<h3 data-number="3.3.11" class="anchored" data-anchor-id="earth-shadow-p_shadow"><span class="header-section-number">3.3.11</span> Earth Shadow: <span class="math inline">\(P_{shadow}\)</span></h3>
+<section id="earth-shadow-p_shadow" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="earth-shadow-p_shadow">Earth Shadow: <span class="math inline">\(P_{shadow}\)</span></h4>
 <p>The mean free path of neutrinos can be expressed as <span class="math inline">\(\lambda = (N_A \sigma_{tot})^{-1}\)</span>. The shadow fact then can be expressed as:</p>
 <p><span class="math display">\[P_{shadow} = e^{-N_A \sigma_{tot} X(\theta)}\]</span></p>
 <p>Where <span class="math inline">\(X(\theta)\)</span> is the column depth travelled by the neutrino through the Earth with a zenith angle <span class="math inline">\(\theta\)</span>.</p>
 <p>See <strong>Exercises 2</strong> for an evaluation of the event rate in an underground detector.</p>
 </section>
-<section id="neutrino-oscillations" class="level3" data-number="3.3.12">
-<h3 data-number="3.3.12" class="anchored" data-anchor-id="neutrino-oscillations"><span class="header-section-number">3.3.12</span> Neutrino Oscillations</h3>
+</section>
+<section id="neutrino-oscillations" class="level3" data-number="3.3.10">
+<h3 data-number="3.3.10" class="anchored" data-anchor-id="neutrino-oscillations"><span class="header-section-number">3.3.10</span> Neutrino Oscillations</h3>
 <p>Neutrinos are generated in flavor eingenstate however propagation is done in mass eingenstate, since each planar wave has a different frecuency given their different masses, the neutrino detected (also in flavor eingenstate) will have a different interference pattern than the one generated given rise to neutrino flavor oscillations.</p>
 <ul>
 <li><p>As a result of these changes in relative phases, neutrinos oscillate from one flavor to another as they travel. Low-energy neutrinos oscillate in a shorter distance than high-energy neutrinos.</p></li>
@@ -952,8 +1069,8 @@ The mean free path is: 304808158.9154454 km</code></pre>
 <li><p>The neutrino <em>only becomes a definite flavor when it interacts</em> in a detector - by finding whether an electron, muon, tau is created.</p></li>
 </ul>
 </section>
-<section id="the-pmns-matrix" class="level3" data-number="3.3.13">
-<h3 data-number="3.3.13" class="anchored" data-anchor-id="the-pmns-matrix"><span class="header-section-number">3.3.13</span> The PMNS Matrix</h3>
+<section id="the-pmns-matrix" class="level3" data-number="3.3.11">
+<h3 data-number="3.3.11" class="anchored" data-anchor-id="the-pmns-matrix"><span class="header-section-number">3.3.11</span> The PMNS Matrix</h3>
 <p>The Pontecorvo-Maki-Nakagawa-Sakata matrix is the one that relates the mass eingenstates with the flavor eingenstates:</p>
 <p><span class="math display">\[\begin{pmatrix} \nu_e \\ \nu_\mu \\ \nu_\tau \end{pmatrix} = U_{PMNS} \begin{pmatrix} \nu_1 \\ \nu_2 \\ \nu_1 \end{pmatrix}\]</span></p>
 <p>with:</p>
@@ -977,8 +1094,8 @@ c_{12} &amp; s_{12} &amp; 0 \\ -s_{12} &amp; c_{12} &amp; 0 \\ 0 &amp; 0 &amp; 1
 \]</span></p>
 <p>where <span class="math inline">\(s_{ij} = \sin \theta_{ij}\)</span>, <span class="math inline">\(c_{ij} = \cos \theta_{ij}\)</span>. The term <span class="math inline">\(\delta\)</span> is a CP violation term, if <span class="math inline">\(s_{13} = 0\)</span> we won’t be able to measure <span class="math inline">\(\delta\)</span> as it always multiplies <span class="math inline">\(s_{13}\)</span></p>
 </section>
-<section id="the-2-flavor-mixing-case" class="level3" data-number="3.3.14">
-<h3 data-number="3.3.14" class="anchored" data-anchor-id="the-2-flavor-mixing-case"><span class="header-section-number">3.3.14</span> The 2-flavor mixing case</h3>
+<section id="the-2-flavor-mixing-case" class="level3" data-number="3.3.12">
+<h3 data-number="3.3.12" class="anchored" data-anchor-id="the-2-flavor-mixing-case"><span class="header-section-number">3.3.12</span> The 2-flavor mixing case</h3>
 <p>Let’s assume 2 flavor eigenstates identified as rotations of 2 mass eigenstates:</p>
 <p><span class="math display">\[\begin{pmatrix} \nu_e \\ \nu_\mu \end{pmatrix} = \begin{pmatrix} \cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} \nu_1 \\ \nu_2 \end{pmatrix}.\]</span></p>
 <p>The angle <span class="math inline">\(\theta\)</span> is called the mixing angle.</p>
@@ -990,9 +1107,9 @@ c_{12} &amp; s_{12} &amp; 0 \\ -s_{12} &amp; c_{12} &amp; 0 \\ 0 &amp; 0 &amp; 1
 <p>and as they evolved:</p>
 <p><span class="math display">\[|\nu_{1}(t,x)\rangle = \cos \theta e^{ -i (E_{1} t - p_1 x)  }\]</span> <span class="math display">\[|\nu_{2}(t,x)\rangle = \sin \theta e^{ -i (E_{2} t - p_2 x) }\]</span></p>
 <p>So after a while the wave form of the <span class="math inline">\(\nu_\alpha\)</span> is given by:</p>
-<p><span class="math display">\[|\nu_{e}(t, x)\rangle = \cos^2 \theta e^{ -i (E_{1} t - p_1 x)  } + \sin^2 \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span> <span class="math display">\[|\nu_{\mu}(t, x)\rangle = -sin\theta\cos \theta e^{ -i (E_{1} t - p_1 x)  } + \cos\theta\sin \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span></p>
-<section id="example-of-survival-probability-for-the-2-flavor-mixing" class="level4" data-number="3.3.14.1">
-<h4 data-number="3.3.14.1" class="anchored" data-anchor-id="example-of-survival-probability-for-the-2-flavor-mixing"><span class="header-section-number">3.3.14.1</span> Example of survival probability for the 2-flavor mixing</h4>
+<p><span class="math display">\[|\nu_{e}(t, x)\rangle = \cos^2 \theta e^{ -i (E_{1} t - p_1 x)  } + \sin^2 \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span> <span class="math display">\[|\nu_{\mu}(t, x)\rangle = -\sin\theta\cos \theta e^{ -i (E_{1} t - p_1 x)  } + \cos\theta\sin \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span></p>
+<section id="example-of-survival-probability-for-the-2-flavor-mixing" class="level4" data-number="3.3.12.1">
+<h4 data-number="3.3.12.1" class="anchored" data-anchor-id="example-of-survival-probability-for-the-2-flavor-mixing"><span class="header-section-number">3.3.12.1</span> Example of survival probability for the 2-flavor mixing</h4>
 <p><span class="math display">\[\begin{aligned}
 P(\nu_e \rightarrow \nu_\mu) = \left|\langle \nu_{\mu}(t,x)|\nu_{e}(0,0)\rangle\right|^2 &amp;=\left|\cos\theta \sin\theta (e^{i(E_2 t - p_2 x)} - e^{i(E_1 t -p_1 x)})\right|^2\\
 &amp;=
@@ -1012,13 +1129,19 @@ P(\nu_e \rightarrow \nu_\mu)&amp;= 2 \cos^2\theta\sin^2\theta ( 1 - \cos (E_2t -
 <p>And the survival probability is:</p>
 <p><span class="math display">\[P(\nu_e \rightarrow \nu_e)  = 1 - P(\nu_e \rightarrow \nu_\mu) = 1- \sin^2 2\theta \sin^2\left(\frac{\Delta m_{12}^2 L}{4E}\right)\]</span></p>
 <p>Replacing <span class="math inline">\(\hbar\)</span> and <span class="math inline">\(c\)</span> the expression can be written as:</p>
-<p><span class="math display">\[P(\nu_e \rightarrow \nu_e)  = 1 - \sin^2 2\theta \sin^2\left[1.27 \left(\frac{\Delta m^2_{12}}\mathrm{{ eV}^2}\right)\frac{L/\rm{ km}}{E/\rm{ GeV}}\right]\]</span></p>
+<p><span class="math display">\[P(\nu_e \rightarrow \nu_e)  = 1 - \sin^2 2\theta \sin^2\left[1.27 \left(\frac{\Delta m^2_{12}}{\mathrm{eV}^2}\right)\frac{L/\mathrm{km}}{E/\mathrm{GeV}}\right]\]</span></p>
 <p>We assumed that the mass eigenstates are created with the same energy or momentum and so <span class="math inline">\(E_i = E_j\)</span>.This assumption is not necessary and it comes from the fact we use the plane wave approximation. Using the correct formalism of wave packets the result is the same.</p>
-</section>
-</section>
-<section id="tutorial-iii-plot-the-survival-probability-of-nu_e-rightarrow-nu_e" class="level3" data-number="3.3.15">
-<h3 data-number="3.3.15" class="anchored" data-anchor-id="tutorial-iii-plot-the-survival-probability-of-nu_e-rightarrow-nu_e"><span class="header-section-number">3.3.15</span> Tutorial III: Plot the survival probability of <span class="math inline">\(\nu_e \rightarrow \nu_e\)</span></h3>
-<div id="29ef9878" class="cell" data-execution_count="5">
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial III: Plot the survival probability of $\nu_e \rightarrow \nu_e$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial III: Plot the survival probability of <span class="math inline">\(\nu_e \rightarrow \nu_e\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="bdbe48f6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">180</span> <span class="co"># km</span></span>
@@ -1045,13 +1168,13 @@ P(\nu_e \rightarrow \nu_\mu)&amp;= 2 \cos^2\theta\sin^2\theta ( 1 - \cos (E_2t -
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chap3_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="chap3_files/figure-html/cell-6-output-1.png" width="813" height="362" class="figure-img"></a></p>
+<p><a href="chap3_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="chap3_files/figure-html/cell-6-output-1.png" width="835" height="387" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Eventually at low enough E / long baselines, neutrino beam becomes fully mixed and energy resolution and source extent conspire to produce 50/50 beam.</p>
-<div id="92f4cfb7" class="cell" data-execution_count="6">
+<div id="112e1031" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>y, x <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">50</span>,<span class="dv">180</span>,<span class="dv">100</span>), np.linspace(<span class="fl">0.1</span>, <span class="dv">15</span>, <span class="dv">100</span>) )</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> prob_survival(x<span class="op">*</span><span class="fl">1e-3</span>,y)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
@@ -1065,14 +1188,17 @@ P(\nu_e \rightarrow \nu_\mu)&amp;= 2 \cos^2\theta\sin^2\theta ( 1 - \cos (E_2t -
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chap3_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="chap3_files/figure-html/cell-7-output-1.png" width="772" height="434" class="figure-img"></a></p>
+<p><a href="chap3_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="chap3_files/figure-html/cell-7-output-1.png" width="817" height="459" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
+</div>
+</div>
 </section>
-<section id="general-case" class="level3" data-number="3.3.16">
-<h3 data-number="3.3.16" class="anchored" data-anchor-id="general-case"><span class="header-section-number">3.3.16</span> General case</h3>
+</section>
+<section id="general-case" class="level3" data-number="3.3.13">
+<h3 data-number="3.3.13" class="anchored" data-anchor-id="general-case"><span class="header-section-number">3.3.13</span> General case</h3>
 <p>Taking greek letters of the flavor eingenstates and latin letter the mass eingenstates we can write:</p>
 <p><span class="math display">\[|\nu_\alpha(x,t)\rangle = \sum_{k=1,2,3} U_{\alpha k} |\nu_k (x,t)\rangle = \sum_{k=1,2,3} U_{\alpha k} e^{-i\Phi_k}|\nu_k (0,0)\rangle\]</span></p>
 <p>inverting the mixing matrix we have:</p>
@@ -1101,8 +1227,8 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <p><span class="math display">\[\begin{matrix}P(\nu_\alpha \rightarrow \nu_\beta)=\delta_{\alpha\beta} &amp; - &amp; 4{\displaystyle \sum_{i&gt;j}\mathrm{ Re}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*}})\sin^{2}(\frac{\Delta m_{ij}^{2}L}{4E})\\ &amp; + &amp; {\displaystyle 2\sum_{i&gt;j}\mathrm{ Im}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(}\frac{\Delta m_{ij}^{2}L}{2E}),\end{matrix}\]</span></p>
 <p>For <span class="math inline">\(\delta = 0\)</span> the last term is 0.</p>
 </section>
-<section id="about-symmetries." class="level3" data-number="3.3.17">
-<h3 data-number="3.3.17" class="anchored" data-anchor-id="about-symmetries."><span class="header-section-number">3.3.17</span> About symmetries.</h3>
+<section id="about-symmetries." class="level3" data-number="3.3.14">
+<h3 data-number="3.3.14" class="anchored" data-anchor-id="about-symmetries."><span class="header-section-number">3.3.14</span> About symmetries.</h3>
 <ul>
 <li>Consequences of CPT invariance:</li>
 </ul>
@@ -1118,12 +1244,12 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <p>Only if <span class="math inline">\(U\)</span> is not real we can have CP violation effects ie:</p>
 <p><span class="math display">\[P(\nu_\alpha \rightarrow \nu_\beta) - P({\bar \nu_\alpha} \rightarrow {\bar \nu_\beta}) ={ 4 \sum_{i&gt;j}\mathrm{ Im}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(}\frac{\Delta m_{ij}^{2}L}{2E})\]</span></p>
 </section>
-<section id="mass-hierarchy" class="level3" data-number="3.3.18">
-<h3 data-number="3.3.18" class="anchored" data-anchor-id="mass-hierarchy"><span class="header-section-number">3.3.18</span> Mass hierarchy</h3>
+<section id="mass-hierarchy" class="level3" data-number="3.3.15">
+<h3 data-number="3.3.15" class="anchored" data-anchor-id="mass-hierarchy"><span class="header-section-number">3.3.15</span> Mass hierarchy</h3>
 <p>But this means that neutrinos oscillations can be described in terms of 6 parameters: <span class="math inline">\(\theta_{12}\)</span>, <span class="math inline">\(\theta_{13}\)</span> and <span class="math inline">\(\theta_{23}\)</span> plus 2 mass-squared differences, <span class="math inline">\(\Delta m_{12}^2\)</span> and <span class="math inline">\(\Delta m_{32}^2\)</span> and one CP violating phase <span class="math inline">\(\delta_{CP}\)</span>. Althought we can measured the mass-squared differences in neutrino oscillation experiments, we cannot know the absolute scales nor the mass hierarchy.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://inspirehep.net/record/1114323/files/Neutrinos_figs_3nuspic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" data-glightbox="description: .lightbox-desc-28" title="Source: arXiv:1205.2671"><img src="https://inspirehep.net/record/1114323/files/Neutrinos_figs_3nuspic.png" class="img-fluid figure-img" alt="Source: arXiv:1205.2671"></a></p>
+<p><a href="https://inspirehep.net/files/ce8abf20fa840b880444095bc363c6b2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" data-glightbox="description: .lightbox-desc-28" title="Source: arXiv:1205.2671"><img src="https://inspirehep.net/files/ce8abf20fa840b880444095bc363c6b2.png" class="img-fluid figure-img" alt="Source: arXiv:1205.2671"></a></p>
 <figcaption>Source: <a href="https://inspirehep.net/record/1114323">arXiv:1205.2671</a></figcaption>
 </figure>
 </div>
@@ -1144,37 +1270,37 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <p><span class="math display">\[\begin{pmatrix} c_{12} &amp; s_{12} &amp; 0 \\ -s_{12} &amp; c_{12} &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\]</span></p>
 <p>If <span class="math inline">\(\Delta m_{31}^2L/E \gg 1\)</span> this experimetns are sensitive to the oscillation <span class="math display">\[ P(\nu_e \rightarrow \nu_e) \simeq 1 - \sin^2 2\theta_{12}\sin^2\frac{\Delta m_{12}^2}{3E}L\]</span></p>
 </section>
-<section id="solar-neutrinos" class="level3" data-number="3.3.19">
-<h3 data-number="3.3.19" class="anchored" data-anchor-id="solar-neutrinos"><span class="header-section-number">3.3.19</span> Solar Neutrinos</h3>
+<section id="solar-neutrinos" class="level3" data-number="3.3.16">
+<h3 data-number="3.3.16" class="anchored" data-anchor-id="solar-neutrinos"><span class="header-section-number">3.3.16</span> Solar Neutrinos</h3>
 <p>Neutrinos from the Sun are produced by some of the fusion reactions in the <span class="math inline">\(pp\)</span> chain or the CNO cycle. The combined effect is:</p>
 <p><span class="math display">\[4p \rightarrow ^4He + 2e^+ 2\nu_e\]</span></p>
 <p>From the beginning of the solar-neutrino observation a deficit of the electron neutrino predicted by the Standard Solar Model was observed: <em>the solar-neutrino problem</em></p>
 <p>In 1999 SNO in Canada started taking data. This experiment was able to detect <span class="math inline">\(\nu_e\)</span> by CC interactions and <span class="math inline">\(\nu_x\)</span> by NC interaction solving the mistery of the solar-neutrino problem. It is now understood as a neutrino flavor oscillation. The results of SNO together with KamLAND (a long baseline neutrino detector) confirmed the Large Mixing Angle solution (LMA) of the solar sector:</p>
 <p><span class="math display">\[\sin^2 \theta_{12} \simeq 0.30\]</span> <span class="math display">\[\Delta m_{12}^2 \equiv \Delta m_{\odot}^2 \simeq 8 \times 10^{-5} \mathrm{ \; eV^2}\]</span></p>
 </section>
-<section id="atmospheric-neutrinos" class="level3" data-number="3.3.20">
-<h3 data-number="3.3.20" class="anchored" data-anchor-id="atmospheric-neutrinos"><span class="header-section-number">3.3.20</span> Atmospheric Neutrinos</h3>
+<section id="atmospheric-neutrinos" class="level3" data-number="3.3.17">
+<h3 data-number="3.3.17" class="anchored" data-anchor-id="atmospheric-neutrinos"><span class="header-section-number">3.3.17</span> Atmospheric Neutrinos</h3>
 <p>First evidence of atmospheric neutrino oscillations came from Super-Kamiokande experiment in 1998. By scanning in zenith angle, is like changing the <span class="math inline">\(L\)</span>.</p>
 <p><a href="http://www.quantumdiaries.org/wp-content/uploads/2014/06/IC86Multi_NuMuOsc_results_Pscan_V1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="http://www.quantumdiaries.org/wp-content/uploads/2014/06/IC86Multi_NuMuOsc_results_Pscan_V1.png" class="img-fluid"></a></p>
 <p>If atmospheric mixing is non-maximal, it remains to determine in which “octant” the mixing angle <span class="math inline">\(\theta_{23}\)</span> lies. For a <span class="math inline">\(\theta_{23}\)</span> in the first octant (<span class="math inline">\(&lt; 45^{\circ}\)</span>) the mass eigenstate <span class="math inline">\(\nu_3\)</span> is <strong>tau heavy</strong>, i.e., the tau neutrino fraction is larger than the muon neutrino fraction. Conversely, for a <span class="math inline">\(\theta_{23}\)</span> in the second octant (<span class="math inline">\(&gt; 45^{\circ}\)</span>) the state <span class="math inline">\(\nu_3\)</span> is <strong>muon heavy</strong>.</p>
 </section>
-<section id="reactor-neutrinos" class="level3" data-number="3.3.21">
-<h3 data-number="3.3.21" class="anchored" data-anchor-id="reactor-neutrinos"><span class="header-section-number">3.3.21</span> Reactor Neutrinos</h3>
+<section id="reactor-neutrinos" class="level3" data-number="3.3.18">
+<h3 data-number="3.3.18" class="anchored" data-anchor-id="reactor-neutrinos"><span class="header-section-number">3.3.18</span> Reactor Neutrinos</h3>
 <ul>
 <li>Double Chooz: <span class="math inline">\(\sin^2 2\theta_{13} = 0.109 \pm 0.030 \pm 0.025 \neq 0\)</span> at <span class="math inline">\(2.9\sigma\)</span></li>
 <li>Daya Bay: <span class="math inline">\(\sin^2 2\theta_{13} = 0.089 \pm 0.010 \pm 0.005 \neq 0\)</span> at <span class="math inline">\(7.7\sigma\)</span></li>
 <li>RENO: <span class="math inline">\(\sin^2 2\theta_{13} = 0.113 \pm 0.013 \pm 0.019 \neq 0\)</span> at <span class="math inline">\(4.9\sigma\)</span></li>
 </ul>
 </section>
-<section id="neutrino-oscillations-in-matter." class="level3" data-number="3.3.22">
-<h3 data-number="3.3.22" class="anchored" data-anchor-id="neutrino-oscillations-in-matter."><span class="header-section-number">3.3.22</span> Neutrino oscillations in matter.</h3>
+<section id="neutrino-oscillations-in-matter." class="level3" data-number="3.3.19">
+<h3 data-number="3.3.19" class="anchored" data-anchor-id="neutrino-oscillations-in-matter."><span class="header-section-number">3.3.19</span> Neutrino oscillations in matter.</h3>
 <p>The <span class="math inline">\(U_{PMNS}\)</span> matrix must be modified to account for the the fact that electron neutrinos have an extra interaction not present for <span class="math inline">\(\nu_\mu\)</span> and <span class="math inline">\(\nu_\tau\)</span> when travelling through matter. Elastic scattering of <span class="math inline">\(\nu_e\)</span> on electron can occur via exchange of a charged <span class="math inline">\(W\)</span>-boson as well as by exchange of the neutral <span class="math inline">\(Z\)</span>-boson adding a term <span class="math inline">\(V_e = G_F \sqrt{2}N_e\)</span> in the mass differences for electrons.</p>
 <p>Without entering in the maths, what happens here is that a resonance effect occurs, ie, even if the mixing angle is small in vacuum it can get amplified in matter. This resonance can be expressed as a condition on the electron density <span class="math inline">\(N_e\)</span> which is appropriate for systems such as stellar interiors (Sun or supernovae too) where provided the core density is high enough, there is always a region in the neutrinos’ path exiting the star where it passes through resonance.</p>
 <p>This is known as the <strong>MSW effect</strong> for the theorists who discovered it - Mikheyev, Smirnov, and Wolfenstein.</p>
 </section>
-<section id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" class="level3" data-number="3.3.23">
-<h3 data-number="3.3.23" class="anchored" data-anchor-id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le"><span class="header-section-number">3.3.23</span> Tutorial III: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E</h3>
-<div id="619bb16c" class="cell" data-execution_count="7">
+<section id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" class="level3" data-number="3.3.20">
+<h3 data-number="3.3.20" class="anchored" data-anchor-id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le"><span class="header-section-number">3.3.20</span> Tutorial III: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E</h3>
+<div id="4eb54062" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PMNS_Factory(t12, t13, t23, d):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    s12 <span class="op">=</span> np.sin(t12)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    c12 <span class="op">=</span> np.cos(t12)</span>
@@ -1227,7 +1353,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chap3_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="chap3_files/figure-html/cell-8-output-1.png" width="963" height="361" class="figure-img"></a></p>
+<p><a href="chap3_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="chap3_files/figure-html/cell-8-output-1.png" width="985" height="385" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -1250,6 +1376,11 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <span class="glightbox-desc lightbox-desc-14">Source: <a href="http://arxiv.org/abs/1210.5154">arXiv:1210.5154</a></span>
 <span class="glightbox-desc lightbox-desc-24">Calculated neutrino cross sections taken from <a href="http://arxiv.org/abs/1309.1764">arXiv:1309.1764</a></span>
 <span class="glightbox-desc lightbox-desc-28">Source: <a href="https://inspirehep.net/record/1114323">arXiv:1205.2671</a></span>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Yanez:2023lsy" class="csl-entry" role="listitem">
+Yañez, Juan Pablo, and Anatoli Fedynitch. 2023. <span>“<span class="nocase">daemonflux: DAta-drivEn MuOn-calibrated Neutrino Flux</span>,”</span> February. <a href="https://arxiv.org/abs/2303.00022">https://arxiv.org/abs/2303.00022</a>.
+</div>
 </div>
 </section>
 
@@ -1648,13 +1779,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chap4.html" class="pagination-link" aria-label="Multimessenger Astronomy">
-        <span class="nav-page-text">Multimessenger Astronomy</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chap4.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Multimessenger Astronomy</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

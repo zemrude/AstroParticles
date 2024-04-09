@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/index.html</loc>
+    <lastmod>2024-02-15T07:33:57.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/chap1.html</loc>
+    <lastmod>2024-04-09T11:15:26.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/chap2.html</loc>
+    <lastmod>2024-04-09T08:37:36.770Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/chap3.html</loc>
-    <lastmod>2024-03-28T15:28:14.639Z</lastmod>
+    <lastmod>2024-04-09T11:22:04.355Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/chap4.html</loc>
+    <lastmod>2024-04-09T09:04:21.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/chap5.html</loc>
+    <lastmod>2024-04-09T11:22:03.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.iihe.ac.be/~aguilar/docs/index.html/references.html</loc>
+    <lastmod>2024-01-16T13:13:33.230Z</lastmod>
   </url>
 </urlset>

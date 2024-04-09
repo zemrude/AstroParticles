@@ -222,13 +222,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Multimessenger Astronomy</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dark Matter</span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -328,8 +328,8 @@ window.Quarto = {
 <section id="natural-units" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="natural-units"><span class="header-section-number">1.1.1</span> Natural Units</h3>
 <p>In high energy physics and astro-particle physics it is very common to use the natural units where <span class="math inline">\(\hbar = c = 1\)</span>. The correspondence between natural units and physical units can be established by use of</p>
-<p><span class="math display">\[\hbar = 6.58 \times 10^{-16} {\;\mathrm{ GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{ GeV} = 1.52 \times 10^{15}\;{\mathrm{ ns}^{-1}}\]</span></p>
-<p><span class="math display">\[c = 30.0\;\mathrm{ cm/ns} = 1 \Rightarrow 30\;\mathrm{ cm} = 1\;\mathrm{ ns}\]</span></p>
+<p><span class="math display">\[\hbar = 6.58 \times 10^{-16} {\;\mathrm{GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{GeV} = 1.52 \times 10^{15}\;{\mathrm{ns}^{-1}}\]</span></p>
+<p><span class="math display">\[c = 30.0\;\mathrm{cm/ns} = 1 \Rightarrow 30\;\mathrm{cm} = 1\;\mathrm{ns}\]</span></p>
 <p>In these units there is then only one fundamental dimension:</p>
 <ul>
 <li>Energy and momentum, usually expressed in GeV</li>
@@ -346,7 +346,7 @@ Tutorial I: Working with Units
 </div>
 <div class="callout-body-container callout-body">
 <p>Along these notes you are going to find different tutorials in <code>python</code> dealing with will help to develop your programing skills in and solve some numerical problems. In this case we are going to see an easy way to work with different units which is uing the module <code>units</code> that exist for example in <a href="http://astropy.readthedocs.org/en/latest/units/"><code>astropy</code></a>:</p>
-<div id="e9a293a7" class="cell" data-execution_count="1">
+<div id="c9415eb6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> const</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
@@ -361,13 +361,13 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Note that the variables defined above already have their units <code>attached</code> to them, so when you make a <code>print</code> or similar statement it will provide as well the units as a string.</p>
-<div id="dd2a0f78" class="cell" data-execution_count="2">
+<div id="daa9de9e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>R_Earth <span class="op">=</span> <span class="fl">6.371E6</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>R_Sun <span class="op">=</span> <span class="fl">6.955E8</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>AU <span class="op">=</span> <span class="fl">1.496E11</span> <span class="op">*</span> u.m <span class="co"># meters</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We the radius we can calculate the mean density of Earth and Sun. We will show that units are preserved along calculations:</p>
-<div id="70518da8" class="cell" data-execution_count="3">
+<div id="4d688959" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>vol_sphere <span class="op">=</span> <span class="kw">lambda</span> r: <span class="dv">4</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">3</span><span class="op">*</span>r<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>rho_Sun <span class="op">=</span> M_Sun <span class="op">/</span> vol_sphere(R_Sun)</span>
@@ -384,7 +384,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>We can use this module to make different transformations of uings, for example from light years to meters:</p>
-<div id="809abbbd" class="cell" data-execution_count="4">
+<div id="405253da" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ly <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> u.lyr</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Number of seconds for light to travel from Sun to Earth: </span><span class="sc">{</span><span class="fl">1.</span><span class="op">/</span>const<span class="sc">.</span>c<span class="sc">.</span>to(u.AU<span class="op">/</span>u.s)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -397,7 +397,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Assuming that the Galaxy is roughly a disk 50 kpc in diameter and 500 pc thick we can now calculate its density:</p>
-<div id="e2116102" class="cell" data-execution_count="5">
+<div id="6a2bb09a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>V_Gal <span class="op">=</span>  np.pi <span class="op">*</span> (<span class="dv">25000</span><span class="op">*</span>u.pc)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> <span class="dv">500</span><span class="op">*</span>u.pc</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Volume of the Milky Way is approximately: </span><span class="sc">{</span>V_Gal<span class="sc">.</span>to(u.m<span class="op">**</span><span class="dv">3</span>)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -522,7 +522,7 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 </div>
 <div class="callout-body-container callout-body">
 <p>Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use <code>Astropy</code>. The <a href="http://www.astropy.org/">Astropy Project</a> is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.</p>
-<div id="14e897ca" class="cell" data-execution_count="6">
+<div id="1f2bdc40" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.time <span class="im">import</span> Time</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> datetime.datetime.now()</span>
@@ -536,11 +536,11 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in mjd is </span><span class="sc">{</span>dt<span class="sc">.</span>value<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in seconds is </span><span class="sc">{</span>dt<span class="sc">.</span>sec<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Today's date and time: 2024-03-28T16:28:28.560532
-Today's julian date (UTC) is 2460398.19
-Today's modified julian date (UTC) is 60397.69
-The time difference in mjd is 9218.69
-The time difference in seconds is 796494513.44</code></pre>
+<pre><code>Today's date and time: 2024-04-09T15:42:13.615228
+Today's julian date (UTC) is 2460410.15
+Today's modified julian date (UTC) is 60409.65
+The time difference in mjd is 9230.65
+The time difference in seconds is 797528538.49</code></pre>
 </div>
 </div>
 </div>
@@ -604,16 +604,16 @@ Tutorial III: Coordinate Transformations
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>ax.plot(ll, bb, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[-3.68359060e-02 -2.67194710e-04]
- [ 2.40148847e+00 -5.29937548e-02]
- [-4.79060423e-01 -1.18277226e-02]
- [-7.12829296e-03  8.92742975e-03]
- [-4.05109503e-01  6.92938488e-02]
- [-2.11381460e+00 -1.60106371e-02]
- [ 1.39865537e-01  4.00497105e-02]
- [ 2.93306792e+00  6.76829488e-02]
- [-9.31781601e-01  1.69093582e-02]
- [-2.88827051e-01  5.96763660e-02]]</code></pre>
+<pre><code>[[ 2.80652078e-01  9.80175635e-02]
+ [ 3.53468660e-01 -4.10161489e-02]
+ [ 5.08695240e-01  3.03740888e-03]
+ [ 8.90659156e-01  1.06884701e-02]
+ [ 7.81562980e-01  4.01818878e-02]
+ [ 1.98124492e-01  1.57023633e-02]
+ [ 8.82722297e-01 -1.17439971e-03]
+ [ 3.21310800e-01  2.15787245e-02]
+ [ 1.42772848e+00 -1.34541857e-03]
+ [-3.65111729e-02 -1.86747781e-02]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -625,7 +625,7 @@ Tutorial III: Coordinate Transformations
 </div>
 </div>
 <p>Now let’s plot it in equatorial coordinates (right ascension, declination).</p>
-<div id="60a50bf6" class="cell" data-execution_count="8">
+<div id="632c4229" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.coordinates <span class="im">import</span> SkyCoord</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -633,7 +633,7 @@ Tutorial III: Coordinate Transformations
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>c_gal_icrs <span class="op">=</span> c_gal.icrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Because <code>matplotlib</code> needs the coordinates in radians and between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>, not 0 and <span class="math inline">\(2\pi\)</span>, we have to convert them.</p>
-<div id="ae04053c" class="cell" data-execution_count="9">
+<div id="d95dac07" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ra_rad <span class="op">=</span> c_gal_icrs.ra.wrap_at(<span class="dv">180</span> <span class="op">*</span> u.deg).radian</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dec_rad <span class="op">=</span> c_gal_icrs.dec.radian</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1197,14 +1197,9 @@ Figure&nbsp;1.2: Age of the Universe
 <section id="references" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="references">References</h4>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Carroll_2001" class="csl-entry" role="listitem">
-Carroll, Sean M. 2001. <span>“The Cosmological Constant.”</span> <em>Living Reviews in Relativity</em> 4 (1). <a href="https://doi.org/10.12942/lrr-2001-1">https://doi.org/10.12942/lrr-2001-1</a>.
-</div>
-<div id="ref-Claus" class="csl-entry" role="listitem">
-Grupen, Claus. n.d. <em>Astro Particle Physics</em>.
-</div>
-<div id="ref-Workman:2022ynf" class="csl-entry" role="listitem">
-Workman, R. L., and Others. 2022. <span>“<span class="nocase">Review of Particle Physics</span>.”</span> <em>PTEP</em> 2022: 083C01. <a href="https://doi.org/10.1093/ptep/ptac097">https://doi.org/10.1093/ptep/ptac097</a>.
+<div id="ref-Yanez:2023lsy" class="csl-entry" role="listitem">
+Yañez, Juan Pablo, and Anatoli Fedynitch. 2023. <span>“<span class="nocase">daemonflux: DAta-drivEn MuOn-calibrated Neutrino
+Flux</span>,”</span> February. <a href="https://arxiv.org/abs/2303.00022">https://arxiv.org/abs/2303.00022</a>.
 </div>
 </div>
 
@@ -1623,7 +1618,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
