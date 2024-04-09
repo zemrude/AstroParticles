@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AstroParticles - 2&nbsp; Cosmic Rays</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap3.html" rel="next">
+<link href="./chap1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cosmic Rays</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">AstroParticles</a> 
+        <div class="sidebar-tools-main">
+    <a href="./AstroParticles.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cosmic Rays</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dark Matter</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-are-cosmic-rays-an-historic-perspective" id="toc-what-are-cosmic-rays-an-historic-perspective" class="nav-link active" data-scroll-target="#what-are-cosmic-rays-an-historic-perspective"><span class="header-section-number">2.1</span> What are Cosmic Rays? An historic perspective</a></li>
+  <li><a href="#the-cosmic-ray-spectrum" id="toc-the-cosmic-ray-spectrum" class="nav-link" data-scroll-target="#the-cosmic-ray-spectrum"><span class="header-section-number">2.2</span> The Cosmic Ray Spectrum</a>
+  <ul class="collapse">
+  <li><a href="#cosmic-ray-as-function-of" id="toc-cosmic-ray-as-function-of" class="nav-link" data-scroll-target="#cosmic-ray-as-function-of"><span class="header-section-number">2.2.1</span> Cosmic Ray as function of…</a></li>
+  <li><a href="#primary-cosmic-rays" id="toc-primary-cosmic-rays" class="nav-link" data-scroll-target="#primary-cosmic-rays"><span class="header-section-number">2.2.2</span> Primary Cosmic Rays</a></li>
+  <li><a href="#galactic-cosmic-ray-composition" id="toc-galactic-cosmic-ray-composition" class="nav-link" data-scroll-target="#galactic-cosmic-ray-composition"><span class="header-section-number">2.2.3</span> Galactic Cosmic Ray Composition</a></li>
+  <li><a href="#electrons" id="toc-electrons" class="nav-link" data-scroll-target="#electrons"><span class="header-section-number">2.2.4</span> Electrons</a></li>
+  <li><a href="#antimatter" id="toc-antimatter" class="nav-link" data-scroll-target="#antimatter"><span class="header-section-number">2.2.5</span> Antimatter</a></li>
+  </ul></li>
+  <li><a href="#galactic-cosmic-rays" id="toc-galactic-cosmic-rays" class="nav-link" data-scroll-target="#galactic-cosmic-rays"><span class="header-section-number">2.3</span> Galactic Cosmic Rays</a>
+  <ul class="collapse">
+  <li><a href="#propagation-of-cosmic-rays" id="toc-propagation-of-cosmic-rays" class="nav-link" data-scroll-target="#propagation-of-cosmic-rays"><span class="header-section-number">2.3.1</span> Propagation of Cosmic Rays</a></li>
+  <li><a href="#acceleration-of-galatic-cosmic-rays" id="toc-acceleration-of-galatic-cosmic-rays" class="nav-link" data-scroll-target="#acceleration-of-galatic-cosmic-rays"><span class="header-section-number">2.3.2</span> Acceleration of Galatic Cosmic Rays</a></li>
+  <li><a href="#sources-of-galactic-cosmic-rays" id="toc-sources-of-galactic-cosmic-rays" class="nav-link" data-scroll-target="#sources-of-galactic-cosmic-rays"><span class="header-section-number">2.3.3</span> Sources of Galactic Cosmic Rays</a></li>
+  </ul></li>
+  <li><a href="#extra-galactic-cosmic-rays-the-knee-and-beyond" id="toc-extra-galactic-cosmic-rays-the-knee-and-beyond" class="nav-link" data-scroll-target="#extra-galactic-cosmic-rays-the-knee-and-beyond"><span class="header-section-number">2.4</span> Extra-Galactic Cosmic Rays: The Knee and Beyond</a>
+  <ul class="collapse">
+  <li><a href="#sec-knee" id="toc-sec-knee" class="nav-link" data-scroll-target="#sec-knee"><span class="header-section-number">2.4.1</span> The Knee</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cosmic Rays</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-are-cosmic-rays-an-historic-perspective" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="what-are-cosmic-rays-an-historic-perspective"><span class="header-section-number">2.1</span> What are Cosmic Rays? An historic perspective</h2>
+<p>To explain cosmic rays, we need to go back about 100 years to the year 1912 when Victor Hess concluded a series of balloon flights equipped with an electroscope. He measured how ionization in the atmosphere increased as he moved away from the Earth’s surface. The origin of this ionization had to be some type of radiation, and since it increased with altitude, the origin couldn’t be terrestrial. In other words, there existed, and still exdists, radiation coming from outer space. For this milestone, Victor Hess is known as the discoverer of cosmic rays. However, it would be unfair to attribute the merit solely to Hess, as many physicists before him had already paved the way that would culminate in his famous balloon flights: Theodor Wulf, Karl Bergwitz, and Domenico Pacini, among others, laid the foundations for one of the branches of particle physics that would dominate the field for the next 40 years until the advent of the first particle accelerators in the early 1950s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Electroscope_showing_induction.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Electroscope charged by induction. Source: Sylvanus P. Thompson (1881) Elementary Lessons in Electricity and Magnetism, MacMillan, New York, p.16, fig.&nbsp;12"><img src="images/Electroscope_showing_induction.png" class="img-fluid figure-img" style="width:50.0%" alt="Electroscope charged by induction. Source: Sylvanus P. Thompson (1881) Elementary Lessons in Electricity and Magnetism, MacMillan, New York, p.16, fig.&nbsp;12"></a></p>
+<figcaption>Electroscope charged by induction. Source: Sylvanus P. Thompson (1881) Elementary Lessons in Electricity and Magnetism, MacMillan, New York, p.16, fig.&nbsp;12</figcaption>
+</figure>
+</div>
+<p>From the begining, cosmic rays were mysterious: What was their origin? What were these ionizing rays? During the 1920s, Bruno Rossi and Robert Millikan engaged in a lively debate on the nature of cosmic rays. Millikan proposed that cosmic rays were “ultra”-gamma rays, photons of very high energy created in the fusion of hydrogen in space. Rossi’s measurements, showing an East-West asymmetry in the intensity of cosmic rays, suggested instead that cosmic rays must be charged particles, disproving Millikan’s theories. There is a famous anecdote in which Rossi, during the introductory talk at a conference in Rome, said: &gt; Clearly, Millikan is resentful because a young man like me has shattered his beloved theory, so much so that from that moment on, he refuses to acknowledge my existence” A hundred years later, we know that Rossi was indeed correct. The majority, 90%, of cosmic rays are protons and other heavy nuclei. The ratio of nuclei faithfully follows the atomic abundance found in our Solar System, indicating that the origin of these particles is stellar. There are some exceptions; for example, lithium, beryllium, and boron are nuclei that we can find among cosmic rays in a proportion greater than in our environment. These nuclei are actually produced by the fragmentation of heavier ones, such as carbon, during their journey through space. Thus, the abundance ratio between carbon and boron provides information about how long carbon has been traveling through space.</p>
+<p>The spectrum, or the number of particles per unit area and time as a function of energy, has also been measured in great detail over the last 30 years thanks to the work of numerous experiments. The cosmic ray spectrum is remarkable in both its variation and energy range. The number of particles, or flux, covers 32 orders of magnitude, so we find that the least energetic particles reach Earth at a rate of one particle per square meter every second. On the other hand, the most energetic ones arrive at a rate of one particle per square kilometer per year. This is why physicists have had to develop various experimental techniques to measure the spectrum of cosmic rays in its entirety: from particle detectors sent into space on satellites or attached to the International Space Station, to experiments deployed on large surfaces of the Earth to detect the most energetic cosmic rays, such as the Pierre Auger Observatory covering an area of about 3000 km2 on the high plateau of the Pampa Amarilla in Malargüe, Argentina.</p>
+<p>But what makes cosmic rays truly fascinating is the amount of energy these particles can reach, far superior to what can be achieved today with the most powerful accelerator built by humans with the Large Hadron Collider (LHC) at the European Organization for Nuclear Research (CERN) in Geneva. The LHC is an underground ring with a length of 27 km located on the Franco-Swiss border near Geneva, Switzerland, using powerful magnets to accelerate protons to 99.99% of the speed of light. Despite the impressiveness of this experiment, if we were to accelerate particles to the energies of cosmic rays with the same technology, we would need an accelerator the size of the orbit of Mercury. The speed of cosmic rays is so high that the effects of space-time relativity are considerable. For example, although the radius of our Galaxy is about 100,000 light-years, due to the temporal contraction of special relativity, the most energetic cosmic rays would experience they will experience the journey in just 10 seconds. When cosmic rays reach Earth, they encounter 10 kilometers of atmosphere which, along with the Earth’s magnetic field, fortunately acts as a shield and protects us from radiation. However, when cosmic rays collide with atoms in the atmosphere, they trigger a shower of new particles. This shower is known as secondary cosmic rays, and in it, we can find a diverse array of new particles. This is why, for many years, the physics of cosmic rays was the only way for particle physicists to discover and study new particles. Thus, following in Hess’s footsteps, during the 1940s, many physicists moved from the laboratory to hot air balloons equipped with bubble chambers (a primitive version of a particle detector) to study this myriad of new particles. Among the new particles discovered were, for example, the first particle of antimatter: the positron, a positively charged electron, as well as the muon, with properties similar to the electron but with greater mass.</p>
+<p>But what is the origin of cosmic rays? Which sources in the Universe are capable of accelerating particles to such energies? That is the question that, despite 100 years since Victor Hess’s discovery, physicists have not been able to fully answer. The main reason is, however, easy to understand. Cosmic rays, being charged particles, are deflected by magnetic fields during their journey through the Universe. Both the Milky Way and intergalactic space are immersed in magnetic fields, so when cosmic rays reach Earth, their direction has little or nothing to do with the original direction, making it impossible to do <em>astronomy</em>. However, despite this disadvantage, we can deduce some things about their origin based on, for example, their energy. We know that low-energy cosmic rays must come from our own Galaxy because the magnetic fields of the Milky Way would confine them until they eventually interact with Earth. On the other end of the spectrum, extremely high-energy cosmic rays (UHECRs) must come from outside our own Galaxy since they are so energetic that the magnetic fields of their respective galaxies would not be able to retain them. The exact turning point in energy between these two origins is uncertain. So far, we have been unable to undoubtivously observe a cosmic-ray source. One of the main candidates for the source of galactic cosmic rays are supernova remnants. At the end of a star’s life cycle, it can explode, releasing a large amount of mass and energy. What remains behind can be a neutron star surrounded by all the remnants left from the original star; this is what is called a supernova remnant. It is more challenging to conceive a cosmic accelerator capable of accelerating particles up to the energy equivalent of a soccer ball kicked at 50 km/h, which corresponds to the energies of UHECRs. Here the list of candidates is considerably reduced because there are fewer objects in the Universe with the magnetic field and size sufficient to act as a large particle accelerator. The candidates are active galactic nuclei and gamma-ray bursts. Active galactic nuclei are the nuclei of galaxies with a supermassive black hole at their center. These nuclei show beams of particles in opposite directions that could function as large accelerators. On the other hand, gamma-ray bursts are the most violent events known in the Universe, and their origin and nature would warrant another chapter of this book. Lasting from a few seconds to a few minutes, these events can illuminate the entire sky by releasing their energy mainly in the form of very high-energy photons. But if cosmic rays never point to their source, how can we ever be sure that active galactic nuclei or gamma-ray bursts are the true sources of cosmic rays? To answer this puzzle, we need what has been dubbed as <em>multi-messenger astronomy</em>. Thanks to particle physics, we know that under the conditions in which, for example, a proton is accelerated to high energies, reactions with the surrounding matter can occur. These interactions would produce other particles such as very high-energy photons and neutrinos. Neutrinos are especially interesting because they are not only neutral and therefore travel in a straight line without being deflected by magnetic fields, but they are also weakly interacting particles, so unlike photons, they can traverse dense regions of the Universe without being absorbed. Future multi messenger experiments will be able to solve the mystery of cosmic rays.</p>
+</section>
+<section id="the-cosmic-ray-spectrum" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-cosmic-ray-spectrum"><span class="header-section-number">2.2</span> The Cosmic Ray Spectrum</h2>
+<p>Cosmic rays mostly protons accelerated at sites within the Galaxy.</p>
+<ul>
+<li>As they are charged they are deviated in galactic and inter-galactic <span class="math inline">\(\vec{B}\)</span> and solar and terrestrial magnetic fields. Directionality only possible for <span class="math inline">\(E \gt 10^{19}\)</span> eV.</li>
+<li>But interactions with CMB at <span class="math inline">\(E \sim 10^{19}\)</span> limit horizon tens or hundreds of Mpc.</li>
+<li>One century after discovery, origins of cosmic rays, in particular UHECR, remain <strong>unknown</strong></li>
+</ul>
+<div id="cell-fig-cr" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> crdb</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'axes.labelsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'legend.fontsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'figure.figsize'</span>: [<span class="dv">8</span>, <span class="dv">6</span>]})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.size'</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.size'</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'legend.frameon'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'lines.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> crdb.experimental <span class="im">import</span> convert_energy</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">7</span>))</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>elements <span class="op">=</span> (<span class="st">"H"</span>, <span class="st">"He"</span>, <span class="st">"C"</span>, <span class="st">"N"</span>, <span class="st">"O"</span>, <span class="st">"Si"</span>, <span class="st">"Fe"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>elements <span class="op">+=</span> (<span class="st">"1H-bar"</span>, <span class="st">"e-+e+"</span>, <span class="st">"AllParticles"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>tabs <span class="op">=</span> []</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> energy_type <span class="kw">in</span> (<span class="st">"EKN"</span>, <span class="st">"ETOT"</span>):</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        tab <span class="op">=</span> crdb.query(</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>            elem,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>            energy_type<span class="op">=</span>energy_type,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            energy_convert_level<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> energy_type <span class="op">==</span> <span class="st">"EKN"</span>:</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            tab <span class="op">=</span> convert_energy(tab, <span class="st">"EK"</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        tabs.append(tab)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> np.concatenate(tabs).view(np.recarray)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">#Lets ignore data without systematic errors</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (tab.err_sys[:, <span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (tab.err_sta[:, <span class="dv">0</span>] <span class="op">/</span> tab.value <span class="op">&lt;</span> <span class="fl">0.5</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[mask]</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="fl">1e-2</span>, <span class="fl">5e11</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    ma <span class="op">=</span> tab.quantity <span class="op">==</span> elem</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[ma]</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(t) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">"k"</span> <span class="cf">if</span> elem <span class="op">==</span> <span class="st">"AllParticles"</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    ax.errorbar(t.e, t.value, sta, fmt<span class="op">=</span><span class="st">"."</span>, color<span class="op">=</span>color)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$E_k$ d$J$/d$E_k$ [1/(m$^2$ s sr)]"</span>)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_k$ [GeV]"</span>)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>km <span class="op">=</span> <span class="fl">1e3</span> <span class="op">*</span> m</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>sr <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>hour <span class="op">=</span> <span class="dv">60</span><span class="op">**</span><span class="dv">2</span> <span class="op">*</span> s</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> <span class="dv">24</span> <span class="op">*</span> hour</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> <span class="dv">30</span> <span class="op">*</span> day</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">356</span> <span class="op">*</span> day</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>century <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> year</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> flux_ref <span class="kw">in</span> (</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1/m^2/s/sr"</span>,</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1/m^2/day/sr"</span>,</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1/m^2/year/sr"</span>,</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1/km^2/day/sr"</span>,</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1/km^2/century/sr"</span>,</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    ):</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>        v <span class="op">=</span> <span class="bu">eval</span>(flux_ref.replace(<span class="st">"^2"</span>, <span class="st">"**2"</span>))</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> flux_ref.replace(<span class="st">"^2"</span>, <span class="st">"$^2$"</span>)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>        ax.axhline(y<span class="op">=</span>v, color<span class="op">=</span><span class="st">"0.4"</span>, lw <span class="op">=</span> <span class="dv">2</span>)</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>        ax.text(</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>                <span class="dv">10</span><span class="op">**</span><span class="dv">11</span>,</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>                v <span class="op">*</span> <span class="fl">1.1</span>,</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>                label,</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>                va<span class="op">=</span><span class="st">"bottom"</span>,</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>                ha<span class="op">=</span><span class="st">"right"</span>,</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span><span class="st">"0.4"</span>,</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>                zorder<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-cr" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap2_files/figure-html/fig-cr-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="chap2_files/figure-html/fig-cr-output-1.png" width="492" height="609" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: All particle cosmic ray spectrum
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="cosmic-ray-as-function-of" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="cosmic-ray-as-function-of"><span class="header-section-number">2.2.1</span> Cosmic Ray as function of…</h3>
+<p>There are four different ways to describe the spectra of the cosmic ray radiation:</p>
+<ul>
+<li>By <strong>particles per unit rigidity</strong>. Propagation and deflection on magnetic fields depends on the rigidity.</li>
+<li>By <strong>particles per energy-per-nucleon</strong>. Fragmentation of nuclei propagating through the interstellar gas depends on energy per nucleon, since that quantity is approximately conserved when a nucleus breaks up on interaction with the gas.</li>
+<li>By <strong>nucleons per energy-per-nucleon</strong>. Production of secondary cosmic rays in the atmosphere depends on the intensity of nucleons per energy-per-nucleon, approximately independently of whether the incident nucleons are free protons or bound in nuclei.</li>
+<li>By <strong>particles per energy-per-nucleus</strong>. Air shower experiments that use the atmosphere as a calorimeter generally measure a quantity that is related to total energy per particle.</li>
+</ul>
+<p>For <span class="math inline">\(E &gt; 100\)</span> TeV the difference between the kinetic energy and the total energy is negligible and fluxes are obten presented as <strong>particle per energy-per-nucleus</strong>.</p>
+<p>For <span class="math inline">\(E &lt; 100\)</span> TeV the difference is important and it is common to present <strong>nucleons per kinetic energy-per-nucleon</strong>. This is the usual way of presenting the spectrum for nuclei with different masses: the conversion in energy per nucleus is not trivial.</p>
+</section>
+<section id="primary-cosmic-rays" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="primary-cosmic-rays"><span class="header-section-number">2.2.2</span> Primary Cosmic Rays</h3>
+<p>The energy spectrum of primary nucleons from GeV to ~ 100 TeV is given by:</p>
+<p><span class="math display">\[I(E) \approx 1.8 \times 10^4 \left(\frac{E}{1\; \mathrm{GeV}}\right)^{-2.7} \frac{\mathrm{nucleons}}{\mathrm{m}^2\; \mathrm{s\;sr\;GeV}}\]</span></p>
+<p>Where <span class="math inline">\(\alpha \equiv 1+ \gamma = 2.7\)</span> is the differential spectral index and <span class="math inline">\(\gamma\)</span> the integral spectral index. The composition of the bulk of cosmic rays are: 80% protons, 15% He, and the rest are heavier nuclei: C, O, Fe and other ionized nuclei and electrons (2%)</p>
+<div id="cell-fig-primaries" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>elements <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"H"</span>: <span class="dv">0</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"He"</span>: <span class="op">-</span><span class="dv">2</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"C"</span>: <span class="op">-</span><span class="dv">4</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"O"</span>: <span class="op">-</span><span class="dv">6</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ne"</span>: <span class="op">-</span><span class="dv">8</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mg"</span>: <span class="op">-</span><span class="dv">10</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Si"</span>: <span class="op">-</span><span class="dv">12</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"S"</span>: <span class="op">-</span><span class="dv">14</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ar"</span>: <span class="op">-</span><span class="dv">16</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ca"</span>: <span class="op">-</span><span class="dv">18</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Fe"</span>: <span class="op">-</span><span class="dv">21</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>xlim <span class="op">=</span> <span class="fl">1e-2</span>, <span class="fl">1e6</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>tabs <span class="op">=</span> []</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    tabs.append(crdb.query(elem, energy_type<span class="op">=</span><span class="st">"EKN"</span>))</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> np.concatenate(tabs).view(np.recarray)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># use our energy range</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[(xlim[<span class="dv">0</span>] <span class="op">&lt;</span> tab.e) <span class="op">&amp;</span> (tab.e <span class="op">&lt;</span> xlim[<span class="dv">1</span>])]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># we don't want upper limits</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[<span class="op">~</span>tab.is_upper_limit]</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># statistical errors less than 100 %</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[np.mean(tab.err_sta, axis<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> tab.value <span class="op">&lt;</span> <span class="dv">1</span>]</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># skip balloon data</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> crdb.experiment_masks(tab)[<span class="st">"Balloon"</span>]</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[<span class="op">~</span>mask]</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>,figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">9</span>))</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>masks <span class="op">=</span> crdb.experiment_masks(tab)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> exp <span class="kw">in</span> <span class="bu">sorted</span>(masks):</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[masks[exp]]</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    first <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    marker <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem, fexp <span class="kw">in</span> elements.items():</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> <span class="dv">10</span><span class="op">**</span>fexp</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        t2 <span class="op">=</span> t[t.quantity <span class="op">==</span> elem]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(t2) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        sta <span class="op">=</span> np.transpose(t2.err_sta)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        l <span class="op">=</span> ax.errorbar(t2.e, t2.value<span class="op">*</span>f, sta<span class="op">*</span>f, fmt<span class="op">=</span><span class="st">"."</span>, color<span class="op">=</span>color, label <span class="op">=</span> exp <span class="cf">if</span> first <span class="cf">else</span> <span class="va">None</span>)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        first <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        color <span class="op">=</span> l.get_children()[<span class="dv">0</span>].get_color()</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem, fexp <span class="kw">in</span> elements.items():</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[tab.quantity <span class="op">==</span> elem]</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    ymean <span class="op">=</span> np.exp(np.mean(np.log(t[t.e <span class="op">&lt;</span> xlim[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">100</span>].value))) <span class="op">*</span> <span class="dv">10</span><span class="op">**</span>fexp</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>elem<span class="sc">}</span><span class="ch">\n</span><span class="ss">$</span><span class="ch">\\</span><span class="ss">times 10^</span><span class="ch">{{</span><span class="sc">{</span>fexp<span class="sc">}</span><span class="ch">}}</span><span class="ss">$"</span> <span class="cf">if</span> fexp <span class="op">!=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="ss">f"</span><span class="sc">{</span>elem<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">2e-3</span>, ymean, s, va<span class="op">=</span><span class="st">"center"</span>, ha<span class="op">=</span><span class="st">"center"</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>ax.grid(color<span class="op">=</span><span class="st">"0.9"</span>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(xlim[<span class="dv">0</span>]<span class="op">/</span><span class="dv">30</span>, xlim[<span class="dv">1</span>])</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="st">"xx-small"</span>, frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, ncol<span class="op">=</span><span class="dv">2</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.legend()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-primaries" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-primaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap2_files/figure-html/fig-primaries-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="chap2_files/figure-html/fig-primaries-output-1.png" width="680" height="722" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-primaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Cosmic Ray spectrum per element
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="galactic-cosmic-ray-composition" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="galactic-cosmic-ray-composition"><span class="header-section-number">2.2.3</span> Galactic Cosmic Ray Composition</h3>
+<ul>
+<li>The chemical composition of cosmic rays is similar to the abundances of the elements in the Sun indicating an <strong>stellar origin of cosmic rays</strong>.</li>
+<li>However there are some differences: Li, Be, B are secondary nuclei produced in the spallation of heavier elements (C and O). Also Mn, V, and Sc come from the fragmentation of Fe. These are usually referred as <strong>secondary cosmic rays</strong>.</li>
+<li>The see-saw effect is due to the fact that nuclei with odd Z and/or A have weaker bounds and are less frequent products of thermonuclear reactions.</li>
+</ul>
+<p>By measuring the primary-to-secondary ratio we can infer the propagation and diffusion processes of CR.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/composition_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Cosmic ray composition. Source: CRDB"><img src="images/composition_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Cosmic ray composition. Source: CRDB"></a></p>
+<figcaption>Cosmic ray composition. Source: CRDB</figcaption>
+</figure>
+</div>
+</section>
+<section id="electrons" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="electrons"><span class="header-section-number">2.2.4</span> Electrons</h3>
+<p>The spectrum of electrons is expected to steepen because the radioactive energy loss in the Galaxy. Electrons will lose energy primarly due to synchrotron radiation and Compton scattering.</p>
+<div id="cell-fig-cr-electrons" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> crdb.query(<span class="st">"e-+e+"</span>, energy_type<span class="op">=</span><span class="st">"EK"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>xlim <span class="op">=</span> <span class="dv">1</span>, <span class="fl">1e4</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[(xlim[<span class="dv">0</span>] <span class="op">&lt;</span> tab.e) <span class="op">&amp;</span> (tab.e <span class="op">&lt;</span> xlim[<span class="dv">1</span>])]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>exclude_exp <span class="op">=</span> (<span class="st">"Balloon"</span>, <span class="st">"LEE"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (exp, mask) <span class="kw">in</span> <span class="bu">enumerate</span>(crdb.experiment_masks(tab).items()):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[mask]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> t.e<span class="op">**</span><span class="dv">3</span> <span class="co">#We plot Flux*E**3</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> exp <span class="kw">in</span> exclude_exp: <span class="co"># Let's exclide ballon experiments</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    ax.errorbar(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        t.e, t.value<span class="op">*</span>f, sta<span class="op">*</span>f, fmt<span class="op">=</span><span class="st">"."</span>, label<span class="op">=</span>exp</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">*</span>xlim)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">1</span>, <span class="fl">8e2</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"E$_k$ [GeV]"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"E$_k^3$ dJ/dE$_k$ [GeV$^2$ / (m$^2$ s sr)]"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="st">"xx-small"</span>, ncol<span class="op">=</span><span class="dv">3</span>, frameon<span class="op">=</span><span class="va">False</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax.grid(color<span class="op">=</span><span class="st">"0.9"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="st">"xx-small"</span>, frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, ncol<span class="op">=</span><span class="dv">2</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-cr-electrons" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cr-electrons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap2_files/figure-html/fig-cr-electrons-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="chap2_files/figure-html/fig-cr-electrons-output-1.png" width="689" height="379" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cr-electrons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Spectrum of <span class="math inline">\(e^-+e^+\)</span> cosmic rays
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The plot above shows the (<span class="math inline">\(e^− + e^+\)</span>) spectrum, only PAMELA data refers only to <span class="math inline">\(e^−\)</span>. As can be seen there are several features worth noting:</p>
+<ul>
+<li>The proton spectrum is also shown multiplied by 0.01, which means that electrons contribute only 1% to the CR.</li>
+<li>For <span class="math inline">\(E \leq\)</span> 20 GeV the spectra is dominated by solar modulations and somehow follows the proton spectrum.</li>
+<li>At about 5 GeV there is a change in the spectrum. Sometimes identified as the energy when electrons start too loose energy, and therefore the spectrum becomes steeper.</li>
+<li>For <span class="math inline">\(E &gt;\)</span> 50 GeV spectra is well fitted with a power law of <span class="math inline">\(\sim 3.1\)</span> for <span class="math inline">\(e^−\)</span> and <span class="math inline">\(\sim 2.7\)</span> for <span class="math inline">\(e^+\)</span>. Since <span class="math inline">\(e^−\)</span> domimate over <span class="math inline">\(e^+\)</span> the overall spectrum (<span class="math inline">\(e^− + e^+\)</span>) also follows a spectral index of <span class="math inline">\(\sim 3\)</span>. Electron spectrum is much steeper than the proton one.</li>
+<li>The sum spectrum (<span class="math inline">\(e^− + e^+\)</span>) has a sharp break at <span class="math inline">\(E \simeq\)</span> 1 TeV, however this is dominated by the <span class="math inline">\(e^−\)</span> with an estimate of a ratio of 3 − 4 in <span class="math inline">\(e^−/e^+\)</span>.</li>
+<li>There is an excess measured by ATIC at <span class="math inline">\(\sim 700\)</span> GeV. The existance of that feature has, however, never been confirmed by other experiments (Fermi, DAMPE, HESS).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Assuming the electron flux is only 1% of the protons. Is it the Earth positive charged-up?</p>
+</div>
+</div>
+</section>
+<section id="antimatter" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="antimatter"><span class="header-section-number">2.2.5</span> Antimatter</h3>
+<ul>
+<li>As antimatter is rare in the Universe today, all antimatter we observe are by-product of particle interactions such as Cosmic Rays interacting with the interstellar gas.</li>
+<li>The PAMELA and AMS-02 satellite experiments measured the positron to electron ratio to increase above 10 GeV instead of the expected decrease at higher energy.</li>
+</ul>
+<div id="cell-fig-positrons" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">5</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> crdb.query(<span class="st">"e+/e-+e+"</span>, energy_type<span class="op">=</span><span class="st">"EK"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>xlim <span class="op">=</span> <span class="fl">0.8</span>, <span class="fl">1e3</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[(xlim[<span class="dv">0</span>] <span class="op">&lt;</span> tab.e) <span class="op">&amp;</span> (tab.e <span class="op">&lt;</span> xlim[<span class="dv">1</span>])]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>experiments <span class="op">=</span> (<span class="st">"AMS01"</span>, <span class="st">"AMS02"</span>, <span class="st">"PAMELA"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (exp, mask) <span class="kw">in</span> <span class="bu">enumerate</span>(crdb.experiment_masks(tab).items()):</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[mask]</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> exp <span class="kw">in</span> experiments:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        ax.errorbar(t.e, t.value, sta, fmt<span class="op">=</span><span class="st">"."</span>, label<span class="op">=</span>exp)    </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">*</span>xlim)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="fl">0.3</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>ax.grid(color<span class="op">=</span><span class="st">"0.4"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_k$ [GeV]"</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$\frac{e^+}{e^-+e^+}$"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    ncol<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    loc<span class="op">=</span><span class="st">"upper left"</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>ax.semilogx()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-positrons" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-positrons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap2_files/figure-html/fig-positrons-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="chap2_files/figure-html/fig-positrons-output-1.png" width="582" height="461" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-positrons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Positron excess
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This excess might hint to to contributions from individual nearby sources (supernova remnants or pulsars) emerging above a background suppressed at high energy by synchrotron losses.</p>
+</section>
+</section>
+<section id="galactic-cosmic-rays" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="galactic-cosmic-rays"><span class="header-section-number">2.3</span> Galactic Cosmic Rays</h2>
+<section id="propagation-of-cosmic-rays" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="propagation-of-cosmic-rays"><span class="header-section-number">2.3.1</span> Propagation of Cosmic Rays</h3>
+<p>One trivial argument to discriminate between a Galacic or extra-Galactic origin of the origin of cosmic rays is to check whether or not the larmor radius, <span class="math inline">\(r_L\)</span>, of cosmic ray particles is of the order of the size of the Galaxy. As we showed, we can express the larmor radius as:</p>
+<p><span class="math display">\[r_L \simeq  1 \;\mathrm{kpc} \left(\frac{E}{10^{18}\;\mathrm{eV}}\right)\left(\frac{1}{Z}\right)\left(\frac{\mu\mathrm{G}}{B}\right)\]</span></p>
+<p>and so the maximum energy to contain cosmic rays in the Galaxy is:</p>
+<p><span class="math display">\[E &lt; 10^{18}\;\mathrm{eV} \left(\frac{h}{1\;\mathrm{kpc}}\right)\left(\frac{\mu\mathrm{G}}{B}\right)\]</span></p>
+<p>There are many uncertainties in these numbers but we can assume that the size of the Galactic halo is <span class="math inline">\(h \sim 1 - 10\; \mathrm{kpc}\)</span>, and the magnetic field in the halo is about <span class="math inline">\(B \sim 0.1 - 10 \;\mu\mathrm{G}\)</span>. Putting this number gives maximum energy of <span class="math inline">\(E_{max} \sim 10^{17} - 10^{20} \;\mathrm{eV}\)</span>. Given this result we can assume that lower energy cosmic rays come from own Galaxy, otherwise they would have escaped.</p>
+<section id="cosmic-ray-interactions" class="level4" data-number="2.3.1.1">
+<h4 data-number="2.3.1.1" class="anchored" data-anchor-id="cosmic-ray-interactions"><span class="header-section-number">2.3.1.1</span> Cosmic-ray Interactions</h4>
+<p>Since the bluck of cosmic-ray particles are expected come from the Galaxy we can now evaluate where and how they will interact during their travel. There are two chiefly process in which a cosmic-ray particle can interact:</p>
+<ul>
+<li><strong>Coulomb collissions:</strong> They occur when a particle interacts with another particle via electric fields.
+<ul>
+<li>The Coulomb cross-section for a 1 GeV particle is <span class="math inline">\(10^{-30} \; \mathrm{cm}^2\)</span>.</li>
+<li>For 1 GeV cosmic-ray propating in the ISM (<span class="math inline">\(n \sim 1 \; \mathrm{cm}^{-3}\)</span>) the mean Coulomb interacion length rate is <span class="math inline">\(1/n\sigma \sim 324100 \; \mathrm{Mpc}\)</span> which is much larger than the Galaxy size. Therefore <strong>coulomb collisions can be neglected.</strong></li>
+</ul></li>
+<li><strong>Spallations processes:</strong> It occurs when C, N, O, Fe nuclei impact on intestellar hydrogen. The large nuclei is broken up into smaller nuclei. A clear indication of a spallation comes precisely from the composition comparison with stellar matter.</li>
+</ul>
+<div id="12ded791" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">1e-30</span> <span class="co">#in cm2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1</span> <span class="co"># in cm-3</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="fl">1.</span><span class="op">/</span>(n<span class="op">*</span>sigma) <span class="op">*</span> <span class="fl">3.241e-25</span> <span class="co"># in Mpc</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"The interaction length for Coulomb collisions is </span><span class="sc">{</span>l<span class="sc">:.2}</span><span class="ss"> Mpc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The interaction length for Coulomb collisions is 3.2e+05 Mpc</code></pre>
+</div>
+</div>
+</section>
+<section id="the-interstellar-medium-ism" class="level4" data-number="2.3.1.2">
+<h4 data-number="2.3.1.2" class="anchored" data-anchor-id="the-interstellar-medium-ism"><span class="header-section-number">2.3.1.2</span> The Interstellar Medium (ISM)</h4>
+<p>Given the low density of the Galactic halo it is clear that the spallation processes must occur in the Galactic Disk. The Galactic Disk is mostly populated by the Interstellar Medium or ISM. It is mostly composed by Hydrogen in 3 different phases:</p>
+<ul>
+<li><p>Molecular Gas. This phase is the more clumpsy as they gathered in molecular clouds that can reach densities of <span class="math inline">\(10^{6} \; \mathrm{cm}^{-3}\)</span> which is still very low for our atmosphere standards (14 lower). It is composed of hydrogene in molecular form, <span class="math inline">\(\mathrm{H}_2\)</span>, <span class="math inline">\(\mathrm{CO}\)</span>. Sometimes called stars nurseries they are stars forming regions.</p></li>
+<li><p>Atomic Gas. Made up of neutral atomic Hydrogen (HI in astronomical nomenclature). The maps tracing the <span class="math inline">\(\mathrm{HI}\)</span> that is organized in a spiral pattern, like <span class="math inline">\(\mathrm{H}_2\)</span>, and also its structure is quite complex, with overdensities and holes.</p></li>
+<li><p>Ionized Gas. Is ionized Hydrogen or <span class="math inline">\(\mathrm{HII}\)</span>.</p></li>
+</ul>
+<p>The overall density of the ISM is <span class="math inline">\(\sim 0.1-1 \;\mathrm{cm}^{-3}\)</span>. The interstellar gas is not a an static gas, but rather is subject to a turbulent motion.</p>
+</section>
+<section id="the-leaky-box-model" class="level4" data-number="2.3.1.3">
+<h4 data-number="2.3.1.3" class="anchored" data-anchor-id="the-leaky-box-model"><span class="header-section-number">2.3.1.3</span> The Leaky Box Model</h4>
+<p>The <em>Leaky Box model</em> is a very simple model used to describe cosmic-ray confinement. In this simplified phenomenological picture CRs are assumed be accelerated in the galactic plane and to propagate freely within a cylindrical box of size <span class="math inline">\(H\)</span> and radius <span class="math inline">\(R\)</span> (see <a href="#fig-leakybox" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-leakybox</span></a>) and reflected at the boundaries; the loss of particles is parametrized assuming the existence of a non-zero probability of escape for each encounter with the boundary (Poisson process).</p>
+<div id="fig-leakybox" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-leakybox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/leakybox.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7"><img src="images/leakybox.jpg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-leakybox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Representation of the <em>leaky box</em> model of the Galaxy
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="primary-to-secondary-ratios" class="level4" data-number="2.3.1.4">
+<h4 data-number="2.3.1.4" class="anchored" data-anchor-id="primary-to-secondary-ratios"><span class="header-section-number">2.3.1.4</span> Primary-to-Secondary Ratios</h4>
+<p>Since we know the partial cross-section of spallation processes we can use the secondary-to-primary abundance ratios to infer the gas column density traversed by the average cosmic ray.</p>
+<p>Let us perform a simply estimate of the <em>Boron-to-Carbon ratio</em>. Boron is chiefly produced by Carbon and Oxygen with approximately conserved kinetic energy per nucleon (see <em>Superposition principle</em>), so we can relate the <em>Boron source production rate</em>, <span class="math inline">\(Q_B(E)\)</span> to the differential density of Carbon by this equation:</p>
+<p><span class="math display">\[Q_B(E) \simeq n_{H} \beta c \sigma_{\rightarrow B} N_C\]</span></p>
+<p>where, <span class="math inline">\(n_H\)</span> denotes the average interstellar gas number density and <span class="math inline">\(N_C\)</span> is the Carbon density and <span class="math inline">\(\beta c\)</span> is the Carbon velocity and <span class="math inline">\(\sigma_{\rightarrow B}\)</span> is the spallation cross-section of Carbon into Boron.</p>
+<p>The Boron density is related to the production rate by the lifetime of Boron in the Galaxy, <span class="math inline">\(\tau\)</span>, before it escapes or losses itself energy by spallation:</p>
+<p><span class="math display">\[Q_B = \dot{N}_B = \frac{N_B}{\tau}\]</span></p>
+<p>where we used <span class="math inline">\(\dot{N}_B = \frac{N_B}{\tau}\)</span> assuming a constant per unit time lifetime (see next Leaky Box model). So we can write:</p>
+<p><span class="math display">\[\frac{N_B}{N_C} \simeq n_{H} \beta c \sigma_{\rightarrow B}\tau\]</span></p>
+<section id="boron-to-carbon-ratio" class="level5" data-number="2.3.1.4.1">
+<h5 data-number="2.3.1.4.1" class="anchored" data-anchor-id="boron-to-carbon-ratio"><span class="header-section-number">2.3.1.4.1</span> Boron-to-Carbon Ratio</h5>
+<p>The plot below represents the latest measurements from PAMELA and AMS satellites of the Boron-to-Carbon ratio. The decrease in energy of the Boron-to-Carbon ratio suggests that high energy CR spend less time than the low energy ones in the Galaxy before escaping.</p>
+<div id="cell-fig-cr-all" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> crdb.query(<span class="st">"B/C"</span>, energy_type<span class="op">=</span><span class="st">"EKN"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># select only entries with systematic uncertainties</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> tab.err_sys[:, <span class="dv">1</span>] <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[mask]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">5</span>))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's plot AMS02 only</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (exp, mask) <span class="kw">in</span> <span class="bu">enumerate</span>(crdb.experiment_masks(tab).items()):</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[mask]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    ax.errorbar(t.e, t.value, sta, fmt<span class="op">=</span><span class="st">"."</span>, label<span class="op">=</span>exp)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol<span class="op">=</span><span class="dv">2</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$E_</span><span class="ch">\\</span><span class="st">mathrm</span><span class="sc">{kin}</span><span class="st"> / A$ / GeV"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"B/C"</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-cr-all" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cr-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap2_files/figure-html/fig-cr-all-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8"><img src="chap2_files/figure-html/fig-cr-all-output-1.png" width="551" height="453" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cr-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: B/C ratio
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial I:  Fit the B/C spectrum of AMS-02 data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial I: Fit the B/C spectrum of AMS-02 data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are going to retrive the data and fit it. We are going to use python to download the data</p>
+<div id="cell-BC" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> crdb.query(<span class="st">"B/C"</span>, energy_type<span class="op">=</span><span class="st">"EKN"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># select only entries with systematic uncertainties</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> tab.err_sys[:, <span class="dv">1</span>] <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[mask]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's plot AMS02 only</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (exp, mask) <span class="kw">in</span> <span class="bu">enumerate</span>(crdb.experiment_masks(tab).items()):</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> exp <span class="op">==</span> <span class="st">"AMS02"</span>:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> tab[mask]</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        ax.errorbar(t.e, t.value, sta, fmt<span class="op">=</span><span class="st">"."</span>, label<span class="op">=</span>exp)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Let's use a simple linear model in log-log</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> model(x, a, b):</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a  <span class="op">+</span> b <span class="op">*</span> x</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#We only fit in the linear part, ie when E &gt; 10 GeV and we ignore statistical errors. </span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> t.e <span class="op">&gt;</span> <span class="dv">10</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>popt, pcov <span class="op">=</span> curve_fit(model, np.log10(t.e[mask]), np.log10(t.value[mask]))</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>ax.plot(t.e[mask], np.power(<span class="dv">10</span>, model(np.log10(t.e[mask]), popt[<span class="dv">0</span>], popt[<span class="dv">1</span>])),  linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol<span class="op">=</span><span class="dv">2</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$E_</span><span class="ch">\\</span><span class="st">mathrm</span><span class="sc">{kin}</span><span class="st"> / A$ / GeV"</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"B/C"</span>)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The values are </span><span class="ch">\u03B1</span><span class="ss"> = </span><span class="sc">{</span><span class="dv">10</span><span class="op">**</span>popt[<span class="dv">0</span>]<span class="sc">:.2}</span><span class="ss"> and </span><span class="ch">\u03B2</span><span class="ss"> = </span><span class="sc">{</span>popt[<span class="dv">1</span>]<span class="sc">:.2}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The values are α = 0.44 and β = -0.34</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="chap2_files/figure-html/bc-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Boron to Carbon ratio"><img src="chap2_files/figure-html/bc-output-2.png" width="550" height="379" alt="Boron to Carbon ratio" class="figure-img"></a></p>
+<figcaption>Boron to Carbon ratio</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Above about 10 GeV/nucleon the <strong>experimental data</strong> can be fitted to a test function, therefore the Boron-to-Carbon ratio can be expressed as:</p>
+<p><span class="math display">\[\frac{N_B}{N_C} = n_{H}\beta c \sigma_{f,B} \tau  =0.4 \left(\frac{E}{\mathrm{GeV}}\right)^{-0.3}\]</span></p>
+<p>For energies above 10 GeV/nucleon we can approximate <span class="math inline">\(\beta \sim 1\)</span>, which leads, using the values of the cross-section, to a life time gas density of:</p>
+<p><span class="math display">\[n_H \tau \simeq 10^{14}\left(\frac{E}{\mathrm{GeV}}\right)^{-0.3} \; \mathrm{s}\;\mathrm{cm}^{-3}\]</span></p>
+</section>
+<section id="boron-lifetime" class="level5" data-number="2.3.1.4.2">
+<h5 data-number="2.3.1.4.2" class="anchored" data-anchor-id="boron-lifetime"><span class="header-section-number">2.3.1.4.2</span> Boron Lifetime</h5>
+<p>But what is this Boron lifetime? The lifetime <span class="math inline">\(\tau\)</span> for Boron includes the <strong>catastrophic loss</strong> time due to the partial fragmentation of Boron, <span class="math inline">\(\tau_{f,B}\)</span> and the <strong>escape probability</strong> from the Galactic confinement volume, <span class="math inline">\(T_{esc}\)</span>. The fragmentation cross section is <span class="math inline">\(\sigma_{f,B} \approx 250\)</span> mbarn so we find that:</p>
+<p><span class="math display">\[n_H \tau_{f,B} = \frac{n_H}{n_H \beta c \sigma_{f,B}} \simeq 1.33 \times 10^{14}\; \mathrm{s}\;\mathrm{cm}^{-3}\]</span></p>
+<p>which is a good match with the loss time bound at <span class="math inline">\(\sim\)</span> 1 GeV but is larger at higher energies and does not depend on energy. For example at 1 TeV it is an order of magnitude larger:</p>
+<p><span class="math display">\[ n_H\tau(1\; \mathrm{TeV}) \simeq 10^{14} 1000^{-0.3} \sim 1.3 \times 10^{13} \mathrm{\;s\;cm}^{-3}\]</span></p>
+</section>
+<section id="borom-escape" class="level5" data-number="2.3.1.4.3">
+<h5 data-number="2.3.1.4.3" class="anchored" data-anchor-id="borom-escape"><span class="header-section-number">2.3.1.4.3</span> Borom Escape</h5>
+<p>It could be that Borom escape the leaky box, but that time will be <span class="math inline">\(\tau_{esc} = \frac{H}{c}\)</span> which will be roughly:</p>
+<p><span class="math display">\[\tau_{esc} = \frac{300\;\mathrm{pc}}{c} \simeq 3\times 10^{10}\; \mathrm{s}\]</span></p>
+<p>which is too small compared to the effective lifetime found. This seems to indicate that CR do not travel in straight lines. Let’s assume that the overall process is a convination of both the borom fragmentation and another process with a lifetime <span class="math inline">\(T\)</span>. By summing the inverse of these processes (being exponential processes):</p>
+<p><span class="math display">\[\tau^{-1} =  n_H \beta c \sigma_{f,B} + T^{-1}\]</span></p>
+<p>and solving for <span class="math inline">\(T\)</span> we have that:</p>
+<p><span class="math display">\[n_H T = \frac{n_H}{\frac{1}{\tau} - \frac{1}{\tau_{f,B}}} \simeq \frac{10^{14} \; \rm{s}\;\rm{cm}^{-3}}{\left(\frac{E}{\mathrm{GeV}}\right)^{-0.3} -0.7} \simeq 10^{14}\left(\frac{E}{\mathrm{GeV}}\right)^{-0.55} \rm{s}\;\rm{cm}^{-3}\]</span></p>
+<p>There no other physical loss process for Boron, so <span class="math inline">\(T\)</span> really must be the escape of the galactic confinement (leaky box). But if the box has a size <span class="math inline">\(H\)</span>, <span class="math inline">\(T_{esc}\)</span> will be H/c which is the time required by CR generated in the Galactic plane to escape the box of height <span class="math inline">\(H\)</span>! However we know that <span class="math inline">\(T \gg H/c\)</span>. So there must be something else confining the CR in the galaxy… what could it be?</p>
+</section>
+</section>
+<section id="dynamics-of-charge-particles-in-magnetic-fields." class="level4" data-number="2.3.1.5">
+<h4 data-number="2.3.1.5" class="anchored" data-anchor-id="dynamics-of-charge-particles-in-magnetic-fields."><span class="header-section-number">2.3.1.5</span> Dynamics of Charge Particles in Magnetic Fields.</h4>
+<p>Before solving the problem what process in the Galaxy is confining the cosmic-rays, let’s review a bit the dynamics of charge particles in magnetic fields.</p>
+<p>Let’s assume the simplest case of a test particle or mass <span class="math inline">\(m_0\)</span> and charge <span class="math inline">\(Ze\)</span> and lorentz factor <span class="math inline">\(\gamma\)</span> in an uniform static magnetic field, <span class="math inline">\({\mathbf B}\)</span>.</p>
+<p><span class="math display">\[\frac{d}{dt}(\gamma m_0 {\mathbf v}) = Ze ( {\mathbf v} \times {\mathbf B})\]</span></p>
+<p>knowing the expression of <span class="math inline">\(\gamma\)</span> we derive this:</p>
+<p><span class="math display">\[
+m_0\frac{d}{dt}(\gamma \mathbf{v}) = m_0\gamma\frac{d {\mathbf v}}{dt} + m_0\gamma^3 {\mathbf v}\frac{ \mathbf{v} \cdot {\mathbf a}}{c^2}\]</span></p>
+<p>In a magnetic field the acceleration is always perpendicular to <span class="math inline">\({\mathbf v}\)</span> so <span class="math inline">\({\mathbf v\cdot a} = 0\)</span> resulting in:</p>
+<p><span class="math display">\[m_0\gamma\frac{d{\mathbf v}}{dt} =  Ze ( {\mathbf v} \times {\mathbf B})\]</span></p>
+<p>This equation tell us that there is no change in the <span class="math inline">\(v_{\parallel}\)</span> the parallel component of the velocity and the aceleration is only perpendicular to the magnetic field direction, <span class="math inline">\(v_{\perp}\)</span>. Beacuse <span class="math inline">\({\mathbf B}\)</span> is constant this results in a spiral motion around the magnetic field. Now we are going to test what happens if the magnetic field is not uniform.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial II:  Motion of a charge particle in a slowly changing magnetic field">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial II: Motion of a charge particle in a slowly changing magnetic field
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="6e37788e" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">1e-3</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>t0 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(t0, t2, <span class="bu">int</span>((t2 <span class="op">-</span> t0)<span class="op">/</span>dt))</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(t)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.zeros((n,<span class="dv">3</span>))</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.zeros((n,<span class="dv">3</span>))</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Initial conditions</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>r[<span class="dv">0</span>] <span class="op">=</span> [<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>]</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>v[<span class="dv">0</span>] <span class="op">=</span> [<span class="fl">2.0</span>, <span class="fl">0.0</span>, <span class="fl">3.0</span>]</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#B = array([0.0, 0.0, 5.0])</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> np.zeros((n,<span class="dv">3</span>))</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>B[<span class="dv">0</span>] <span class="op">=</span> np.array([<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">4.0</span>])</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>dB <span class="op">=</span> np.array([<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">5e-3</span>])</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    a   <span class="op">=</span> q<span class="op">/</span>m<span class="op">*</span> np.cross(v[i],B[i]) </span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    v[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> v[i] <span class="op">+</span> a<span class="op">*</span>dt</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    r[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> r[i] <span class="op">+</span> v[i<span class="op">+</span><span class="dv">1</span>]<span class="op">*</span>dt</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    B[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> B[i] <span class="op">+</span> dB</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">8</span>))</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>ax.plot(r[:,<span class="dv">0</span>], r[:,<span class="dv">1</span>], r[:,<span class="dv">2</span>])</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">"$z$"</span>)</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="chap2_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="chap2_files/figure-html/cell-9-output-1.png" width="629" height="613" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scattering-in-plasma" class="level4" data-number="2.3.1.6">
+<h4 data-number="2.3.1.6" class="anchored" data-anchor-id="scattering-in-plasma"><span class="header-section-number">2.3.1.6</span> Scattering in Plasma</h4>
+<p>The picture above holds while the gyroradius is larger or smaller than the variation of the magnetic field. In the first case when <span class="math inline">\(R_g \ll (\Delta B)\)</span> the charge particle will follow the substructure of the magnetic field. In the second case <span class="math inline">\(R_g \gg (\Delta B)\)</span> the magnetic field irregularities are transparent to the particle. However when <span class="math inline">\(R_g \approx (\Delta B)\)</span> then the particle <em>sees</em> the magnetic irregularities. In this case the particle will scattered almost inelastically in this irregularities. The picture of a test-particle moving in a magnetic field is a simplistic one. In reallity cosmic ray particles propagate in collisionless, high-conductive, magnetized plasma consisting mainly of protons and electrons and very often the energy density of cosmic ray particles is comparable to that of the background medium. As a consequence of that, the electromagnetic field in the system is severely influenced by the cosmic ray particles and the description is more complex than the motion of a test charged particle in a fixed electromagnetic field. This will generate irregularities in the magnetic field. The <strong>irregularities in the Galactic magnetic field</strong> are responsible for the <strong>diffusive propagation</strong> of cosmic rays.</p>
+</section>
+<section id="diffusion-of-cosmic-rays" class="level4" data-number="2.3.1.7">
+<h4 data-number="2.3.1.7" class="anchored" data-anchor-id="diffusion-of-cosmic-rays"><span class="header-section-number">2.3.1.7</span> Diffusion of Cosmic Rays</h4>
+<p>The results above leads to think that CR experience diffusion in the galaxy. The equation that we used to relate the Boron production rate by the Carbon spallation process can be seen as a diffuse equation.</p>
+<p>In diffusion the continuity equation states that the variation of the density <span class="math inline">\(N\)</span> in time is given by its transfer of flux in area plus the source contribution:</p>
+<p><span class="math display">\[\frac{\partial N}{\partial t}= - \nabla \cdot \mathbf{J} + Q\]</span></p>
+<p>where <span class="math inline">\(Q\)</span> is intensity of any local source of this quantity and <span class="math inline">\(\mathbf{J}\)</span> is the flux.</p>
+<p><strong>Fick’s first law:</strong> the diffusion flux is proportional to the negative of the concentration gradient in an isotropic medium:</p>
+<p><span class="math display">\[\begin{aligned}
+\mathbf{J}&amp;=-D \nabla N \\
+J_i&amp;=-D \frac{\partial N}{\partial x_i}
+\end{aligned}\]</span></p>
+<p>where the proporcionality constant, <span class="math inline">\(D\)</span>, is called diffusion coefficient. Which leads to the diffusion equation of:</p>
+<p><span class="math display">\[\frac{\partial N}{\partial t} =  D\Delta N + Q \]</span></p>
+<p>where <span class="math inline">\(\Delta\)</span> (or <span class="math inline">\(\nabla^2\)</span>) is the Laplace operator.</p>
+<p>In the Leaky Box model the diffusion equation, ignoring other effects, can be written as:</p>
+<p><span class="math display">\[\frac{\partial N_i}{\partial t} = D\Delta N_i =-\frac{N_i}{T_{esp}}\]</span></p>
+<p>We made use of the fact that the escape probability is constant per unit time (Poisson process) and so the distribution in time can be writen as:</p>
+<p><span class="math display">\[N_i(t) = n_0 e^{-\frac{t}{T_{esc}}}\]</span></p>
+<p>In the absent of collisions and other energy changing processes, the distribution of cosmic ray path lengths can also be written as:</p>
+<p><span class="math display">\[N_i(z) = n_0 e^{-\frac{z}{H}}\]</span></p>
+<p>with <span class="math inline">\(z\)</span> the travel distance in the z-axis and <span class="math inline">\(H\)</span> the heigth of the <em>box</em>. Using both expressions of the cosmic ray distribution (in time and in space), together with the diffusion formula above give us equation:</p>
+<p><span class="math display">\[T_{esp} = \frac{H^2}{D} \]</span></p>
+<p>However we found from the B/C ratio that <span class="math inline">\(T_{esc} \propto E^{-\delta}\)</span> with <span class="math inline">\(\delta = 0.55\)</span>, therefore the diffusion coefficient is:</p>
+<p><span class="math display">\[ D(E) \propto E^{\delta} \sim E^{0.55}\]</span></p>
+<p>Note that physically <span class="math inline">\(D = D(z)\)</span> ie, diffussion will depend on distance to the disc, however in the leaky-box model we assumed that <span class="math inline">\(D\)</span> is independent of that, which it is only an approximation.</p>
+</section>
+<section id="the-state-of-art-of-diffusion" class="level4" data-number="2.3.1.8">
+<h4 data-number="2.3.1.8" class="anchored" data-anchor-id="the-state-of-art-of-diffusion"><span class="header-section-number">2.3.1.8</span> The State-of-Art of Diffusion</h4>
+<p>The leaky box model is a very simplistic approximation but more realistic diffusion models, such as the numerical integration of the transport equation in the <a href="https://galprop.stanford.edu/">GALPROP</a> code (Strong and Moskalenko 1998), lead to results for the major stable cosmic-ray nuclei, which are equivalent to the Leaky-Box predictions at high energy. However sofisticated models of transport should include effects such as:</p>
+<ol type="1">
+<li>Diffusion coefficient non spatially constant.</li>
+<li>Anisotropic diffusion (Parallel vs Perpendicular)</li>
+<li>Effect of self-generation waves induced by CR.</li>
+<li>Damping of waves and its effects in CR propagation</li>
+<li>Cascading of modes in wavenumber space</li>
+</ol>
+<p>Each of these effects might change the predicted spectra and CR anisotropies in significant ways.</p>
+</section>
+<section id="transport-equation-on-primary-cosmic-rays" class="level4" data-number="2.3.1.9">
+<h4 data-number="2.3.1.9" class="anchored" data-anchor-id="transport-equation-on-primary-cosmic-rays"><span class="header-section-number">2.3.1.9</span> Transport Equation on Primary Cosmic Rays</h4>
+<p>The general simplified transport/dissusion equation that relate the abundances of CR elements can be given by:</p>
+<p><span class="math display">\[\frac{\partial N_i(E)}{\partial t} =\frac{N_i(E)}{T_{esc}(E)} = Q_i(E) - \left(\beta c n_H \sigma_i + \frac{1}{\gamma\tau_i}\right)N_i(E) + \beta c n_H \sum_{k\ge i}\sigma_{k\rightarrow i}N_K(E)\]</span></p>
+<p>where now <span class="math inline">\(Q_i(E)\)</span> is the <strong>local production rate by a CR accelerator</strong>, the middle part reprensents the <strong>losses due to interactions</strong> with cross-section <span class="math inline">\(\sigma_i\)</span> and <strong>decays for unestable nuclei</strong> with lifetime <span class="math inline">\(\tau_i\)</span>. The last term is the <strong>feed-down production</strong> due to spallation processes of heavier CR. We can simplified this equation depending if we are dealing with Primary or Secondary CR:</p>
+<ul>
+<li>Primaries <span class="math inline">\(\rightarrow\)</span> neglect spallation feed-down.</li>
+<li>Secondaries <span class="math inline">\(\rightarrow\)</span> neglect production by sources: <span class="math inline">\(Q_s = 0\)</span></li>
+</ul>
+<p>For example, let’s assume now a primary CR, <span class="math inline">\(P\)</span>, where feed-down spallation is not taking place (ie, they are not product of heavier CR) and no decay (most nuclei are stable, one exception is <span class="math inline">\(^{10}\)</span>Be which is unstable and <span class="math inline">\(\beta\)</span>-decay), the equation can be written as:</p>
+<p><span class="math display">\[\frac{N_P(E)}{T_{esc}(E)} = Q_P(E) - \frac{\beta c \rho_H N_P(E)}{\lambda_P(E)} \rightarrow N_P(E) = \frac{Q_P(E)}{\frac{1}{T_{esc}(E)}+\frac{\beta c \rho_H}{\lambda_P(E)}}\]</span></p>
+<p>where we wrote <span class="math inline">\(n_H = \rho_H/m\)</span> and <span class="math inline">\(\lambda_P\)</span> is the mean free path in <span class="math inline">\(\mathrm{ g / cm}^2\)</span>.</p>
+<p>While <span class="math inline">\(T_{esc}\)</span> is the same for all nuclei with same rigidity, <span class="math inline">\(\lambda_i\)</span> is different and depends on the mass of the nucleus. The equation suggests that at low energies the spectra for different nuclei will be different (eg for Fe interaction dominates over escape) and will be parallel at high energy if accelerated on the same source. For proton with interaction lengths <span class="math inline">\(\lambda_{proton} \gg \lambda_{esc}\)</span> at all energies so the transport equation gets simplified to:</p>
+<p><span class="math display">\[N_{p}(E) = Q_p(E)\cdot T_{esc}(E)\]</span></p>
+<p>ie, we observe at Earth a proton density of <span class="math inline">\(N_p(E)\propto E^{-(\gamma +1)} \sim E^{-2.7}\)</span>, and <span class="math inline">\(T_{esc}(E)\)</span> goes with the inverse of the diffusion coefficient <span class="math inline">\(D(E)\)</span>, ie <span class="math inline">\(T_{esc}(E) \propto E^{-\delta}\)</span>, then at the production site the spectrum must follow <span class="math inline">\(Q_p(E) \propto E^{-\alpha}\)</span> with:</p>
+<p><span class="math display">\[\alpha = (\gamma + 1) -\delta \approx 2.1\]</span></p>
+</section>
+</section>
+<section id="acceleration-of-galatic-cosmic-rays" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="acceleration-of-galatic-cosmic-rays"><span class="header-section-number">2.3.2</span> Acceleration of Galatic Cosmic Rays</h3>
+<p>Three questions:</p>
+<ul>
+<li>What is the source of power?</li>
+<li>What is the actual mechanism?</li>
+<li>Can it reproduce the spectral index found? ### Energy density of galactic cosmic-rays</li>
+</ul>
+<p>In cosmic ray physics we called spectrum to the flux per stero radian, so the relationship between them is:</p>
+<p><span class="math display">\[\Phi (E) = \int_\Omega \mathrm{ d} \Omega I(E) = 4\pi I(E)\]</span></p>
+<p>For all-hemispheres. So we can relate the number density of CR with the spectrum by:</p>
+<p><span class="math display">\[n(E) = \frac{4\pi}{v}I(E)\]</span></p>
+<p>since the flux is just the number density times the velocity.</p>
+<p>And so <strong>kinetic energy density</strong> of CR, <span class="math inline">\(\rho_{CR}\)</span> is therefore the integral of the <strong>energy density spectrum</strong>, <span class="math inline">\(E\cdot n(E)\)</span>:</p>
+<p><span class="math display">\[\rho_{CR} = \int E n(E) \mathrm{ d} E =4\pi \int \frac{E}{v}I(E) \mathrm{ d} E\]</span></p>
+<p>assuming for the Galactic CR (and that <span class="math inline">\(v = c\)</span> for relativistic particles):</p>
+<p><span class="math display">\[ I(E) \approx 1.8 \times 10^4 \left(\frac{E}{1\; \mathrm{GeV}}\right)^{-2.7} \frac{\mathrm{nucleons}}{\mathrm{m}^2\; \mathrm{s\;sr\;GeV}}\]</span></p>
+<p>we can calculate the energy density for cosmic-rays from above the solar modulations up the <em>knee</em>, which is given by:</p>
+<p><span class="math display">\[ \rho_{CR} = \frac{4\pi}{c} \frac{1.8}{1 - 1.7} \left[\left(\frac{E_{max}}{1\;\mathrm{GeV}}\right)^{1 -1.7} - \left(\frac{E_{min}}{1\;\mathrm{GeV}}\right)^{1 -1.7}\right] \approx 1\; \mathrm{ev\;cm}^{-3}\]</span></p>
+<div id="63f5a1e6" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.constants <span class="im">as</span> cte</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.constants <span class="im">import</span> pc</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>cspeed <span class="op">=</span> cte.value(<span class="st">"speed of light in vacuum"</span>) <span class="op">*</span> <span class="fl">1e2</span> <span class="co"># in cm/s</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>emin <span class="op">=</span> <span class="fl">1.</span> <span class="co">#GeV</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>emax <span class="op">=</span> <span class="fl">1e5</span> <span class="co"># 100 TeV</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">/</span>cspeed <span class="op">*</span> <span class="fl">1.8</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> <span class="fl">1.7</span>) <span class="op">*</span> (np.power(emax,<span class="dv">1</span><span class="op">-</span><span class="fl">1.7</span>) <span class="op">-</span> np.power(emin,<span class="dv">1</span><span class="op">-</span><span class="fl">1.7</span>)) <span class="op">*</span> <span class="fl">1e9</span> <span class="co"># in ev cm-3</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="vs">r"The energy density is $\rho_</span><span class="sc">{CR}</span><span class="vs"> \approx </span><span class="sc">%.2f</span><span class="vs">$ $\mathrm{ ev/cm}^</span><span class="sc">{3}</span><span class="vs">$"</span> <span class="op">%</span>rho)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The energy density is $\rho_{CR} \approx 1.08$ $\mathrm{ ev/cm}^{3}$</code></pre>
+</div>
+</div>
+<p>This energy density is comparable with the energy density of the CMB <span class="math inline">\(\rho_{CMB} \approx 0.25\)</span> eV/cm<span class="math inline">\(^{3}\)</span></p>
+<section id="required-power-for-galactic-cosmic-rays" class="level4" data-number="2.3.2.1">
+<h4 data-number="2.3.2.1" class="anchored" data-anchor-id="required-power-for-galactic-cosmic-rays"><span class="header-section-number">2.3.2.1</span> Required Power for Galactic Cosmic Rays</h4>
+<p>If we assume this value to be the constant value over the galaxy, the power required (called <em>luminosity</em> in astrophysics) to supply all the galactic CR and balance the escape processes is:</p>
+<p><span class="math display">\[\mathcal{L}_{CR} = \frac{V_D \rho_{CR}}{\tau_{esc} }\sim 4\times 10^{40} \mathrm{\;erg\;s}^{-1}\]</span></p>
+<p>where <span class="math inline">\(V_D\)</span> is the volume of the galactic disk</p>
+<p><span class="math display">\[V_D = \pi R^2 d \sim \pi (15 \mathrm{\;kpc})^2(300 \mathrm{\;pc}) \sim 6 \times 10^{66} \mathrm{\;cm}^3.\]</span></p>
+<div id="f5c4d04e" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">15000</span> <span class="op">*</span> pc.to(<span class="st">"cm"</span>).value <span class="co"># radius in Cm</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">300</span> <span class="op">*</span> pc.to(<span class="st">"cm"</span>).value</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>Vd <span class="op">=</span> np.pi <span class="op">*</span> R <span class="op">**</span><span class="dv">2</span> <span class="op">*</span> h</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="vs">r"Galactic Volume is </span><span class="sc">%.1e</span><span class="vs"> $\mathrm{ cm}^{-3}$"</span> <span class="op">%</span>Vd)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>evtoerg <span class="op">=</span> cte.value(<span class="st">"electron volt-joule relationship"</span>) <span class="op">*</span> <span class="fl">1e7</span> </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>tesc <span class="op">=</span> <span class="fl">1e14</span> <span class="co"># s cm^3 at 1 GeV</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>tesc <span class="op">=</span> tesc<span class="op">/</span><span class="fl">0.1</span> <span class="co"># s</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>power <span class="op">=</span> (Vd <span class="op">*</span> rho) <span class="op">*</span> evtoerg <span class="op">/</span> tesc</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Power L ~ </span><span class="sc">{</span>power<span class="sc">:.2e}</span><span class="ss"> erg /s"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Galactic Volume is 6.2e+66 $\mathrm{ cm}^{-3}$
+Power L ~ 1.08e+40 erg /s</code></pre>
+</div>
+</div>
+<p>It was emphasized long ago (Ginzburg &amp; Syrovatskii 1964) that supernovae might account for this power. For example a type II supernova gives an average power output of:</p>
+<p><span class="math display">\[\mathcal{L}_{SN} \sim 3 \times 10^{42} \mathrm{\;erg\;s}^{-1}\]</span></p>
+<p>Therefore if SN transmit a few percent of the energy into CR it is enough to account for the total energy in the cosmic ray beam. That was called the <strong>SNR paradigm</strong></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Power Required for > 100 TeV">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Power Required for &gt; 100 TeV
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The derivation above was considered using the CR flux with an integral spectral index of <span class="math inline">\(\gamma = \alpha -1 =  1.7\)</span> which describes well the CR up to the <em>knee</em> (See <a href="#sec-knee" class="quarto-xref"><span class="quarto-unresolved-ref">sec-knee</span></a>). This is the bulk of cosmic ray density. The power required for the high energy part will be significantly less due to the steeply falling primary cosmic ray spectrum. For example assuming an integral index of <span class="math inline">\(\gamma = 1.6\)</span> for <span class="math inline">\(E &lt; 1000\)</span> TeV and <span class="math inline">\(\gamma = 2\)</span> for higher energy we get:</p>
+<p><span class="math display">\[\begin{aligned}
+\sim 2 \times 10^{39} {\;\rm\;erg/s\; for\; } E &amp;&gt; 100 \mathrm{\; TeV}\\
+\sim 2 \times 10^{38} {\;\rm\;erg/s\; for\; } E &amp;&gt; 1 \mathrm{\;PeV}\\
+\sim 2 \times 10^{37} {\;\rm\;erg/s\; for\; } E &amp;&gt; 10 \mathrm{\;PeV}
+\end{aligned}\]</span> ` which are considerably less than the total power required for all the cosmic-rays. This power might be available from a few very energetic sources.</p>
+</div>
+</div>
+</section>
+<section id="fermi-acceleration" class="level4" data-number="2.3.2.2">
+<h4 data-number="2.3.2.2" class="anchored" data-anchor-id="fermi-acceleration"><span class="header-section-number">2.3.2.2</span> Fermi Acceleration</h4>
+<p>Fermi studied how it is posible to transfer macroscopic kinetic energy of moving magnetized plasma to individual particles. He considered an iterative process in which for each <em>encounter</em> a particle gains energy which is proportional to the energy.</p>
+<p>Let’s write the increase in energy as <span class="math inline">\(\Delta E = \xi E\)</span> after <span class="math inline">\(n\)</span> encounters then:</p>
+<p><span class="math display">\[E_n = E_0(1 + \xi)^n\]</span></p>
+<p>where <span class="math inline">\(E_0\)</span> is the injection energy in the <em>acceleration region</em>. If the probability of escaping this <em>acceleration region</em> is <span class="math inline">\(P_{esc}\)</span> per <em>encounter</em>, after <span class="math inline">\(n\)</span> the remaining probability is <span class="math inline">\((1 - P_{esc})^n\)</span>. To reach a given energy <span class="math inline">\(E\)</span> we need:</p>
+<p><span class="math display">\[n = \log\left(\frac{E_n}{E_0}\right)/\log(1 + \xi)\]</span></p>
+<p>after each interaction there is a fraction <span class="math inline">\((1-P_{esc})\)</span> that remain and the rest escapes the accelerator. If <span class="math inline">\(N_0\)</span> particles entered the “encounter” in the first place, after <span class="math inline">\(n\)</span> interaction those remaining are:</p>
+<p><span class="math display">\[N(\ge  E_n) = N_0(1- P_{esc})^n\]</span></p>
+<p>These particles will always eventually escape since <span class="math inline">\(P_{esc}\)</span> is not 0, but for any given number of cycles, <span class="math inline">\(n\)</span>, we can be sure that those remaining particles (whenever they escape) will have more energy than those that escaped at the cycle <span class="math inline">\(n\)</span>. We can rewrite:</p>
+<p><span class="math display">\[\log\left(\frac{N}{N_0}\right) = n(1 - P_{esc}) \]</span></p>
+<p>equalling <span class="math inline">\(n\)</span> with the equation above we have:</p>
+<p><span class="math display">\[\frac{\log (N/N_0)}{\log (E_n/E_0)} = \frac{\log(1-P_{esc})}{\log(1+ \xi)}\]</span></p>
+<p>For any given energy then we have:</p>
+<p><span class="math display">\[N(\ge E) = N_0 \left(\frac{E}{E_0}\right)^{-\gamma}\]</span></p>
+<p>where we defined</p>
+<p><span class="math display">\[\gamma = \log\left(\frac{1}{1-P_{esc}}\right)\frac{1}{\log (1+\xi)} \approx \frac{P_{esc}}{\xi} = \frac{1}{\xi}\cdot\frac{T_{cycle}}{T_{esc}}\]</span></p>
+<p>where <span class="math inline">\(T_{cycle}\)</span> is the characteristic time of acceleration cycle, and <span class="math inline">\(T_{esc}\)</span> is the characteristic time to escape the acceleration region.</p>
+<p>Note that <span class="math inline">\(N(\ge E)\)</span> is the integral spectrum, the differntial spectrum is given by:</p>
+<p><span class="math display">\[ n(E) \propto E^{-1 - \gamma} \]</span></p>
+<section id="fermi-mechanism" class="level5" data-number="2.3.2.2.1">
+<h5 data-number="2.3.2.2.1" class="anchored" data-anchor-id="fermi-mechanism"><span class="header-section-number">2.3.2.2.1</span> Fermi Mechanism</h5>
+<p>A mechanism working for a time <span class="math inline">\(t\)</span> will produce a maximum energy:</p>
+<p><span class="math display">\[E\leq E_0 (1+\xi)^{t/T_{cycle}}\]</span></p>
+<p>Two characteristic features are apparent from this equation:</p>
+<ul>
+<li>High energy particles take longer to accelerate</li>
+<li>If a given kind of Fermi accelerator has a limited lifetime this will be characterize by a maximum energy per particle that can produce. In the general mechanism we can imagine a particle encountering something moving at a speed <span class="math inline">\(\beta\)</span>. This “something” can be for example a magnetic cloud.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fermi_general.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/fermi_general.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>In this general approach, the particle might enter at different angles and exit at difference angles. Let’s assume <span class="math inline">\(O^\prime\)</span> to be the reference system where the magnetic cloud is in the rest frame. A particle with energy <span class="math inline">\(E_1\)</span> in the lab reference system will have total energy in this reference system given by the boost transformation with <span class="math inline">\(\beta\)</span> being the speed of the plasma flow (cloud:</p>
+<p><span class="math display">\[E_1^\prime = \gamma E_1 (1 -\beta \cos\theta_1)\]</span></p>
+<p>Before leaving the gas cloud the particle has an anegy <span class="math inline">\(E_2^\prime\)</span>. If we transform this back to the lab reference system we get:</p>
+<p><span class="math display">\[E_2 = \gamma E_2^\prime (1 +\beta \cos\theta_2^\prime)\]</span></p>
+<p>As the particle suffers from colissioness scatterings inside the cloud the energy in the moving frame just before it escapes is <span class="math inline">\(E_2^\prime = E_1^\prime\)</span> and so we can calculate the increment in energy <span class="math inline">\(\Delta E = E_2 - E_1\)</span> as:</p>
+<p><span class="math display">\[\xi = \frac{\Delta E}{E_1}  = \frac{1 - \beta \cos \theta_1 + \beta\cos\theta_2^\prime - \beta^2\cos\theta_1\cos\theta_2^\prime}{1 - \beta^2} -1\]</span></p>
+</section>
+<section id="fermi-2nd-order-acceleration." class="level5" data-number="2.3.2.2.2">
+<h5 data-number="2.3.2.2.2" class="anchored" data-anchor-id="fermi-2nd-order-acceleration."><span class="header-section-number">2.3.2.2.2</span> Fermi 2nd Order Acceleration.</h5>
+<p>In the <strong>second order</strong> (first chronologically) Fermi considered <em>encounters</em> with moving clouds of plasma.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Fermi2nd.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/Fermi2nd.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><p>The scattered angle is uniform so the average value is <span class="math inline">\(\langle \cos\theta_2^\prime\rangle = 0\)</span>.</p></li>
+<li><p>The probability of collision at angle <span class="math inline">\(\theta\)</span> with the cloud of speed V is proportional to the relative velocity between the cloud and the particle <span class="math inline">\(c\)</span> if we assume it relativistic (factor <span class="math inline">\(1/2\)</span> is there to have a proper normalization):</p></li>
+</ul>
+<p><span class="math display">\[\frac{dn}{d\cos \theta_1} = \frac{1}{2}\frac{c - V\cos\theta_1}{c}=\frac{1 -\beta \cos\theta_1}{2}, {\;\; \rm for -1 \leq \cos\theta_1 \leq 1}\]</span></p>
+<p>and so:</p>
+<p><span class="math display">\[\langle \cos\theta_1\rangle = \frac{\int \cos\theta_1 \cdot \frac{dn}{d\cos\theta_1} d\cos\theta_1}{\int \frac{dn}{d\cos\theta_1}d\cos\theta_1} = - \frac{\beta}{3}\]</span></p>
+<p>Particles can gain or lose energy depending on the angles, but on average the gain is</p>
+<p><span class="math display">\[\xi = \frac{1 + \frac{1}{3}\beta^2}{1 - \beta^2} \sim \frac{4}{3}\beta^2\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Problems wih the 2nd order acceleration">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Problems wih the 2nd order acceleration
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The energy increase is second order of <span class="math inline">\(\beta\)</span> and..</li>
+<li>… the random velocities of clouds are relatively small: <span class="math inline">\(\beta \sim 10^{-4}\)</span> !!!</li>
+<li>Some collisions result in energy losses! Only with the average one finds a net increase.</li>
+<li>Very little chance of a particle gaining significant energy!</li>
+<li>The theory does not predict the power law exponent</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="fermi-1st-order-acceleration." class="level5" data-number="2.3.2.2.3">
+<h5 data-number="2.3.2.2.3" class="anchored" data-anchor-id="fermi-1st-order-acceleration."><span class="header-section-number">2.3.2.2.3</span> Fermi 1st Order Acceleration.</h5>
+<p>Let’s imagine a shock moving through a plasma. In the reference system of the <em>unshocked</em> plasma the shock front approaches with speed <span class="math inline">\(\vec{u_1}\)</span> while the <em>shocked</em> plasma (left behind) moves at a slower velocity <span class="math inline">\(\vec{V}\)</span> where <span class="math inline">\(|V| &lt; |u_1|\)</span>. If we now changed to the reference system where the shock-front is at rest the gas <em>unshocked</em> now appears to approach speed <span class="math inline">\(-\vec{u_1}\)</span> while the <em>shocked</em> plasma recedes with speed <span class="math inline">\({-\vec u_2 = (\vec{V} - \vec u_1)}\)</span>. A test cosmic ray particle crossing from any side of the shock, will always face an encounter with plasma aproaching at speed <span class="math inline">\(|V|\)</span>, hence <span class="math inline">\(\beta\)</span> now refers to this speed, the speed of the shocked (downstream) gas in the upstream reference system.</p>
+<div id="fig-fermi1st" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fermi1st-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fermi1st" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-fermi-upstream" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-fermi-upstream-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/fermi-us-ref.jpg" class="lightbox" data-gallery="fig-fermi1st" data-glightbox="description: .lightbox-desc-13"><img src="images/fermi-us-ref.jpg" class="img-fluid figure-img" data-ref-parent="fig-fermi1st"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-fermi-upstream-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Upstream
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fermi1st" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-fermi-sockwave" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-fermi-sockwave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/fermi-sw-ref.jpg" class="lightbox" data-gallery="fig-fermi1st" data-glightbox="description: .lightbox-desc-14"><img src="images/fermi-sw-ref.jpg" class="img-fluid figure-img" data-ref-parent="fig-fermi1st"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-fermi-sockwave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Shockwave
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fermi1st" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-fermi-downstream" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-fermi-downstream-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/fermi-ds-ref.jpg" class="lightbox" data-gallery="fig-fermi1st" data-glightbox="description: .lightbox-desc-15"><img src="images/fermi-ds-ref.jpg" class="img-fluid figure-img" data-ref-parent="fig-fermi1st"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-fermi-downstream-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Downstream
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fermi1st-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.7: Fermi first order acceleration. Different referenec systems.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>The outcoming distribution of particles is not now 0, there is an asymmetry in the Fermi shock acceleration model, as particle in the upstream will re-enter the shock, only those going downstream can escape. Therefore the distribution follows the projection of an uniform flux on a plane:</li>
+</ul>
+<p><span class="math display">\[\frac{dn}{d\cos \theta_2^\prime} = 2 \cos\theta_2^\prime{\;\; \rm for\;  0 \leq \cos\theta_2^\prime \leq 1}\]</span></p>
+<p>which gives:</p>
+<p><span class="math display">\[\langle \cos\theta_2^\prime\rangle = \frac{\int \cos\theta_2^\prime \cdot \frac{dn}{d\cos\theta_2^\prime} d\cos\theta_2^\prime}{\int \frac{dn}{d\cos\theta_2^\prime}d\cos\theta_2^\prime} = \frac{2}{3}\]</span></p>
+<ul>
+<li>The incoming angle distribution is also the projection of an uniform flux on a plen but this time with <span class="math inline">\(-1 \leq \cos\theta_1 \leq 0\)</span> and so <span class="math inline">\(\langle \cos \theta_1 \rangle = -2/3\)</span></li>
+</ul>
+<p>Particles entering the shockwave and exiting will have a gain of:</p>
+<p><span class="math display">\[\xi = \frac{1 + \frac{4}{3}\beta + \frac{4}{9}\beta^2}{1 -\beta^2} - 1 \sim \frac{4}{3}\beta = \frac{4}{3}\frac{u_1 - u_2}{c}\]</span></p>
+</section>
+<section id="escape-probability" class="level5" data-number="2.3.2.2.4">
+<h5 data-number="2.3.2.2.4" class="anchored" data-anchor-id="escape-probability"><span class="header-section-number">2.3.2.2.4</span> Escape Probability</h5>
+<p>The escape probability of loss rate of particles is given by the ratio of the incoming flux and the outgoing flux of particles.</p>
+<ul>
+<li><strong>Incoming rate.</strong> Let’s assume that the diffusion of particles is so effective that close to the shockwave the distribution of particles is isotropic. In this case the rate of encounters for a plane shock is the projection of an isotropic flux onto the plane shock. Let’s assume <span class="math inline">\(n\)</span> to be the density of particles close to the shock, because it is isotropic it should follow:</li>
+</ul>
+<p><span class="math display">\[\mathrm{ d}n = \frac{n}{4\pi}\mathrm{ d}\Omega\]</span></p>
+<p>assuming the particles moving at relativistic speed, the velocity across the shock is <span class="math inline">\(c\cos\theta\)</span> therefore the rate of encounters of particles upstream with the shock is given by:</p>
+<p><span class="math display">\[R_{in} = \int \mathrm{ d} n c \cos\theta = \int_0^1 \mathrm{ d} \cos \theta \int_0^{2\pi} \mathrm{ d} \phi\frac{cn(E)}{4\pi}\cos\theta = \frac{cn(E)}{4}\]</span></p>
+<p>where <span class="math inline">\(n(E)\)</span> is the CR number density.</p>
+<ul>
+<li><strong>Outgoing rate.</strong> The outgoing rate is simply the number of particles escaping the system. In the shock rest frame, that’s all particles not returning to the shockwave. In this reference system there is an outflow of cosmic-rays adverted downstream. Since particles are diffusing in all direction, the net outflow goes with the velocity of the downstream speed and is given simply by <span class="math inline">\(R_{out} = n(E) u_2\)</span>,</li>
+</ul>
+<p>Therefore the escape probability is given by:</p>
+<p><span class="math display">\[P_{esc} = \frac{R_{in} }{R_{out} }= \frac{4 u_2}{c}\]</span></p>
+<p>which for acceleration at shock gives:</p>
+<p><span class="math display">\[\gamma = \frac{P_{esc}}{\xi} = \frac{3}{u_1/u_2 -1}\]</span></p>
+<p>So we get an estimate of the spectral index based on the relative velocities of the downstream and upstram gas in the sockwave.</p>
+</section>
+</section>
+<section id="kinematic-relations-at-the-shock" class="level4" data-number="2.3.2.3">
+<h4 data-number="2.3.2.3" class="anchored" data-anchor-id="kinematic-relations-at-the-shock"><span class="header-section-number">2.3.2.3</span> Kinematic Relations at the Shock</h4>
+<p>In order to derive the exact value of the spectral index we need to obtain a relation between <span class="math inline">\(u_1\)</span> and <span class="math inline">\(u_2\)</span> using the kinematics of a shock wave. This equations are the conservation of mass, the Euler equation for momentum conservation and conservation of energy:</p>
+<ul>
+<li><p><strong>Conservation of mass</strong>: <span class="math display">\[\partial_t \rho + \nabla \cdot (\rho\vec{u}) = 0\]</span></p></li>
+<li><p><strong>Conservation of momentum (Euler equation)</strong>:</p></li>
+</ul>
+<p><span class="math display">\[\rho\frac{\partial \vec{u}}{\partial t} + \rho \vec{u} \cdot(\nabla\vec{u}) = \vec{F} - \nabla P\]</span></p>
+<p>where <span class="math inline">\(\vec{F}\)</span> is an external force, and <span class="math inline">\(\nabla P\)</span> is a force due to a pressure gradient.</p>
+<ul>
+<li><strong>Conservation of energy</strong>:</li>
+</ul>
+<p><span class="math display">\[\frac{\partial}{\partial t} \left(\frac{\rho u^2}{2} + \rho U + \rho\Phi\right) + \nabla\cdot\left[\rho \vec{u}\left(\frac{u^2}{2} + U + \frac{P}{\rho} + \Phi\right)\right] = 0 \]</span></p>
+<p>where this equation accounts for the kinetic, internal, and potential energy <span class="math inline">\(\Phi\)</span>.</p>
+<p>Let’s assume a one-dimensional, steady shock in its rest frame (otherwise time derivates must be taking into account).</p>
+<p>Then the first equation becomes simply: <span class="math display">\[\frac{d}{dx} (\rho u) = 0\]</span></p>
+<p>and the Euler equation simplifies to:</p>
+<p><span class="math display">\[\frac{d}{dx}(P + \rho u^2) = 0\]</span></p>
+<p>In the energy equation we assume <span class="math inline">\(\Phi = 0\)</span>:</p>
+<p><span class="math display">\[\frac{d}{dx}\left(\frac{\rho u^3}{2} + (\rho U + P)u\right) = 0 \]</span></p>
+<p><span class="math display">\[\frac{d}{dx}\left[ \rho u \left(\frac{u^2}{2} + U + \frac{P}{\rho}\right) \right] = 0 \]</span></p>
+<p>where U is the internal density per unit volume and we can write $ U = {}$, where <span class="math inline">\(\Gamma = c_p/c_v\)</span> is the <a href="http://en.wikipedia.org/wiki/Heat_capacity_ratio">adiabatic index</a> or heat capacity ratio.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Conditions of discontinuity at the shochwave">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conditions of discontinuity at the shochwave
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let’s assume we are in the shock ref system. Applyting these equations at the discontinuity of the shock we have the three conditions at the discontinuity of the shock:</p>
+<p><span class="math display">\[\begin{aligned}
+\rho_1 u_1 &amp;= \rho_2 u_2\\
+P_1 + \rho_1 u_1^2 &amp;= P_2 + \rho_2 u_2^2\\
+\frac{\rho_1 u_1^2}{2} + \frac{\Gamma}{\Gamma - 1} P_1 &amp;=\frac{\rho_2 u_2^2}{2} + \frac{\Gamma}{\Gamma - 1}  P_2\\
+\end{aligned}\]</span></p>
+</div>
+</div>
+<p>For a gas with <span class="math inline">\(P = K \rho^\Gamma\)</span> the speed of sound can be written as <span class="math inline">\(c_s = \sqrt{\Gamma P / \rho}\)</span> or <span class="math inline">\(\rho c_s^2 = \Gamma P\)</span>. From the second condition we can write:</p>
+<p><span class="math display">\[ P_1 + \rho_1 u_1^2 =  \rho_1 u_1^2 \left( 1 + \frac{P_1}{\rho_1 u_1^2}\right)  = \rho_1 u_1^2 \left( 1 + \frac{c_s^2}{\Gamma u_1^2}\right) = \rho_1 u_1^2 \left(1 + \frac{1}{\mathcal{M_1}\Gamma}\right) \]</span></p>
+<p>For strong shocks <span class="math inline">\(\mathcal{M_1} \gg 1\)</span> then the presure in the upstream is neglicable <span class="math inline">\(P_1 \sim 0\)</span></p>
+<p>We can isolate <span class="math inline">\(\rho_2\)</span> and <span class="math inline">\(P_2\)</span> as:</p>
+<p><span class="math display">\[\rho_2 = \frac{u_1}{u_2} \rho_1\]</span></p>
+<p><span class="math display">\[P_2 = P_1 + \rho_1 u_1^2 - \rho_1 \frac{u_1}{u_2}u_2^2 = P_1 + \rho_1 u_1 (u_1 - u_2) \sim \rho_1 u_1 (u_1 - u_2)\]</span></p>
+<p>Using these expression ot eliminate <span class="math inline">\(\rho_2\)</span> and <span class="math inline">\(P_2\)</span> from the third (enegy conservation) equation we have:</p>
+<p><span class="math display">\[\frac{1}{2}u_1^2 = \frac{1}{2}u_2^2 + \frac{\Gamma}{\Gamma -1}\frac{P_2}{\rho_2} = \frac{1}{2}u_2^2 + \frac{\Gamma}{\Gamma -1} u_2 (u_1 - u_2)\]</span></p>
+<p>grouping by powers of <span class="math inline">\(u_2\)</span>:</p>
+<p><span class="math display">\[\left(\frac{\Gamma}{\Gamma -1} - \frac{1}{2}\right) u_2^2 - \frac{\Gamma}{\Gamma -1} u_2u_1 + u_1^2 = 0 \]</span></p>
+<p>multiplying by <span class="math inline">\(2/u_1^2\)</span>: <span class="math display">\[\left(\frac{\Gamma + 1 }{\Gamma -1}\right) t^2 - \frac{2\Gamma}{\Gamma -1} t + 1 = 0\]</span></p>
+<p>where we defined <span class="math inline">\(t \equiv u_2/u_1\)</span> this quadratic equation has the 2 solutions:</p>
+<p><span class="math display">\[ t = 1 \rightarrow u_1 = u_2\]</span></p>
+<p>ie, no shock at all, and a second solution given by:</p>
+<p><span class="math display">\[ t = \frac{\Gamma - 1}{\Gamma + 1} \rightarrow \frac{u_2}{u_1} = \frac{\Gamma - 1}{\Gamma +1}\]</span></p>
+<p>for a monatomic gas with 3 degrees of freedom the ratio of specific heats is <span class="math inline">\(\Gamma = 1 + 1/f = \frac{5}{3}\)</span>, so</p>
+<p><span class="math display">\[\frac{u_2}{u_1} = \frac{1}{4}\]</span></p>
+<p>No matter how strong a shock wave is, a mono-atomic gas can only be compressed by a factor of 4. The spectral index is then:</p>
+<p><span class="math display">\[\gamma = \frac{P_{esc}}{\xi} = \frac{3}{u_1/u_2 -1} = 1\]</span></p>
+<p>If one keeps the factors of <span class="math inline">\(1/\mathcal{M}^2\)</span> (to prove if you are brave):</p>
+<p><span class="math display">\[\gamma \sim 1 + \frac{4}{\mathcal{M}^2} \sim 1.1\]</span></p>
+<p>Which matches remarkably to what we derived to be the differential spectral index at the accelerator:</p>
+<p><span class="math display">\[ n(E) \propto E^{-(\gamma+1)} \sim E^{-2.1} \]</span></p>
+<section id="maximum-energy" class="level5" data-number="2.3.2.3.1">
+<h5 data-number="2.3.2.3.1" class="anchored" data-anchor-id="maximum-energy"><span class="header-section-number">2.3.2.3.1</span> Maximum Energy</h5>
+<p>In an infinite planar shockwave, all particles upstream will encounter again the shochwave. However particles can advent downstream. In diffuse shock accelerations, particules will diffuse travelling a distance <span class="math inline">\(l_D\)</span> upstream, until they are reached by the shock moving at spead <span class="math inline">\(u_1\)</span> in the upstream reference system. Particles will cross when:</p>
+<p><span class="math display">\[\begin{aligned}
+l_d &amp;\simeq \sqrt{D t_d} \\
+l_d &amp;= u_1 t_d \\
+t_d &amp;\approx \frac{D}{u_1^2}
+\end{aligned}\]</span></p>
+<p>Assuming a diffusion that depends on energy in the form of <span class="math inline">\(D = D_0 E^{\alpha}\)</span> we can get that the maximum energy corresponds to:</p>
+<p><span class="math display">\[E_{max} \leq \left(\frac{u_1^2 t_d}{D_0}\right)^{\frac{1}{\alpha}}\]</span></p>
+<p>where we can assume <span class="math inline">\(t_d\)</span> to be the time during which the mechanism is working, ie the livetime of the shockwave <span class="math inline">\(t_d \sim t_{age}\)</span>. From the equation above we can conclude that the maximum energy:</p>
+<ul>
+<li>increases with time</li>
+<li>depends on: age, shock speed, magnetic field intensity and structure (through D)</li>
+<li>is not universal</li>
+<li><span class="math inline">\(D\)</span> and therefore <span class="math inline">\(l_d\)</span> increases with energy, and the each cycle energy increases, so the last cycle is the longest</li>
+</ul>
+<p>We can rewrite the diffusion coefficient as: <span class="math display">\[ D \sim \frac{l_d^2}{t_d} = l_d v \]</span> where <span class="math inline">\(v\)</span> is the particle speed. A more detailed analysis gives <span class="math inline">\(D = \frac{1}{3}l_d v\)</span> where the factor 3 comes from the 3 dimensions. In other words, the diffussion coefficient can be understood as the product of the particle velocity <span class="math inline">\(v \simeq c\)</span> and its mean free path. At high energies, the mean free path between scatterings in the turbulent magnetic clous can be approximate as <span class="math inline">\(l_d = r_L/r_0\)</span>, where <span class="math inline">\(r_0\)</span> is the size of the magnetic cloud and <span class="math inline">\(r_L\)</span> the Larmor radius of the particle. Assuming that <span class="math inline">\(r_L \gg r_0\)</span> we can re-write:</p>
+<p><span class="math display">\[ D = \frac{r_L c}{3} \sim \frac{1}{3}\frac{E c}{Z eB} \]</span></p>
+<p>Another way to see this, is to assume that mean diffusion path <span class="math inline">\(l_d\)</span> cannot be smaller than the Larmor radius, since a magnetic field irregularities in a smaller scale than the Larmor radisu will be transparent. This is the regime of the Bohm diffusion and it is possible in higly turbulent magnetic fields, something that theoreticians think is possible when CR excite magnetic turbulence at shocks while being accelerated. This is called magnetic field amplification.</p>
+<p>In that case, the diffusion coefficient depends linearly with energy (<span class="math inline">\(\alpha = 1\)</span>) and the equation above can be rewritten as:</p>
+<p><span class="math display">\[E_{max} \leq 3 \frac{u_1}{c} Z e B (u_1 t_{age})\]</span></p>
+<p>where <span class="math inline">\(t_{age}\)</span> is the time in which the accelerator is working. Note that the product <span class="math inline">\((u_1 t_{age})\)</span> is the radius of a expanding shell. Using some estimates on the time (<span class="math inline">\(t_{age} \sim\)</span> 1000 yrs as the typical SN shockwave) and <span class="math inline">\(B_{ISM} \sim 3 \mu\)</span>G we can rewrite the maximum energy for SN shockwaves as:</p>
+<p><span class="math display">\[E_{max} \leq Z\times 3 \times 10^4 \mathrm{ GeV}\]</span></p>
+<p>In order words, the shock-wave acceleration shown can accelerate CR <strong>up to 100 Z TeV</strong>, but not beyond this. Other acceleration mechanism are needed for the highest energy cosmic rays. We need very high magnetic fields (non-lineal acceleration mechanism). In these cases, even if this object cannot supply the all the galactic cosmic rays the energy per particle may be orders of magnitude higher than those possible in shock acceleration by blast waves.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Hillas Criteria">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hillas Criteria
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The equation of the maximum energy from shock acceleration can be rewritten as:</p>
+<p><span class="math display">\[E_{max} \leq 10^{18} \mathrm{eV}\; Z \;\beta_s \left(\frac{R}{\mathrm{kpc}}\right)\left(\frac{B}{\mu\mathrm{G}}\right)\]</span></p>
+<p>where <span class="math inline">\(\beta_s\)</span> is the shock velocity, <span class="math inline">\(B\)</span> the magnetic field strength, and <span class="math inline">\(R = u_1 t_{age}\)</span> is the radius of the expanding shockwave, or in other words the size of the acceleration reguin. In 1984 Hillas arrived to a similar conclusion just by doing a back-of-an-envelope assumption that in order for it to accelerate CR particles to high energies in which he impossed that a condition where the size of the acceleration region must be at least twice the Larmor radius. The plot showing possible sources in the parameter space <span class="math inline">\(B\)</span> vs <span class="math inline">\(R\)</span> is usually referred as the Hillas’ plot. For relativistic shockwaves (<span class="math inline">\(\beta_s \sim 1\)</span>) many sources are able to accelerate protons up to <span class="math inline">\(10^{20}\)</span> eV, however for slower shockwaves (<span class="math inline">\(\beta_s \sim 1/300\)</span>) the number of source candidates is strongly reduced.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Hillas_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/Hillas_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="sources-of-galactic-cosmic-rays" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="sources-of-galactic-cosmic-rays"><span class="header-section-number">2.3.3</span> Sources of Galactic Cosmic Rays</h3>
+<section id="supernova-remnants-snrs" class="level4" data-number="2.3.3.1">
+<h4 data-number="2.3.3.1" class="anchored" data-anchor-id="supernova-remnants-snrs"><span class="header-section-number">2.3.3.1</span> Supernova Remnants (SNRs)</h4>
+<p><strong>Supernova remnants (SNR)</strong> remain the most likely candidates for CR acceleration up to at least <span class="math inline">\(10^{14} \mathrm{ \; eV}\)</span> via the Fermi shock mechanism. Supernova explosions are very violent events which transfer a significant amount of energy in the ISM. The explosion mechanism can be the carbon deflagration of white dwarts (Type I) or the core collapse of masssive stars (Type II) but the dynamical evolution of the supernova remnant (SNR) i.e., the expanding cloud of hot gas in the ISM is similar:</p>
+<ul>
+<li><p><strong>Free Expansion Phase.</strong> <span class="math inline">\(M_{ej} \ll M_{sw}\)</span> The shock wave moves in the ISM gas a highly supersonic speed. The shock radius scales as: <span class="math inline">\(R_s(t) = v_e t\)</span>. Behind the shockfront ISM gas starts to accumulate an a reverse shock starts to form. Sometimes we see first this reverse shock. At some point the compressed ISM gas equals the ejected material, this marks the end of the free expansion phase. It last less than 200-300 years.</p></li>
+<li><p><strong>Sedov-Taylor Phase.</strong> Once the reverse shock reaches the nucleus, the interior of the SNR gets very hot that energy losses due to radiation are not possible (all atoms are ionized). The cooling of the gas is only due to the expansion, that’s why this phase is the adiabatic phase. The radius goes as <span class="math inline">\(R \propto t^{2/5}\)</span>. When temperature reaches the critical value of <span class="math inline">\(10^{6}\)</span> K ionized atoms start to capture free electrons and can lose energy due to de-exitation. This is the end of the adiabatic phase. This phase can last 20,000 years.</p></li>
+<li><p><strong>Cooling or Snowplough phase</strong> Due to the effective radiative cooling the thermal presure decreases and the expansion slows down. More and more interstellar gas is accumulated until the swept-up mass is much larger than the ejected material. Finally the shell breaks up into clumps probably due to Rayleigh-Taylor inestabilities. This phase lasts up to 500,000 years.</p></li>
+</ul>
+<p>As we discussed, the <span class="math inline">\(E_{max}\)</span> depends on how long the accelerator is active. Therefore an individual CR particel will gain the highest energy if it starts during the free expansion phase and stays with the shock front until and through the Sedov phase. There is a caveat, though, the <span class="math inline">\(E_{max}\)</span> also depends on the magnetic field, and magnetic fields during the slow expansion of he Sedov phase are not strong enough to confine the CR particle. In this case, it seems the maximum CR energy may only be reached during the pre-Sedov expansion. This is the reason why young SNR are the main candidates to search for CR injection up to PeV energies.</p>
+</section>
+<section id="other-sources-of-galactic-cosmic-rays" class="level4" data-number="2.3.3.2">
+<h4 data-number="2.3.3.2" class="anchored" data-anchor-id="other-sources-of-galactic-cosmic-rays"><span class="header-section-number">2.3.3.2</span> Other Sources of Galactic Cosmic Rays</h4>
+<ul>
+<li><p><strong>Neutron stars</strong> Neutron stars, especially young fast-rotating pulsars and magnetars have extreme magnetic fields (up to <span class="math inline">\(10^{12}\)</span> G in the case of magnetars) with complex structure that could accelerate CR up to the highest energies. These objects are far rarer than SNRs, however, only a dozen magnetars are known in the Milky Way, although many could exist in the local neighborhood.</p></li>
+<li><p><strong>Microquasars</strong> are radio-intense X-ray binary stars with companion orbiting an accreting black hole. They are particularly interesting particle accelerators due to observation of VHE gamma ray emission and highly relativistic jets which could provide energy for UHECR</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="extra-galactic-cosmic-rays-the-knee-and-beyond" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="extra-galactic-cosmic-rays-the-knee-and-beyond"><span class="header-section-number">2.4</span> Extra-Galactic Cosmic Rays: The Knee and Beyond</h2>
+<section id="sec-knee" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="sec-knee"><span class="header-section-number">2.4.1</span> The Knee</h3>
+<p>At energies of about 5 <span class="math inline">\(\times 10^{15}\)</span> eV a steepening in the spectrum from <span class="math inline">\(\gamma \sim 1.7 \rightarrow \gamma \sim 2\)</span> known as the <em>knee</em> takes place. Already Peters in 1959 concluded that it could be due to:</p>
+<ul>
+<li>Consequence of the breakdown of an acceleration mechanism.</li>
+<li>Increased rate of escape from the galaxy at high energies.</li>
+</ul>
+<div id="c97c1166" class="cell" data-fig-label="fig-knee" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>elements <span class="op">=</span> (<span class="st">"H"</span>, <span class="st">"He"</span>, <span class="st">"C"</span>, <span class="st">"N"</span>, <span class="st">"O"</span>, <span class="st">"Si"</span>, <span class="st">"Fe"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>elements <span class="op">+=</span> (<span class="st">"1H-bar"</span>, <span class="st">"e-+e+"</span>, <span class="st">"AllParticles"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>tabs <span class="op">=</span> []</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> energy_type <span class="kw">in</span> (<span class="st">"EKN"</span>, <span class="st">"ETOT"</span>):</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        tab <span class="op">=</span> crdb.query(</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>            elem,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>            energy_type<span class="op">=</span>energy_type,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>            energy_convert_level<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> energy_type <span class="op">==</span> <span class="st">"EKN"</span>:</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            tab <span class="op">=</span> convert_energy(tab, <span class="st">"EK"</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        tabs.append(tab)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> np.concatenate(tabs).view(np.recarray)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> np.errstate(divide<span class="op">=</span><span class="st">"ignore"</span>):</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> (tab.err_sys[:, <span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (tab.err_sta[:, <span class="dv">0</span>] <span class="op">/</span> tab.value <span class="op">&lt;</span> <span class="fl">0.5</span>)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[mask]</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>xlim <span class="op">=</span> <span class="fl">1e4</span>, <span class="fl">1e11</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">5</span>))</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    tab <span class="op">=</span> tab[(xlim[<span class="dv">0</span>] <span class="op">&lt;</span> tab.e) <span class="op">&amp;</span> (tab.e <span class="op">&lt;</span> xlim[<span class="dv">1</span>])]</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    ma <span class="op">=</span> tab.quantity <span class="op">==</span> elem</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(tab) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span>  </span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">"k"</span> <span class="cf">if</span> elem <span class="op">==</span> <span class="st">"AllParticles"</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[ma]</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(t) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> t.e<span class="op">**</span><span class="fl">2.7</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">"k"</span> <span class="cf">if</span> elem <span class="op">==</span> <span class="st">"AllParticles"</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    ax.errorbar(t.e, t.value <span class="op">*</span> f, sta<span class="op">*</span>f, fmt<span class="op">=</span><span class="st">"."</span>, color<span class="op">=</span>color, label<span class="op">=</span>elem)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$E_k^</span><span class="sc">{2.7}</span><span class="vs">$ d$J$/d$E_k$ [GeV$^</span><span class="sc">{1.7}</span><span class="vs">$ / (m$^2$ s sr)]"</span>)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_k$ [GeV]"</span>)</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="chap2_files/figure-html/cell-12-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" data-glightbox="description: .lightbox-desc-17" title="The Knee of the CR spectrum"><img src="chap2_files/figure-html/cell-12-output-1.png" width="551" height="453" alt="The Knee of the CR spectrum" class="figure-img"></a></p>
+<figcaption>The Knee of the CR spectrum</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>A third explanation could be a change in CR interactions at <span class="math inline">\({\sqrt s}\sim\)</span> few TeV. The first two explanantions produce a rigidity dependent <em>knee</em>, ie the position of the <em>knee</em> for different nuclei depends on <span class="math inline">\(Z\)</span>, while the third explanation will depend on <span class="math inline">\(A\)</span>. Experimentally the rigidity dependence is favored.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/knee.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/knee.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<p>Experimentally at these energies we cannot observe cosmic-rays in a direct way. We need to start looking at their interactions with the atmosphere (see lecture 3 on air-shower physics). This imposses limitation on the precision of the cosmic ray composition. In particular different models of hadronic interactions have to be assumed.</p>
+<section id="the-ankle-and-the-end-of-the-spectrum" class="level4" data-number="2.4.1.1">
+<h4 data-number="2.4.1.1" class="anchored" data-anchor-id="the-ankle-and-the-end-of-the-spectrum"><span class="header-section-number">2.4.1.1</span> The Ankle and the End of the Spectrum</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/ankle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/ankle.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><p>A proton of energies <span class="math inline">\(10^{18}\)</span> eV has a gyroradious of a kpc in a typical magnetic field which hints at an extra-Galactic origin for these energies.</p></li>
+<li><p>Greissen-Zatsepin and Kuz-min predicted that at energies of <span class="math inline">\(\sim 10^{19}\)</span> eV will interact with the low energy photons of the CMB. This interaction leads to a supression of flux above <span class="math inline">\(5\times10^{19}\)</span> eV unless the sources are within a few tens of Mpc. This supression is referred as GZK cutoff.</p></li>
+</ul>
+</section>
+<section id="high-energy-composition" class="level4" data-number="2.4.1.2">
+<h4 data-number="2.4.1.2" class="anchored" data-anchor-id="high-energy-composition"><span class="header-section-number">2.4.1.2</span> High Energy Composition</h4>
+<ul>
+<li>Composition of the high energy CR spectrum involves only two archetypes: light nuclei (protons) and heavy nuclei (iron).</li>
+<li>The plots above show Auger / HiRes measurements near GZK cutoff, all favoring at least a mixed composition tending toward heavy at the higher energies.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/AugerUHECRComp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/AugerUHECRComp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="sources-of-extra-galactic-cosmic-rays" class="level4" data-number="2.4.1.3">
+<h4 data-number="2.4.1.3" class="anchored" data-anchor-id="sources-of-extra-galactic-cosmic-rays"><span class="header-section-number">2.4.1.3</span> Sources of Extra Galactic Cosmic Rays</h4>
+<p>As we shaw, CR in supernova remmants or blast waves can only accelerate CR <strong>up to 100 Z TeV</strong>. In order to explain CR beyond this energy, one has to invoke other processes such as Non-Linear Diffusion Acceleration, or extremely high magnetic fields (as suggested in Hillas plot).</p>
+<p>Binary systems in which a compact object (black hole, neutrino star, pulsar) is permanentely dragging material for an accompaying object (normal star or galaxy) and whirled into an accreation disk can generate enourmouse plasma motions with very strong electromagnetic fields. The image belowe shows an artistic representation of 4U 0614+091, a X-ray binary.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="http://2.bp.blogspot.com/_viputHRpZ2A/TB9vhOAIFJI/AAAAAAAADnk/TiLb5xiigM0/s1600/REFLECTION_4_B.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="http://2.bp.blogspot.com/_viputHRpZ2A/TB9vhOAIFJI/AAAAAAAADnk/TiLb5xiigM0/s1600/REFLECTION_4_B.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="sources-of-uhecr-the-disk-dynamo" class="level4" data-number="2.4.1.4">
+<h4 data-number="2.4.1.4" class="anchored" data-anchor-id="sources-of-uhecr-the-disk-dynamo"><span class="header-section-number">2.4.1.4</span> Sources of UHECR: The Disk Dynamo</h4>
+<p>Black holes or neutrino stars will have matter acretting around them. Due to the gravitational pull matter will be ripped of in molecules, atoms, and ultimately elementary charge particles. The energy gain of infalling potrons will correspond to the variation in the gravitational potential. If we equal the variation of gravitational potential to the kinetic energy of the accretting matter we have in the classical approach:</p>
+<p><span class="math display">\[\frac{1}{2}m_p v^2 = \Delta E = -\int^{R}_\infty G\frac{m_p M}{r^2} = G\frac{m_p M}{R}  \rightarrow v =\sqrt{\frac{2 GM}{R}}\]</span></p>
+<p>where <span class="math inline">\(M\)</span>, <span class="math inline">\(R\)</span>, are the mass and radius of the central compact object.</p>
+<ul>
+<li><p>For a neutron star (<span class="math inline">\(M\approx 2\times10^{30}\)</span> kg, <span class="math inline">\(R= 10\)</span> km): <span class="math inline">\(\frac{\Delta E}{m_p} \sim 1.32\times 10^{20} \;\mathrm{erg/g}\)</span></p></li>
+<li><p>For a black hole (<span class="math inline">\(M\approx 10^8 M_\odot\)</span>, <span class="math inline">\(R = R_S = 2\frac{GM}{c^2}\)</span>): <span class="math inline">\(\frac{\Delta E}{m_p} \sim 5 \times 10^{20} \;\mathrm{erg/g}\)</span></p></li>
+</ul>
+<p>The variable magnetic field of the neutron stars or black holes are perpendicular to the direction of the accreation disk generating a Lorentz force:</p>
+<p><span class="math display">\[\vec{F} = e (\vec{v} \times \vec{B}) = e\vec{E}\]</span></p>
+<p>So the energy obtained is</p>
+<p><span class="math display">\[E=\int \vec{F}d\vec{s} = e v B\Delta s\]</span></p>
+<p>where <span class="math inline">\(\Delta s\)</span> is the distance over which the force acts. Under plausible assumptions (<span class="math inline">\(v \sim c\)</span>, <span class="math inline">\(B= 10^6\)</span> T, <span class="math inline">\(\Delta s = 10^5\)</span> m) energies of <span class="math inline">\(3\times 10^{19}\)</span> eV are possible.</p>
+</section>
+<section id="candidates-of-extra-galactic-cosmic-rays-sources" class="level4" data-number="2.4.1.5">
+<h4 data-number="2.4.1.5" class="anchored" data-anchor-id="candidates-of-extra-galactic-cosmic-rays-sources"><span class="header-section-number">2.4.1.5</span> Candidates of Extra Galactic Cosmic Rays Sources</h4>
+<p>The two main candidates for ExtraGalactic Cosmic Rays are:</p>
+<ul>
+<li><strong>Active Galactic Nuclei (AGN)</strong></li>
+<li><strong>Gamma Ray Bursts</strong></li>
+</ul>
+<section id="active-galactic-nuclei-agns" class="level5" data-number="2.4.1.5.1">
+<h5 data-number="2.4.1.5.1" class="anchored" data-anchor-id="active-galactic-nuclei-agns"><span class="header-section-number">2.4.1.5.1</span> Active Galactic Nuclei (AGNs)</h5>
+<ul>
+<li><p>Discovered in 1932 by K. Jansky looking for noise in transatlantic radio transmission for the Bell Telephone Labs. He found a persistent noise in the radio from the centre of the Galaxy too loud to be due to thermal black body radiation.</p></li>
+<li><p>1953 Ginzburg &amp; Shklovski suggested it was due to synchrotron radiation from highly relativistic electrons, confirmed with discovery of predicted polarization in M87 light.</p></li>
+<li><p>Sandange labeled 3C48 a quasar or quasi-stellar object (it appeared pointlike).</p></li>
+<li><p>In 1962 3C273 radio source position was found with precision of 1 arcsec, which allowed to find the optical counterpart at z = 0.158 (not 1 star but a galaxy).</p></li>
+<li><p>In 1963 Hoyle and Fowler speculated that the tremendous emitted energy is due to the gravitational collapse of a very massive object.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="AGN Classification">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+AGN Classification
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>There is two broad classes: <strong>Radio quiet</strong> (90%) and <strong>Radio Loud</strong> (10%) depending on the pressence of jets or not.</li>
+<li>The unified model of ANGs suggests that different AGNs are infact the same object seen from different angles.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/agn_model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/agn_model.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gamma-ray-bursts" class="level5" data-number="2.4.1.5.2">
+<h5 data-number="2.4.1.5.2" class="anchored" data-anchor-id="gamma-ray-bursts"><span class="header-section-number">2.4.1.5.2</span> Gamma-Ray Bursts</h5>
+<ul>
+<li><p>GRBs are short bursts lasting a few seconds of <span class="math inline">\(\gamma\)</span>-ray photons from 0.1 - 1 MeV.</p></li>
+<li><p>They were discovered in the 60s by the U.S. Vela satellites, which were built to detect gamma radiation pulses emitted by nuclear weapons tested in space as the US suspected the URSS might carry on secret nuclear tests depiste the <a href="http://en.wikipedia.org/wiki/Nuclear_Test_Ban_Treaty">Nuclear Test Ban Treaty</a>.</p></li>
+<li><p>They have been hypothesed (given their occurence) to have caused mass extintions events (thousand times since life begun), in particular they are associated with the <a href="http://en.wikipedia.org/wiki/Ordovician%E2%80%93Silurian_extinction_event">Ordovician–Silurian extinction</a>.</p></li>
+<li><p>There is some observational evidence suggesting that progenitor of a GRB are stars undergoing a catastrophic energy release by the end of their lifes <span class="math inline">\(\rightarrow\)</span> Hypernovas</p></li>
+</ul>
+<p>The accepted phenomenological picuted of GRBs is of a expanding relativistic wind <em>fireball</em> dissipating kinetic energy. The observed <em>afterglow</em> on some GRBs result from the collision of the expanding fireball and the surroundings.</p>
+<p>In the fireball, the observed radition is produced by synchrotron emission of shock accelerated electrons, similar to SNRs. Hence, it is likely that protons will be also shock accelerated.</p>
+<p>The two conditition for GRBs sources of UHECR are:</p>
+<ol type="1">
+<li><p>The proton acceleration time must be smaller that the wind expansion time (burst duration).</p></li>
+<li><p>The proton synchrotron loss time must exceed the acceleration time.</p></li>
+</ol>
+<p>These two conditions lead to a constrain in the Lorentz boost factor for GRBs:</p>
+<p><span class="math display">\[\gamma \geq 130\left(\frac{E}{10^{20}\mathrm{\; eV}}\right)^{3/4}\left(\frac{0.01\mathrm{\; s}}{\Delta t}\right)^{1/4}\]</span></p>
+<p>which matches what we see from GRBs. However IceCube has <a href="http://arxiv.org/abs/1204.4219">not seen any neutrino associated with GRBs</a> which puts in tension the idea that GRBs can be the only sources of UHECR.</p>
+</section>
+</section>
+</section>
+<section id="references" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Claus" class="csl-entry" role="listitem">
+Grupen, Claus. n.d. <em>Astro Particle Physics</em>.
+</div>
+<div id="ref-kachelriess2008lecture" class="csl-entry" role="listitem">
+Kachelriess, M. 2008. <span>“Lecture Notes on High Energy Cosmic Rays.”</span> <a href="https://arxiv.org/abs/0801.4376">https://arxiv.org/abs/0801.4376</a>.
+</div>
+<div id="ref-Kampert_2014" class="csl-entry" role="listitem">
+Kampert, Karl-Heinz, and Peter Tinyakov. 2014. <span>“Cosmic Rays from the Ankle to the Cutoff.”</span> <em>Comptes Rendus. Physique</em> 15 (4): 318–28. <a href="https://doi.org/10.1016/j.crhy.2014.04.006">https://doi.org/10.1016/j.crhy.2014.04.006</a>.
+</div>
+<div id="ref-72925f46-3bcd-305f-ad05-7b07a9fbcf25" class="csl-entry" role="listitem">
+Melia, Fulvio. 2009. <em>High-Energy Astrophysics</em>. Vol. 14. Princeton University Press. <a href="http://www.jstor.org/stable/j.ctv21r3q4z">http://www.jstor.org/stable/j.ctv21r3q4z</a>.
+</div>
+<div id="ref-Workman:2022ynf" class="csl-entry" role="listitem">
+Workman, R. L., and Others. 2022. <span>“<span class="nocase">Review of Particle Physics</span>.”</span> <em>PTEP</em> 2022: 083C01. <a href="https://doi.org/10.1093/ptep/ptac097">https://doi.org/10.1093/ptep/ptac097</a>.
+</div>
+</div>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Electroscope charged by induction. Source: Sylvanus P. Thompson (1881) Elementary Lessons in Electricity and Magnetism, MacMillan, New York, p.16, fig.&nbsp;12</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2.1: All particle cosmic ray spectrum</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2.2: Cosmic Ray spectrum per element</span>
+<span class="glightbox-desc lightbox-desc-4">Cosmic ray composition. Source: CRDB</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;2.3: Spectrum of <span class="math inline">\(e^-+e^+\)</span> cosmic rays</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;2.4: Positron excess</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;2.5: Representation of the <em>leaky box</em> model of the Galaxy</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;2.6: B/C ratio</span>
+<span class="glightbox-desc lightbox-desc-9">Boron to Carbon ratio</span>
+<span class="glightbox-desc lightbox-desc-13">Figure&nbsp;2.7&nbsp;(a): Upstream</span>
+<span class="glightbox-desc lightbox-desc-14">Figure&nbsp;2.7&nbsp;(b): Shockwave</span>
+<span class="glightbox-desc lightbox-desc-15">Figure&nbsp;2.7&nbsp;(c): Downstream</span>
+<span class="glightbox-desc lightbox-desc-17">The Knee of the CR spectrum</span>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap1.html" class="pagination-link  aria-label=" &lt;span="" concents="" and="" notations&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basic Concents and Notations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap3.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Cosmic Rays in the Atmosphere</span>">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
