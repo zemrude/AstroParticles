@@ -435,7 +435,7 @@ window.Quarto = {
 <section id="tutorial-i.-working-with-sed" class="level3" data-number="4.2.5">
 <h3 data-number="4.2.5" class="anchored" data-anchor-id="tutorial-i.-working-with-sed"><span class="header-section-number">4.2.5</span> Tutorial I. Working with SED</h3>
 <p>We are going to plot some SED using a python module called <a href="https://github.com/zblz/naima"><code>naima</code></a>. This package allows for the calculation of non-thermal radiation from relativistic particle populations.</p>
-<div id="f013d293" class="cell" data-execution_count="1">
+<div id="6607e290" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
@@ -545,7 +545,7 @@ Note
 <section id="tutorial-ii-working-with-sed" class="level3" data-number="4.2.7">
 <h3 data-number="4.2.7" class="anchored" data-anchor-id="tutorial-ii-working-with-sed"><span class="header-section-number">4.2.7</span> Tutorial II Working with SED</h3>
 <p>We are going now to calculate the IC spectrum using the CMB as the radiation field:</p>
-<div id="2905d3b6" class="cell" data-execution_count="2">
+<div id="72da82fd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.constants <span class="im">import</span> c</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>IC <span class="op">=</span> naima.models.InverseCompton(e_pl, seed_photon_fields<span class="op">=</span>[<span class="st">'CMB'</span>])</span>
@@ -597,7 +597,7 @@ Note
 <p><span class="math display">\[\epsilon = E_{CoM} - 2m_p \]</span></p>
 <p>The energy threshod to produce a pion at rest is then:</p>
 <p><span class="math display">\[E_{p,th} = \frac{m_{\pi^0}^2 + 4m_p m_{\pi^0} + 2m_p^2}{ 2 m_p} = \frac{m_{\pi^0}^2}{2m_p} + 2 m_{\pi^0} + m_p\]</span></p>
-<div id="569edec1" class="cell" data-execution_count="3">
+<div id="e1a2bd96" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mp <span class="op">=</span> <span class="fl">938.28</span> <span class="co">#MeV</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpion <span class="op">=</span> <span class="fl">134.976</span> <span class="co">#MeV</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"Kinetic energy threshold for pion production </span><span class="sc">{</span>(mpion<span class="op">**</span><span class="dv">2</span><span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>mp) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>mpion)<span class="sc">:.1f}</span><span class="ss"> MeV"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -685,7 +685,7 @@ Note
 </section>
 <section id="tutorial-ii-plot-of-the-cherenkov-angle-as-funcion-of-the-spectral-index." class="level3" data-number="4.2.14">
 <h3 data-number="4.2.14" class="anchored" data-anchor-id="tutorial-ii-plot-of-the-cherenkov-angle-as-funcion-of-the-spectral-index."><span class="header-section-number">4.2.14</span> Tutorial II: Plot of the Cherenkov angle as funcion of the spectral index.</h3>
-<div id="bf058ac2" class="cell" data-execution_count="4">
+<div id="8c71d227" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>diffn <span class="op">=</span> np.logspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">100</span>) <span class="co">#n - 1 form 0.0001 to 1</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">4</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -723,7 +723,7 @@ Cherenkov angle in the atmosphere: $\theta_C = 1.40^{\circ}$</code></pre>
 <p>The number of photons from Cherenkov radiation follows the <em>Frank-Tamn</em> formula:</p>
 <p><span class="math display">\[\frac{\mathrm{d}N}{\mathrm{d}x} = 2 \pi \alpha z^2\int_{\lambda_1}^{\lambda_2} \sin^2\theta \frac{\mathrm{d}\lambda}{\lambda^2}\]</span></p>
 <p>For relativistic particles, <span class="math inline">\(\beta \sim 1\)</span> in water <span class="math inline">\(n = 1.33\)</span> the Cherenkov spectrum is:</p>
-<div id="fe5f6858" class="cell" data-execution_count="5">
+<div id="f227b1a9" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.constants <span class="im">as</span> cte</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> cte.alpha <span class="co">#fine structure constant</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -738,7 +738,7 @@ Cherenkov angle in the atmosphere: $\theta_C = 1.40^{\circ}$</code></pre>
 <div class="cell-output cell-output-stderr">
 <pre><code>&lt;&gt;:8: SyntaxWarning: invalid escape sequence '\l'
 &lt;&gt;:8: SyntaxWarning: invalid escape sequence '\l'
-/var/folders/lx/66msvxgn7jbds1ygvq14q5z00000gn/T/ipykernel_90766/3882946818.py:8: SyntaxWarning: invalid escape sequence '\l'
+/var/folders/lx/66msvxgn7jbds1ygvq14q5z00000gn/T/ipykernel_91146/3882946818.py:8: SyntaxWarning: invalid escape sequence '\l'
   ax.set_xlabel("$\lambda$ [nm]")</code></pre>
 </div>
 <div class="cell-output cell-output-error">
@@ -888,7 +888,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) &amp;=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}
 </section>
 <section id="tutorial-ii-calculation-of-astrophysical-neutrino-oscillations" class="level3" data-number="4.3.6">
 <h3 data-number="4.3.6" class="anchored" data-anchor-id="tutorial-ii-calculation-of-astrophysical-neutrino-oscillations"><span class="header-section-number">4.3.6</span> Tutorial II: Calculation of astrophysical neutrino oscillations</h3>
-<div id="44592631" class="cell" data-execution_count="6">
+<div id="83966cda" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy <span class="im">as</span> sp</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -930,13 +930,13 @@ P(\nu_\alpha \rightarrow \nu_\beta) &amp;=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}
 <p>The probability of a neutrino flavor fector of <span class="math inline">\((\nu^{source}_e, \nu^{source}_\mu, \nu^{source}_\tau)\)</span> to change into a flavor vector <span class="math inline">\((\nu^{Earth}_e, \nu^{Earth}_\mu, \nu^{Earth}_\tau)\)</span> is given by:</p>
 <p><span class="math display">\[\begin{pmatrix}\left.\nu^{Earth}_e \\ \nu^{Earth}_\mu \\ \nu^{Earth}_\tau\right.\end{pmatrix} = P_{\alpha\beta} \begin{pmatrix}\left.\nu^{Source}_e \\ \nu^{Source}_\mu \\ \nu^{Source}_\tau\right.\end{pmatrix} \]</span></p>
 <p>Assuming at the source the flavor ratio is (1:2:0) we have that:</p>
-<div id="b88878b3" class="cell" data-execution_count="7">
+<div id="1b48d51a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Prob(<span class="dv">0</span>, <span class="dv">0</span>, U) <span class="op">+</span> Prob(<span class="dv">1</span>, <span class="dv">0</span>, U) <span class="op">+</span> Prob(<span class="dv">2</span>, <span class="dv">0</span>, U)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>1.005381376348095</code></pre>
 </div>
 </div>
-<div id="73a1197f" class="cell" data-execution_count="8">
+<div id="6d465f0d" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>source <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>])</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> ProbMatrix(U)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>Earth <span class="op">=</span> np.dot(P, source)</span>
@@ -1018,7 +1018,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) &amp;=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}
 <section id="tutorial-iii-calculate-the-value-of-xi" class="level3" data-number="4.3.12">
 <h3 data-number="4.3.12" class="anchored" data-anchor-id="tutorial-iii-calculate-the-value-of-xi"><span class="header-section-number">4.3.12</span> Tutorial III: Calculate the value of <span class="math inline">\(\xi\)</span></h3>
 <p>We are going to calculate the value of the parameter <span class="math inline">\(\xi\)</span> for different cosmological evolution of the sources. The SFR evolution is given by the following broken power law formula:</p>
-<div id="ddc326ad" class="cell" data-execution_count="9">
+<div id="4ef015ff" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rho(z):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> z <span class="op">&lt;</span> <span class="fl">1.</span>:</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="fl">1.</span> <span class="op">+</span> z)<span class="op">**</span><span class="fl">3.4</span></span>
@@ -1064,7 +1064,7 @@ $\xi$ = 0.48 for no cosmological evolution up to redshift z &lt; 2</code></pre>
 </div>
 <p>Therefore the parameter <span class="math inline">\(\xi\)</span> varies between <span class="math inline">\(0.5\sim 3\)</span>. We can equate this total neutrino flux per steroradian to the flux observed by IceCube (assuming an spectral index of 2):</p>
 <p><span class="math display">\[\xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} = E^2 \Phi_\nu \sim 2.06 \times 10^{-8} \frac{\mathrm{ GeV}}{\mathrm{ cm}^2\mathrm{ s\;} \mathrm{ sr}}\]</span></p>
-<div id="eb230551" class="cell" data-execution_count="10">
+<div id="c406a3e9" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I'm going to use units to avoid stupid mistakes</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> const</span>
@@ -1102,7 +1102,7 @@ $\xi$ = 0.48 for no cosmological evolution up to redshift z &lt; 2</code></pre>
 <p>so we have the 2 constrains together:</p>
 <p><span class="math display">\[n_0^{-1/3} \leq \frac{\Phi^{u.l.}}{10^{43}\frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}}\]</span></p>
 <p>which leads to the following condition on the local density of sources from the point-source upper limits:</p>
-<div id="8317a041" class="cell" data-execution_count="11">
+<div id="8e638e34" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>flux_upperlimit <span class="op">=</span> <span class="fl">2e-9</span> <span class="op">*</span> u.GeV<span class="op">/</span>u.cm<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> u.s</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>n0 <span class="op">=</span> np.power(flux_upperlimit<span class="op">/</span>Ln, <span class="op">-</span><span class="dv">3</span>)</span>
@@ -1534,7 +1534,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

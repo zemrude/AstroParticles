@@ -346,7 +346,7 @@ Tutorial I: Working with Units
 </div>
 <div class="callout-body-container callout-body">
 <p>Along these notes you are going to find different tutorials in <code>python</code> dealing with will help to develop your programing skills in and solve some numerical problems. In this case we are going to see an easy way to work with different units which is uing the module <code>units</code> that exist for example in <a href="http://astropy.readthedocs.org/en/latest/units/"><code>astropy</code></a>:</p>
-<div id="c9415eb6" class="cell" data-execution_count="1">
+<div id="274826c0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> const</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
@@ -361,13 +361,13 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Note that the variables defined above already have their units <code>attached</code> to them, so when you make a <code>print</code> or similar statement it will provide as well the units as a string.</p>
-<div id="daa9de9e" class="cell" data-execution_count="2">
+<div id="928df485" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>R_Earth <span class="op">=</span> <span class="fl">6.371E6</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>R_Sun <span class="op">=</span> <span class="fl">6.955E8</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>AU <span class="op">=</span> <span class="fl">1.496E11</span> <span class="op">*</span> u.m <span class="co"># meters</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We the radius we can calculate the mean density of Earth and Sun. We will show that units are preserved along calculations:</p>
-<div id="4d688959" class="cell" data-execution_count="3">
+<div id="06c25690" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>vol_sphere <span class="op">=</span> <span class="kw">lambda</span> r: <span class="dv">4</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">3</span><span class="op">*</span>r<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>rho_Sun <span class="op">=</span> M_Sun <span class="op">/</span> vol_sphere(R_Sun)</span>
@@ -384,7 +384,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>We can use this module to make different transformations of uings, for example from light years to meters:</p>
-<div id="405253da" class="cell" data-execution_count="4">
+<div id="40de406c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ly <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> u.lyr</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Number of seconds for light to travel from Sun to Earth: </span><span class="sc">{</span><span class="fl">1.</span><span class="op">/</span>const<span class="sc">.</span>c<span class="sc">.</span>to(u.AU<span class="op">/</span>u.s)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -397,7 +397,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Assuming that the Galaxy is roughly a disk 50 kpc in diameter and 500 pc thick we can now calculate its density:</p>
-<div id="6a2bb09a" class="cell" data-execution_count="5">
+<div id="697d0007" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>V_Gal <span class="op">=</span>  np.pi <span class="op">*</span> (<span class="dv">25000</span><span class="op">*</span>u.pc)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> <span class="dv">500</span><span class="op">*</span>u.pc</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Volume of the Milky Way is approximately: </span><span class="sc">{</span>V_Gal<span class="sc">.</span>to(u.m<span class="op">**</span><span class="dv">3</span>)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -466,7 +466,7 @@ R \equiv r_L B c = \frac{pc}{Ze}
 <p>The Sun is <strong>7.6-8.7 kpc</strong> from the Galactic Center where there appears to be a supermassive black hole of <strong>1 million solar masses</strong> (<span class="math inline">\(M_{\odot} = 1.99\times 10^{30}\)</span> Kg) which coincides with a radio source known as <strong>Sagittarius A*</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/c1/Galactic_centre_orbits.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Source: Wikipedia"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Galactic_centre_orbits.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/c1/Galactic_centre_orbits.svg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Source: Wikipedia"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Galactic_centre_orbits.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
 <figcaption>Source: Wikipedia</figcaption>
 </figure>
 </div>
@@ -477,7 +477,7 @@ R \equiv r_L B c = \frac{pc}{Ze}
 <p>The Milky Way is surrounded by 54 known satellite galaxies (most of them dwarf galaxies) in a group known as the <strong>Local Group</strong> (A dwarf galaxy has <span class="math inline">\(\sim\)</span> billion stars compared to our Milky Ways 200-400 billion stars). The most notably are the Large Magellanic Cloud (50 kpc) and the Small Magellanic Cloud (60 kpc). The LMC mass is <span class="math inline">\(10^{10} M_{\odot}\)</span>. Next nearest full-fledged galaxy is Andromeda or M31 (<span class="math inline">\(1.5\times 10^{12} M_{\odot}\)</span>) at a distance of approximately <strong>780 kpc</strong>. The group contains also other galaxies MW, M31, M33 (Triangulum Galaxy) and it has volume of diameter of about <strong>3 Mpc</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://upload.wikimedia.org/wikipedia/commons/5/57/5_Local_Galactic_Group_%28ELitU%29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Source: Wikipedia"><img src="http://upload.wikimedia.org/wikipedia/commons/5/57/5_Local_Galactic_Group_%28ELitU%29.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/5/57/5_Local_Galactic_Group_%28ELitU%29.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Source: Wikipedia"><img src="http://upload.wikimedia.org/wikipedia/commons/5/57/5_Local_Galactic_Group_%28ELitU%29.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
 <figcaption>Source: Wikipedia</figcaption>
 </figure>
 </div>
@@ -522,7 +522,7 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 </div>
 <div class="callout-body-container callout-body">
 <p>Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use <code>Astropy</code>. The <a href="http://www.astropy.org/">Astropy Project</a> is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.</p>
-<div id="1f2bdc40" class="cell" data-execution_count="6">
+<div id="2ade45b4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.time <span class="im">import</span> Time</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> datetime.datetime.now()</span>
@@ -536,11 +536,11 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in mjd is </span><span class="sc">{</span>dt<span class="sc">.</span>value<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in seconds is </span><span class="sc">{</span>dt<span class="sc">.</span>sec<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Today's date and time: 2024-04-09T15:42:13.615228
-Today's julian date (UTC) is 2460410.15
-Today's modified julian date (UTC) is 60409.65
-The time difference in mjd is 9230.65
-The time difference in seconds is 797528538.49</code></pre>
+<pre><code>Today's date and time: 2024-04-09T15:46:19.992481
+Today's julian date (UTC) is 2460410.16
+Today's modified julian date (UTC) is 60409.66
+The time difference in mjd is 9230.66
+The time difference in seconds is 797528784.87</code></pre>
 </div>
 </div>
 </div>
@@ -561,7 +561,7 @@ The time difference in seconds is 797528538.49</code></pre>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/eq_coordinates.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Equatorial coordinate system"><img src="images/eq_coordinates.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-with="50%" alt="Equatorial coordinate system"></a></p>
+<p><a href="images/eq_coordinates.svg" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Equatorial coordinate system"><img src="images/eq_coordinates.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-with="50%" alt="Equatorial coordinate system"></a></p>
 <figcaption>Equatorial coordinate system</figcaption>
 </figure>
 </div>
@@ -604,28 +604,28 @@ Tutorial III: Coordinate Transformations
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>ax.plot(ll, bb, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[ 2.80652078e-01  9.80175635e-02]
- [ 3.53468660e-01 -4.10161489e-02]
- [ 5.08695240e-01  3.03740888e-03]
- [ 8.90659156e-01  1.06884701e-02]
- [ 7.81562980e-01  4.01818878e-02]
- [ 1.98124492e-01  1.57023633e-02]
- [ 8.82722297e-01 -1.17439971e-03]
- [ 3.21310800e-01  2.15787245e-02]
- [ 1.42772848e+00 -1.34541857e-03]
- [-3.65111729e-02 -1.86747781e-02]]</code></pre>
+<pre><code>[[ 0.28685351  0.0204642 ]
+ [ 1.48963766 -0.01560576]
+ [-0.35562634  0.01796953]
+ [ 0.15636013  0.03509245]
+ [-1.58906376  0.00847893]
+ [-1.0385966  -0.01446237]
+ [-1.15934549  0.01927685]
+ [-0.36055693  0.03424465]
+ [ 1.48527536  0.04042053]
+ [-0.99390343 -0.01760565]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="chap1_files/figure-html/gal-eq-output-2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Galaxy in Galactic Coordiantes"><img src="chap1_files/figure-html/gal-eq-output-2.svg" class="img-fluid figure-img" alt="Galaxy in Galactic Coordiantes"></a></p>
+<p><a href="chap1_files/figure-html/gal-eq-output-2.svg" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Galaxy in Galactic Coordiantes"><img src="chap1_files/figure-html/gal-eq-output-2.svg" class="img-fluid figure-img" alt="Galaxy in Galactic Coordiantes"></a></p>
 <figcaption>Galaxy in Galactic Coordiantes</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Now let’s plot it in equatorial coordinates (right ascension, declination).</p>
-<div id="632c4229" class="cell" data-execution_count="8">
+<div id="ac0e8e38" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.coordinates <span class="im">import</span> SkyCoord</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -633,7 +633,7 @@ Tutorial III: Coordinate Transformations
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>c_gal_icrs <span class="op">=</span> c_gal.icrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Because <code>matplotlib</code> needs the coordinates in radians and between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>, not 0 and <span class="math inline">\(2\pi\)</span>, we have to convert them.</p>
-<div id="d95dac07" class="cell" data-execution_count="9">
+<div id="59d07a57" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ra_rad <span class="op">=</span> c_gal_icrs.ra.wrap_at(<span class="dv">180</span> <span class="op">*</span> u.deg).radian</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dec_rad <span class="op">=</span> c_gal_icrs.dec.radian</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -927,7 +927,7 @@ Example 2: UHECR protons
 <p>where <span class="math inline">\(d\Sigma(k)\)</span> refers to the spatial 3-dimentional metric depending on the curvature parameter <span class="math inline">\(k\)</span> which takes the discrete values +1, 0, -1, corresponding to a closed, open or spacially flat geometry, and we used the normalized form of the scale factor <span class="math inline">\(a(t) = R(t)/R_0\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Source: quantum-bits.org"><img src="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Source: quantum-bits.org"></a></p>
+<p><a href="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Source: quantum-bits.org"><img src="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Source: quantum-bits.org"></a></p>
 <figcaption>Source: quantum-bits.org</figcaption>
 </figure>
 </div>
@@ -999,7 +999,7 @@ H^2  &amp;=  \left(\frac{\dot a}{a} \right)^2 = \frac{8\pi G}{3}\rho + \frac{\La
 <p><span class="math display">\[C_\ell = \langle |a_{\ell m}|^2 \rangle\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="Source: ESA"><img src="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: ESA"></a></p>
+<p><a href="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="Source: ESA"><img src="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: ESA"></a></p>
 <figcaption>Source: ESA</figcaption>
 </figure>
 </div>
@@ -1182,7 +1182,7 @@ Tutorial IV: Age of the Universe
 <div id="fig-age" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="chap1_files/figure-html/fig-age-output-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14"><img src="chap1_files/figure-html/fig-age-output-1.svg" class="img-fluid figure-img"></a>
+<a href="chap1_files/figure-html/fig-age-output-1.svg" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14"><img src="chap1_files/figure-html/fig-age-output-1.svg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.2: Age of the Universe
@@ -1618,7 +1618,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
