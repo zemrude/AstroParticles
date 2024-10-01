@@ -16,4 +16,4 @@ A long this week we will use the following python modules related with astropart
 
 
 ### Disclaimer and Acknowledgments
-These notes are far from original work. I limited myself to read the literature on the subject, assimilate and also re-elaborate concepts into what I hope is a coherent story, useful to give a feeling of how wonderful our universe and Nature are. There is an endless list of people that inspired these notes and many references. Particularly, we acknowledge: T.K. Gaisser, F. Halzen, K. Hanson, Alexander Kappes, Carlos de los Heros, Stefano Gabici, T. Montaruli, and a long etc.
+These notes are far from original work. I limited myself to read the literature on the subject, assimilate and also re-elaborate concepts into what I hope is a coherent story, useful to give a feeling of how wonderful our Universe and Nature are. There is an endless list of people that inspired these notes and many references. Particularly, I acknowledge: T. K. Gaisser, F. Halzen, K. Hanson, A. Kappes, C. de los Heros, S. Gabici, T. Montaruli, and a long etc.

@@ -389,16 +389,18 @@ Since we know the partial cross-section of spallation processes we can use the s
 
 Let us perform a simply estimate of the *Boron-to-Carbon ratio*. Boron is chiefly produced by Carbon and Oxygen with approximately conserved kinetic energy per nucleon (see *Superposition principle*), so we can relate the *Boron source production rate*, $Q_B(E)$ to the differential density of Carbon by this equation:
 
-$$Q_B(E) \simeq n_{H} \beta c \sigma_{\rightarrow B} N_C$$
+$$Q_B(E) \simeq n_{ISM} \beta c \sigma_{f,B} N_C$$
 
-where, $n_H$ denotes the average interstellar gas number density and $N_C$ is the Carbon density and $\beta c$ is the Carbon velocity and $\sigma_{\rightarrow B}$ is the spallation cross-section of Carbon into Boron.
+where, $n_{ISM}$ denotes the average interstellar gas number density and $N_C$ is the Carbon density and $\beta c$ is the Carbon velocity and $\sigma_{f,B}$ is the spallation or fragementation cross-section of Carbon into Boron.
 
-The Boron density is related to the production rate by the lifetime of Boron in the Galaxy, $\tau$, before it escapes or losses itself energy by spallation:
+The Boron disappears by escaping the galaxy in Poisson process or lossing its energy. The disappearence of Boron can be written using a lifetime $\tau$ as:
 
-$$Q_B = \dot{N}_B = \frac{N_B}{\tau}$$ 
+$$D_B = \frac{N_B}{\tau}$$ 
 
-where we used $\dot{N}_B = \frac{N_B}{\tau}$ assuming a constant per unit time lifetime (see next Leaky Box model). So we can write:
+assuming the amount of Boron in the Galaxy is constant per unit time, $\dot{N}_B = 0$, then the production of Boron has to be equal to the disappearence rate, in other words:
+$$\dot{N}_B = 0 = Q_B - D_B$$
 
+We can write:
 
 $$\frac{N_B}{N_C} \simeq n_{H} \beta c \sigma_{\rightarrow B}\tau$$
 

@@ -674,7 +674,7 @@ Figure&nbsp;2.4: Positron excess
 </ul></li>
 <li><strong>Spallations processes:</strong> It occurs when C, N, O, Fe nuclei impact on intestellar hydrogen. The large nuclei is broken up into smaller nuclei. A clear indication of a spallation comes precisely from the composition comparison with stellar matter.</li>
 </ul>
-<div id="4116edcb" class="cell" data-execution_count="5">
+<div id="88d8fbea" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">1e-30</span> <span class="co">#in cm2</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1</span> <span class="co"># in cm-3</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="fl">1.</span><span class="op">/</span>(n<span class="op">*</span>sigma) <span class="op">*</span> <span class="fl">3.241e-25</span> <span class="co"># in Mpc</span></span>
@@ -696,7 +696,7 @@ Figure&nbsp;2.4: Positron excess
 </section>
 <section id="the-leaky-box-model" class="level4" data-number="2.3.1.3">
 <h4 data-number="2.3.1.3" class="anchored" data-anchor-id="the-leaky-box-model"><span class="header-section-number">2.3.1.3</span> The Leaky Box Model</h4>
-<p>The <em>Leaky Box model</em> is a very simple model used to describe cosmic-ray confinement. In this simplified phenomenological picture CRs are assumed be accelerated in the galactic plane and to propagate freely within a cylindrical box of size <span class="math inline">\(H\)</span> and radius <span class="math inline">\(R\)</span> (see <a href="#fig-leakybox" class="quarto-xref">Figure&nbsp;<span>2.5</span></a>) and reflected at the boundaries; the loss of particles is parametrized assuming the existence of a non-zero probability of escape for each encounter with the boundary (Poisson process).</p>
+<p>The <em>Leaky Box model</em> is a very simple model used to describe cosmic-ray confinement. In this simplified phenomenological picture CRs are assumed be accelerated in the galactic plane and to propagate freely within a cylindrical box of size <span class="math inline">\(H\)</span> and radius <span class="math inline">\(R\)</span> (see <a href="#fig-leakybox" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-leakybox</span></a>) and reflected at the boundaries; the loss of particles is parametrized assuming the existence of a non-zero probability of escape for each encounter with the boundary (Poisson process).</p>
 <div id="fig-leakybox" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-leakybox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -712,11 +712,12 @@ Figure&nbsp;2.5: Representation of the <em>leaky box</em> model of the Galaxy
 <h4 data-number="2.3.1.4" class="anchored" data-anchor-id="primary-to-secondary-ratios"><span class="header-section-number">2.3.1.4</span> Primary-to-Secondary Ratios</h4>
 <p>Since we know the partial cross-section of spallation processes we can use the secondary-to-primary abundance ratios to infer the gas column density traversed by the average cosmic ray.</p>
 <p>Let us perform a simply estimate of the <em>Boron-to-Carbon ratio</em>. Boron is chiefly produced by Carbon and Oxygen with approximately conserved kinetic energy per nucleon (see <em>Superposition principle</em>), so we can relate the <em>Boron source production rate</em>, <span class="math inline">\(Q_B(E)\)</span> to the differential density of Carbon by this equation:</p>
-<p><span class="math display">\[Q_B(E) \simeq n_{H} \beta c \sigma_{\rightarrow B} N_C\]</span></p>
-<p>where, <span class="math inline">\(n_H\)</span> denotes the average interstellar gas number density and <span class="math inline">\(N_C\)</span> is the Carbon density and <span class="math inline">\(\beta c\)</span> is the Carbon velocity and <span class="math inline">\(\sigma_{\rightarrow B}\)</span> is the spallation cross-section of Carbon into Boron.</p>
-<p>The Boron density is related to the production rate by the lifetime of Boron in the Galaxy, <span class="math inline">\(\tau\)</span>, before it escapes or losses itself energy by spallation:</p>
-<p><span class="math display">\[Q_B = \dot{N}_B = \frac{N_B}{\tau}\]</span></p>
-<p>where we used <span class="math inline">\(\dot{N}_B = \frac{N_B}{\tau}\)</span> assuming a constant per unit time lifetime (see next Leaky Box model). So we can write:</p>
+<p><span class="math display">\[Q_B(E) \simeq n_{ISM} \beta c \sigma_{f,B} N_C\]</span></p>
+<p>where, <span class="math inline">\(n_{ISM}\)</span> denotes the average interstellar gas number density and <span class="math inline">\(N_C\)</span> is the Carbon density and <span class="math inline">\(\beta c\)</span> is the Carbon velocity and <span class="math inline">\(\sigma_{f,B}\)</span> is the spallation or fragementation cross-section of Carbon into Boron.</p>
+<p>The Boron disappears by escaping the galaxy in Poisson process or lossing its energy. The disappearence of Boron can be written using a lifetime <span class="math inline">\(\tau\)</span> as:</p>
+<p><span class="math display">\[D_B = \frac{N_B}{\tau}\]</span></p>
+<p>assuming the amount of Boron in the Galaxy is constant per unit time, <span class="math inline">\(\dot{N}_B = 0\)</span>, then the production of Boron has to be equal to the disappearence rate, in other words: <span class="math display">\[\dot{N}_B = 0 = Q_B - D_B\]</span></p>
+<p>We can write:</p>
 <p><span class="math display">\[\frac{N_B}{N_C} \simeq n_{H} \beta c \sigma_{\rightarrow B}\tau\]</span></p>
 <section id="boron-to-carbon-ratio" class="level5" data-number="2.3.1.4.1">
 <h5 data-number="2.3.1.4.1" class="anchored" data-anchor-id="boron-to-carbon-ratio"><span class="header-section-number">2.3.1.4.1</span> Boron-to-Carbon Ratio</h5>
@@ -862,7 +863,7 @@ Tutorial II: Motion of a charge particle in a slowly changing magnetic field
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div id="210592c1" class="cell" data-execution_count="8">
+<div id="c466a15c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="fl">1.0</span></span>
@@ -995,7 +996,7 @@ J_i&amp;=-D \frac{\partial N}{\partial x_i}
 <p><span class="math display">\[ I(E) \approx 1.8 \times 10^4 \left(\frac{E}{1\; \mathrm{GeV}}\right)^{-2.7} \frac{\mathrm{nucleons}}{\mathrm{m}^2\; \mathrm{s\;sr\;GeV}}\]</span></p>
 <p>we can calculate the energy density for cosmic-rays from above the solar modulations up the <em>knee</em>, which is given by:</p>
 <p><span class="math display">\[ \rho_{CR} = \frac{4\pi}{c} \frac{1.8}{1 - 1.7} \left[\left(\frac{E_{max}}{1\;\mathrm{GeV}}\right)^{1 -1.7} - \left(\frac{E_{min}}{1\;\mathrm{GeV}}\right)^{1 -1.7}\right] \approx 1\; \mathrm{ev\;cm}^{-3}\]</span></p>
-<div id="b7e50d6b" class="cell" data-execution_count="9">
+<div id="5dd933c3" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.constants <span class="im">as</span> cte</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.constants <span class="im">import</span> pc</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1017,7 +1018,7 @@ J_i&amp;=-D \frac{\partial N}{\partial x_i}
 <p><span class="math display">\[\mathcal{L}_{CR} = \frac{V_D \rho_{CR}}{\tau_{esc} }\sim 4\times 10^{40} \mathrm{\;erg\;s}^{-1}\]</span></p>
 <p>where <span class="math inline">\(V_D\)</span> is the volume of the galactic disk</p>
 <p><span class="math display">\[V_D = \pi R^2 d \sim \pi (15 \mathrm{\;kpc})^2(300 \mathrm{\;pc}) \sim 6 \times 10^{66} \mathrm{\;cm}^3.\]</span></p>
-<div id="a7570fec" class="cell" data-execution_count="10">
+<div id="02419aed" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">15000</span> <span class="op">*</span> pc.to(<span class="st">"cm"</span>).value <span class="co"># radius in Cm</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">300</span> <span class="op">*</span> pc.to(<span class="st">"cm"</span>).value</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>Vd <span class="op">=</span> np.pi <span class="op">*</span> R <span class="op">**</span><span class="dv">2</span> <span class="op">*</span> h</span>
@@ -1045,7 +1046,7 @@ Power Required for &gt; 100 TeV
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The derivation above was considered using the CR flux with an integral spectral index of <span class="math inline">\(\gamma = \alpha -1 =  1.7\)</span> which describes well the CR up to the <em>knee</em> (See <a href="#sec-knee" class="quarto-xref"><span>Section 2.4.1</span></a>). This is the bulk of cosmic ray density. The power required for the high energy part will be significantly less due to the steeply falling primary cosmic ray spectrum. For example assuming an integral index of <span class="math inline">\(\gamma = 1.6\)</span> for <span class="math inline">\(E &lt; 1000\)</span> TeV and <span class="math inline">\(\gamma = 2\)</span> for higher energy we get:</p>
+<p>The derivation above was considered using the CR flux with an integral spectral index of <span class="math inline">\(\gamma = \alpha -1 =  1.7\)</span> which describes well the CR up to the <em>knee</em> (See <a href="#sec-knee" class="quarto-xref"><span class="quarto-unresolved-ref">sec-knee</span></a>). This is the bulk of cosmic ray density. The power required for the high energy part will be significantly less due to the steeply falling primary cosmic ray spectrum. For example assuming an integral index of <span class="math inline">\(\gamma = 1.6\)</span> for <span class="math inline">\(E &lt; 1000\)</span> TeV and <span class="math inline">\(\gamma = 2\)</span> for higher energy we get:</p>
 <p><span class="math display">\[\begin{aligned}
 \sim 2 \times 10^{39} {\;\rm\;erg/s\; for\; } E &amp;&gt; 100 \mathrm{\; TeV}\\
 \sim 2 \times 10^{38} {\;\rm\;erg/s\; for\; } E &amp;&gt; 1 \mathrm{\;PeV}\\
@@ -1355,7 +1356,7 @@ Hillas Criteria
 <li>Consequence of the breakdown of an acceleration mechanism.</li>
 <li>Increased rate of escape from the galaxy at high energies.</li>
 </ul>
-<div id="f3902463" class="cell" data-fig-label="fig-knee" data-execution_count="11">
+<div id="d61d98fa" class="cell" data-fig-label="fig-knee" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>elements <span class="op">=</span> (<span class="st">"H"</span>, <span class="st">"He"</span>, <span class="st">"C"</span>, <span class="st">"N"</span>, <span class="st">"O"</span>, <span class="st">"Si"</span>, <span class="st">"Fe"</span>)</span>
@@ -1527,7 +1528,7 @@ AGN Classification
 </section>
 <section id="references" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="references">References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Claus" class="csl-entry" role="listitem">
 Grupen, Claus. n.d. <em>Astro Particle Physics</em>.
 </div>
@@ -1965,7 +1966,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

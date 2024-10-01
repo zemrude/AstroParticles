@@ -568,7 +568,7 @@ Critical energy for mesons, <span class="math inline">\(\pi\)</span>, <span clas
 <p>The muon energy spectrum at sea level is a direct consequence of the meson source spectrum. Unlike electrons, muons will decay before reaching the ground in the GeV energy range. The muon decay length is given by:</p>
 <p><span class="math display">\[ d_\mu = \gamma \tau_\mu c\]</span></p>
 <p>Where <span class="math inline">\(\tau_\mu\)</span> is the muon lifetime of the order of <span class="math inline">\(2.2\times 10^{-6}\)</span> s. So for a muon of 1 GeV we have:</p>
-<div id="8a1d739b" class="cell" data-execution_count="1">
+<div id="4710a758" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lifetime <span class="op">=</span> <span class="fl">2.1969811e-6</span> <span class="co"># muon lifetime in seconds</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.constants <span class="im">as</span> cte</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cspeed <span class="op">=</span> cte.c</span>
@@ -616,7 +616,7 @@ Tutorial I: Plot the muon flux for two different angles
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div id="5b54f890" class="cell" data-execution_count="2">
+<div id="072e38a6" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
@@ -719,11 +719,11 @@ Tutorial I: Plot the muon flux for two different angles
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tutorial II: Plot the <span class="math inline">\(\nu_\mu\)</span> and <span class="math inline">\(\nu_e\)</span> atmospheric flux using the package <code>DaemonFlux</code> <span class="citation" data-cites="Yanez:2023lsy">Yañez and Fedynitch (<a href="chap1.html#ref-Yanez:2023lsy" role="doc-biblioref">2023</a>)</span>
+Tutorial II: Plot the <span class="math inline">\(\nu_\mu\)</span> and <span class="math inline">\(\nu_e\)</span> atmospheric flux using the package <code>DaemonFlux</code> <span class="citation" data-cites="Yanez:2023lsy">Yañez and Fedynitch (<a href="#ref-Yanez:2023lsy" role="doc-biblioref">2023</a>)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div id="00572074" class="cell" data-fig-caption="Neutrino Flux using DaemonFlux @Yanez:2023lsy" data-execution_count="3">
+<div id="d347d204" class="cell" data-fig-caption="Neutrino Flux using DaemonFlux @Yanez:2023lsy" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> daemonflux <span class="im">import</span> Flux</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fl <span class="op">=</span> Flux(location<span class="op">=</span><span class="st">'generic'</span>, use_calibration<span class="op">=</span><span class="va">True</span>, debug<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>egrid <span class="op">=</span> np.logspace(<span class="dv">0</span>,<span class="dv">5</span>)</span>
@@ -925,7 +925,7 @@ Earth is transparent to GeV neutrinos
 <p>where <span class="math inline">\(n_N\)</span> is the number density of <em>nucleons</em> and not atoms. As we saw in lecture 2 we can re-express the number density as:</p>
 <p><span class="math display">\[n_N = \frac{N_A}{\mathcal{M}}\rho\]</span></p>
 <p>where <span class="math inline">\(\mathcal{M}\)</span> is the molar mass of one mole of nucleons and <span class="math inline">\(\rho\)</span> is the mass density of the medium. However, by definition a mol of nucleons has a mass of 1 g (Remember that a mol of <span class="math inline">\(^{12}C\)</span> atoms has a mass of 12 g). So, we can rewrite as <span class="math inline">\(n_N = N_A \rho\)</span>. Below there is another way to estimate the mean free path:</p>
-<div id="82c2966e" class="cell" data-execution_count="4">
+<div id="5a413193" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> ct</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Earth mass</span></span>
@@ -1141,7 +1141,7 @@ Tutorial III: Plot the survival probability of <span class="math inline">\(\nu_e
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div id="c00e4bea" class="cell" data-execution_count="5">
+<div id="4142c5cc" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">180</span> <span class="co"># km</span></span>
@@ -1174,7 +1174,7 @@ Tutorial III: Plot the survival probability of <span class="math inline">\(\nu_e
 </div>
 </div>
 <p>Eventually at low enough E / long baselines, neutrino beam becomes fully mixed and energy resolution and source extent conspire to produce 50/50 beam.</p>
-<div id="0ec3f0a1" class="cell" data-execution_count="6">
+<div id="191139a0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>y, x <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">50</span>,<span class="dv">180</span>,<span class="dv">100</span>), np.linspace(<span class="fl">0.1</span>, <span class="dv">15</span>, <span class="dv">100</span>) )</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> prob_survival(x<span class="op">*</span><span class="fl">1e-3</span>,y)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
@@ -1300,7 +1300,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 </section>
 <section id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le" class="level3" data-number="3.3.20">
 <h3 data-number="3.3.20" class="anchored" data-anchor-id="tutorial-iii-calculate-the-probabilities-of-nu_e-rightarrow-nu_x-as-function-of-le"><span class="header-section-number">3.3.20</span> Tutorial III: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E</h3>
-<div id="25b404f2" class="cell" data-execution_count="7">
+<div id="6e3b595e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PMNS_Factory(t12, t13, t23, d):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    s12 <span class="op">=</span> np.sin(t12)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    c12 <span class="op">=</span> np.cos(t12)</span>
@@ -1377,7 +1377,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \n
 <span class="glightbox-desc lightbox-desc-24">Calculated neutrino cross sections taken from <a href="http://arxiv.org/abs/1309.1764">arXiv:1309.1764</a></span>
 <span class="glightbox-desc lightbox-desc-28">Source: <a href="https://inspirehep.net/record/1114323">arXiv:1205.2671</a></span>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Yanez:2023lsy" class="csl-entry" role="listitem">
 Yañez, Juan Pablo, and Anatoli Fedynitch. 2023. <span>“<span class="nocase">daemonflux: DAta-drivEn MuOn-calibrated Neutrino Flux</span>,”</span> February. <a href="https://arxiv.org/abs/2303.00022">https://arxiv.org/abs/2303.00022</a>.
 </div>
@@ -1785,7 +1785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
