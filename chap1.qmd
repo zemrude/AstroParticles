@@ -470,8 +470,6 @@ The energy available for new particle creation is $\epsilon = E_{COM} - m_B - m_
    $$\epsilon^2 \approx 2 (E_A E_B - \vec{p}_A \vec{p}_B ).$$
 
 
-
-
 ### Fixed-target experiment
 
 If the target particle B is at rest in the laboratory system (as is the case in accelerator fixed-target experiments or UHE cosmic rays striking nucleons in the atmosphere, or ...) then $(E_B = m_B)$ and $(\vec{p}_B = 0)$. In this case,
