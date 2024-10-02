@@ -14,7 +14,7 @@ Before studying the interactions of cosmic rays in the atmosphere we need to set
 $$X(h) =\int_h^{\infty} \rho(h^\prime)\mathrm{ d}h^\prime$$
 
 
-![](images/atmos.png){fig-align="center" width="50%"}
+![](images/x.svg){fig-align="center" width="50%"}
 
 #### The isothermal model of the Atmosphere
 
