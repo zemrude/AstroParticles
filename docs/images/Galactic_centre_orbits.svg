@@ -1,0 +1,78 @@
+<svg viewBox="-640 -620 960 1152" font-family="sans-serif" text-anchor="middle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Inferred orbits of 6 stars around galactic centre</title>
+<desc>Inferred well-determined orbits of 6 stars around supermassive black hole Sagittarius A* at the Milky Way galactic centre based on data from "SINFONI in the Galactic Center: Young Stars and Infrared Flares in the Central Light-Month" by Eisenhauer et al, The Astrophysical Journal, 628:246-259, 2005; redrawn by CMG Lee.</desc>
+<defs><path id="arrow" d="M-10 20 0 0 10 20"/></defs>
+<rect x="-640" y="-620" width="960" height="1152" fill="#FFF"/>
+<!-- Grid -->
+<g fill="none">
+	<g stroke="#CCC" stroke-dasharray="1,19">
+	<path d="M-100-480.5V481" stroke-width="800"/>
+	<path d="M-480.5 0H281" stroke-width="1000"/>
+	</g>
+	<g stroke="#999" stroke-dasharray="1,99">
+	<path d="M-100-400.5V401" stroke-width="800"/>
+	<path d="M-400.5 0H201" stroke-width="1000"/>
+	</g>
+	<path d="M-500-500H300V500H-500Zm0 500H300M0-500V500" stroke="#000"/>
+</g>
+<g font-size="32">
+	<text x="-100" y="-580">Right Ascension difference from 17h 45m 40.045s</text>
+	<text transform="matrix(0,-1,1,0,-605,0)">Declination difference from −29° 0′ 27.9″</text>
+	<g text-anchor="end">
+		<text x="-510" y="-490">+0.5″</text>
+		<text x="-510" y="-390">+0.4″</text>
+		<text x="-510" y="-290">+0.3″</text>
+		<text x="-510" y="-190">+0.2″</text>
+		<text x="-510" y="-90" >+0.1″</text>
+		<text x="-510" y="10"  > 0.0″</text>
+		<text x="-510" y="110" >−0.1″</text>
+		<text x="-510" y="210" >−0.2″</text>
+		<text x="-510" y="310" >−0.3″</text>
+		<text x="-510" y="410" >−0.4″</text>
+		<text x="-510" y="510" >−0.5″</text>
+	</g>
+	<text x="-500" y="-530">+0.5″</text>
+	<text x="-400" y="-530">+0.4″</text>
+	<text x="-300" y="-530">+0.3″</text>
+	<text x="-200" y="-530">+0.2″</text>
+	<text x="-100" y="-530">+0.1″</text>
+	<text x="0"    y="-530"> 0.0″</text>
+	<text x="100"  y="-530">−0.1″</text>
+	<text x="200"  y="-530">−0.2″</text>
+</g>
+<!-- Orbits -->
+<g font-size="64" stroke-width="3" fill="none">
+	<text x="220" y="-420" fill="#C0C">S1</text>
+	<ellipse transform="translate(-25,-102) rotate(15.7)" rx="203" ry="397" stroke="#C0C"/>
+	<use transform="translate(154,-430) rotate(140)" xlink:href="#arrow" stroke="#C0C"/>
+	<text x="-240" y="380" fill="#C90">S8</text>
+	<ellipse transform="translate(-221,195) rotate(47.9)" rx="62" ry="315" stroke="#C90"/>
+	<use transform="translate(-300,340) rotate(60)" xlink:href="#arrow" stroke="#C90"/>
+	<text x="-250" y="-420" fill="#0C0">S12</text>
+	<ellipse transform="translate(-43,-227) rotate(-13)" rx="113" ry="263" stroke="#0C0"/>
+	<use transform="translate(-148,-440) rotate(-150)" xlink:href="#arrow" stroke="#0C0"/>
+	<text x="100" y="360" fill="#09C">S13</text>
+	<ellipse transform="translate(-18,90) rotate(15)" rx="200" ry="215" stroke="#09C"/>
+	<use transform="translate(67,280) rotate(60)" xlink:href="#arrow" stroke="#09C"/>
+	<text x="-360" y="-150" fill="#00F">S14</text>
+	<ellipse transform="translate(-160,-127) rotate(-50.3)" rx="10" ry="215" stroke="#00F"/>
+	<use transform="translate(-293,-230) rotate(-45)" xlink:href="#arrow" stroke="#00F"/>
+	<text x="0" y="-190" fill="#F00">S2</text>
+	<ellipse transform="translate(12,-73)" rx="52" ry="95" stroke="#F00"/>
+	<use transform="translate(20,-167) rotate(90)" xlink:href="#arrow" stroke="#F00"/>
+</g>
+<!-- Comparison -->
+<g font-size="28" text-anchor="end" stroke-width="20">
+<g transform="matrix(.126,0,0,.126,260,380)" fill="none">
+	<!-- Sedna   --><ellipse cx="11" cy="422" rx="161.5" ry="506.5" stroke="#F30"/>
+	<!-- Eris    --><ellipse transform="rotate(58)" cx="28" cy="4" rx="67.7" ry="44" stroke="#090"/>
+	<!-- Pluto   --><ellipse cx="10" cy="3" rx="40" ry="40" stroke="#90F"/>
+	<!-- Neptune --><circle r="30" stroke="#06C"/>
+	<!-- Sun     --><circle r="8" fill="#960"/>
+	</g>
+	<text x="230" y="440">Orbits of some bodies of the Solar System</text>
+	<text x="230" y="465">(<tspan fill="#F30">Sedna</tspan>, <tspan fill="#090">Eris</tspan>, <tspan fill="#90F">Pluto</tspan> and <tspan fill="#06C">Neptune</tspan>)</text>
+	<text x="230" y="490">at the same scale for comparison</text>
+</g>
+<circle r="5"/>
+</svg>

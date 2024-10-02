@@ -350,7 +350,7 @@ window.Quarto = {
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="the-boltzman-equation"><span class="header-section-number">5.3.2</span> The Boltzman equation</h3>
 <p>Imagine that dark matter is a non-interacting, non-relativistic particle with number density given <span class="math inline">\(n_\chi \propto a^{-3}\)</span>. As the universe expands the density is diluting according to:</p>
 <p><span class="math display">\[\frac{d n_\chi}{dt} = - 3 H n_\chi\]</span></p>
-<p>Since <span class="math inline">\(H = da/dt\)</span>. Now let’s imagine that dark matter is in thermal equilibrium with the standard model, we are talking here about “chemical” equilibrium in which particles interact and convert among each other while keeping the <em>total number of particles</em>. Ie, in this case it will mean that dark matter particles annihilate to SM (<span class="math inline">\(\chi \chi \rightarrow f\bar{f}\)</span>) and SM particles produce dark matter particles ($f{f} $). Dark matter annihilation happens at the rate that depends on the square of dark matter number density (because we need 2 DM particles) and the thermally average annihilation cross-section, so we can add this term in the equation above $n^2_<em>{A} v</em>$. On the contrary, the convertion of SM particles to DM can be is produced as a rate of <span class="math inline">\(-n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle\)</span>. At equilibrium, both processes must compensate so we can write:</p>
+<p>Since <span class="math inline">\(H = da/dt\)</span>. Now let’s imagine that dark matter is in thermal equilibrium with the standard model, we are talking here about “chemical” equilibrium in which particles interact and convert among each other while keeping the <em>total number of particles</em>. Ie, in this case it will mean that dark matter particles annihilate to SM (<span class="math inline">\(\chi \chi \rightarrow f\bar{f}\)</span>) and SM particles produce dark matter particles (<span class="math inline">\(f\bar{f} \rightarrow \chi \chi\)</span>). Dark matter annihilation happens at the rate that depends on the square of dark matter number density (because we need 2 DM particles) and the thermally average annihilation cross-section, so we can add this term in the equation above <span class="math inline">\(n^2_\chi \langle \sigma_{A} v_\chi \rangle\)</span>. On the contrary, the convertion of SM particles to DM can be is produced as a rate of <span class="math inline">\(-n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle\)</span>. At equilibrium, both processes must compensate so we can write:</p>
 <p><span class="math display">\[n^2_{\chi, eq} \langle \sigma_{A} v_\chi \rangle = n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle\]</span></p>
 <p>which leads us to the Boltzman equation written as:</p>
 <p><span class="math display">\[\frac{\mathrm{d} n_\chi}{\mathrm{d}t} = - 3 H n_\chi  - \langle \sigma_{A} v_\chi \rangle (n^2_\chi - n^2_{\chi, eq})\]</span></p>
@@ -368,7 +368,7 @@ window.Quarto = {
 <p>where we can assume that <span class="math inline">\(n_\chi = n_{\chi,eq}\)</span>. After the freeze-out, the number density changes scales with <span class="math inline">\(a(t)^{-3}\)</span> but also <span class="math inline">\(T\)</span> scales with <span class="math inline">\(a(t)^{-1}\)</span> so the number density of dark matter particles today can be written as:</p>
 <p><span class="math display">\[n_\chi(T_0) \sim n_\chi(T_{fo})\left(\frac{T_0}{T_{fo}}\right)^3 \sim \left(\frac{T_0}{T_{fo}}\right)^3 \times \frac{T_{fo}^2/M_{Pl}}{\langle \sigma_{A} v_\chi \rangle} \]</span></p>
 <p>The mass density is then, <span class="math inline">\(\rho_\chi = M_\chi n_\chi\)</span> and dividing by the critical energy gives:</p>
-<p><span class="math display">\[\Omega_\chi = \frac{\rho_\chi}{\rho_c} \sim \frac{10^{-25}}{\langle \sigma_{A} v_\chi \rangle} \rm{cm}^3\rm{s}^{-1}\]</span></p>
+<p><span class="math display">\[\Omega_\chi = \frac{\rho_\chi}{\rho_c} \sim \frac{10^{-25}}{\langle \sigma_{A} v_\chi \rangle} \mathrm{cm}^3\mathrm{s}^{-1}\]</span></p>
 <p>Finding the right relic density of dark matter is the same as finding the right value of <span class="math inline">\(\langle \sigma_{A} v_\chi \rangle\)</span>. As it happens this values turns out to be in the same range expected for the weak interactions. This is called the WIMP miracle…</p>
 </section>
 <section id="direct-detection" class="level3" data-number="5.3.4">
@@ -848,7 +848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

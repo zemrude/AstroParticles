@@ -22,7 +22,7 @@ So far, we have been unable to undoubtivously observe a cosmic-ray source. One o
 ## The Cosmic Ray Spectrum
 Cosmic rays mostly protons accelerated at sites within the Galaxy.
 
-* As they are charged they are deviated in galactic and inter-galactic $\vec{B}$ and solar and terrestrial magnetic fields. Directionality only possible for $E \gt 10^{19}$ eV. 
+* As they are charged they are deviated in galactic and inter-galactic $\vec{B}$ and solar and terrestrial magnetic fields. Directionality only possible for $E \ge 10^{19}$ eV. 
 * But interactions with CMB at $E \sim 10^{19}$ limit horizon tens or hundreds of Mpc.
 * One century after discovery, origins of cosmic rays, in particular UHECR, remain **unknown**
 
@@ -512,7 +512,7 @@ $$\tau^{-1} =  n_H \beta c \sigma_{f,B} + T^{-1}$$
 
 and solving for $T$ we have that:
 
-$$n_H T = \frac{n_H}{\frac{1}{\tau} - \frac{1}{\tau_{f,B}}} \simeq \frac{10^{14} \; \rm{s}\;\rm{cm}^{-3}}{\left(\frac{E}{\mathrm{GeV}}\right)^{-0.3} -0.7} \simeq 10^{14}\left(\frac{E}{\mathrm{GeV}}\right)^{-0.55} \rm{s}\;\rm{cm}^{-3}$$
+$$n_H T = \frac{n_H}{\frac{1}{\tau} - \frac{1}{\tau_{f,B}}} \simeq \frac{10^{14} \; \mathrm{s}\;\mathrm{cm}^{-3}}{\left(\frac{E}{\mathrm{GeV}}\right)^{-0.3} -0.7} \simeq 10^{14}\left(\frac{E}{\mathrm{GeV}}\right)^{-0.55} \mathrm{s}\;\mathrm{cm}^{-3}$$
 
 There no other physical loss process for Boron, so $T$ really must be the escape of the galactic confinement (leaky box). But if the box has a size $H$, $T_{esc}$ will be H/c which is the time required by CR generated in the Galactic plane to escape the box of height $H$! However we know that $T \gg H/c$. So there must be something else confining the CR in the galaxy... what could it be?
 
@@ -757,9 +757,9 @@ Therefore if SN transmit a few percent of the energy into CR it is enough to acc
 The derivation above was considered using the CR flux with an integral spectral index of $\gamma = \alpha -1 =  1.7$ which describes well the CR up to the *knee* (See @sec-knee). This is the bulk of cosmic ray density. The power required for the high energy part will be significantly less due to the steeply falling primary cosmic ray spectrum. For example assuming an integral index of $\gamma = 1.6$ for $E < 1000$ TeV and $\gamma = 2$ for higher energy we get:
 
 $$\begin{aligned}
-\sim 2 \times 10^{39} {\;\rm\;erg/s\; for\; } E &> 100 \mathrm{\; TeV}\\
-\sim 2 \times 10^{38} {\;\rm\;erg/s\; for\; } E &> 1 \mathrm{\;PeV}\\
- \sim 2 \times 10^{37} {\;\rm\;erg/s\; for\; } E &> 10 \mathrm{\;PeV}
+\sim 2 \times 10^{39} {\;\mathrm{\;erg/s\; for\;} } E &> 100 \mathrm{\; TeV}\\
+\sim 2 \times 10^{38} {\;\mathrm{\;erg/s\; for\;} } E &> 1 \mathrm{\;PeV}\\
+ \sim 2 \times 10^{37} {\;\mathrm{\;erg/s\; for\;} } E &> 10 \mathrm{\;PeV}
  \end{aligned}$$
 `
 which are considerably less than the total power required for all the cosmic-rays. This power might be available from a few very energetic sources.
@@ -839,7 +839,7 @@ In the **second order** (first chronologically) Fermi considered *encounters* wi
 * The probability of collision at angle $\theta$ with the cloud of speed V is proportional to the relative velocity between the cloud and the particle $c$ if we assume it relativistic (factor $1/2$ is there to have a proper normalization):
 
 
-$$\frac{dn}{d\cos \theta_1} = \frac{1}{2}\frac{c - V\cos\theta_1}{c}=\frac{1 -\beta \cos\theta_1}{2}, {\;\; \rm for -1 \leq \cos\theta_1 \leq 1}$$
+$$\frac{dn}{d\cos \theta_1} = \frac{1}{2}\frac{c - V\cos\theta_1}{c}=\frac{1 -\beta \cos\theta_1}{2}, {\;\; \mathrm{ for\;} -1 \leq \cos\theta_1 \leq 1}$$
 
 and so:
 
@@ -878,7 +878,7 @@ Fermi first order acceleration. Different referenec systems.
 
 * The outcoming distribution of particles is not now 0, there is an asymmetry in the Fermi shock acceleration model, as particle in the upstream will re-enter the shock, only those going downstream can escape. Therefore the distribution follows the projection of an uniform flux on a plane:
 
-$$\frac{dn}{d\cos \theta_2^\prime} = 2 \cos\theta_2^\prime{\;\; \rm for\;  0 \leq \cos\theta_2^\prime \leq 1}$$
+$$\frac{dn}{d\cos \theta_2^\prime} = 2 \cos\theta_2^\prime{\;\; \mathrm{for\;}  0 \leq \cos\theta_2^\prime \leq 1}$$
 
 which gives:
 
@@ -950,7 +950,7 @@ $$\frac{d}{dx}\left(\frac{\rho u^3}{2} + (\rho U + P)u\right) = 0 $$
 
 $$\frac{d}{dx}\left[ \rho u \left(\frac{u^2}{2} + U + \frac{P}{\rho}\right) \right] = 0 $$
 
-where U is the internal density per unit volume and we can write $ \rho U = \frac{P} {\Gamma -1}$, where $\Gamma = c_p/c_v$ is the [adiabatic index](http://en.wikipedia.org/wiki/Heat_capacity_ratio) or heat capacity ratio.
+where $U$ is the internal density per unit volume and we can write $\rho U = \frac{P}{\Gamma -1}$, where $\Gamma = c_p/c_v$ is the [adiabatic index](http://en.wikipedia.org/wiki/Heat_capacity_ratio) or heat capacity ratio.
 
 :::{.callout-important title="Conditions of discontinuity at the shochwave"}
 
@@ -1067,11 +1067,30 @@ energies in which he impossed that a condition where the size of the acceleratio
 
 #### Supernova Remnants (SNRs)
 
-**Supernova remnants (SNR)** remain the most likely candidates for CR acceleration up to at least $10^{14} \mathrm{ \; eV}$ via the Fermi shock mechanism. Supernova explosions are very violent events which transfer a significant amount of energy in the ISM. The explosion mechanism can be the carbon deflagration of white dwarts (Type I) or the core collapse of masssive stars (Type II) but the dynamical evolution of the supernova remnant (SNR) i.e., the expanding cloud of hot gas in the ISM is similar:
 
-* **Free Expansion Phase.** $M_{ej} \ll M_{sw}$ The shock wave moves in the ISM gas a highly supersonic speed. The shock radius scales as: $R_s(t) = v_e t$. Behind the shockfront ISM gas starts to accumulate an a reverse shock starts to form. Sometimes we see first this reverse shock. At some point the compressed ISM gas equals the ejected material, this marks the end of the free expansion phase. It last less than 200-300 years.
+**Supernova remnants (SNR)** remain the most likely candidates for CR acceleration up to at least $10^{14} \mathrm{ \; eV}$ via the Fermi shock mechanism. Supernova explosions are very violent events which transfer a significant amount of energy in the ISM. We distinguish between the SN explosions --the actual events and the next few years) and Supernova remnants - what happens over the next few thousand years. Supernova explosion mechanism can be the carbon deflagration of white dwarts (Type I) or the core collapse of masssive stars (Type II) but the dynamical evolution of the supernova remnant (SNR) i.e., the expanding cloud of hot gas in the ISM is similar and can be divided in 3 phases depending on the relation between the ejected material, $M_{ej}$ and the _swetp_ material $M_{sw}$:
 
-* **Sedov-Taylor Phase.** Once the reverse shock reaches the nucleus, the interior of the SNR gets very hot that energy losses due to radiation are not possible (all atoms are ionized). The cooling of the gas is only due to the expansion, that's why this phase is the adiabatic phase. The radius goes as $R \propto t^{2/5}$. When temperature reaches the critical value of $10^{6}$ K ionized atoms start to capture free electrons and can lose energy due to de-exitation. This is the end of the adiabatic phase. This phase can last 20,000 years. 
+* **Free Expansion Phase.** $M_{ej} \gg M_{sw}$ The shock wave moves in the ISM gas a highly supersonic speed. The speed is constant as there is no acceleration and so the shock radius scales as $R_s(t) = v_e t$. Behind the shockfront ISM gas starts to accumulate an a reverse shock starts to form. Sometimes we see first this reverse shock. At some point the compressed ISM gas equals the ejected material, this marks the end of the free expansion phase. Given an initial density of ISM $\rho_{ISM}$ we can can define a swept material as:
+  $$M_{sw} = \frac{4\pi}{3}\pi R_{sw}^3\rho_{ISM}$$
+  When the condition $M_{sw} \simeq M_{ej}$ is reached, this marks the end of the free expansion phase and the swept radius can be defined as:
+ $$R_{sw} = \left(\frac{3M_{ej}}{4\pi\rho_{ISM}}\right)^{1/3}$$ 
+This radius is reached at the defined swept time $t_{sw} =R_{sw}/v_{sh}$ which is about 200-300 years.
+
+* **Sedov-Taylor Phase.** Once the reverse shock reaches the nucleus, the interior of the SNR gets very hot that energy losses due to radiation are not possible (all atoms are ionized). The cooling of the gas is only due to the expansion, that's why this phase is the adiabatic phase. This is therefore a pressure-driven phase. Taking the pressure into account we can use the following formula:
+$$\frac{\textrm{d}}{\textrm{d}t}(m v) = F$$
+$$\frac{\textrm{d}}{\textrm{d}t}\left(\frac{4\pi}{3}R_{sh}^4\rho_{ISM}\dot{R}_{sh}\right) = 4\pi R_{sh}P$$
+  The pressure and internal energy $E$ of an ideal gas are related by:
+  $$P = (\gamma -1)\frac{E}{V}$$
+  where $V$ is the volume. Since this is an adiabatic expansion we can assume that the internal energy is equal to the explosion energy $E =E_{SN}$, and $V = 4\pi R_{sh}^3 /3$. Assuming a mono-atomic gass with a adiabactic index $\gamma = 5/3$ we obtain as pressure:
+  $$P = \frac{E_{SN}}{2\pi R_{sh}^3},$$
+  which inserting on the expression above we have:
+
+  $$\frac{\textrm{d}}{\textrm{d}t}\left(\frac{1}{3}R_{sh}^4\rho_{ISM}\dot{R_{sh}}\right) = \frac{E_{SN}}{2\pi R_{sh}}.$$
+  Solving for $R_{sh}$ we obtained:
+  $$R_{sh}(t) = \left(\frac{25E_{SN}}{4\pi \rho_{ISM}}\right)^{1/5}t^{2/5}$$
+  $$v_{sh}(t) = \frac{2}{5}\left(\frac{25E_{SN}}{4\pi \rho_{ISM}}\right)^{1/5}t^{-3/5}.$$
+  
+  As can be seen, the radius goes as $R_{sh} \propto t^{2/5}$. When temperature reaches the critical value of $10^{6}$ K ionized atoms start to capture free electrons and can lose energy due to de-exitation. This is the end of the adiabatic phase. This phase can last 20,000 years. 
 
 * **Cooling or Snowplough phase** Due to the effective radiative cooling the thermal presure decreases and the expansion slows down. More and more interstellar gas is accumulated until the swept-up mass is much larger than the ejected material. Finally the shell breaks up into clumps probably due to Rayleigh-Taylor inestabilities. This phase lasts up to 500,000 years.
 

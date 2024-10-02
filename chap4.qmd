@@ -14,7 +14,7 @@ As we saw, the origin of CR remains a mystery due to the deflection of CRs in th
 
 Gamma-ray astronomy provides an fundamental tool to observe the Universe using neutral deep penetrating gamma-ray particles. Originally the distinction between gamma-rays and X-rays was due to the nuclear production mechanism. X-rays are the product of transition of electrons in the atomic shell, while gamma-rays are produced in the atomic nucleus. This distinction also leads to a classification in energy. X-rays are typically below 100 keV. Photons with E > 100 keV are called gamma-rays. 
 
-![](http://upload.wikimedia.org/wikipedia/commons/f/f1/EM_spectrum.svg)
+![Source: Wikipedia](images/EM_spectrum.svg)
 
 ### Spectral Energy Distribution
 
@@ -471,7 +471,7 @@ The mayor limitation of satellite experiments is their low area which limits the
 ### Cherenkov emission.
 When relativistic particles traverse a medium at a speed greater than the speed of light in that medium it can induce Cherenkov radiation. Cherenkov light is emitted in the UV and blue region in a narrow cone with angle:
 
-![Source: Wikipedia](http://upload.wikimedia.org/wikipedia/commons/8/87/Cherenkov_radiation-animation.gif)
+![](images/Cherenkov.svg)
 
 $$\cos \theta = \frac{ct/n}{\beta c t} = \frac{1}{\beta n}$$
 
@@ -528,8 +528,8 @@ fig, ax = plt.subplots(figsize=(5,4))
 wl = np.arange(200, 500,1)
 n = 1.33
 ax.plot(wl, 2 * np.pi * alpha * ( 1- 1/n**2)/wl**2)
-ax.set_xlabel("$\lambda$ [nm]")
-ax.set_ylabel(r"$\frac{\mathrm{d}N_\gamma}{\mathrm{d}x \mathrm{ d}\lambda}}$ (photons nm$^{-2}$)")
+ax.set_xlabel(r"$\lambda$ [nm]")
+ax.set_ylabel(r"$\frac{\mathrm{d}N_\gamma}{\mathrm{d}x\mathrm{d}\lambda}$ (photons nm$^{-2}$)")
 ax.grid()
 plt.show()
 ```
@@ -759,7 +759,7 @@ U = PMNS_Factory(t12, t13, t23, 0)
 ```
 The probability of a neutrino flavor fector of $(\nu^{source}_e, \nu^{source}_\mu, \nu^{source}_\tau)$ to change into a flavor vector $(\nu^{Earth}_e, \nu^{Earth}_\mu, \nu^{Earth}_\tau)$ is given by:
 
-$$\begin{pmatrix}\left.\nu^{Earth}_e \\ \nu^{Earth}_\mu \\ \nu^{Earth}_\tau\right.\end{pmatrix} = P_{\alpha\beta} \begin{pmatrix}\left.\nu^{Source}_e \\ \nu^{Source}_\mu \\ \nu^{Source}_\tau\right.\end{pmatrix} $$
+$$\left(\nu^{Earth}_e \\ \nu^{Earth}_\mu \\ \nu^{Earth}_\tau\right) = P_{\alpha\beta} \left(\nu^{Source}_e \\ \nu^{Source}_\mu \\ \nu^{Source}_\tau\right)$$
 
 Assuming at the source the flavor ratio is (1:2:0) we have that:
 
@@ -808,7 +808,7 @@ Muons  produced  in  CC  neutrino  interactions  far  outside  the  detector can
 The results of a combined analysis fits the neutrino flux to a power-law between 27 TeV and 2 PeV consistent
 with an unbroken power law with a best-fit spectral index of $-2.49 \pm 0.08$ given by:
 
-$$E^2\Phi(E) = 2.06^{+0.35}_{-0.26} \times 10^{-8} \left(\frac{E}{100 \rm{ TeV}}\right)^{-0.46\pm 0.12} \mathrm{ GeV s}^{-1}\rm{ sr}^{-1}\mathrm{ cm}^{-2}.$$
+$$E^2\Phi(E) = 2.06^{+0.35}_{-0.26} \times 10^{-8} \left(\frac{E}{100\;\mathrm{TeV}}\right)^{-0.46\pm 0.12}\; \mathrm{GeV\;s}^{-1}\;\mathrm{sr}^{-1}\mathrm{ cm}^{-2}.$$
 
 
 

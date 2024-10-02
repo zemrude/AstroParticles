@@ -95,7 +95,7 @@ The critical energy is the energy at $(\mathrm{ d}E/\mathrm{ d}x)_{ion} = (\math
 
 When relativistic particles traverse a medium at a speed greater than the speed of light in that medium it can induce Cherenkov radiation. 
 
-![Source: Wikipedia](http://upload.wikimedia.org/wikipedia/commons/8/87/Cherenkov_radiation-animation.gif)
+![](images/Cherenkov.svg)
 
 
 Cherenkov light is emitted in the UV and blue region in a narrow cone with angle:
@@ -248,11 +248,11 @@ Electrons and nucleons fluxes above 1 GeV/$c$ are about 0.2 and 2 m$^{-2}$ s$^{-
 The most important channels for muon and neutrino production are:
 
 * Two body decays
-$$\pi^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({ \bar \nu_\mu}) \rm{\;\; (\sim 100\%)}$$
-$$K^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({\bar \nu_\mu}) \rm{\;\; (\sim 63.5\%)}$$
+$$\pi^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({ \bar \nu_\mu}) \mathrm{\;\; (\sim 100\%)}$$
+$$K^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({\bar \nu_\mu}) \mathrm{\;\; (\sim 63.5\%)}$$
 
 * Three body decay
-    $$K_L \rightarrow \pi^{\pm} e^{\pm}\nu_e({\bar \nu_e}) \rm{\;\; (\sim 38.7\%)}$$
+    $$K_L \rightarrow \pi^{\pm} e^{\pm}\nu_e({\bar \nu_e}) \mathrm{\;\; (\sim 38.7\%)}$$
 
 At lower energies, the muon decay is also important: 
 
@@ -260,7 +260,7 @@ $$ \mu^{\pm} \rightarrow e^{\pm} + \nu_{e}({\bar \nu_e}) + {\bar \nu_{\mu}}(\nu_
 
 For each of the 2-body decay channels, assuming the muon always decay the neutrino flavor ratio is: 
 
-$$\bf{ \nu_\mu : \nu_e = 2:1}$$
+$$\mathbf{ \nu_\mu : \nu_e = 2:1}$$
 
 :::{.callout-note title="Mean free path for mesons, $\pi$, $K$"}
 Charged pions and Kaons can interact or decay. Both processes have a mean free path and one or the other will dominate depending on which mean free path is larger.
@@ -328,7 +328,7 @@ Three different regimes are distinguishable:
 
 ![](images/muon_energylosses_air.png){width="50%" fig-align="center"}
 
-* $\epsilon_\mu \leq E_\mu \leq \epsilon_{\pi,K}$, where $\epsilon_\pi = 115 {\;\rm GeV}$ and $\epsilon_K = 850 {\;\rm GeV}$. In this range all mesons decay and muons spectrum follows the same of the parent spectrum of mesons and hence that of the primary CRs. The muon is almost independent of the zenith angle.
+* $\epsilon_\mu \leq E_\mu \leq \epsilon_{\pi,K}$, where $\epsilon_\pi = 115 \;\mathrm{GeV}$ and $\epsilon_K = 850 \;\mathrm{GeV}$. In this range all mesons decay and muons spectrum follows the same of the parent spectrum of mesons and hence that of the primary CRs. The muon is almost independent of the zenith angle.
 
 * $E_\mu \gg \epsilon_{\pi,K}$, Mesons interaction length starts to be comparable to their decay length. This happens first for inclined showers and so the muon flux gets suppressed while it also starts to depend on the zenith angle (ie on the density of the atmosphere).
 
@@ -595,12 +595,12 @@ Neutrinos will scatter from electrons as well as nuclear matter.
 
 The anti-neutrino cross-section at GeV energies is a factor ~2 lower (naively should be 3, but the factor 2 comes from the structure function of the nucleus) than the neutrino cross-section due to the helicity. 
 
-![](images/pdg_plot.gif){fig-align="center"}
+![](images/pdg_plot.png){fig-align="center"}
 
 At $E_\nu \gg 1 \mathrm{GeV}$ the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:
 
-$$\sigma_{\nu p} \simeq 0.69 \times 10^{-38} \left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2$$
-$$\sigma_{\bar{\nu} p} \simeq 0.35 \times 10^{-38}\left(\frac{E_\nu}{ 1 \rm{\; GeV}}\right) \rm{ \; cm}^2$$
+$$\sigma_{\nu p} \simeq 0.69 \times 10^{-38} \left(\frac{E_\nu}{ 1 \mathrm{\; GeV}}\right) \mathrm{ \; cm}^2$$
+$$\sigma_{\bar{\nu} p} \simeq 0.35 \times 10^{-38}\left(\frac{E_\nu}{ 1 \mathrm{\; GeV}}\right) \mathrm{ \; cm}^2$$
 
 Sometimes the cross-section is expressed as $\nu + N$ where $N$ is the nucleon definition as:
 

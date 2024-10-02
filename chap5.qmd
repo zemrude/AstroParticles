@@ -154,8 +154,8 @@ Imagine that dark matter is a non-interacting, non-relativistic particle with nu
 
 $$\frac{d n_\chi}{dt} = - 3 H n_\chi$$
 
-Since $H = da/dt$. Now let's imagine that dark matter is in thermal equilibrium with the standard model, we are talking here about "chemical" equilibrium in which particles interact and convert among each other while keeping the *total number of particles*. Ie, in this case it will mean that dark matter particles annihilate to SM ($\chi \chi \rightarrow f\bar{f}$) and SM particles produce dark matter particles ($f\bar{f} \rightarrow \chi \chi $).
-Dark matter annihilation happens at the rate that depends on the square of dark matter number density (because we need 2 DM particles) and the thermally average annihilation cross-section, so we can add this term in the equation above $n^2_\chi \langle \sigma_{A} v_\chi \rangle $. On the contrary, the convertion of SM particles to DM can be is produced as a rate of  $-n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle$. At equilibrium, both processes must compensate so we can write:
+Since $H = da/dt$. Now let's imagine that dark matter is in thermal equilibrium with the standard model, we are talking here about "chemical" equilibrium in which particles interact and convert among each other while keeping the *total number of particles*. Ie, in this case it will mean that dark matter particles annihilate to SM ($\chi \chi \rightarrow f\bar{f}$) and SM particles produce dark matter particles ($f\bar{f} \rightarrow \chi \chi$).
+Dark matter annihilation happens at the rate that depends on the square of dark matter number density (because we need 2 DM particles) and the thermally average annihilation cross-section, so we can add this term in the equation above $n^2_\chi \langle \sigma_{A} v_\chi \rangle$. On the contrary, the convertion of SM particles to DM can be is produced as a rate of  $-n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle$. At equilibrium, both processes must compensate so we can write:
 
 $$n^2_{\chi, eq} \langle \sigma_{A} v_\chi \rangle = n^2_{SM} \langle \sigma_{A,inv} v_\chi \rangle$$
 
@@ -177,20 +177,20 @@ At some point the expansion of the Universe becomes important and we no longer c
 
 In a radiation dominated Universe the expansion of the Universe is given by:
 
-$$ H(T) \propto \frac{T^2}{M_{Pl}} $$
+$$H(T) \propto \frac{T^2}{M_{Pl}}$$
 
 where $M_{PL}$ is the plank mass. So according to the Boltzman equation, in an expanding Universe the moment of the freeze-out is given by the condition:
 
 
-$$n_\chi(T_{fo}) \langle \sigma_{A} v_\chi \rangle =  3H(T_{fo}) $$
+$$n_\chi(T_{fo}) \langle \sigma_{A} v_\chi \rangle =  3H(T_{fo})$$
 
 where we can assume that $n_\chi = n_{\chi,eq}$. After the freeze-out, the number density changes scales with $a(t)^{-3}$ but also $T$ scales with $a(t)^{-1}$ so the number density of dark matter particles today can be written as:
 
-$$n_\chi(T_0) \sim n_\chi(T_{fo})\left(\frac{T_0}{T_{fo}}\right)^3 \sim \left(\frac{T_0}{T_{fo}}\right)^3 \times \frac{T_{fo}^2/M_{Pl}}{\langle \sigma_{A} v_\chi \rangle} $$
+$$n_\chi(T_0) \sim n_\chi(T_{fo})\left(\frac{T_0}{T_{fo}}\right)^3 \sim \left(\frac{T_0}{T_{fo}}\right)^3 \times \frac{T_{fo}^2/M_{Pl}}{\langle \sigma_{A} v_\chi \rangle}$$
 
 The mass density is then, $\rho_\chi = M_\chi n_\chi$ and dividing by the critical energy gives:
 
-$$\Omega_\chi = \frac{\rho_\chi}{\rho_c} \sim \frac{10^{-25}}{\langle \sigma_{A} v_\chi \rangle} \rm{cm}^3\rm{s}^{-1}$$
+$$\Omega_\chi = \frac{\rho_\chi}{\rho_c} \sim \frac{10^{-25}}{\langle \sigma_{A} v_\chi \rangle} \mathrm{cm}^3\mathrm{s}^{-1}$$
 
 Finding the right relic density of dark matter is the same as finding the right value of $\langle \sigma_{A} v_\chi \rangle$. As it happens this values turns out to be in the same range expected for the weak interactions. This is called the WIMP miracle...
 
@@ -277,7 +277,7 @@ The various elements of this equation are:
 
 * $C_E$ is the "evaporation" of dark matter, it is the escape of DM due to their thermal velociy being equivalent to the escape velocity of the celestial body. The Sun's escape velocity is $v_{esc} \simeq 1156$ km/s. Assuming DM particles sink into the core of the Sun and gain the thermal velocity the typical velocity is:
 
-$$v_\chi  \simeq c \left(\frac{1 \mathrm{keV}}{m_\chi}\right)^{1/2} \geq  v_{esc}^{\odot} \rightarrow m_\chi \leq 0.1 \mathrm{GeV} $$ 
+$$v_\chi  \simeq c \left(\frac{1 \mathrm{keV}}{m_\chi}\right)^{1/2} \geq  v_{esc}^{\odot} \rightarrow m_\chi \leq 0.1 \mathrm{GeV}$$ 
 
 only for very low masses the evaporation term is important.
 
@@ -293,7 +293,7 @@ $$\Gamma_A = \frac{1}{2}C_A N^2 = \frac{C_c}{2}\left[\tanh(\sqrt{C_c C_A} t)\rig
 
 where $t$ is the lifetime of the celestial body. It is clear from this equation that equilibrium is reached when:
 
-$$t_{eq} \equiv \frac{1}{\sqrt{C_c C_A}} $$
+$$t_{eq} \equiv \frac{1}{\sqrt{C_c C_A}}$$
 
 For the Earth, this equilibrium time is of the order of $10^{11}$ years if the spin-independent WIMP-proton cross-section is $\sigma^{SI}_{\chi - p} \sim 10^{-43} $cm$^{2}$ which is longer than the age of the solar system $t_{Earth} \sim 4.5$ Gyr. In the Sun however, most models predict $t_{eq} \ll t_\odot$ and therefore we can assume that equilibrium is reached in the Sun. 
 
