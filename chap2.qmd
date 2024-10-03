@@ -238,7 +238,7 @@ By measuring the primary-to-secondary ratio we can infer the propagation and dif
 
 ### Electrons 
 
-The spectrum of electrons is expected to steepen because the radioactive energy loss in the Galaxy. Electrons will lose energy primarly due to synchrotron radiation and Compton scattering.
+The spectrum of electrons is expected to steepen because the radiative energy loss in the Galaxy. Electrons will lose energy primarly due to [synchrotron radiation](chap4.qmd#synchrotron-radiation) and [inverse Compton scattering](chap4.qmd#inverse-compton-scattering.)
 
 ```{python}
 #| fig-cap: Spectrum of $e^-+e^+$ cosmic rays 
@@ -276,12 +276,15 @@ ax.legend(
 
 The plot above shows the ($e^− + e^+$) spectrum, only PAMELA data refers only to $e^−$. As can be seen there are several features worth noting:
 
-* The proton spectrum is also shown multiplied by 0.01, which means that electrons contribute only 1% to the CR.
-* For $E \leq$ 20 GeV the spectra is dominated by solar modulations and somehow follows the proton spectrum.
+* For $E \leq$ 20 GeV the spectra is dominated by solar modulations and somehow follows the same spectral index as the proton spectrum, although with factor 0.01 in the normalization, which means that electrons contribute only 1% to the overall CR spectrum. 
 * At about 5 GeV there is a change in the spectrum. Sometimes identified as the energy when electrons start too loose energy, and therefore the spectrum becomes steeper.
 * For $E >$ 50 GeV spectra is well fitted with a power law of $\sim 3.1$ for $e^−$ and $\sim 2.7$ for $e^+$. Since $e^−$ domimate over $e^+$ the overall spectrum ($e^− + e^+$) also follows a spectral index of $\sim 3$. Electron spectrum is much steeper than the proton one.
-* The sum spectrum ($e^− + e^+$) has a sharp break at $E \simeq$ 1 TeV, however this is dominated by the $e^−$ with an estimate of a ratio of 3 − 4 in $e^−/e^+$.
+* The sum spectrum ($e^− + e^+$) has a sharp break at $E \simeq$ 1 TeV, however this is dominated by the $e^−$ with an estimate of a ratio of 3 − 4 in $e^−/e^+$. This cutoff has been confirmed by DAMPE making it the first direct observation of this cutoff. 
 * There is an excess measured by ATIC at $\sim 700$ GeV. The existance of that feature has, however, never been confirmed by other experiments (Fermi, DAMPE, HESS).
+  
+:::{.callout-important title=""}
+Given the diffusion loss length of electrons is about $300\;\mathrm{pc}$ and confinement time in the Galaxy about $100\;\mathrm={yrs}$ it is assumed that the electron spectrum above few TeV is dominated by nearby and young cosmic ray sources.
+:::
 
 :::{.callout-note title="Question"}
 Assuming the electron flux is only 1% of the protons. Is it the Earth positive charged-up?

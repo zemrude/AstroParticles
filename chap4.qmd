@@ -96,7 +96,7 @@ $$P  = \frac{2q^2}{3c^3} \gamma^4 [ \gamma^2 a_{\parallel}^2 + a^2_{\perp}] $$
 
 In an uniform magnetic field, a high energy charged particle, for example an electron, moves in spiral path at a constant *pitch angle*, $\alpha$.
 
-![](images/spiral.svg)
+![](images/spiral.svg){fig-align="center"}
 
 Its velocity along the field lines is constant $v_{\parallel} = v \cos\alpha = \mathrm{const.}$, but its circular component $v_\perp = v\sin\alpha$. Let's first attack the non-relativistic case.
 
@@ -124,7 +124,7 @@ Note the Larmor formula does not tell us frequency spectrum, but if a particle i
 
 In particular since the power $P$ depends on  $|v^2|$ for a distance in the $x-y$ plane, power will varie as $\sin^2(\omega_{gyr}t)$ and so the electric field line will change as $E(t)\propto \sin(\omega_{gyr}t)$. The radiated emission will appear as *monochromatic* with an angular frequency given precisely by the particle circular frequency $\omega_{gyr}$. This is the known as the *cyclotron* radiation. In this case the dipole emission pattern is turning around with the particle and an observer in the laboratory frame will see the same frequency. As a consequence also the radiation is independent of the viewing angle. 
 
-#### Relativistic case: Synchrotron radiation.
+#### Relativistic case: Synchrotron radiation.{#synchrotron}
 
 Things are slighly different when we consider the relativistic case where electrons move at $\beta \rightarrow 1$. Using again Newton's law with the Lorentz force we have:
 
@@ -174,7 +174,7 @@ i.e, while the power is radiated nearly isotropically (dipole) in the particle's
 This beaming in the lab reference frame has an impact on how the viewer sees the electric field variation. It is no longer a sinusoidal, instead the emission is pulsed every time the cone sweeps around the line of sight of an observer as illustrated below:
 
 
-![](images/synchrotron_0.svg)
+![](images/synchrotron_0.svg){fig-align="center"}
 
 
 Since each cone beaming has a half amplidude of $1/\gamma$ the radiation from an observer is visible during a $\Delta \theta \sim 2/\gamma$. During this angular distance the particle travels from $A$ to $B$ at an angular frequency given by $\omega_{gyr}^{rel}$ which means that $\Delta t_{AB}$ is given by:
@@ -229,7 +229,7 @@ $$L_\nu \propto B^{(\delta+1)/2}\nu^{(1-\delta)/2}$$
 
 That is, the synchrotron spectrum of a power-law energy distribution is itself a power law. This idea is represented in the figure below:
 
-![](images/synchrotron_spectrum.svg)
+![](images/synchrotron_spectrum.svg){fig-align="center"}
 
 
 For example in our Galaxy we expect the electron population to have an spectral index of $\delta \sim 2.4$, and so the synchrotron radiation should have an spectral index of $\sim 0.7$. 
@@ -295,7 +295,7 @@ ax.grid()
 ax.legend(loc='upper right')
 plt.show()
 ```
-### Inverse Compton scattering.
+### Inverse Compton scattering.{#inverse-compton}
 
 Compton discovered that photons can transfer part of their energy to electrons in a collision. In astrophysics the inverse Compton effect electrons accelerated to high energy collide with photons from the blackbody radiation (thermal photons) or starlight photons and transfer energy to them. 
 
@@ -468,10 +468,10 @@ The Earth's atmosphere is opaque to photons with energy above 10 eV, meaning tha
 
 The mayor limitation of satellite experiments is their low area which limits their use to $\leq 100$ GeV. At 100 GeV is when electromagnetic showers from the initial photon can be detected in ground-based telescopes.
 
-### Cherenkov emission.
+### Cherenkov emission
 When relativistic particles traverse a medium at a speed greater than the speed of light in that medium it can induce Cherenkov radiation. Cherenkov light is emitted in the UV and blue region in a narrow cone with angle:
 
-![](images/Cherenkov.svg)
+![](images/Cherenkov.svg){fig-align="center"}
 
 $$\cos \theta = \frac{ct/n}{\beta c t} = \frac{1}{\beta n}$$
 
