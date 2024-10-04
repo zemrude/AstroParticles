@@ -15,6 +15,9 @@ book:
     - part: "Physics Introduction"
       chapters:
       - chap1.qmd
+      - chap1_1.qmd
+      - chap1_2.qmd
+      - chap1_3.qmd
     - part: "Cosmic Rays"
       chapters:
       - chap2.qmd
@@ -28,7 +31,7 @@ book:
     - part: "References"
       chapters:
       - references.qmd
-
+number-depth: 1
 
 bibliography: references.bib
   

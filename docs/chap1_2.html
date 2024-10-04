@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 3&nbsp; Introduction to Special Relativity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap1_3.html" rel="next">
+<link href="./chap1_1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap1.html">Physics Introduction</a></li><li class="breadcrumb-item"><a href="./chap1_2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-is-it-important" id="toc-why-is-it-important" class="nav-link active" data-scroll-target="#why-is-it-important">Why is it important?</a></li>
+  <li><a href="#lorentz-transformations" id="toc-lorentz-transformations" class="nav-link" data-scroll-target="#lorentz-transformations">Lorentz Transformations</a></li>
+  <li><a href="#consequences-of-lorentz-transformations" id="toc-consequences-of-lorentz-transformations" class="nav-link" data-scroll-target="#consequences-of-lorentz-transformations">Consequences of Lorentz transformations</a></li>
+  <li><a href="#relativistic-kinematics" id="toc-relativistic-kinematics" class="nav-link" data-scroll-target="#relativistic-kinematics"><span class="header-section-number">4</span> Relativistic kinematics</a>
+  <ul class="collapse">
+  <li><a href="#four-vectors" id="toc-four-vectors" class="nav-link" data-scroll-target="#four-vectors">Four-vectors</a></li>
+  <li><a href="#transformation-to-the-center-of-momentum-frame-com" id="toc-transformation-to-the-center-of-momentum-frame-com" class="nav-link" data-scroll-target="#transformation-to-the-center-of-momentum-frame-com">Transformation to the Center-of-Momentum Frame (COM)</a></li>
+  <li><a href="#fixed-target-experiment" id="toc-fixed-target-experiment" class="nav-link" data-scroll-target="#fixed-target-experiment">Fixed-target Experiment</a></li>
+  <li><a href="#collider-experiments" id="toc-collider-experiments" class="nav-link" data-scroll-target="#collider-experiments">Collider Experiments</a></li>
+  <li><a href="#two-body-decay-in-com" id="toc-two-body-decay-in-com" class="nav-link" data-scroll-target="#two-body-decay-in-com">Two-body Decay in COM</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap1.html">Physics Introduction</a></li><li class="breadcrumb-item"><a href="./chap1_2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-is-it-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-it-important">Why is it important?</h2>
+<p><span class="math display">\[\gamma = \sqrt{\frac{1}{1-\beta^2}}\;, \beta = \frac{v}{c}\]</span></p>
+<ul>
+<li>Jets emitted by supermassive black holes have: <span class="math inline">\(\gamma \approx 30 \rightarrow \beta = 0.9984\)</span></li>
+<li>Electrons spiraling in B-field lines of pulsars have: <span class="math inline">\(\gamma \sim 10^7\)</span></li>
+<li>Lorentz factors of protons of <span class="math inline">\(10^{20}\)</span> eV: <span class="math inline">\(\gamma = \frac{E}{m^0_p c^2} = \frac{10^{20}}{1\times 10^9} = 10^{11}\)</span></li>
+</ul>
+<p>Two principles:</p>
+<ol type="1">
+<li><p><em>The Principle of Relativity</em> – The laws by which the states of physical systems undergo change are not affected, whether these changes of state be referred to the one or the other of two systems in uniform translatory motion relative to each other</p></li>
+<li><p><em>The Principle of Invariant Light Speed</em>– “… light is always propagated in empty space with a definite velocity [speed] c which is independent of the state of motion of the emitting body.”</p></li>
+</ol>
+</section>
+<section id="lorentz-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="lorentz-transformations">Lorentz Transformations</h2>
+<p>As a simple case, consider a reference frame <em>O</em> and and observer in another frame <em>O’</em> moving at constant speed <span class="math inline">\(\beta\)</span> along the <span class="math inline">\(x\)</span> axis:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Lorentz.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/Lorentz.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>A Lorentz transformation or <em>boost</em> is the transformation from one inertial reference frame to another. In general it is a <span class="math inline">\((4\times4)\)</span> matrix which encapsulates the system of equations describing the transformation (in natural units).</p>
+<p><span class="math display">\[\begin{aligned}
+t' &amp;= \gamma(t - \beta x) \\
+x' &amp;= \gamma(x - \beta t) \\
+y' &amp;= y \\
+z' &amp;= z
+\end{aligned}\]</span></p>
+<p>The matrix form of this transformation is</p>
+<p><span class="math display">\[x'^\mu = {\Lambda^\mu}_\nu x^\nu, \; {\Lambda^\mu}_\nu =
+\begin{pmatrix}
+\gamma &amp; -\beta\gamma &amp; 0 &amp; 0 \\
+-\beta\gamma &amp; \gamma &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\]</span></p>
+<p>This is just a particular case of a Lorentz transformation (there is nothing special on the x-axis) and a variable invariant under a Lorentz transformation is called <em>Lorentz invariant or scalar</em>.</p>
+<p>The line element <span class="math inline">\(\Delta s^2\)</span> is a Lorentz invariant:</p>
+<p><span class="math display">\[\Delta s^2 = \Delta t^2 - \Delta x^2 - \Delta y^2 -\Delta z^2 \]</span></p>
+<p>This can be rewritten as the inner product of a 4-vector <span class="math inline">\(x^{\mu}\)</span>:</p>
+<p><span class="math display">\[\Delta s^2 = x^2 \equiv x^\mu x_\mu = g_{\mu\nu} x^\mu x^\nu\]</span></p>
+<p>where <em>metric tensor</em> <span class="math inline">\(g_{\mu\nu}\)</span> is:</p>
+<p><span class="math display">\[g_{00} = + 1, g_{11} = g_{22} = g_{33} = - 1 , g_{\mu\nu} = 0, \;\mathrm{ for}\; \mu \neq\nu\]</span></p>
+<p>is called the <strong>Minkowski space</strong>.</p>
+</section>
+<section id="consequences-of-lorentz-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="consequences-of-lorentz-transformations">Consequences of Lorentz transformations</h2>
+<p>Lorentz transformation have the following (some of them really bizarre) consequences:</p>
+<ul>
+<li><strong>Relativity of simultaneity.</strong> <span class="math inline">\(\Delta t' = 0\)</span> in <span class="math inline">\(O'\)</span> doesn’t imply <span class="math inline">\(\Delta t = 0\)</span> in <span class="math inline">\(O\)</span>:</li>
+</ul>
+<p><span class="math display">\[\Delta t' = \gamma(\Delta t - \beta \Delta x)\]</span></p>
+<ul>
+<li><strong>Time dilatation.</strong> If <span class="math inline">\(\Delta x = 0\)</span> i.e.&nbsp;the ticks of one clock:</li>
+</ul>
+<p><span class="math display">\[\Delta t' = \gamma \Delta t\]</span></p>
+<ul>
+<li><p><strong>Length contraction.</strong> For events satisfying <span class="math inline">\(\Delta t' = 0\)</span>:</p>
+<p><span class="math display">\[\Delta x' = \frac{\Delta x}{\gamma}\]</span></p></li>
+<li><p><strong>Equivalence of mass and energy.</strong></p></li>
+</ul>
+<p>In 1905, Einstein gave his first derivation of the mass-energy equivalence by studing, in different reference frames, the energy balance of a body emiting electromagnetic radiation. You can replace <em>body</em> with a <em>cat</em> and check a quick proof of the mass energy equivalence in this video:</p>
+<div id="fig-minute" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-minute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/hW7DW9NIO9M" title="Einstein's Proof of E=mc²" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Source: Minute Physics
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="relativistic-kinematics" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Relativistic kinematics</h1>
+<section id="four-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="four-vectors">Four-vectors</h2>
+<p>We saw that position vectors in Minkowski space become 4-vectors with zeroth component. <span class="math inline">\(x^0 = t\)</span>, identified with time. Likewise momentum 4-vector has <span class="math inline">\(p^0 = E\)</span>:</p>
+<p><span class="math display">\[ {\mathbf P} = (E, \vec{p})\]</span></p>
+<p><span class="math display">\[ {\mathbf X} = (t, \vec{x})\]</span></p>
+<p>We saw that the inner product in Minkowski space is invariant under Lorentz transformations. In this case, the Lorentz invariant is:</p>
+<p><span class="math display">\[  s = p_\mu p^{\mu} = m_0^2 = E^2 -{\vec p\cdot \vec p} \rightarrow E^2 = {\vec p\cdot \vec p} +m_0^2\]</span></p>
+<p>which is the <em>relativistic energy-momentum relationship</em>.</p>
+<p><span class="math display">\[ E = m = \gamma m_0\]</span></p>
+<p>One can derive the expresions for relativistic 3-momentum and kinetic energy:</p>
+<p><span class="math display">\[|{\vec p}|= \beta E\]</span></p>
+<p><span class="math display">\[E_{kin} \equiv E - m_0 = (\gamma -1) m_0\]</span></p>
+</section>
+<section id="transformation-to-the-center-of-momentum-frame-com" class="level2">
+<h2 class="anchored" data-anchor-id="transformation-to-the-center-of-momentum-frame-com">Transformation to the Center-of-Momentum Frame (COM)</h2>
+<p>As a concrete example of how 4-vectors aid real calculations, let’s take the classic case of a transformation to the center-of-momentum frame (COM), that is, a coordinate frame where the total three-momentum <span class="math inline">\(\vec p = 0\)</span>. In this case the invariant square of a system is equal to the total COM energy square or:</p>
+<p><span class="math display">\[\sqrt{s} = E_{COM}\]</span></p>
+<p>In the case of a two-particle system with particles A and B with energies <span class="math inline">\((E_A)\)</span> and <span class="math inline">\((E_B)\)</span>, and 3-momenta <span class="math inline">\((\vec{p}_A)\)</span> and <span class="math inline">\((\vec{p}_B)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}{2}
+s = p^2 &amp;= (E_A + E_B)^2 - (\vec{p}_A + \vec{p}_B)^2 \\
+    &amp;= m_A^2 + m_B^2 + 2E_AE_B - 2(\vec{p}_A \cdot \vec{p}_B)\\
+    &amp;= m_A^2 + m_B^2 + 2E_AE_B( 1 - \beta_A\beta_B\cos \theta)\\
+    &amp;= E_{COM}^2
+\end{aligned}\]</span></p>
+<p>where we used the fact that: <span class="math display">\[\vec{p}_A \cdot \vec{p}_B = |\vec{p}_A ||\vec{p}_B|\cos\theta\]</span></p>
+<p>and</p>
+<p><span class="math display">\[ |\vec{p}| = E\beta \]</span></p>
+<p>The energy available for new particle creation is <span class="math inline">\(\epsilon = E_{COM} - m_B - m_A\)</span>. If <span class="math inline">\(E_A \gg m_A\)</span> and <span class="math inline">\(E_B \gg m_B\)</span> then:</p>
+<p><span class="math display">\[\epsilon^2 \approx 2 (E_A E_B - \vec{p}_A \vec{p}_B ).\]</span></p>
+</section>
+<section id="fixed-target-experiment" class="level2">
+<h2 class="anchored" data-anchor-id="fixed-target-experiment">Fixed-target Experiment</h2>
+<p>If the target particle B is at rest in the laboratory system (as is the case in accelerator fixed-target experiments or UHE cosmic rays striking nucleons in the atmosphere, or …) then <span class="math inline">\((E_B = m_B)\)</span> and <span class="math inline">\((\vec{p}_B = 0)\)</span>. In this case,</p>
+<p><span class="math display">\[E_{COM}^2 = m_A^2 + m_B^2 + 2E_Am_B.\]</span></p>
+<p>which in the ultra-relativistic limit where energies are much higher than the masses <span class="math inline">\((E \gg m)\)</span> simplifies to</p>
+<p><span class="math display">\[\epsilon = E_{COM} \simeq \sqrt{2m_BE_A}.\]</span></p>
+<p>Equivalently, the threshold energy of the beam particle A needed to produce a particle of mass <span class="math inline">\((m_*)\)</span> at rest in the boosted frame is:</p>
+<p><span class="math display">\[E_{A,\mathrm{thresh}} = \frac{m_*^2}{2m_B}.\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Example 1: Pion production">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example 1: Pion production
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Considering the photoproduction of pion on a target proton at rest mass: <span class="math display">\[\gamma + p \rightarrow p + \pi^0\]</span></p>
+<p><span class="math display">\[\begin{alignedat}{2}
+\sqrt{s} = \sqrt{m_p^2 + 2E_\gamma m_p} &amp;\geq m_p + m_{\pi^0}\\
+m_p^2 + 2 E_\gamma m_p &amp;\geq m_p^2 + m^2_{\pi^0} + 2 m_p^2 m^2_{\pi^0}
+\end{alignedat}\]</span></p>
+<p><span class="math display">\[E_\gamma \geq m_{\pi^0} + \frac{m^2_{\pi^0}}{2 m_p} \approx 145 \mathrm{ \; MeV}\]</span></p>
+</div>
+</div>
+</section>
+<section id="collider-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="collider-experiments">Collider Experiments</h2>
+<p>In the case of a collider experiment where beam particles A and B are counter-circulating in an accelerator and collide head-on, then</p>
+<p><span class="math display">\[{\vec p}_{A}\cdot{\vec p}_{B} = -|{\vec p}_{A}||{\vec p}_{B}|\]</span></p>
+<p>and the equation of the 3-momenta <span class="math inline">\({\vec p}_A\)</span> becomes</p>
+<p><span class="math display">\[
+s = E_{COM}^2 = m_A^2 + m_B^2 + 2(E_AE_B + |{\vec p}_{A}||{\vec p}_{B}|) \rightarrow \epsilon^2 \simeq 4E_AE_B,
+\]</span></p>
+<p>in the relativistic limit where mass can be ignored. This in turn has the consequence that in a collider experiment the energy available in the COM to produce new particles rises linearly with beam energy when <span class="math inline">\(E_A = E_B\)</span>.</p>
+<p>Nevertheless, it is still the case that the COM energies probed by astroparticles exceeds the LHC’s reach by a factor of 10!</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Example 2: UHECR protons">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example 2: UHECR protons
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider an UHECR proton at <span class="math inline">\(E_p = 10^{10}\;\mathrm{ GeV}\)</span> interacting with a proton (<span class="math inline">\(m_p = 1 \mathrm{ GeV}\)</span>) at rest in the atmosphere, what is the energy in the COM frame?</p>
+<p><span class="math display">\[E_{COM} = \sqrt{2 m_p^2 + 2 E_p m_p} \simeq 142\;\; \mathrm{ TeV} \]</span></p>
+</div>
+</div>
+</section>
+<section id="two-body-decay-in-com" class="level2">
+<h2 class="anchored" data-anchor-id="two-body-decay-in-com">Two-body Decay in COM</h2>
+<p>The COM is also useful to estimate the energy of two particles from the decay of a particle with mass <span class="math inline">\(M\)</span>. If a particle A decays into <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>, we have that in the COM the particle A has <span class="math inline">\({\vec p_A} = {\vec p_{COM}} = 0\)</span>. Then the invariant is given by:</p>
+<p><span class="math display">\[ s = M^2 = (E_1 + E_2)^2 -  (\vec{p}_1 + \vec{p}_2)^2 \]</span></p>
+<p>where <span class="math inline">\({\vec p_1} = -{\vec p_2}\)</span>. The energies in the COM are given by:</p>
+<p><span class="math display">\[ M^2 = (E_1 + E_2)^2 \rightarrow M = E_1 + E_2 \]</span></p>
+<p><span class="math display">\[E_1^2 = p_1^2 + m_1^2\;\;\;\mathrm{ and}\;\; E_2^2 = p_2^2 + m_2^2\]</span></p>
+<p>since <span class="math inline">\(|{\vec p_1}| = |{\vec p_2}|\)</span> we can make the substraction:</p>
+<p><span class="math display">\[E_1^2 - E_2^2 = m_1^2 - m_2^2 \rightarrow E_2^2 = E_1^2 - m_1^2 + m_2^2\]</span></p>
+<p>sustituing <span class="math inline">\(E_2^2\)</span> in <span class="math inline">\(M^2 = E_1^2 + E_2^2 + 2E_1 E_2\)</span> and using <span class="math inline">\(E_2 = M - E_1\)</span> we have:</p>
+<p><span class="math display">\[M^2 = E_1^2 + E_1^2 - m_1^2 + m_2^2 + 2E_1(M- E_1) \]</span> <span class="math display">\[M^2 = 2E_1^2 - m_1^2 + m_2^2 - 2E_1^2 + 2E_1M\]</span></p>
+<p><span class="math display">\[E_1 = \frac{1}{2M}(M^2 + m_1^2 - m_2^2)\]</span></p>
+<p>likewise we can prove:</p>
+<p><span class="math display">\[E_2 = \frac{1}{2M}(M^2 + m_2^2 - m_1^2)\]</span></p>
+<p>and the momentum:</p>
+<p><span class="math display">\[{|\vec p_1|^2} = E_1^2 - m_1^2 = \frac{1}{4M^2}(M^4 - 2M^2(m_1^2 + m_2^2) + (m_1^2 + m_2^2)^2) = {|\vec p_2|^2}\]</span></p>
+<p>Energies and momentums are fixed, the only unknowns are the angles.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap1_1.html" class="pagination-link  aria-label=" &lt;span="" and="" coordinate="" systems="" in="" astronomy&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap1_3.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Introduction to Cosmology</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

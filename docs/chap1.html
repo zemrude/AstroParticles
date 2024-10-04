@@ -54,27 +54,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -84,7 +64,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./chap2.html" rel="next">
+<link href="./chap1_1.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -95,9 +75,6 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -216,6 +193,24 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -230,13 +225,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
   </div>
 </li>
       </ul>
@@ -253,7 +248,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
   </div>
 </li>
       </ul>
@@ -270,7 +265,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
   </div>
 </li>
       </ul>
@@ -302,69 +297,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#natural-units" id="toc-natural-units" class="nav-link active" data-scroll-target="#natural-units"><span class="header-section-number">1.1</span> Natural Units</a></li>
-  <li><a href="#larmor-radius-and-rigidity" id="toc-larmor-radius-and-rigidity" class="nav-link" data-scroll-target="#larmor-radius-and-rigidity"><span class="header-section-number">1.2</span> Larmor Radius and Rigidity</a></li>
-  <li><a href="#superposition-model" id="toc-superposition-model" class="nav-link" data-scroll-target="#superposition-model"><span class="header-section-number">1.3</span> Superposition Model</a></li>
-  <li><a href="#cross-sections-number-density-lifetime-and-interaction-lengths" id="toc-cross-sections-number-density-lifetime-and-interaction-lengths" class="nav-link" data-scroll-target="#cross-sections-number-density-lifetime-and-interaction-lengths"><span class="header-section-number">1.4</span> Cross sections, number density, lifetime, and interaction lengths</a></li>
-  <li><a href="#time-and-coordinate-systems-in-astronomy" id="toc-time-and-coordinate-systems-in-astronomy" class="nav-link" data-scroll-target="#time-and-coordinate-systems-in-astronomy"><span class="header-section-number">2</span> Time and Coordinate Systems in Astronomy</a>
-  <ul class="collapse">
-  <li><a href="#astronomical-geography" id="toc-astronomical-geography" class="nav-link" data-scroll-target="#astronomical-geography"><span class="header-section-number">2.1</span> Astronomical Geography</a>
-  <ul class="collapse">
-  <li><a href="#milky-way" id="toc-milky-way" class="nav-link" data-scroll-target="#milky-way"><span class="header-section-number">2.1.1</span> Milky Way</a></li>
-  <li><a href="#local-group" id="toc-local-group" class="nav-link" data-scroll-target="#local-group"><span class="header-section-number">2.1.2</span> Local Group</a></li>
-  <li><a href="#virgo-supercluster" id="toc-virgo-supercluster" class="nav-link" data-scroll-target="#virgo-supercluster"><span class="header-section-number">2.1.3</span> Virgo Supercluster</a></li>
-  </ul></li>
-  <li><a href="#time-scales-and-time-standards" id="toc-time-scales-and-time-standards" class="nav-link" data-scroll-target="#time-scales-and-time-standards"><span class="header-section-number">2.2</span> Time Scales and Time Standards</a>
-  <ul class="collapse">
-  <li><a href="#time-representations-jd-and-mjd" id="toc-time-representations-jd-and-mjd" class="nav-link" data-scroll-target="#time-representations-jd-and-mjd"><span class="header-section-number">2.2.1</span> Time Representations: JD and MJD</a></li>
-  <li><a href="#time-in-experiments" id="toc-time-in-experiments" class="nav-link" data-scroll-target="#time-in-experiments"><span class="header-section-number">2.2.2</span> Time in Experiments</a></li>
-  </ul></li>
-  <li><a href="#astronomical-coordinate-system" id="toc-astronomical-coordinate-system" class="nav-link" data-scroll-target="#astronomical-coordinate-system"><span class="header-section-number">2.3</span> Astronomical Coordinate System</a>
-  <ul class="collapse">
-  <li><a href="#local-coordinates" id="toc-local-coordinates" class="nav-link" data-scroll-target="#local-coordinates"><span class="header-section-number">2.3.1</span> Local coordinates</a></li>
-  <li><a href="#celestial-coordinate-systems" id="toc-celestial-coordinate-systems" class="nav-link" data-scroll-target="#celestial-coordinate-systems"><span class="header-section-number">2.3.2</span> Celestial coordinate systems</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#introduction-to-special-relativity" id="toc-introduction-to-special-relativity" class="nav-link" data-scroll-target="#introduction-to-special-relativity"><span class="header-section-number">3</span> Introduction to Special Relativity</a>
-  <ul class="collapse">
-  <li><a href="#why-is-it-important" id="toc-why-is-it-important" class="nav-link" data-scroll-target="#why-is-it-important"><span class="header-section-number">3.1</span> Why is it important?</a></li>
-  <li><a href="#lorentz-transformations" id="toc-lorentz-transformations" class="nav-link" data-scroll-target="#lorentz-transformations"><span class="header-section-number">3.2</span> Lorentz Transformations</a></li>
-  <li><a href="#consequences-of-lorentz-transformations" id="toc-consequences-of-lorentz-transformations" class="nav-link" data-scroll-target="#consequences-of-lorentz-transformations"><span class="header-section-number">3.3</span> Consequences of Lorentz transformations</a></li>
-  </ul></li>
-  <li><a href="#relativistic-kinematics" id="toc-relativistic-kinematics" class="nav-link" data-scroll-target="#relativistic-kinematics"><span class="header-section-number">4</span> Relativistic kinematics</a>
-  <ul class="collapse">
-  <li><a href="#four-vectors" id="toc-four-vectors" class="nav-link" data-scroll-target="#four-vectors"><span class="header-section-number">4.1</span> Four-vectors</a></li>
-  <li><a href="#transformation-to-the-center-of-momentum-frame-com" id="toc-transformation-to-the-center-of-momentum-frame-com" class="nav-link" data-scroll-target="#transformation-to-the-center-of-momentum-frame-com"><span class="header-section-number">4.2</span> Transformation to the Center-of-Momentum Frame (COM)</a></li>
-  <li><a href="#fixed-target-experiment" id="toc-fixed-target-experiment" class="nav-link" data-scroll-target="#fixed-target-experiment"><span class="header-section-number">4.3</span> Fixed-target Experiment</a></li>
-  <li><a href="#collider-experiments" id="toc-collider-experiments" class="nav-link" data-scroll-target="#collider-experiments"><span class="header-section-number">4.4</span> Collider Experiments</a></li>
-  <li><a href="#two-body-decay-in-com" id="toc-two-body-decay-in-com" class="nav-link" data-scroll-target="#two-body-decay-in-com"><span class="header-section-number">4.5</span> Two-body Decay in COM</a></li>
-  </ul></li>
-  <li><a href="#introduction-to-cosmology" id="toc-introduction-to-cosmology" class="nav-link" data-scroll-target="#introduction-to-cosmology"><span class="header-section-number">5</span> Introduction to Cosmology</a>
-  <ul class="collapse">
-  <li><a href="#what-is-red-shift" id="toc-what-is-red-shift" class="nav-link" data-scroll-target="#what-is-red-shift"><span class="header-section-number">5.1</span> What is Red-shift?</a></li>
-  <li><a href="#relativistic-redshift" id="toc-relativistic-redshift" class="nav-link" data-scroll-target="#relativistic-redshift"><span class="header-section-number">5.2</span> Relativistic Redshift</a></li>
-  <li><a href="#hubble-expansion" id="toc-hubble-expansion" class="nav-link" data-scroll-target="#hubble-expansion"><span class="header-section-number">5.3</span> Hubble Expansion</a>
-  <ul class="collapse">
-  <li><a href="#age-of-the-universe-first-approximation" id="toc-age-of-the-universe-first-approximation" class="nav-link" data-scroll-target="#age-of-the-universe-first-approximation"><span class="header-section-number">5.3.1</span> Age of the Universe (first approximation)</a></li>
-  </ul></li>
-  <li><a href="#cosmological-principle" id="toc-cosmological-principle" class="nav-link" data-scroll-target="#cosmological-principle"><span class="header-section-number">5.4</span> Cosmological Principle</a></li>
-  <li><a href="#friedmannlemaître-robertson-walker" id="toc-friedmannlemaître-robertson-walker" class="nav-link" data-scroll-target="#friedmannlemaître-robertson-walker"><span class="header-section-number">5.5</span> Friedmann–Lemaître-Robertson-Walker</a>
-  <ul class="collapse">
-  <li><a href="#friedman-equations" id="toc-friedman-equations" class="nav-link" data-scroll-target="#friedman-equations"><span class="header-section-number">5.5.1</span> Friedman Equations</a></li>
-  </ul></li>
-  <li><a href="#cosmological-constants" id="toc-cosmological-constants" class="nav-link" data-scroll-target="#cosmological-constants"><span class="header-section-number">5.6</span> Cosmological Constants</a>
-  <ul class="collapse">
-  <li><a href="#the-cosmological-constant" id="toc-the-cosmological-constant" class="nav-link" data-scroll-target="#the-cosmological-constant"><span class="header-section-number">5.6.1</span> The Cosmological Constant</a></li>
-  <li><a href="#evolution-of-the-cosmological-constants" id="toc-evolution-of-the-cosmological-constants" class="nav-link" data-scroll-target="#evolution-of-the-cosmological-constants"><span class="header-section-number">5.6.2</span> Evolution of the Cosmological Constants</a></li>
-  </ul></li>
-  <li><a href="#observational-cosmological-results" id="toc-observational-cosmological-results" class="nav-link" data-scroll-target="#observational-cosmological-results"><span class="header-section-number">5.7</span> Observational Cosmological Results</a></li>
-  <li><a href="#cosmic-microwave-background" id="toc-cosmic-microwave-background" class="nav-link" data-scroll-target="#cosmic-microwave-background"><span class="header-section-number">5.8</span> Cosmic Microwave Background</a></li>
-  <li><a href="#cosmography" id="toc-cosmography" class="nav-link" data-scroll-target="#cosmography"><span class="header-section-number">5.9</span> Cosmography</a>
-  <ul class="collapse">
-  <li><a href="#comoving-distance-line-of-sight" id="toc-comoving-distance-line-of-sight" class="nav-link" data-scroll-target="#comoving-distance-line-of-sight"><span class="header-section-number">5.9.1</span> Comoving distance (Line of Sight)</a></li>
-  <li><a href="#luminosity-distances" id="toc-luminosity-distances" class="nav-link" data-scroll-target="#luminosity-distances"><span class="header-section-number">5.9.2</span> Luminosity Distances</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#natural-units" id="toc-natural-units" class="nav-link active" data-scroll-target="#natural-units">Natural Units</a></li>
+  <li><a href="#larmor-radius-and-rigidity" id="toc-larmor-radius-and-rigidity" class="nav-link" data-scroll-target="#larmor-radius-and-rigidity">Larmor Radius and Rigidity</a></li>
+  <li><a href="#superposition-model" id="toc-superposition-model" class="nav-link" data-scroll-target="#superposition-model">Superposition Model</a></li>
+  <li><a href="#cross-sections-number-density-lifetime-and-interaction-lengths" id="toc-cross-sections-number-density-lifetime-and-interaction-lengths" class="nav-link" data-scroll-target="#cross-sections-number-density-lifetime-and-interaction-lengths">Cross sections, number density, lifetime, and interaction lengths</a></li>
   </ul>
 </nav>
     </div>
@@ -390,8 +326,8 @@ window.Quarto = {
 </header>
 
 
-<section id="natural-units" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="natural-units"><span class="header-section-number">1.1</span> Natural Units</h2>
+<section id="natural-units" class="level2">
+<h2 class="anchored" data-anchor-id="natural-units">Natural Units</h2>
 <p>In high energy physics and astro-particle physics it is very common to use the natural units where <span class="math inline">\(\hbar = c = 1\)</span>. The correspondence between natural units and physical units can be established by use of</p>
 <p><span class="math display">\[\hbar = 6.58 \times 10^{-16} {\;\mathrm{GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{GeV} = 1.52 \times 10^{15}\;{\mathrm{ns}^{-1}}\]</span></p>
 <p><span class="math display">\[c = 30.0\;\mathrm{cm/ns} = 1 \Rightarrow 30\;\mathrm{cm} = 1\;\mathrm{ns}\]</span></p>
@@ -411,7 +347,7 @@ Tutorial I: Working with Units
 </div>
 <div class="callout-body-container callout-body">
 <p>Along these notes you are going to find different tutorials in <code>python</code> dealing with will help to develop your programing skills in and solve some numerical problems. In this case we are going to see an easy way to work with different units which is uing the module <code>units</code> that exist for example in <a href="http://astropy.readthedocs.org/en/latest/units/"><code>astropy</code></a>:</p>
-<div id="a994553f" class="cell" data-execution_count="1">
+<div id="1a633ce7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> const</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
@@ -426,13 +362,13 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Note that the variables defined above already have their units <code>attached</code> to them, so when you make a <code>print</code> or similar statement it will provide as well the units as a string.</p>
-<div id="364621a6" class="cell" data-execution_count="2">
+<div id="afe71e2c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>R_Earth <span class="op">=</span> <span class="fl">6.371E6</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>R_Sun <span class="op">=</span> <span class="fl">6.955E8</span> <span class="op">*</span> u.m <span class="co"># meters</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>AU <span class="op">=</span> <span class="fl">1.496E11</span> <span class="op">*</span> u.m <span class="co"># meters</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We the radius we can calculate the mean density of Earth and Sun. We will show that units are preserved along calculations:</p>
-<div id="a5542458" class="cell" data-execution_count="3">
+<div id="cc472ce3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>vol_sphere <span class="op">=</span> <span class="kw">lambda</span> r: <span class="dv">4</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">3</span><span class="op">*</span>r<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>rho_Sun <span class="op">=</span> M_Sun <span class="op">/</span> vol_sphere(R_Sun)</span>
@@ -449,7 +385,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>We can use this module to make different transformations of uings, for example from light years to meters:</p>
-<div id="1824f723" class="cell" data-execution_count="4">
+<div id="70a10d92" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ly <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> u.lyr</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Number of seconds for light to travel from Sun to Earth: </span><span class="sc">{</span><span class="fl">1.</span><span class="op">/</span>const<span class="sc">.</span>c<span class="sc">.</span>to(u.AU<span class="op">/</span>u.s)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -462,7 +398,7 @@ Tutorial I: Working with Units
 </div>
 </div>
 <p>Assuming that the Galaxy is roughly a disk 50 kpc in diameter and 500 pc thick we can now calculate its density:</p>
-<div id="f74d4166" class="cell" data-execution_count="5">
+<div id="e1abbb12" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>V_Gal <span class="op">=</span>  np.pi <span class="op">*</span> (<span class="dv">25000</span><span class="op">*</span>u.pc)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> <span class="dv">500</span><span class="op">*</span>u.pc</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>display(Markdown (<span class="ss">f"Volume of the Milky Way is approximately: </span><span class="sc">{</span>V_Gal<span class="sc">.</span>to(u.m<span class="op">**</span><span class="dv">3</span>)<span class="sc">:.2e}</span><span class="ss">"</span>))</span>
@@ -479,8 +415,8 @@ Tutorial I: Working with Units
 </div>
 </div>
 </section>
-<section id="larmor-radius-and-rigidity" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="larmor-radius-and-rigidity"><span class="header-section-number">1.2</span> Larmor Radius and Rigidity</h2>
+<section id="larmor-radius-and-rigidity" class="level2">
+<h2 class="anchored" data-anchor-id="larmor-radius-and-rigidity">Larmor Radius and Rigidity</h2>
 <p>Larmor radius, or gyroradius, <span class="math inline">\(r_L\)</span>, is the radius of the orbit of a charged particle moving in a uniform, perpendicular magnetic field, obtained by simply equating the Lorentz force with the centripetal force/</p>
 <p>It is defined as: <span class="math display">\[q v B = \frac{mv^2}{r_L} \rightarrow r_L = \frac{p}{ZeB}\]</span></p>
 <p>where <span class="math inline">\(p\)</span> has replaced <span class="math inline">\(mv\)</span> in the classical limit. However, this also holds for the relativistic generalization by considering <span class="math inline">\(p\)</span> to be the relativistic 3-momentum. There are several adaptations of this formula, tuned to units natural to various scenarios. One such is</p>
@@ -491,8 +427,8 @@ R \equiv r_L B c = \frac{pc}{Ze}
 \]</span></p>
 <p>note that the rigidity, <span class="math inline">\(R\)</span> has units of Volts.</p>
 </section>
-<section id="superposition-model" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="superposition-model"><span class="header-section-number">1.3</span> Superposition Model</h2>
+<section id="superposition-model" class="level2">
+<h2 class="anchored" data-anchor-id="superposition-model">Superposition Model</h2>
 <p>Another concept that we will use frecuently in cosmic-ray physics is the <em>superpositoin model</em>. In the superposition model, a nucleus with mass <span class="math inline">\(A\)</span> and energy <span class="math inline">\(E(A)\)</span> is considered as <span class="math inline">\(A\)</span> independent nucleons with energy <span class="math inline">\(E_0\)</span>. In a spallation process the energy per nucleon is approximately cosnserved therefore:</p>
 <p><span class="math display">\[A + p \rightarrow A_1 + A_2\]</span></p>
 <p><span class="math display">\[\begin{alignedat}{2}
@@ -501,8 +437,8 @@ R \equiv r_L B c = \frac{pc}{Ze}
 &amp;E(A_2) &amp;= &amp;A_2 E_0
 \end{alignedat}\]</span></p>
 </section>
-<section id="cross-sections-number-density-lifetime-and-interaction-lengths" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="cross-sections-number-density-lifetime-and-interaction-lengths"><span class="header-section-number">1.4</span> Cross sections, number density, lifetime, and interaction lengths</h2>
+<section id="cross-sections-number-density-lifetime-and-interaction-lengths" class="level2">
+<h2 class="anchored" data-anchor-id="cross-sections-number-density-lifetime-and-interaction-lengths">Cross sections, number density, lifetime, and interaction lengths</h2>
 <p>The <strong>cross-section</strong> of a reaction is a very important parameter. It can be considered as the effective area for a collision between a target and a projectile. The cross-section of an interaction depends on interaction force, the energy of the particle, etc…</p>
 <p>Cross-section is typically measured in surface, <span class="math inline">\(\mathrm{cm}^2\)</span> or “barns”:</p>
 <p><span class="math display">\[ 1 \mathrm{ barn} = 10^{-24} \mathrm{cm}^2\]</span></p>
@@ -521,766 +457,8 @@ R \equiv r_L B c = \frac{pc}{Ze}
 <p><span class="math display">\[\tau = \frac{1}{n v\sigma_N}\]</span></p>
 <p>Known as the <strong>lifetime</strong>. If several processes are taking place, we need to replace <span class="math inline">\(n\sigma_N\)</span> as <span class="math inline">\(\sum n_i\sigma_i\)</span>, which gives:</p>
 <p><span class="math display">\[\frac{1}{\tau_{total}} = \frac{1}{\tau_1} + \frac{1}{\tau_2} + ... + \frac{1}{\tau_n}\]</span></p>
-</section>
-<section id="time-and-coordinate-systems-in-astronomy" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Time and Coordinate Systems in Astronomy</h1>
-<p>In this section we are going to review a bit the geography around our Galaxy as well as the different systems in which we can reference to objects in the sky (coordinate systems) or events (time standards).</p>
-<section id="astronomical-geography" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="astronomical-geography"><span class="header-section-number">2.1</span> Astronomical Geography</h2>
-<section id="milky-way" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="milky-way"><span class="header-section-number">2.1.1</span> Milky Way</h3>
-<p>The Sun is <strong>7.6-8.7 kpc</strong> from the Galactic Center where there appears to be a supermassive black hole of <strong>1 million solar masses</strong> (<span class="math inline">\(M_{\odot} = 1.99\times 10^{30}\)</span> Kg) which coincides with a radio source known as <strong>Sagittarius A*</strong>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/Galactic_centre_orbits.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Source: Wikipedia"><img src="images/Galactic_centre_orbits.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
-<figcaption>Source: Wikipedia</figcaption>
-</figure>
-</div>
-<p>The trayectories of stars around Str A* can be used to estimate the mass of the black hole. It is the up to now, best prove of the existance of a black hole. Although it is a galaxy with a black hole in their center, the Milky Way is not considered to have an Active Galactic Nuclei due to the low mass of the black hole. If we assume the Milky Way to have a cylindrical shape it will have a radius of <strong>30 kpc</strong> and thickness of <strong>300 pc</strong>. Its mass is estimated to be <span class="math inline">\(5.8 \times 10^{11} M_{\odot}\)</span>.</p>
-</section>
-<section id="local-group" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="local-group"><span class="header-section-number">2.1.2</span> Local Group</h3>
-<p>The Milky Way is surrounded by 54 known satellite galaxies (most of them dwarf galaxies) in a group known as the <strong>Local Group</strong> (A dwarf galaxy has <span class="math inline">\(\sim\)</span> billion stars compared to our Milky Ways 200-400 billion stars). The most notably are the Large Magellanic Cloud (50 kpc) and the Small Magellanic Cloud (60 kpc). The LMC mass is <span class="math inline">\(10^{10} M_{\odot}\)</span>. Next nearest full-fledged galaxy is Andromeda or M31 (<span class="math inline">\(1.5\times 10^{12} M_{\odot}\)</span>) at a distance of approximately <strong>780 kpc</strong>. The group contains also other galaxies MW, M31, M33 (Triangulum Galaxy) and it has volume of diameter of about <strong>3 Mpc</strong>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/5_Local_Galactic_Group_(ELitU).png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Source: Wikipedia"><img src="images/5_Local_Galactic_Group_(ELitU).png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
-<figcaption>Source: Wikipedia</figcaption>
-</figure>
-</div>
-</section>
-<section id="virgo-supercluster" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="virgo-supercluster"><span class="header-section-number">2.1.3</span> Virgo Supercluster</h3>
-<p>The Local Group is itself contained within the <em>Virgo Supercluster</em> or <em>Local Supercluster</em> (LC) of galaxies extending out to about 33 Mpc. It has a total mass of <span class="math inline">\(10^{15}M_{\odot}\)</span></p>
-</section>
-</section>
-<section id="time-scales-and-time-standards" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="time-scales-and-time-standards"><span class="header-section-number">2.2</span> Time Scales and Time Standards</h2>
-<p>There are several time standards or ways to specify time. A time standard can affect the rate (ie, how long is a day) or reference or point in time, or both. Some standards are:</p>
-<ul>
-<li><p><a href="http://en.wikipedia.org/wiki/Solar_time#Mean_solar_time">Mean solar time</a> There are two solar times, the aparent one (also called true one) which depends on latitude and the year and the Mean solar time which the time of <em>mean</em> sun, the difference between the two is called the <a href="http://en.wikipedia.org/wiki/Solar_time#mediaviewer/File:Equation_of_time.svg">equation of time</a>. The length of the mean solar day is slowly increasing due to the tidal acceleration of the Moon by the Earth and the corresponding slowing of Earth’s rotation by the Moon.</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/Universal_Time">Universal Time (UT0, UT1)</a> Is a time scale based on the mean solar day, defined to be as uniform as possible despite variations in Earth’s rotation</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/International_Atomic_Time">International Atomic Time</a> Is the primary international time standard from which other time standards, including UTC, are calculated. TAI is kept by the BIPM (International Bureau of Weights and Measures), and is based on the combined input of many atomic clocks around the world.</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time (UTC)</a> is an atomic time scale designed to approximate Universal Time. UTC differs from TAI by an integral number of seconds. UTC is kept within 0.9 second of UT1 by the introduction of one-second steps to UTC. The difference with UT1 is known as DUT1.</p></li>
-</ul>
-<section id="time-representations-jd-and-mjd" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="time-representations-jd-and-mjd"><span class="header-section-number">2.2.1</span> Time Representations: JD and MJD</h3>
-<p>These are not technically standards (or scales), they are just reprentations (formats) of the aforementioned standards typically used in Astronomy:</p>
-<ul>
-<li><p><a href="http://en.wikipedia.org/wiki/Julian_day">Julian Date</a> Is the count of days elapsed since Greenwich mean noon on 1 January 4713 B.C., Julian proleptic calendar. Note that this day count conforms with the astronomical convention starting the day at noon, in contrast with the civil practice where the day starts with midnight (in popular use the belief is widespread that the day ends with midnight, but this is not the proper scientific use).</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/Julian_day">Modified Julian Date</a> Is defined as MJD = JD - 2400000.5. The half day is subtracted so that the day starts at midnight in conformance with civil time reckoning. There is a good reason for this modification and it has to do with how much precision one can represent in a double (IEEE 754) variable. Julian dates can be expressed in UT, TAI, TDT, etc. and so for precise applications the timescale should be specified, e.g.&nbsp;MJD 49135.3824 TAI.</p></li>
-</ul>
-</section>
-<section id="time-in-experiments" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="time-in-experiments"><span class="header-section-number">2.2.2</span> Time in Experiments</h3>
-<p>Practically speaking, in experiments time comes from one or more of the following sources:</p>
-<ul>
-<li><p><strong>Atomic clocks (Cs, Rb)</strong> -They use the microwave signal that electrons in atoms emit when they change energy levels. These have very good short term performance but a Rb clock left by itself will wander by several ns per day. Cs clocks are perhaps better by a factor of 100x.</p></li>
-<li><p><strong>GPS</strong> - The GPS gives precision timing too. The system consists of the space segment of O(30) satellites each equipped with Caesium atomic clocks and each constantly getting corrections from the central control facility. GPS broadcasts navigation and time messages synchronized to this ultraprecise time from which the user segment can extract time and space coordinates accurate to O(10) ns and meters, respectively. GPS time is based on the 86400 second day. It indirectly accounts for leap years. There are <em>no</em> leap seconds in GPS time.</p></li>
-</ul>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial II: Using Time Standards in `Astropy`">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tutorial II: Using Time Standards in <code>Astropy</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use <code>Astropy</code>. The <a href="http://www.astropy.org/">Astropy Project</a> is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.</p>
-<div id="582f67cc" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.time <span class="im">import</span> Time</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> datetime.datetime.now()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"Today's date and time: </span><span class="sc">{</span>i<span class="sc">.</span>isoformat()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>times <span class="op">=</span> [<span class="st">'1999-01-01T00:00:00.123456789'</span>, i.isoformat()]</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Time(times, <span class="bu">format</span><span class="op">=</span><span class="st">'isot'</span>, scale<span class="op">=</span><span class="st">'utc'</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Today's julian date (UTC) is </span><span class="sc">{</span>t[<span class="dv">1</span>]<span class="sc">.</span>jd<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Today's modified julian date (UTC) is </span><span class="sc">{</span>t[<span class="dv">1</span>]<span class="sc">.</span>mjd<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> t[<span class="dv">1</span>] <span class="op">-</span> t[<span class="dv">0</span>]</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in mjd is </span><span class="sc">{</span>dt<span class="sc">.</span>value<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in seconds is </span><span class="sc">{</span>dt<span class="sc">.</span>sec<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Today's date and time: 2024-10-04T11:44:37.995292
-Today's julian date (UTC) is 2460587.99
-Today's modified julian date (UTC) is 60587.49
-The time difference in mjd is 9408.49
-The time difference in seconds is 812893482.87</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="astronomical-coordinate-system" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="astronomical-coordinate-system"><span class="header-section-number">2.3</span> Astronomical Coordinate System</h2>
-<p>Coordinate systems are used to map objects position in the sky. They can divided into local coordiantes and celestial coordinate systems:</p>
-<section id="local-coordinates" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="local-coordinates"><span class="header-section-number">2.3.1</span> Local coordinates</h3>
-<p>These are those that depend on from where on Earth you observe, ie they have the observer’s local position as reference. For example the horizontal coordinate system is expressed in terms of <strong>altitude</strong> (or elevation or zenith) angle and <strong>azimuth</strong>. These coordinates are not useful to inequivocally identify the position of an object in the sky since celestials object local coordinates change with time.</p>
-</section>
-<section id="celestial-coordinate-systems" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="celestial-coordinate-systems"><span class="header-section-number">2.3.2</span> Celestial coordinate systems</h3>
-<p>Those systems are independent of the observer’s local position. Two of the mostly used coordinates systems in astroparticle are:</p>
-<ul>
-<li><strong>Equatorial coordinates</strong>: It’s defined by an origin at the center of the Earth, a fundamental plane consisting of the projection of the Earth’s equator onto the celestial sphere. Coordinates are give by <strong>right ascension</strong> and <strong>declination</strong>.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/eq_coordinates.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Equatorial coordinate system"><img src="images/eq_coordinates.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-with="50%" alt="Equatorial coordinate system"></a></p>
-<figcaption>Equatorial coordinate system</figcaption>
-</figure>
-</div>
-<ul>
-<li><strong>Galactic coordinates</strong>: The <strong>galactic longitude</strong>, <span class="math inline">\(\ell\)</span> is the angular distance Eastward (counterclockwise looking down on the Galaxy from the GNP) from the Galactic Center and the <strong>galactic latitude</strong>, <span class="math inline">\(b\)</span>, is the angular distance outside of the plane of the Galaxy, positive up, negative down. Note that having a large galactic latitude is neither a necessary nor a sufficient condition for an object being extragalactic. This is how to get the image of the Galactic plane on the celestial sphere.</li>
-</ul>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial III: Coordinate Transformations">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tutorial III: Coordinate Transformations
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Let’s do some “representation” of the galactic plane. We generate some random points using numpy following a 2-dimensional gaussian in the <span class="math inline">\(\ell\)</span>: <span class="math inline">\(-\pi, +\pi\)</span> and <span class="math inline">\(b\)</span>:<span class="math inline">\(-\pi/2, +\pi/2\)</span> space. Now we are going to use <code>matplotlib</code> to make plots, for that we are going to call the magic command <code>%matplotlib inline</code> to make the plots appear inside the notebook:</p>
-<div id="cell-gal-eq" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#We call random.multivariate_normal to generate randon normal points at 0</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Lets use the inline figure format as svg</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>config InlineBackend.figure_format <span class="op">=</span> <span class="st">'svg'</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>disk <span class="op">=</span> np.random.multivariate_normal(mean<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">0</span>], cov<span class="op">=</span>np.diag([<span class="dv">1</span>,<span class="fl">0.001</span>]), size<span class="op">=</span><span class="dv">5000</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#disk is a list of pairs [l, b] in radians</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(disk[<span class="dv">0</span>:<span class="dv">10</span>])</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">5</span>))</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'aitoff'</span>)</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#There are several projections: Aitoff, Hammer, Lambert, MollWeide</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Galactic</span><span class="ch">\n</span><span class="st"> Coordinates"</span>)</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>ll <span class="op">=</span> disk[:,<span class="dv">0</span>]</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>bb <span class="op">=</span> disk[:,<span class="dv">1</span>]</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.set_axis_bgcolor("black")</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.tick_params(axis='x', colors='white')</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>ax.plot(ll, bb, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[-1.53910163 -0.01010081]
- [-1.00003043 -0.02006935]
- [-1.09947949 -0.08201463]
- [-2.03740012 -0.05322556]
- [ 0.49682416  0.04147879]
- [ 1.71642537 -0.04352255]
- [-0.95474591  0.08531988]
- [ 0.46170504  0.03490184]
- [ 0.88403977  0.04620426]
- [-0.81191979  0.03449469]]</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="chap1_files/figure-html/gal-eq-output-2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Galaxy in Galactic Coordiantes"><img src="chap1_files/figure-html/gal-eq-output-2.svg" class="img-fluid figure-img" alt="Galaxy in Galactic Coordiantes"></a></p>
-<figcaption>Galaxy in Galactic Coordiantes</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Now let’s plot it in equatorial coordinates (right ascension, declination).</p>
-<div id="b72404ea" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.coordinates <span class="im">import</span> SkyCoord</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>c_gal <span class="op">=</span> SkyCoord(l<span class="op">=</span>ll<span class="op">*</span>u.radian, b<span class="op">=</span>bb<span class="op">*</span>u.radian, frame<span class="op">=</span><span class="st">'galactic'</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>c_gal_icrs <span class="op">=</span> c_gal.icrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Because <code>matplotlib</code> needs the coordinates in radians and between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>, not 0 and <span class="math inline">\(2\pi\)</span>, we have to convert them.</p>
-<div id="af97d6b9" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ra_rad <span class="op">=</span> c_gal_icrs.ra.wrap_at(<span class="dv">180</span> <span class="op">*</span> u.deg).radian</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dec_rad <span class="op">=</span> c_gal_icrs.dec.radian</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">5</span>))</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">"mollweide"</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Equatorial coordinates"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ax.plot(ra_rad, dec_rad, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#NOTE: Normally right ascension is plotted from right (0 deg.) to left (360 deg.)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="chap1_files/figure-html/cell-10-output-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="chap1_files/figure-html/cell-10-output-1.svg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-</section>
-<section id="introduction-to-special-relativity" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Introduction to Special Relativity</h1>
-<section id="why-is-it-important" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="why-is-it-important"><span class="header-section-number">3.1</span> Why is it important?</h2>
-<p><span class="math display">\[\gamma = \sqrt{\frac{1}{1-\beta^2}}\;, \beta = \frac{v}{c}\]</span></p>
-<ul>
-<li>Jets emitted by supermassive black holes have: <span class="math inline">\(\gamma \approx 30 \rightarrow \beta = 0.9984\)</span></li>
-<li>Electrons spiraling in B-field lines of pulsars have: <span class="math inline">\(\gamma \sim 10^7\)</span></li>
-<li>Lorentz factors of protons of <span class="math inline">\(10^{20}\)</span> eV: <span class="math inline">\(\gamma = \frac{E}{m^0_p c^2} = \frac{10^{20}}{1\times 10^9} = 10^{11}\)</span></li>
-</ul>
-<p>Two principles:</p>
-<ol type="1">
-<li><p><em>The Principle of Relativity</em> – The laws by which the states of physical systems undergo change are not affected, whether these changes of state be referred to the one or the other of two systems in uniform translatory motion relative to each other</p></li>
-<li><p><em>The Principle of Invariant Light Speed</em>– “… light is always propagated in empty space with a definite velocity [speed] c which is independent of the state of motion of the emitting body.”</p></li>
-</ol>
-</section>
-<section id="lorentz-transformations" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="lorentz-transformations"><span class="header-section-number">3.2</span> Lorentz Transformations</h2>
-<p>As a simple case, consider a reference frame <em>O</em> and and observer in another frame <em>O’</em> moving at constant speed <span class="math inline">\(\beta\)</span> along the <span class="math inline">\(x\)</span> axis:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/Lorentz.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/Lorentz.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
-</figure>
-</div>
-<p>A Lorentz transformation or <em>boost</em> is the transformation from one inertial reference frame to another. In general it is a <span class="math inline">\((4\times4)\)</span> matrix which encapsulates the system of equations describing the transformation (in natural units).</p>
-<p><span class="math display">\[\begin{aligned}
-t' &amp;= \gamma(t - \beta x) \\
-x' &amp;= \gamma(x - \beta t) \\
-y' &amp;= y \\
-z' &amp;= z
-\end{aligned}\]</span></p>
-<p>The matrix form of this transformation is</p>
-<p><span class="math display">\[x'^\mu = {\Lambda^\mu}_\nu x^\nu, \; {\Lambda^\mu}_\nu =
-\begin{pmatrix}
-\gamma &amp; -\beta\gamma &amp; 0 &amp; 0 \\
--\beta\gamma &amp; \gamma &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1
-\end{pmatrix}\]</span></p>
-<p>This is just a particular case of a Lorentz transformation (there is nothing special on the x-axis) and a variable invariant under a Lorentz transformation is called <em>Lorentz invariant or scalar</em>.</p>
-<p>The line element <span class="math inline">\(\Delta s^2\)</span> is a Lorentz invariant:</p>
-<p><span class="math display">\[\Delta s^2 = \Delta t^2 - \Delta x^2 - \Delta y^2 -\Delta z^2 \]</span></p>
-<p>This can be rewritten as the inner product of a 4-vector <span class="math inline">\(x^{\mu}\)</span>:</p>
-<p><span class="math display">\[\Delta s^2 = x^2 \equiv x^\mu x_\mu = g_{\mu\nu} x^\mu x^\nu\]</span></p>
-<p>where <em>metric tensor</em> <span class="math inline">\(g_{\mu\nu}\)</span> is:</p>
-<p><span class="math display">\[g_{00} = + 1, g_{11} = g_{22} = g_{33} = - 1 , g_{\mu\nu} = 0, \;\mathrm{ for}\; \mu \neq\nu\]</span></p>
-<p>is called the <strong>Minkowski space</strong>.</p>
-</section>
-<section id="consequences-of-lorentz-transformations" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="consequences-of-lorentz-transformations"><span class="header-section-number">3.3</span> Consequences of Lorentz transformations</h2>
-<p>Lorentz transformation have the following (some of them really bizarre) consequences:</p>
-<ul>
-<li><strong>Relativity of simultaneity.</strong> <span class="math inline">\(\Delta t' = 0\)</span> in <span class="math inline">\(O'\)</span> doesn’t imply <span class="math inline">\(\Delta t = 0\)</span> in <span class="math inline">\(O\)</span>:</li>
-</ul>
-<p><span class="math display">\[\Delta t' = \gamma(\Delta t - \beta \Delta x)\]</span></p>
-<ul>
-<li><strong>Time dilatation.</strong> If <span class="math inline">\(\Delta x = 0\)</span> i.e.&nbsp;the ticks of one clock:</li>
-</ul>
-<p><span class="math display">\[\Delta t' = \gamma \Delta t\]</span></p>
-<ul>
-<li><p><strong>Length contraction.</strong> For events satisfying <span class="math inline">\(\Delta t' = 0\)</span>:</p>
-<p><span class="math display">\[\Delta x' = \frac{\Delta x}{\gamma}\]</span></p></li>
-<li><p><strong>Equivalence of mass and energy.</strong></p></li>
-</ul>
-<p>In 1905, Einstein gave his first derivation of the mass-energy equivalence by studing, in different reference frames, the energy balance of a body emiting electromagnetic radiation. You can replace <em>body</em> with a <em>cat</em> and check a quick proof of the mass energy equivalence in this video:</p>
-<div id="fig-minute" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-minute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/hW7DW9NIO9M" title="Einstein's Proof of E=mc²" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Source: Minute Physics
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="relativistic-kinematics" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Relativistic kinematics</h1>
-<section id="four-vectors" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="four-vectors"><span class="header-section-number">4.1</span> Four-vectors</h2>
-<p>We saw that position vectors in Minkowski space become 4-vectors with zeroth component. <span class="math inline">\(x^0 = t\)</span>, identified with time. Likewise momentum 4-vector has <span class="math inline">\(p^0 = E\)</span>:</p>
-<p><span class="math display">\[ {\mathbf P} = (E, \vec{p})\]</span></p>
-<p><span class="math display">\[ {\mathbf X} = (t, \vec{x})\]</span></p>
-<p>We saw that the inner product in Minkowski space is invariant under Lorentz transformations. In this case, the Lorentz invariant is:</p>
-<p><span class="math display">\[  s = p_\mu p^{\mu} = m_0^2 = E^2 -{\vec p\cdot \vec p} \rightarrow E^2 = {\vec p\cdot \vec p} +m_0^2\]</span></p>
-<p>which is the <em>relativistic energy-momentum relationship</em>.</p>
-<p><span class="math display">\[ E = m = \gamma m_0\]</span></p>
-<p>One can derive the expresions for relativistic 3-momentum and kinetic energy:</p>
-<p><span class="math display">\[|{\vec p}|= \beta E\]</span></p>
-<p><span class="math display">\[E_{kin} \equiv E - m_0 = (\gamma -1) m_0\]</span></p>
-</section>
-<section id="transformation-to-the-center-of-momentum-frame-com" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="transformation-to-the-center-of-momentum-frame-com"><span class="header-section-number">4.2</span> Transformation to the Center-of-Momentum Frame (COM)</h2>
-<p>As a concrete example of how 4-vectors aid real calculations, let’s take the classic case of a transformation to the center-of-momentum frame (COM), that is, a coordinate frame where the total three-momentum <span class="math inline">\(\vec p = 0\)</span>. In this case the invariant square of a system is equal to the total COM energy square or:</p>
-<p><span class="math display">\[\sqrt{s} = E_{COM}\]</span></p>
-<p>In the case of a two-particle system with particles A and B with energies <span class="math inline">\((E_A)\)</span> and <span class="math inline">\((E_B)\)</span>, and 3-momenta <span class="math inline">\((\vec{p}_A)\)</span> and <span class="math inline">\((\vec{p}_B)\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}{2}
-s = p^2 &amp;= (E_A + E_B)^2 - (\vec{p}_A + \vec{p}_B)^2 \\
-    &amp;= m_A^2 + m_B^2 + 2E_AE_B - 2(\vec{p}_A \cdot \vec{p}_B)\\
-    &amp;= m_A^2 + m_B^2 + 2E_AE_B( 1 - \beta_A\beta_B\cos \theta)\\
-    &amp;= E_{COM}^2
-\end{aligned}\]</span></p>
-<p>where we used the fact that: <span class="math display">\[\vec{p}_A \cdot \vec{p}_B = |\vec{p}_A ||\vec{p}_B|\cos\theta\]</span></p>
-<p>and</p>
-<p><span class="math display">\[ |\vec{p}| = E\beta \]</span></p>
-<p>The energy available for new particle creation is <span class="math inline">\(\epsilon = E_{COM} - m_B - m_A\)</span>. If <span class="math inline">\(E_A \gg m_A\)</span> and <span class="math inline">\(E_B \gg m_B\)</span> then:</p>
-<p><span class="math display">\[\epsilon^2 \approx 2 (E_A E_B - \vec{p}_A \vec{p}_B ).\]</span></p>
-</section>
-<section id="fixed-target-experiment" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="fixed-target-experiment"><span class="header-section-number">4.3</span> Fixed-target Experiment</h2>
-<p>If the target particle B is at rest in the laboratory system (as is the case in accelerator fixed-target experiments or UHE cosmic rays striking nucleons in the atmosphere, or …) then <span class="math inline">\((E_B = m_B)\)</span> and <span class="math inline">\((\vec{p}_B = 0)\)</span>. In this case,</p>
-<p><span class="math display">\[E_{COM}^2 = m_A^2 + m_B^2 + 2E_Am_B.\]</span></p>
-<p>which in the ultra-relativistic limit where energies are much higher than the masses <span class="math inline">\((E \gg m)\)</span> simplifies to</p>
-<p><span class="math display">\[\epsilon = E_{COM} \simeq \sqrt{2m_BE_A}.\]</span></p>
-<p>Equivalently, the threshold energy of the beam particle A needed to produce a particle of mass <span class="math inline">\((m_*)\)</span> at rest in the boosted frame is:</p>
-<p><span class="math display">\[E_{A,\mathrm{thresh}} = \frac{m_*^2}{2m_B}.\]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Example 1: Pion production">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example 1: Pion production
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Considering the photoproduction of pion on a target proton at rest mass: <span class="math display">\[\gamma + p \rightarrow p + \pi^0\]</span></p>
-<p><span class="math display">\[\begin{alignedat}{2}
-\sqrt{s} = \sqrt{m_p^2 + 2E_\gamma m_p} &amp;\geq m_p + m_{\pi^0}\\
-m_p^2 + 2 E_\gamma m_p &amp;\geq m_p^2 + m^2_{\pi^0} + 2 m_p^2 m^2_{\pi^0}
-\end{alignedat}\]</span></p>
-<p><span class="math display">\[E_\gamma \geq m_{\pi^0} + \frac{m^2_{\pi^0}}{2 m_p} \approx 145 \mathrm{ \; MeV}\]</span></p>
-</div>
-</div>
-</section>
-<section id="collider-experiments" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="collider-experiments"><span class="header-section-number">4.4</span> Collider Experiments</h2>
-<p>In the case of a collider experiment where beam particles A and B are counter-circulating in an accelerator and collide head-on, then</p>
-<p><span class="math display">\[{\vec p}_{A}\cdot{\vec p}_{B} = -|{\vec p}_{A}||{\vec p}_{B}|\]</span></p>
-<p>and the equation of the 3-momenta <span class="math inline">\({\vec p}_A\)</span> becomes</p>
-<p><span class="math display">\[
-s = E_{COM}^2 = m_A^2 + m_B^2 + 2(E_AE_B + |{\vec p}_{A}||{\vec p}_{B}|) \rightarrow \epsilon^2 \simeq 4E_AE_B,
-\]</span></p>
-<p>in the relativistic limit where mass can be ignored. This in turn has the consequence that in a collider experiment the energy available in the COM to produce new particles rises linearly with beam energy when <span class="math inline">\(E_A = E_B\)</span>.</p>
-<p>Nevertheless, it is still the case that the COM energies probed by astroparticles exceeds the LHC’s reach by a factor of 10!</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Example 2: UHECR protons">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example 2: UHECR protons
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Consider an UHECR proton at <span class="math inline">\(E_p = 10^{10}\;\mathrm{ GeV}\)</span> interacting with a proton (<span class="math inline">\(m_p = 1 \mathrm{ GeV}\)</span>) at rest in the atmosphere, what is the energy in the COM frame?</p>
-<p><span class="math display">\[E_{COM} = \sqrt{2 m_p^2 + 2 E_p m_p} \simeq 142\;\; \mathrm{ TeV} \]</span></p>
-</div>
-</div>
-</section>
-<section id="two-body-decay-in-com" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="two-body-decay-in-com"><span class="header-section-number">4.5</span> Two-body Decay in COM</h2>
-<p>The COM is also useful to estimate the energy of two particles from the decay of a particle with mass <span class="math inline">\(M\)</span>. If a particle A decays into <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>, we have that in the COM the particle A has <span class="math inline">\({\vec p_A} = {\vec p_{COM}} = 0\)</span>. Then the invariant is given by:</p>
-<p><span class="math display">\[ s = M^2 = (E_1 + E_2)^2 -  (\vec{p}_1 + \vec{p}_2)^2 \]</span></p>
-<p>where <span class="math inline">\({\vec p_1} = -{\vec p_2}\)</span>. The energies in the COM are given by:</p>
-<p><span class="math display">\[ M^2 = (E_1 + E_2)^2 \rightarrow M = E_1 + E_2 \]</span></p>
-<p><span class="math display">\[E_1^2 = p_1^2 + m_1^2\;\;\;\mathrm{ and}\;\; E_2^2 = p_2^2 + m_2^2\]</span></p>
-<p>since <span class="math inline">\(|{\vec p_1}| = |{\vec p_2}|\)</span> we can make the substraction:</p>
-<p><span class="math display">\[E_1^2 - E_2^2 = m_1^2 - m_2^2 \rightarrow E_2^2 = E_1^2 - m_1^2 + m_2^2\]</span></p>
-<p>sustituing <span class="math inline">\(E_2^2\)</span> in <span class="math inline">\(M^2 = E_1^2 + E_2^2 + 2E_1 E_2\)</span> and using <span class="math inline">\(E_2 = M - E_1\)</span> we have:</p>
-<p><span class="math display">\[M^2 = E_1^2 + E_1^2 - m_1^2 + m_2^2 + 2E_1(M- E_1) \]</span> <span class="math display">\[M^2 = 2E_1^2 - m_1^2 + m_2^2 - 2E_1^2 + 2E_1M\]</span></p>
-<p><span class="math display">\[E_1 = \frac{1}{2M}(M^2 + m_1^2 - m_2^2)\]</span></p>
-<p>likewise we can prove:</p>
-<p><span class="math display">\[E_2 = \frac{1}{2M}(M^2 + m_2^2 - m_1^2)\]</span></p>
-<p>and the momentum:</p>
-<p><span class="math display">\[{|\vec p_1|^2} = E_1^2 - m_1^2 = \frac{1}{4M^2}(M^4 - 2M^2(m_1^2 + m_2^2) + (m_1^2 + m_2^2)^2) = {|\vec p_2|^2}\]</span></p>
-<p>Energies and momentums are fixed, the only unknowns are the angles.</p>
-</section>
-</section>
-<section id="introduction-to-cosmology" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Introduction to Cosmology</h1>
-<section id="what-is-red-shift" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="what-is-red-shift"><span class="header-section-number">5.1</span> What is Red-shift?</h2>
-<p>Red-shift is the shift (towards red) in the electromagnetic spectrum and is defined as:</p>
-<p><span class="math display">\[z=\frac{\lambda_{obs} - \lambda_{emit}}{\lambda_{emit}}\]</span></p>
-<p>If a source of the light is moving away from an observer, then redshift (z &gt; 0) occurs; if the source moves towards the observer, then blueshift (z &lt; 0) occurs. This is true for all electromagnetic waves and is explained by the Doppler effect. Consequently, this type of redshift is called the <em>Doppler redshift</em>.</p>
-</section>
-<section id="relativistic-redshift" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="relativistic-redshift"><span class="header-section-number">5.2</span> Relativistic Redshift</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/redshift.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/redshift.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
-</figure>
-</div>
-<p>The wavefront moves with velocity <span class="math inline">\(c\)</span>, but at the same time the source moves away with velocity <span class="math inline">\(v\)</span>. Afte a time <span class="math inline">\(t_s\)</span> the source has receded <span class="math inline">\(vt\)</span>. The crest of the wave emission is at <span class="math inline">\(\lambda+v t_s=ct_s\)</span>. The period in the reference system of the source is given by:</p>
-<p><span class="math display">\[t_s = \frac{\lambda}{c-v} = \frac{c}{(c-v)f_s} = \frac{1}{(1-\beta)f_s}.\]</span></p>
-<p>Remember that when a reference <span class="math inline">\(O_s\)</span> was moving at speed <span class="math inline">\(\beta\)</span> from a another reference <span class="math inline">\(O_{o}\)</span>, the time relation was:</p>
-<p><span class="math display">\[\Delta t_s = \gamma(\Delta t_{o} - \beta \Delta x_{o}).\]</span></p>
-<p>Since <span class="math inline">\(\Delta x_{o} =0\)</span> (we are just measuring when the crest of the waves arrive), then the time observed <span class="math inline">\(t_{o}\)</span> in the reference system O is given:</p>
-<p><span class="math display">\[t_o = \frac{t_s}{\gamma}.\]</span></p>
-<p>The corresponding observed frequency is <span class="math display">\[f_o = \frac{1}{t_o} = \gamma (1-\beta) f_s = \sqrt{\frac{1-\beta}{1+\beta}}\,f_s.\]</span></p>
-<p>The ratio</p>
-<p><span class="math display">\[\frac{f_s}{f_o} = \sqrt{\frac{1+\beta}{1-\beta}},\]</span></p>
-<p>is called the <em>Doppler factor</em> of the source relative to the observer.</p>
-<p>The corresponding wavelengths are related by</p>
-<p><span class="math display">\[\frac{\lambda_o}{\lambda_s} = \frac{f_s}{f_o} = \sqrt{\frac{1+\beta}{1-\beta}},\]</span></p>
-<p>and the resulting redshift</p>
-<p><span class="math display">\[z = \frac{\lambda_o - \lambda_s}{\lambda_s} = \frac{f_s - f_o}{f_o},\]</span></p>
-<p>can be written as</p>
-<p><span class="math display">\[z = \sqrt{\frac{1+\beta}{1-\beta}} - 1.\]</span></p>
-<p>When interpreted as a relativistic Doppler shift from object receeding at velocity <span class="math inline">\(\beta\)</span>, this is:</p>
-<p><span class="math display">\[\lambda_o = \sqrt{\frac{1+\beta}{1-\beta}}\lambda_s \simeq (1+\beta)\lambda_s\]</span></p>
-<p>In the non-relativistic limit (when <span class="math inline">\(v \ll c\)</span>) this redshift can be approximated by <span class="math inline">\(z \simeq \beta = \frac{v}{c}\)</span> corresponding to the classical Doppler effect.</p>
-</section>
-<section id="hubble-expansion" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="hubble-expansion"><span class="header-section-number">5.3</span> Hubble Expansion</h2>
-<p>When plotting their redshift (ie speed) as function of distance (measured with the techniques we saw, parallax, etc.) in 1929 Hubble found a correlation between redshift and radial distance from Earth:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/unnamed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/unnamed.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
-</figure>
-</div>
-<p><span class="math display">\[v = H_0 r, \; H_0 = 72\;\mathrm{ km/s/Mpc}\]</span></p>
-<p>Note that <span class="math inline">\(H_0\)</span> has only units of time<span class="math inline">\(^{-1}\)</span> we explicitely write the other dimensions to better understand its meaning.</p>
-<p>But Doppler redshift does not depends on distance! So this not a doppler redshift but a <strong>Cosmological redshift</strong>. In this case the redshift is not due to relative velocities, the photons instead increase in wavelength and redshift because the spacetime through which they are traveling is expanding.</p>
-<p>But we said that for midly relativistic objects (and galaxies are moving at midly relativistic speeds) we can approximate <span class="math inline">\(z \approx \beta\)</span> so we <em>can use <span class="math inline">\(z\)</span> to estimate distances!</em>:</p>
-<p><span class="math display">\[r \simeq \frac{c}{H_0}z \simeq 4000\;\mathrm{ Mpc}\cdot z\]</span></p>
-<p>For small <span class="math inline">\(v\)</span> over distance <span class="math inline">\(r\)</span> the <strong>velocity is proportional to the distance</strong>. Note that however this only holds only for <em>small redshifts!</em>.</p>
-<p>For larger redshifts other relations with the distance need to be invoked.</p>
-<section id="age-of-the-universe-first-approximation" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="age-of-the-universe-first-approximation"><span class="header-section-number">5.3.1</span> Age of the Universe (first approximation)</h3>
-<p>If we assume that the rate of expansion (ie H) is essentially constant (it is not!) the age of the Universe can be estimated by this relation:</p>
-<p><span class="math display">\[\frac{d r}{dt} = H_0 r \rightarrow \int \frac{1}{r}dr =\int H_0 dt\]</span></p>
-<p><span class="math display">\[ \mathrm{ In} r = H_0 t \rightarrow r = e^{H_0 t}\]</span></p>
-<p>where Universe increases by a factor <span class="math inline">\(e\)</span> every <span class="math inline">\(t_{\mathrm{Hubble}} = \frac{1}{H_0} = 14\times 10^9\mathrm{ yr}\)</span> which is the <strong>Hubble time</strong>.</p>
-<section id="are-we-expanding" class="level4" data-number="5.3.1.1">
-<h4 data-number="5.3.1.1" class="anchored" data-anchor-id="are-we-expanding"><span class="header-section-number">5.3.1.1</span> Are we expanding?</h4>
-<blockquote class="blockquote">
-<p><a href="https://www.youtube.com/watch?v=5U1-OmAICpU">Brooklyn is not expanding!</a> <em>Annie Hall</em></p>
-</blockquote>
-</section>
-</section>
-</section>
-<section id="cosmological-principle" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="cosmological-principle"><span class="header-section-number">5.4</span> Cosmological Principle</h2>
-<p>The <em>cosmological principle</em> is the notion that the distribution of matter in the Universe is <strong>homogeneous</strong> and <strong>isotropic</strong> when viewed on a large enough scale.</p>
-<ul>
-<li><strong>Homogeneity</strong> states that the distribution of matter is even in each epoch.</li>
-<li><strong>Isotropy</strong> states that there are no prefered directions in the distribution of matter in space.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/2df_slice_blue_big.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/2df_slice_blue_big.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
-<p>The <a href="http://en.wikipedia.org/wiki/Observable_universe#End_of_Greatness">End of Greatness</a> is an observational scale discovered at roughly 100 Mpc where the lumpiness seen in the large-scale structure of the universe is homogenized and isotropized, this together with the isotropy of the CMB reinforced the idea of the <strong>Cosmological Principle</strong>.</p>
-<p>However, in 2013 a new structure <strong>3 Gpc</strong> wide has been discovered, the <a href="http://arxiv.org/abs/1311.1104">Hercules–Corona Borealis Great Wall</a>, which puts doubt on the validity of the cosmological principle.</p>
-</section>
-<section id="friedmannlemaître-robertson-walker" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="friedmannlemaître-robertson-walker"><span class="header-section-number">5.5</span> Friedmann–Lemaître-Robertson-Walker</h2>
-<p>Despite seing all galaxies receding, we are not at the center of the Universe. The common interpretation of the expansion is that we are living in a Universe that can be thought of lying on the surface of a balloon. Distances between objects (points on the ballon) on this manifold are expressed as:</p>
-<p><span class="math display">\[r(t) = R(t)r_0\]</span></p>
-<p>where <span class="math inline">\(R(t)\)</span> is a scale factor, depending on the time, and <span class="math inline">\(r_0\)</span> is a <em>comoving coordinate</em> without time dependence or current distance if we assume <span class="math inline">\(R(0) = 1\)</span>, but sometimes its better to explicitelly use a <em>normalized</em> scale factor as <span class="math inline">\(a(t) = R(t)/R(0)\)</span></p>
-<p>So we are looking for a Universe that is isotropic, homogeneous and it is expanding. The metric that describes such a Universe is given by the <strong>Friedmann–Lemaître-Robertson-Walker</strong> metric:</p>
-<p><span class="math display">\[ds^2 = dt^2 - R(t)^2 d \Sigma(k)^2 \]</span> <span class="math display">\[= dt^2 - a^2(t)R^2_0\left[\frac{dr^2}{1 - kr^2} + r^2(d\theta^2  + sin^2\theta d\phi^2)\right]\]</span></p>
-<p>where <span class="math inline">\(d\Sigma(k)\)</span> refers to the spatial 3-dimentional metric depending on the curvature parameter <span class="math inline">\(k\)</span> which takes the discrete values +1, 0, -1, corresponding to a closed, open or spacially flat geometry, and we used the normalized form of the scale factor <span class="math inline">\(a(t) = R(t)/R_0\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Source: quantum-bits.org"><img src="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Source: quantum-bits.org"></a></p>
-<figcaption>Source: quantum-bits.org</figcaption>
-</figure>
-</div>
-<p>The evolution of the scale parameter as in the case of wavelength (see Exercises):</p>
-<p><span class="math display">\[a(t) = \frac{1}{1+z}.\]</span></p>
-<section id="friedman-equations" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="friedman-equations"><span class="header-section-number">5.5.1</span> Friedman Equations</h3>
-<p>The dynamics’s of the FLRW metric is governed by the Einstein’s equations. Einstein’s original field equations are:</p>
-<p><span class="math display">\[R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8 \pi GT_{\mu\nu}.\]</span></p>
-<p>In Newtonian gravity, the source is mass. In special relativity, is a more general concept called the energy-momemtum tensor, which may be modeled as a perfect fluid for which:</p>
-<p><span class="math display">\[T_{\mu\nu} = (\rho + p)U_\mu U_\nu + pg_{\mu\nu},\]</span></p>
-<p>where <span class="math inline">\(U_\mu\)</span> is the fluid four-velocity in co-moving coordinates, <span class="math inline">\(\rho\)</span> is an energy density and <span class="math inline">\(p\)</span> is the isotropic pressure. The FLRW metric solution to the Einstein equations can be reduced to the two <strong>Friedmann equations</strong>:</p>
-<p><span class="math display">\[H^2 \equiv \left(\frac{\dot a}{a}\right)^{2} =  \frac{8\pi G}{3}\rho - \frac{kc^{2}}{a^2R^2_0},\]</span></p>
-<p>and</p>
-<p><span class="math display">\[\frac{\ddot a}{a} = -\frac{4\pi G}{3}(\rho + 3p).\]</span></p>
-</section>
-</section>
-<section id="cosmological-constants" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="cosmological-constants"><span class="header-section-number">5.6</span> Cosmological Constants</h2>
-<p>Given the Friedmann equations we can calculate for any value of <span class="math inline">\(H\)</span> the critical density such as the geometry is flat (<span class="math inline">\(k=0\)</span>):</p>
-<p><span class="math display">\[\rho_{crit} = \frac{3H^2}{8\pi G}\]</span></p>
-<p>It is convenient to measure the the total energy density in terms of critical density by introducing the density parameters:</p>
-<p><span class="math display">\[\Omega\equiv\frac{\rho}{\rho_{crit}} = \left(\frac{8\pi G}{3H^2}\right)\rho\]</span></p>
-<p>In general the energy density will have contributions of distinct components so whe can defined:</p>
-<p><span class="math display">\[\Omega_i\equiv\frac{\rho_i}{\rho_{crit}} = \left(\frac{8\pi G}{3H^2}\right)\rho_i\]</span></p>
-<p>where <span class="math inline">\(i\)</span> stands for the different components of the energy density as we will see later: matter (or dust), radiation, cosmological density, curvature density.</p>
-<p>For the special case of <span class="math inline">\(a(t_0) = 1\)</span>, ie, today, we have the formula:</p>
-<p><span class="math display">\[H_0^2\Omega_0 = \frac{8\pi G}{3}\rho_0\]</span></p>
-<section id="the-cosmological-constant" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="the-cosmological-constant"><span class="header-section-number">5.6.1</span> The Cosmological Constant</h3>
-<p>Einstein was interested in finding <span class="math inline">\(\dot{a} = 0\)</span> (ie static) solutions. This can be achieved if <span class="math inline">\(k= + 1\)</span> and <span class="math inline">\(\rho\)</span> is appropriately tuned. But <span class="math inline">\(\ddot a\)</span> will not vanish in this case. Einstein therefore modified his equations to:</p>
-<p><span class="math display">\[R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8 \pi GT_{\mu\nu} + \Lambda g_{\mu\nu},\]</span></p>
-<p>where the <span class="math inline">\(\lambda\)</span> term is put in the rhs of the equation as it is interpreted as an effective energy-momentum tensor for the vacuum. With this modification the Friedmann equations become:</p>
-<p><span class="math display">\[
-\begin{aligned}
-H^2  &amp;=  \left(\frac{\dot a}{a} \right)^2 = \frac{8\pi G}{3}\rho + \frac{\Lambda}{3} - \frac{kc^{2}}{a^2R^2_0} \\
-\frac{\ddot a}{a} &amp;= -\frac{4\pi G}{3}(\rho + 3p) +  \frac{\Lambda}{3}
-\end{aligned}
-\]</span></p>
-<p>The discovery by Hubble that the Universe is expanding eliminated the empirical need for a static world. However, we believe that <span class="math inline">\(\Lambda\)</span> is actually nonzero, so Einstein was right after all. Assuming that cosmological constant is due to the vacuum energy, most quantum field theories predict a <span class="math inline">\(\Lambda\)</span> that is 120 orders of magnitude larger than the observational values! this is so-called <strong>cosmological constant problem</strong>.</p>
-</section>
-<section id="evolution-of-the-cosmological-constants" class="level3" data-number="5.6.2">
-<h3 data-number="5.6.2" class="anchored" data-anchor-id="evolution-of-the-cosmological-constants"><span class="header-section-number">5.6.2</span> Evolution of the Cosmological Constants</h3>
-<p>In general the energy density will have contributions of distinct components which will evolve differently with the Universe expansion:</p>
-<ul>
-<li>Massive particles with negligible velocities are known in cosmology as <em>dust</em> or simply <em>matter</em>. Their density scales as the number density times their rest mass. Their number density scales as the inverse of the volume while the rest mass is constant: <span class="math inline">\(\rho_M \propto a^{-3}\)</span></li>
-<li>Relativistic particles are known as <em>radiation</em> (although it is not only photons) and their energy density is the number density times the particle energy, the latter is proportional to <span class="math inline">\(a^{-1}\)</span> (as they redshift with expansion) and so: <span class="math inline">\(\rho_r \propto a^{-4}\)</span></li>
-<li>Vacuum energy does not change as universe expand so we can define a <span class="math inline">\(\rho_\Lambda \equiv \frac{\Lambda}{8\pi G} \propto a^0\)</span></li>
-<li>It is useful to pretend that <span class="math inline">\(-ka^{-2}R_0^{-2}\)</span> represents an effective <em>curvature energy density</em> defining <span class="math inline">\(\rho_k \equiv -(3k/8\pi G R^2_0)a^{-2}\)</span>.</li>
-</ul>
-<p>Given this evolution it is possible to write:</p>
-<p><span class="math display">\[ H^2(t) = H^2_0 [\Omega^0_M(1+z)^3 + \Omega^0_r(1+z)^4 + \Omega^0_k(1+z)^2 +\Omega^0_\Lambda]\]</span></p>
-</section>
-</section>
-<section id="observational-cosmological-results" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="observational-cosmological-results"><span class="header-section-number">5.7</span> Observational Cosmological Results</h2>
-<p>There are good reasons to believe that the energy density of radiation is much less than matter, as photon contrinute only to <span class="math inline">\(\Omega_r \sim 5 \times 10^{-5}\)</span> mostly in the CMB. Therefore is useful to parametrize the universe today as <span class="math inline">\(\Omega_k = 1 - \Omega_M - \Omega_\Lambda\)</span>.</p>
-<ul>
-<li><p><strong>Direct measures of the Hubble constant.</strong>. The most reliable result on the Hubble constant comes from the <a href="http://iopscience.iop.org/0004-637X/553/1/47">Hubble Space Telecope Key Project</a>. They use the Cepheids to obtain distances to 31 galaxies (They also use Type Ia Supernovae). A recent study with over 600 Cepheids yielded the number <span class="math inline">\(H_0 = 73.8 \pm 2.4 \mathrm{\;km\;s^{-1}\; Mpc^{-1}}\)</span>. The indirect measurement from <em>Planck</em> Collaboration gives somehow a lower value (this discrepancy as well as the comic distance-ladder method are under investigation).</p></li>
-<li><p><strong>Supernovae.</strong> Two major studies, the Supernova Cosmology Project and the High-<span class="math inline">\(z\)</span> Supernova Search Team, found evidence for an accelerating Universe. When combined with the CMB data indicating flatness (ie <span class="math inline">\(\Omega_k = 0 \rightarrow \Omega_M + \Omega_\Lambda = 1\)</span>), the best-fit values were <span class="math inline">\(\Omega_M \approx 0.3\)</span> and <span class="math inline">\(\Omega_\Lambda \approx 0.7\)</span>)</p></li>
-<li><p><strong>Cosmic Microwave Background.</strong> See next section.</p></li>
-</ul>
-</section>
-<section id="cosmic-microwave-background" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="cosmic-microwave-background"><span class="header-section-number">5.8</span> Cosmic Microwave Background</h2>
-<p>The cosmic microwave background (CMB) is electromagnetic radiation that remains from the time when photons decoupled from matter shortly after the recombination of electrons and protons into neutral hydrogen atoms. Once photons decoupled from matter, they traveled freely through the universe without interacting with matter. For an observer today this CMB is observed as a distribution of temperatures (from black body radiation) at on a two-dimensional sphere. This temperature distribution, however, was shown to have anisotropies. If we denote <span class="math inline">\(\Delta T (\theta, \phi)\)</span> the temperature difference measured in the direction (<span class="math inline">\(\sin\theta \cos \theta, \sin\theta \sin\theta , \cos\theta\)</span>) with respect to <span class="math inline">\(T_0 =\)</span> 2.725 K, the average temperature we can decompose these anisotropies over the bases of spherical harmonics, the so called <span class="math inline">\(Y_{\ell m} (\theta, \phi)\)</span>, the same way a we can decompose a function in a curved space over sines and cosines by the Fourier transform:</p>
-<p><span class="math display">\[\frac{\Delta T}{T} = \sum_{\ell m} a_{\ell m} Y_{\ell m} (\theta, \phi)\]</span></p>
-<p>This decomposition tell us the amount of anisotropy at a given the multipole moment <span class="math inline">\(\ell\)</span> or angular scale <span class="math inline">\(\theta = \frac{180^{\circ}}{\ell}\)</span></p>
-<p><span class="math display">\[C_\ell = \langle |a_{\ell m}|^2 \rangle\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="Source: ESA"><img src="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: ESA"></a></p>
-<figcaption>Source: ESA</figcaption>
-</figure>
-</div>
-<p>The power spectrum of the CMB represents the anisotropies of the CMB as a function of the angular scale. The typical spectrum features a plateu at large angular scales (small <span class="math inline">\(\ell\)</span>) followed by some oscillatory features (aka acoustic peaks or <em>Doppler peak</em>). These peaks represent the oscillation of photon-baryon fuild around the decoupling. The first peak at <span class="math inline">\(\ell \sim 200\)</span> probes the spatial geometry, while the relative heights probe the baryon density. The position of the first peak constrains the spatial geometry in a way consistent with a flat Universe (<span class="math inline">\(\Omega_k \sim 0\)</span>)</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Build your own Universe">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Build your own Universe
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can build your own Universe <a href="https://lambda.gsfc.nasa.gov/education/cmb_plotter/">here</a></p>
-</div>
-</div>
-<section id="before-planck" class="level4" data-number="5.8.0.1">
-<h4 data-number="5.8.0.1" class="anchored" data-anchor-id="before-planck"><span class="header-section-number">5.8.0.1</span> Before Planck</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/eso0419d.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/eso0419d.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
-</section>
-<section id="after-planck" class="level4" data-number="5.8.0.2">
-<h4 data-number="5.8.0.2" class="anchored" data-anchor-id="after-planck"><span class="header-section-number">5.8.0.2</span> After Planck</h4>
-<p>Planck showed that the amount of dark energy in the Universe is appreciably less than we had previously thought, while the amount of dark-and-normal matter is appreciably greater than we thought.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/Lambda_Matter.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/Lambda_Matter.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
-</section>
-</section>
-<section id="cosmography" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="cosmography"><span class="header-section-number">5.9</span> Cosmography</h2>
-<p>Using the Huble equation we are going to derive some quantities related to the measurement of the Universe.</p>
-<section id="age-of-the-universe" class="level4" data-number="5.9.0.1">
-<h4 data-number="5.9.0.1" class="anchored" data-anchor-id="age-of-the-universe"><span class="header-section-number">5.9.0.1</span> Age of the Universe</h4>
-<p>We have shown the evolution of the Hubble expansion as a function of the redshift using the clousure parameters. We know that</p>
-<p><span class="math display">\[H(z) = \frac{\dot a}{a} = -\left(\frac{\mathrm{ d}z/\mathrm{ d}t}{(1+z)}\right) \rightarrow \mathrm{ d}t = -\frac{\mathrm{ d}z}{(1+z)H(z)}\]</span></p>
-<p>And so the age of the universe can be calculated as (where <span class="math inline">\(z=0\)</span> corresponds to today <span class="math inline">\(t_0\)</span>):</p>
-<p><span class="math display">\[\int_{0}^{t_0} \mathrm{ d} t = t_0 = \frac{1}{H_0} \int^\infty_0 \frac{\mathrm{ d}z}{E(z)}\]</span></p>
-<p>where we defined the following function:</p>
-<p><span class="math display">\[E(z)\equiv \sqrt{\Omega_M(1+z)^4 + \Omega_r(1+z)^5 + \Omega_k(1+z)^3 +\Omega_\Lambda(1+z)}.\]</span></p>
-<p>Assuming a flat Universe <span class="math inline">\(\Omega_k =0\)</span> and ignoring the radiation <span class="math inline">\(\Omega_r \ll \Omega_M\)</span> the integral gets simplified to:</p>
-<p><span class="math display">\[H_0 t_0 = \frac{1}{3\sqrt{1 - \Omega_M}}\mathrm{ In}\left(\frac{1+\sqrt{1 - \Omega_M}}{1 - \sqrt{1- \Omega_M}}\right)\]</span> where we used <span class="math inline">\(1 = \Omega_\Lambda + \Omega_M.\)</span></p>
-<p>For <span class="math inline">\(\Omega_M = 0.70\)</span> and <span class="math inline">\(\Omega_\Lambda = (1 - \Omega_M) = 0.30\)</span> one finds <span class="math inline">\(H_0 t_0 = 0.964\)</span> so that <span class="math inline">\(t_0 \approx \frac{0.96}{H_0} = 13.5\)</span> Gyr. Which is similar to the assumption we did with a constant <span class="math inline">\(H_0\)</span>.</p>
-</section>
-<section id="comoving-distance-line-of-sight" class="level3" data-number="5.9.1">
-<h3 data-number="5.9.1" class="anchored" data-anchor-id="comoving-distance-line-of-sight"><span class="header-section-number">5.9.1</span> Comoving distance (Line of Sight)</h3>
-<p>The comoving distance between two nearby objects in the Universe is the distance between them which remains constant with epoch if the two objects are moving with the <em>Hubble flow</em>. That an object follows the <em>Hubble flow</em> if there is no peculiar velocities, ie, the only reason the 2 objects separate is due to the expansion of the Universe and not because the have relative velocities among them. The comoving distance has the expansion factored out and therefore remains constant with epoch. You can think of it as the distance measured with a ruler that also expands with the Universe. Using the same argument as above with the age of the Universe we can multiplying by the speed of light we can derive:</p>
-<p><span class="math display">\[D_c(z) = \int_{t}^{t_0} c\mathrm{ d} t = \frac{c}{H_0} \int^z_0 \frac{\mathrm{ d}z^\prime}{E(z^\prime)}.\]</span></p>
-<p>This is the comoving distance along the <em>line of sight</em>. Ie, is the comoving distance from a galaxy at redshift <span class="math inline">\(z\)</span> from us. If we want to estimate, let’s say, the distance between 2 galaxies at the same redshift but separated in angle <span class="math inline">\(\Delta \theta\)</span>, then the distance is given by <span class="math inline">\(D_M \Delta \theta\)</span> where <span class="math inline">\(D_M\)</span> is the <em>transverse comoving distance</em>. For a flat Universe <span class="math inline">\(D_M = D_c\)</span> but if the curvature is not zero, the relationship depends on the trigonometric functions <span class="math inline">\(\sinh\)</span> (for a closed Universe) and <span class="math inline">\(\sin\)</span> (for an open Universe) to account for the curvature of spacetime.</p>
-</section>
-<section id="luminosity-distances" class="level3" data-number="5.9.2">
-<h3 data-number="5.9.2" class="anchored" data-anchor-id="luminosity-distances"><span class="header-section-number">5.9.2</span> Luminosity Distances</h3>
-<p>The luminosity distance defined in cosmology is defined as the distace in which an object with intrinsic luminosity <span class="math inline">\(L\)</span> is observed with flux <span class="math inline">\(f\)</span>, ie:</p>
-<p><span class="math display">\[ f = \frac{L}{4\pi d_L^2}.\]</span></p>
-<p>This in terms of bolometric values, however sometimes we only observe a given bandwidth in frequency, ie, we have to replace <span class="math inline">\(f\rightarrow f(\nu_o)\)</span> and <span class="math inline">\(L \rightarrow L(\nu_{e})\)</span> where <span class="math inline">\(\nu_o\)</span> and <span class="math inline">\(\nu_e\)</span> are the observed and emitted frequencies. Since the luminosity is defined as energy delivered over interval of time, we can approximate it as:</p>
-<p><span class="math display">\[ L(\nu_e) = \frac{Nh\nu_e}{\Delta t_e},\]</span> <span class="math display">\[ L(\nu_o) = \frac{Nh\nu_o}{\Delta t_o},\]</span></p>
-<p>being <span class="math inline">\(N\)</span> the number of photos. However the photons emitted are redshifted and photons observed at <span class="math inline">\(\nu_o\)</span> were emitted at <span class="math inline">\((1+z)\nu_o\)</span>. The time intervals are also related by the expansion of the Universe as:</p>
-<p><span class="math display">\[\frac{\Delta t_e}{\Delta t_o} = \frac{1}{(1+z)}.\]</span></p>
-<p>So we have that the emitted luminosity and the observed luminosity are related as:</p>
-<p><span class="math display">\[L(\nu_o) = \frac{L(\nu_e)}{(1+z)^2}.\]</span></p>
-<p>The observed luminosity is smaller than the emitted luminosity. On the other hand the relation between the observed flux and observed luminosity is the same as in a non-expanding Universe. ie:</p>
-<p><span class="math display">\[f(\nu_o) = \frac{L(\nu_o)}{4\pi D_c^2},\]</span></p>
-<p>where <span class="math inline">\(D_c\)</span> is the co-moving distance. Putting everything together we have that:</p>
-<p><span class="math display">\[f(\nu_o) = \frac{1}{(1+z)^2}\frac{L(\nu_e)}{4\pi D_c^2} = \frac{L(\nu_e)}{4\pi D_L^2},\]</span> so we have the relation between the luminosity distance and the co-moving distance as:</p>
-<p><span class="math display">\[D_L = D_c(1+z).\]</span></p>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial IV: Age of the Universe">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tutorial IV: Age of the Universe
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In the about the age of the Universe we calculated an analytical solution for a given condition. No we are goign to use <code>python</code> to numerically solve the look-back time for any given set of cosmological parameters. For that we are going to rewrite the loopback formula in terms of the scale factor <span class="math inline">\(a\)</span> since we have the redshift scale relation:</p>
-<p><span class="math display">\[(1+z) = \frac{1}{a}\]</span></p>
-<p>we can prove that:</p>
-<p><span class="math display">\[\frac{\mathrm{ d}z}{1 +z} = -\frac{\mathrm{ d}a}{a}\]</span></p>
-<p>Therefore the equation above that relates <span class="math inline">\(\mathrm{d}t\)</span> with redshift we can rewrite it at:</p>
-<p><span class="math display">\[ \mathrm{ d}t = \frac{\mathrm{d}a}{H(a)a} \]</span></p>
-<p>with</p>
-<p><span class="math display">\[  H^2(a) = H^2_0 [\Omega^0_M a^{-3} + \Omega^0_r a^{-4} + \Omega^0_k a^{-2} +\Omega^0_\Lambda] \]</span></p>
-<p>We need to numerically integrate the right hand side of the equation. However, for some parameters this integration is circular, reaching a <span class="math inline">\(a_{max}\)</span> then the <span class="math inline">\(H^2(a_{max}) = 0\)</span></p>
-<div id="cell-fig-age" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#We take the current value of H0 from the astropy package</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.cosmology <span class="im">import</span> Planck13</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>H0 <span class="op">=</span> Planck13.H(<span class="dv">0</span>).value</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#We define the friedman equation ignoring the radiation component omega_r &lt;&lt;</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> friedman(a, omega_M, omega_lambda):</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    omega_k <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> omega_M <span class="op">-</span> omega_lambda</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    H2 <span class="op">=</span> H0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> (omega_M <span class="op">*</span> a<span class="op">**-</span><span class="dv">3</span> <span class="op">+</span> omega_k <span class="op">*</span> a<span class="op">**-</span><span class="dv">2</span> <span class="op">+</span> omega_lambda)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> H2</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> integrate</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">#This is a simple integration, it does not take into account a possible Big Crunch</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">def calculate_times(omega_m, omega_lambda):</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">    t0 = integrate.quad(lambda x: 1/x * 1/np.sqrt(friedman(x,omega_m, omega_lambda)), 0, 1)[0]</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">    times = []</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">    scales = np.arange(0.1, 2, 0.01)</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">    for a in scales:</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">        time = integrate.quad(lambda x: 1/x * 1/np.sqrt(friedman(x,omega_m, omega_lambda)), 0, a)[0]</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">        times.append(H0*(time - t0))  </span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co">    return np.array(times), np.array(scales)</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co">#This integration takes into account a Big Crunch</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_times(omega_m, omega_lambda):</span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Lets check if there is a maximal, ie, if H^2(a) = 0</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    astep <span class="op">=</span> <span class="fl">0.001</span></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    amax <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>    scales <span class="op">=</span> np.arange(<span class="fl">0.1</span>, amax, astep)</span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> friedman(scales, omega_m, omega_lambda)</span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>    ia, <span class="op">=</span> np.where(np.diff(np.sign(f)))</span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(ia) <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>        amax <span class="op">=</span> scales[ia[<span class="dv">0</span>]]</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>    tmax <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, amax <span class="op">-</span> astep)[<span class="dv">0</span>]</span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>    <span class="co">#time today a = 1</span></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>    t0 <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, <span class="dv">1</span>)[<span class="dv">0</span>]</span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Empty x,y for the plots</span></span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>    times <span class="op">=</span> []</span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>    scale <span class="op">=</span> []</span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> scales:</span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="op">&lt;</span> amax: <span class="co">#If a &lt; amax we do the typical integral 0 -&gt; a</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>            time <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, a)[<span class="dv">0</span>]</span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>            times.append(H0<span class="op">*</span>(time <span class="op">-</span> t0)) <span class="co">#We calibrate at -t0 to place all curves together</span></span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>            scale.append(a)</span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="op">&gt;=</span> amax <span class="kw">and</span> <span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a <span class="op">&gt;</span> <span class="dv">0</span>: <span class="co">#If a &gt; amax we are out the domain we integrate backwards</span></span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>            time <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>tmax <span class="op">-</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a)[<span class="dv">0</span>]</span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>            times.append(H0<span class="op">*</span>(time <span class="op">-</span> t0))</span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>            scale.append(<span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a)</span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(times), np.array(scale)</span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">4</span>))</span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">0.3</span></span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="fl">0.7</span></span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">0.3</span></span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"upper left"</span>)</span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">1</span>,<span class="fl">1.5</span>)</span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="fl">0.2</span>,<span class="dv">2</span>)</span>
-<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$a(t)$"</span>)</span>
-<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$H_0 (t - t_0)$"</span>)</span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="fig-age" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="chap1_files/figure-html/fig-age-output-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14"><img src="chap1_files/figure-html/fig-age-output-1.svg" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.1: Age of the Universe
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section id="references" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="references">References</h4>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Yanez:2023lsy" class="csl-entry" role="listitem">
-Yañez, Juan Pablo, and Anatoli Fedynitch. 2023. <span>“<span class="nocase">daemonflux: DAta-drivEn MuOn-calibrated Neutrino
-Flux</span>,”</span> February. <a href="https://arxiv.org/abs/2303.00022">https://arxiv.org/abs/2303.00022</a>.
-</div>
-</div>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Source: Wikipedia</span>
-<span class="glightbox-desc lightbox-desc-2">Source: Wikipedia</span>
-<span class="glightbox-desc lightbox-desc-3">Equatorial coordinate system</span>
-<span class="glightbox-desc lightbox-desc-4">Galaxy in Galactic Coordiantes</span>
-<span class="glightbox-desc lightbox-desc-10">Source: quantum-bits.org</span>
-<span class="glightbox-desc lightbox-desc-11">Source: ESA</span>
-<span class="glightbox-desc lightbox-desc-14">Figure&nbsp;5.1: Age of the Universe</span>
-</div>
-</section>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1678,37 +856,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chap2.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>What are Cosmic Rays?</span>">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chap1_1.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Time and Coordinate Systems in Astronomy</span>">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

@@ -1,0 +1,242 @@
+# Introduction to Special Relativity
+
+## Why is it important?
+
+$$\gamma = \sqrt{\frac{1}{1-\beta^2}}\;, \beta = \frac{v}{c}$$
+
+* Jets emitted by supermassive black holes have:
+$\gamma \approx 30 \rightarrow \beta = 0.9984$
+* Electrons spiraling in B-field lines of pulsars have:
+$\gamma \sim 10^7$
+* Lorentz factors of protons of $10^{20}$ eV:
+$\gamma = \frac{E}{m^0_p c^2} = \frac{10^{20}}{1\times 10^9} = 10^{11}$
+
+Two principles:
+
+1. *The Principle of Relativity* – The laws by which the states of physical systems undergo change are not affected, whether these changes of state be referred to the one or the other of two systems in uniform translatory motion relative to each other
+
+2. *The Principle of Invariant Light Speed*– "... light is always propagated in empty space with a definite velocity [speed] c which is independent of the state of motion of the emitting body."
+
+## Lorentz Transformations
+
+As a simple case, consider a reference frame *O* and and observer in another
+frame *O'* moving at constant speed $\beta$ along the $x$ axis:
+
+![](images/Lorentz.svg){fig-align="center"}
+
+A Lorentz transformation or *boost* is the transformation from one inertial
+reference frame to another.  In general it is a $(4\times4)$ matrix which
+encapsulates the system of equations describing the transformation (in natural units).
+
+$$\begin{aligned}
+t' &= \gamma(t - \beta x) \\
+x' &= \gamma(x - \beta t) \\
+y' &= y \\
+z' &= z
+\end{aligned}$$
+
+
+The matrix form of this transformation is
+
+$$x'^\mu = {\Lambda^\mu}_\nu x^\nu, \; {\Lambda^\mu}_\nu =
+\begin{pmatrix}
+\gamma & -\beta\gamma & 0 & 0 \\
+-\beta\gamma & \gamma & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix}$$
+
+This is just a particular case of a Lorentz transformation (there is nothing special on the x-axis) and a variable invariant under a Lorentz transformation is called *Lorentz invariant or scalar*.
+
+The line element $\Delta s^2$ is a Lorentz invariant:
+
+$$\Delta s^2 = \Delta t^2 - \Delta x^2 - \Delta y^2 -\Delta z^2 $$
+
+This can be rewritten as the inner product of a 4-vector $x^{\mu}$:
+
+$$\Delta s^2 = x^2 \equiv x^\mu x_\mu = g_{\mu\nu} x^\mu x^\nu$$
+
+where *metric tensor* $g_{\mu\nu}$ is:
+
+$$g_{00} = + 1, g_{11} = g_{22} = g_{33} = - 1 , g_{\mu\nu} = 0, \;\mathrm{ for}\; \mu \neq\nu$$
+
+is called the **Minkowski space**.
+
+
+## Consequences of Lorentz transformations
+
+Lorentz transformation have the following (some of them really bizarre) consequences:
+
+* **Relativity of simultaneity.** $\Delta t' = 0$ in $O'$ doesn't imply $\Delta t = 0$ in $O$:
+
+$$\Delta t' = \gamma(\Delta t - \beta \Delta x)$$
+
+
+
+* **Time dilatation.** If $\Delta x = 0$ i.e. the ticks of one clock:
+
+$$\Delta t' = \gamma \Delta t$$
+
+* **Length contraction.** For events satisfying $\Delta t' = 0$:
+
+    $$\Delta x' = \frac{\Delta x}{\gamma}$$
+
+* **Equivalence of mass and energy.**
+
+In 1905, Einstein gave his first derivation of the mass-energy equivalence by studing, in different reference frames, the energy balance of a body emiting electromagnetic radiation. You can replace *body* with a *cat* and check a quick proof of the mass energy equivalence in this video:
+
+::: {#fig-minute}
+
+{{< video https://www.youtube.com/watch?v=hW7DW9NIO9M 
+title = "Einstein's Proof of E=mc²"
+>}}
+
+Source: Minute Physics
+
+::: 
+
+
+
+
+# Relativistic kinematics
+## Four-vectors
+
+We saw that position vectors in Minkowski space become 4-vectors with zeroth component. $x^0 = t$, identified with time. Likewise momentum 4-vector has $p^0 = E$:
+
+$$ {\mathbf P} = (E, \vec{p})$$
+
+$$ {\mathbf X} = (t, \vec{x})$$
+
+We saw that the inner product in Minkowski space is invariant under Lorentz transformations. In this case, the Lorentz invariant is:
+
+$$  s = p_\mu p^{\mu} = m_0^2 = E^2 -{\vec p\cdot \vec p} \rightarrow E^2 = {\vec p\cdot \vec p} +m_0^2$$
+
+which is the *relativistic energy-momentum relationship*.
+
+$$ E = m = \gamma m_0$$
+
+One can derive the expresions for relativistic 3-momentum and kinetic energy:
+
+$$|{\vec p}|= \beta E$$
+
+$$E_{kin} \equiv E - m_0 = (\gamma -1) m_0$$
+
+
+
+## Transformation to the Center-of-Momentum Frame (COM)
+
+As a concrete example of how 4-vectors aid real calculations, let's take the classic
+case of a transformation to the center-of-momentum frame (COM), that is, a coordinate frame where the total three-momentum $\vec p = 0$.
+In this case the invariant square of a system is equal to the total COM energy square or:
+
+$$\sqrt{s} = E_{COM}$$
+
+In the case of a two-particle system with particles A and B with energies $(E_A)$ and $(E_B)$, and 3-momenta $(\vec{p}_A)$ and $(\vec{p}_B)$:
+
+$$\begin{aligned}{2}
+s = p^2 &= (E_A + E_B)^2 - (\vec{p}_A + \vec{p}_B)^2 \\
+    &= m_A^2 + m_B^2 + 2E_AE_B - 2(\vec{p}_A \cdot \vec{p}_B)\\
+    &= m_A^2 + m_B^2 + 2E_AE_B( 1 - \beta_A\beta_B\cos \theta)\\
+    &= E_{COM}^2
+\end{aligned}$$
+
+where we used the fact that:
+$$\vec{p}_A \cdot \vec{p}_B = |\vec{p}_A ||\vec{p}_B|\cos\theta$$
+
+and
+
+$$ |\vec{p}| = E\beta $$
+
+The energy available for new particle creation is $\epsilon = E_{COM} - m_B - m_A$. If $E_A \gg m_A$ and $E_B \gg m_B$ then:
+
+   $$\epsilon^2 \approx 2 (E_A E_B - \vec{p}_A \vec{p}_B ).$$
+
+
+## Fixed-target Experiment
+
+If the target particle B is at rest in the laboratory system (as is the case in accelerator fixed-target experiments or UHE cosmic rays striking nucleons in the atmosphere, or ...) then $(E_B = m_B)$ and $(\vec{p}_B = 0)$. In this case,
+
+$$E_{COM}^2 = m_A^2 + m_B^2 + 2E_Am_B.$$
+
+which in the ultra-relativistic limit where energies are much higher than the masses $(E \gg m)$ simplifies to
+
+$$\epsilon = E_{COM} \simeq \sqrt{2m_BE_A}.$$
+
+Equivalently, the threshold energy of the beam particle A needed to produce a particle of mass $(m_*)$ at rest in the boosted frame is:
+
+$$E_{A,\mathrm{thresh}} = \frac{m_*^2}{2m_B}.$$
+
+
+::: {.callout-tip title="Example 1: Pion production"}
+  Considering the photoproduction of pion on a target proton at rest mass:
+$$\gamma + p \rightarrow p + \pi^0$$
+
+
+$$\begin{alignedat}{2}
+ \sqrt{s} = \sqrt{m_p^2 + 2E_\gamma m_p} &\geq m_p + m_{\pi^0}\\
+m_p^2 + 2 E_\gamma m_p &\geq m_p^2 + m^2_{\pi^0} + 2 m_p^2 m^2_{\pi^0}
+\end{alignedat}$$
+
+$$E_\gamma \geq m_{\pi^0} + \frac{m^2_{\pi^0}}{2 m_p} \approx 145 \mathrm{ \; MeV}$$
+
+::: 
+
+## Collider Experiments
+
+In the case of a collider experiment where beam particles A and B are counter-circulating in an accelerator and collide head-on, then
+
+$${\vec p}_{A}\cdot{\vec p}_{B} = -|{\vec p}_{A}||{\vec p}_{B}|$$
+
+and the equation of the 3-momenta ${\vec p}_A$ becomes
+
+$$
+s = E_{COM}^2 = m_A^2 + m_B^2 + 2(E_AE_B + |{\vec p}_{A}||{\vec p}_{B}|) \rightarrow \epsilon^2 \simeq 4E_AE_B,
+$$
+
+in the relativistic limit where mass can be ignored.  This in turn has the consequence that in a collider experiment the energy available in the COM to produce new particles rises linearly with beam energy when $E_A = E_B$.
+
+Nevertheless, it is still the case that the COM energies probed by astroparticles exceeds the LHC's reach by a factor of 10!
+
+::: {.callout-tip title="Example 2: UHECR protons"}
+Consider an UHECR proton at $E_p = 10^{10}\;\mathrm{ GeV}$ interacting with a proton ($m_p = 1 \mathrm{ GeV}$) at rest in the atmosphere, what is the energy in the COM frame?
+
+
+$$E_{COM} = \sqrt{2 m_p^2 + 2 E_p m_p} \simeq 142\;\; \mathrm{ TeV} $$
+
+::: 
+
+## Two-body Decay in COM
+
+The COM is also useful to estimate the energy of two particles from the decay of a particle with mass $M$.  If a particle A decays into  $m_1$ and $m_2$, we have that in the COM the particle A has ${\vec p_A} = {\vec p_{COM}} = 0$. Then the invariant is given by:
+
+$$ s = M^2 = (E_1 + E_2)^2 -  (\vec{p}_1 + \vec{p}_2)^2 $$
+
+where ${\vec p_1} = -{\vec p_2}$. The energies in the COM are given by:
+
+$$ M^2 = (E_1 + E_2)^2 \rightarrow M = E_1 + E_2 $$
+
+$$E_1^2 = p_1^2 + m_1^2\;\;\;\mathrm{ and}\;\; E_2^2 = p_2^2 + m_2^2$$
+
+since $|{\vec p_1}| = |{\vec p_2}|$ we can make the substraction:
+
+$$E_1^2 - E_2^2 = m_1^2 - m_2^2 \rightarrow E_2^2 = E_1^2 - m_1^2 + m_2^2$$
+
+sustituing $E_2^2$ in $M^2 = E_1^2 + E_2^2 + 2E_1 E_2$ and using $E_2 = M - E_1$ we have:
+
+
+$$M^2 = E_1^2 + E_1^2 - m_1^2 + m_2^2 + 2E_1(M- E_1) $$
+$$M^2 = 2E_1^2 - m_1^2 + m_2^2 - 2E_1^2 + 2E_1M$$
+
+
+$$E_1 = \frac{1}{2M}(M^2 + m_1^2 - m_2^2)$$
+
+likewise we can prove:
+
+$$E_2 = \frac{1}{2M}(M^2 + m_2^2 - m_1^2)$$
+
+and the momentum:
+
+$${|\vec p_1|^2} = E_1^2 - m_1^2 = \frac{1}{4M^2}(M^4 - 2M^2(m_1^2 + m_2^2) + (m_1^2 + m_2^2)^2) = {|\vec p_2|^2}$$
+
+Energies and momentums are fixed, the only unknowns are the angles.
+

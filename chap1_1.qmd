@@ -1,0 +1,160 @@
+# Time and Coordinate Systems in Astronomy
+
+In this section we are going to review a bit the geography around our Galaxy as well as the different systems in which we can reference to objects in the sky (coordinate systems) or events (time standards).
+
+## Astronomical Geography
+### Milky Way
+
+The Sun is **7.6-8.7 kpc** from the Galactic Center where there appears to be a supermassive black hole of **1 million solar masses** ($M_{\odot} = 1.99\times 10^{30}$ Kg) which coincides with a radio source known as **Sagittarius A\***. 
+
+![Source: Wikipedia](images/Galactic_centre_orbits.svg){fig-align="center" width="70%"}
+
+The trayectories of stars around Str A\* can be used to estimate the mass of the black hole. It is the up to now, best prove of the existance of a black hole. Although it is a galaxy with a black hole in their center, the Milky Way is not considered to have an Active Galactic Nuclei due to the low mass of the black hole.
+If we assume the Milky Way to have a cylindrical shape it will have a radius of **30 kpc** and thickness of **300 pc**. Its mass is estimated to be $5.8 \times 10^{11} M_{\odot}$.
+
+### Local Group
+
+The Milky Way is surrounded by 54 known satellite galaxies (most of them dwarf galaxies) in a group known as the **Local Group** (A dwarf galaxy has $\sim$ billion stars compared to our Milky Ways 200-400 billion stars). The most notably are the Large Magellanic Cloud (50 kpc) and the Small Magellanic Cloud (60 kpc). The LMC mass is $10^{10} M_{\odot}$.  Next nearest full-fledged galaxy is Andromeda or M31 ($1.5\times 10^{12} M_{\odot}$) at a distance of approximately **780 kpc**. The group contains also other galaxies MW, M31, M33 (Triangulum Galaxy) and it has volume of diameter of about **3 Mpc**.
+
+![Source: Wikipedia](images/5_Local_Galactic_Group_(ELitU).png){.lightbox fig-align="center" width="70%"}
+
+### Virgo Supercluster
+
+The Local Group is itself contained within the _Virgo Supercluster_ or _Local Supercluster_ (LC) of galaxies extending out to about 33 Mpc.  It has a total mass of $10^{15}M_{\odot}$
+
+## Time Scales and Time Standards
+
+There are several time standards or ways to specify time. A time standard can affect the rate (ie, how long is a day) or reference or point in time, or both. Some standards are:
+
+* [Mean solar time](http://en.wikipedia.org/wiki/Solar_time#Mean_solar_time) There are two solar times, the aparent one (also called true one) which depends on latitude and the year and the Mean solar time which the time of *mean* sun, the difference between the two is called the [equation of time](http://en.wikipedia.org/wiki/Solar_time#mediaviewer/File:Equation_of_time.svg). The length of the mean solar day is slowly increasing due to the tidal acceleration of the Moon by the Earth and the corresponding slowing of Earth's rotation by the Moon.
+
+* [Universal Time (UT0, UT1)](http://en.wikipedia.org/wiki/Universal_Time) Is a time scale based on the mean solar day, defined to be as uniform as possible despite variations in Earth's rotation
+
+* [International Atomic Time](http://en.wikipedia.org/wiki/International_Atomic_Time) Is the primary international time standard from which other time standards, including UTC, are calculated. TAI is kept by the BIPM (International Bureau of Weights and Measures), and is based on the combined input of many atomic clocks around the world.
+
+* [Coordinated Universal Time (UTC)](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) is an atomic time scale designed to approximate Universal Time. UTC differs from TAI by an integral number of seconds. UTC is kept within 0.9 second of UT1 by the introduction of one-second steps to UTC. The difference with UT1 is known as DUT1.
+
+### Time Representations: JD and MJD
+
+These are not technically standards (or scales), they are just reprentations (formats) of the aforementioned standards typically used in Astronomy:
+
+* [Julian Date](http://en.wikipedia.org/wiki/Julian_day) Is the count of days elapsed since Greenwich mean noon on 1 January 4713 B.C., Julian proleptic calendar. Note that this day count conforms with the astronomical convention starting the day at noon, in contrast with the civil practice where the day starts with midnight (in popular use the belief is widespread that the day ends with midnight, but this is not the proper scientific use).
+
+* [Modified Julian Date](http://en.wikipedia.org/wiki/Julian_day) Is defined as MJD = JD - 2400000.5. The half day is subtracted so that the day starts at midnight in conformance with civil time reckoning. There is a good reason for this modification and it has to do with how much precision one can represent in a double (IEEE 754) variable. Julian dates can be expressed in UT, TAI, TDT, etc. and so for precise applications the timescale should be specified, e.g. MJD 49135.3824 TAI.
+
+### Time in Experiments
+
+Practically speaking, in experiments time comes from one or more of the following sources:
+
+
+* **Atomic clocks (Cs, Rb)** -They use the microwave signal that electrons in atoms emit when they change energy levels. These have very good short term performance but a Rb clock left by itself will wander by several ns per day.  Cs clocks are perhaps better by a factor of 100x.
+
+
+
+* **GPS** - The GPS gives precision timing too.  The system consists of the space segment of O(30) satellites each equipped with Caesium atomic clocks and each constantly getting corrections from the central control facility.  GPS broadcasts navigation and time messages synchronized to this ultraprecise time from which the user segment can extract time and space coordinates accurate to O(10) ns and meters, respectively. GPS time is based on the 86400 second day.  It indirectly accounts for leap years. There are _no_ leap seconds in GPS time.
+
+:::{.callout title="Tutorial II: Using Time Standards in `Astropy`"}
+
+Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use `Astropy`. The [Astropy Project](http://www.astropy.org/) is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.
+
+
+```{python}
+from astropy.time import Time
+import datetime
+i = datetime.datetime.now()
+print (f"Today's date and time: {i.isoformat()}")
+times = ['1999-01-01T00:00:00.123456789', i.isoformat()]
+t = Time(times, format='isot', scale='utc')
+print(f"Today's julian date (UTC) is {t[1].jd:.2f}")
+print(f"Today's modified julian date (UTC) is {t[1].mjd:.2f}")
+
+dt = t[1] - t[0]
+print(f"The time difference in mjd is {dt.value:.2f}")
+print(f"The time difference in seconds is {dt.sec:.2f}")
+```
+:::
+
+## Astronomical Coordinate System
+
+Coordinate systems are used to map objects position in the sky. They can divided into local coordiantes and celestial coordinate systems:
+
+### Local coordinates
+
+These are those that depend on from where on Earth you observe, ie they have the observer's local position as reference. For example the horizontal coordinate system is expressed in terms of **altitude** (or elevation or zenith) angle and **azimuth**. These coordinates are not useful to inequivocally identify the position of an object in the sky since celestials object local coordinates change with time.
+
+### Celestial coordinate systems
+
+Those systems are independent of the observer's local position. Two of the mostly used coordinates systems in astroparticle are:
+
+* **Equatorial coordinates**: It's defined by an origin at the center of the Earth, a fundamental plane consisting of the projection of the Earth's equator onto the celestial sphere. Coordinates are give by **right ascension** and **declination**.
+
+
+![Equatorial coordinate system](images/eq_coordinates.svg){fig-align="center" with="50%"}
+
+* **Galactic coordinates**: The **galactic longitude**, $\ell$ is the angular distance Eastward (counterclockwise looking down on the Galaxy from the GNP) from the Galactic Center and the **galactic latitude**, $b$, is the angular distance outside of the plane of the Galaxy, positive up, negative down.  Note that having a large galactic latitude is neither a necessary nor a sufficient condition for an object being extragalactic.  This is how to get the image of the Galactic plane on the celestial sphere.
+
+
+:::{.callout title="Tutorial III: Coordinate Transformations"}
+
+Let's do some "representation" of the galactic plane.  We generate some random points using numpy following a 2-dimensional gaussian in the $\ell$: $-\pi, +\pi$ and $b$:$-\pi/2, +\pi/2$ space. Now we are going to use `matplotlib` to make plots, for that we are going to call the magic command `%matplotlib inline` to make the plots appear inside the notebook:
+
+
+```{python}
+#| label: gal-eq
+#| fig-cap: "Galaxy in Galactic Coordiantes"
+%matplotlib inline
+import matplotlib.pylab as plt
+plt.rcParams['font.family'] = "STIXGeneral"
+
+#We call random.multivariate_normal to generate randon normal points at 0
+import numpy as np
+#Lets use the inline figure format as svg
+%config InlineBackend.figure_format = 'svg'
+
+disk = np.random.multivariate_normal(mean=[0,0], cov=np.diag([1,0.001]), size=5000)
+#disk is a list of pairs [l, b] in radians
+print(disk[0:10])
+f = plt.figure(figsize=(7,5))
+ax = plt.subplot(111, projection='aitoff')
+#There are several projections: Aitoff, Hammer, Lambert, MollWeide
+ax.set_title("Galactic\n Coordinates")
+ax.grid(True)
+ll = disk[:,0]
+bb = disk[:,1]
+#ax.set_axis_bgcolor("black")
+#ax.tick_params(axis='x', colors='white')
+ax.plot(ll, bb, 'o', markersize=2, alpha=0.3)
+plt.show()
+```
+
+
+Now let's plot it in equatorial coordinates (right ascension, declination).
+
+
+
+```{python}
+from astropy import units as u
+from astropy.coordinates import SkyCoord
+
+c_gal = SkyCoord(l=ll*u.radian, b=bb*u.radian, frame='galactic')
+c_gal_icrs = c_gal.icrs
+```
+
+Because ```matplotlib``` needs the coordinates in radians and between $-\pi$ and $\pi$, not 0 and $2\pi$, we have to convert them.
+
+
+```{python}
+ra_rad = c_gal_icrs.ra.wrap_at(180 * u.deg).radian
+dec_rad = c_gal_icrs.dec.radian
+
+plt.figure(figsize=(7,5))
+ax = plt.subplot(111, projection="mollweide")
+ax.set_title("Equatorial coordinates")
+plt.grid(True)
+ax.plot(ra_rad, dec_rad, 'o', markersize=2, alpha=0.3)
+plt.show()
+#NOTE: Normally right ascension is plotted from right (0 deg.) to left (360 deg.)
+```
+
+:::
+

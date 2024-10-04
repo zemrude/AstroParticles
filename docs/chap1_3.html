@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 4&nbsp; Introduction to Cosmology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap2.html" rel="next">
+<link href="./chap1_2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap1.html">Physics Introduction</a></li><li class="breadcrumb-item"><a href="./chap1_3.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Multimessenger Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-red-shift" id="toc-what-is-red-shift" class="nav-link active" data-scroll-target="#what-is-red-shift">What is Red-shift?</a></li>
+  <li><a href="#relativistic-redshift" id="toc-relativistic-redshift" class="nav-link" data-scroll-target="#relativistic-redshift">Relativistic Redshift</a></li>
+  <li><a href="#hubble-expansion" id="toc-hubble-expansion" class="nav-link" data-scroll-target="#hubble-expansion">Hubble Expansion</a>
+  <ul class="collapse">
+  <li><a href="#age-of-the-universe-first-approximation" id="toc-age-of-the-universe-first-approximation" class="nav-link" data-scroll-target="#age-of-the-universe-first-approximation">Age of the Universe (first approximation)</a></li>
+  </ul></li>
+  <li><a href="#cosmological-principle" id="toc-cosmological-principle" class="nav-link" data-scroll-target="#cosmological-principle">Cosmological Principle</a></li>
+  <li><a href="#friedmannlemaître-robertson-walker" id="toc-friedmannlemaître-robertson-walker" class="nav-link" data-scroll-target="#friedmannlemaître-robertson-walker">Friedmann–Lemaître-Robertson-Walker</a>
+  <ul class="collapse">
+  <li><a href="#friedman-equations" id="toc-friedman-equations" class="nav-link" data-scroll-target="#friedman-equations">Friedman Equations</a></li>
+  </ul></li>
+  <li><a href="#cosmological-constants" id="toc-cosmological-constants" class="nav-link" data-scroll-target="#cosmological-constants">Cosmological Constants</a>
+  <ul class="collapse">
+  <li><a href="#the-cosmological-constant" id="toc-the-cosmological-constant" class="nav-link" data-scroll-target="#the-cosmological-constant">The Cosmological Constant</a></li>
+  <li><a href="#evolution-of-the-cosmological-constants" id="toc-evolution-of-the-cosmological-constants" class="nav-link" data-scroll-target="#evolution-of-the-cosmological-constants">Evolution of the Cosmological Constants</a></li>
+  </ul></li>
+  <li><a href="#observational-cosmological-results" id="toc-observational-cosmological-results" class="nav-link" data-scroll-target="#observational-cosmological-results">Observational Cosmological Results</a></li>
+  <li><a href="#cosmic-microwave-background" id="toc-cosmic-microwave-background" class="nav-link" data-scroll-target="#cosmic-microwave-background">Cosmic Microwave Background</a></li>
+  <li><a href="#cosmography" id="toc-cosmography" class="nav-link" data-scroll-target="#cosmography">Cosmography</a>
+  <ul class="collapse">
+  <li><a href="#comoving-distance-line-of-sight" id="toc-comoving-distance-line-of-sight" class="nav-link" data-scroll-target="#comoving-distance-line-of-sight">Comoving distance (Line of Sight)</a></li>
+  <li><a href="#luminosity-distances" id="toc-luminosity-distances" class="nav-link" data-scroll-target="#luminosity-distances">Luminosity Distances</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap1.html">Physics Introduction</a></li><li class="breadcrumb-item"><a href="./chap1_3.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-is-red-shift" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-red-shift">What is Red-shift?</h2>
+<p>Red-shift is the shift (towards red) in the electromagnetic spectrum and is defined as:</p>
+<p><span class="math display">\[z=\frac{\lambda_{obs} - \lambda_{emit}}{\lambda_{emit}}\]</span></p>
+<p>If a source of the light is moving away from an observer, then redshift (z &gt; 0) occurs; if the source moves towards the observer, then blueshift (z &lt; 0) occurs. This is true for all electromagnetic waves and is explained by the Doppler effect. Consequently, this type of redshift is called the <em>Doppler redshift</em>.</p>
+</section>
+<section id="relativistic-redshift" class="level2">
+<h2 class="anchored" data-anchor-id="relativistic-redshift">Relativistic Redshift</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/redshift.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/redshift.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>The wavefront moves with velocity <span class="math inline">\(c\)</span>, but at the same time the source moves away with velocity <span class="math inline">\(v\)</span>. Afte a time <span class="math inline">\(t_s\)</span> the source has receded <span class="math inline">\(vt\)</span>. The crest of the wave emission is at <span class="math inline">\(\lambda+v t_s=ct_s\)</span>. The period in the reference system of the source is given by:</p>
+<p><span class="math display">\[t_s = \frac{\lambda}{c-v} = \frac{c}{(c-v)f_s} = \frac{1}{(1-\beta)f_s}.\]</span></p>
+<p>Remember that when a reference <span class="math inline">\(O_s\)</span> was moving at speed <span class="math inline">\(\beta\)</span> from a another reference <span class="math inline">\(O_{o}\)</span>, the time relation was:</p>
+<p><span class="math display">\[\Delta t_s = \gamma(\Delta t_{o} - \beta \Delta x_{o}).\]</span></p>
+<p>Since <span class="math inline">\(\Delta x_{o} =0\)</span> (we are just measuring when the crest of the waves arrive), then the time observed <span class="math inline">\(t_{o}\)</span> in the reference system O is given:</p>
+<p><span class="math display">\[t_o = \frac{t_s}{\gamma}.\]</span></p>
+<p>The corresponding observed frequency is <span class="math display">\[f_o = \frac{1}{t_o} = \gamma (1-\beta) f_s = \sqrt{\frac{1-\beta}{1+\beta}}\,f_s.\]</span></p>
+<p>The ratio</p>
+<p><span class="math display">\[\frac{f_s}{f_o} = \sqrt{\frac{1+\beta}{1-\beta}},\]</span></p>
+<p>is called the <em>Doppler factor</em> of the source relative to the observer.</p>
+<p>The corresponding wavelengths are related by</p>
+<p><span class="math display">\[\frac{\lambda_o}{\lambda_s} = \frac{f_s}{f_o} = \sqrt{\frac{1+\beta}{1-\beta}},\]</span></p>
+<p>and the resulting redshift</p>
+<p><span class="math display">\[z = \frac{\lambda_o - \lambda_s}{\lambda_s} = \frac{f_s - f_o}{f_o},\]</span></p>
+<p>can be written as</p>
+<p><span class="math display">\[z = \sqrt{\frac{1+\beta}{1-\beta}} - 1.\]</span></p>
+<p>When interpreted as a relativistic Doppler shift from object receeding at velocity <span class="math inline">\(\beta\)</span>, this is:</p>
+<p><span class="math display">\[\lambda_o = \sqrt{\frac{1+\beta}{1-\beta}}\lambda_s \simeq (1+\beta)\lambda_s\]</span></p>
+<p>In the non-relativistic limit (when <span class="math inline">\(v \ll c\)</span>) this redshift can be approximated by <span class="math inline">\(z \simeq \beta = \frac{v}{c}\)</span> corresponding to the classical Doppler effect.</p>
+</section>
+<section id="hubble-expansion" class="level2">
+<h2 class="anchored" data-anchor-id="hubble-expansion">Hubble Expansion</h2>
+<p>When plotting their redshift (ie speed) as function of distance (measured with the techniques we saw, parallax, etc.) in 1929 Hubble found a correlation between redshift and radial distance from Earth:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/unnamed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/unnamed.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p><span class="math display">\[v = H_0 r, \; H_0 = 72\;\mathrm{ km/s/Mpc}\]</span></p>
+<p>Note that <span class="math inline">\(H_0\)</span> has only units of time<span class="math inline">\(^{-1}\)</span> we explicitely write the other dimensions to better understand its meaning.</p>
+<p>But Doppler redshift does not depends on distance! So this not a doppler redshift but a <strong>Cosmological redshift</strong>. In this case the redshift is not due to relative velocities, the photons instead increase in wavelength and redshift because the spacetime through which they are traveling is expanding.</p>
+<p>But we said that for midly relativistic objects (and galaxies are moving at midly relativistic speeds) we can approximate <span class="math inline">\(z \approx \beta\)</span> so we <em>can use <span class="math inline">\(z\)</span> to estimate distances!</em>:</p>
+<p><span class="math display">\[r \simeq \frac{c}{H_0}z \simeq 4000\;\mathrm{ Mpc}\cdot z\]</span></p>
+<p>For small <span class="math inline">\(v\)</span> over distance <span class="math inline">\(r\)</span> the <strong>velocity is proportional to the distance</strong>. Note that however this only holds only for <em>small redshifts!</em>.</p>
+<p>For larger redshifts other relations with the distance need to be invoked.</p>
+<section id="age-of-the-universe-first-approximation" class="level3">
+<h3 class="anchored" data-anchor-id="age-of-the-universe-first-approximation">Age of the Universe (first approximation)</h3>
+<p>If we assume that the rate of expansion (ie H) is essentially constant (it is not!) the age of the Universe can be estimated by this relation:</p>
+<p><span class="math display">\[\frac{d r}{dt} = H_0 r \rightarrow \int \frac{1}{r}dr =\int H_0 dt\]</span></p>
+<p><span class="math display">\[ \mathrm{ In} r = H_0 t \rightarrow r = e^{H_0 t}\]</span></p>
+<p>where Universe increases by a factor <span class="math inline">\(e\)</span> every <span class="math inline">\(t_{\mathrm{Hubble}} = \frac{1}{H_0} = 14\times 10^9\mathrm{ yr}\)</span> which is the <strong>Hubble time</strong>.</p>
+<section id="are-we-expanding" class="level4">
+<h4 class="anchored" data-anchor-id="are-we-expanding">Are we expanding?</h4>
+<blockquote class="blockquote">
+<p><a href="https://www.youtube.com/watch?v=5U1-OmAICpU">Brooklyn is not expanding!</a> <em>Annie Hall</em></p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="cosmological-principle" class="level2">
+<h2 class="anchored" data-anchor-id="cosmological-principle">Cosmological Principle</h2>
+<p>The <em>cosmological principle</em> is the notion that the distribution of matter in the Universe is <strong>homogeneous</strong> and <strong>isotropic</strong> when viewed on a large enough scale.</p>
+<ul>
+<li><strong>Homogeneity</strong> states that the distribution of matter is even in each epoch.</li>
+<li><strong>Isotropy</strong> states that there are no prefered directions in the distribution of matter in space.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/2df_slice_blue_big.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/2df_slice_blue_big.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>The <a href="http://en.wikipedia.org/wiki/Observable_universe#End_of_Greatness">End of Greatness</a> is an observational scale discovered at roughly 100 Mpc where the lumpiness seen in the large-scale structure of the universe is homogenized and isotropized, this together with the isotropy of the CMB reinforced the idea of the <strong>Cosmological Principle</strong>.</p>
+<p>However, in 2013 a new structure <strong>3 Gpc</strong> wide has been discovered, the <a href="http://arxiv.org/abs/1311.1104">Hercules–Corona Borealis Great Wall</a>, which puts doubt on the validity of the cosmological principle.</p>
+</section>
+<section id="friedmannlemaître-robertson-walker" class="level2">
+<h2 class="anchored" data-anchor-id="friedmannlemaître-robertson-walker">Friedmann–Lemaître-Robertson-Walker</h2>
+<p>Despite seing all galaxies receding, we are not at the center of the Universe. The common interpretation of the expansion is that we are living in a Universe that can be thought of lying on the surface of a balloon. Distances between objects (points on the ballon) on this manifold are expressed as:</p>
+<p><span class="math display">\[r(t) = R(t)r_0\]</span></p>
+<p>where <span class="math inline">\(R(t)\)</span> is a scale factor, depending on the time, and <span class="math inline">\(r_0\)</span> is a <em>comoving coordinate</em> without time dependence or current distance if we assume <span class="math inline">\(R(0) = 1\)</span>, but sometimes its better to explicitelly use a <em>normalized</em> scale factor as <span class="math inline">\(a(t) = R(t)/R(0)\)</span></p>
+<p>So we are looking for a Universe that is isotropic, homogeneous and it is expanding. The metric that describes such a Universe is given by the <strong>Friedmann–Lemaître-Robertson-Walker</strong> metric:</p>
+<p><span class="math display">\[ds^2 = dt^2 - R(t)^2 d \Sigma(k)^2 \]</span> <span class="math display">\[= dt^2 - a^2(t)R^2_0\left[\frac{dr^2}{1 - kr^2} + r^2(d\theta^2  + sin^2\theta d\phi^2)\right]\]</span></p>
+<p>where <span class="math inline">\(d\Sigma(k)\)</span> refers to the spatial 3-dimentional metric depending on the curvature parameter <span class="math inline">\(k\)</span> which takes the discrete values +1, 0, -1, corresponding to a closed, open or spacially flat geometry, and we used the normalized form of the scale factor <span class="math inline">\(a(t) = R(t)/R_0\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Source: quantum-bits.org"><img src="http://quantum-bits.org/wp-content/uploads/2015/08/universe-shape-1024x950.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Source: quantum-bits.org"></a></p>
+<figcaption>Source: quantum-bits.org</figcaption>
+</figure>
+</div>
+<p>The evolution of the scale parameter as in the case of wavelength (see Exercises):</p>
+<p><span class="math display">\[a(t) = \frac{1}{1+z}.\]</span></p>
+<section id="friedman-equations" class="level3">
+<h3 class="anchored" data-anchor-id="friedman-equations">Friedman Equations</h3>
+<p>The dynamics’s of the FLRW metric is governed by the Einstein’s equations. Einstein’s original field equations are:</p>
+<p><span class="math display">\[R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8 \pi GT_{\mu\nu}.\]</span></p>
+<p>In Newtonian gravity, the source is mass. In special relativity, is a more general concept called the energy-momemtum tensor, which may be modeled as a perfect fluid for which:</p>
+<p><span class="math display">\[T_{\mu\nu} = (\rho + p)U_\mu U_\nu + pg_{\mu\nu},\]</span></p>
+<p>where <span class="math inline">\(U_\mu\)</span> is the fluid four-velocity in co-moving coordinates, <span class="math inline">\(\rho\)</span> is an energy density and <span class="math inline">\(p\)</span> is the isotropic pressure. The FLRW metric solution to the Einstein equations can be reduced to the two <strong>Friedmann equations</strong>:</p>
+<p><span class="math display">\[H^2 \equiv \left(\frac{\dot a}{a}\right)^{2} =  \frac{8\pi G}{3}\rho - \frac{kc^{2}}{a^2R^2_0},\]</span></p>
+<p>and</p>
+<p><span class="math display">\[\frac{\ddot a}{a} = -\frac{4\pi G}{3}(\rho + 3p).\]</span></p>
+</section>
+</section>
+<section id="cosmological-constants" class="level2">
+<h2 class="anchored" data-anchor-id="cosmological-constants">Cosmological Constants</h2>
+<p>Given the Friedmann equations we can calculate for any value of <span class="math inline">\(H\)</span> the critical density such as the geometry is flat (<span class="math inline">\(k=0\)</span>):</p>
+<p><span class="math display">\[\rho_{crit} = \frac{3H^2}{8\pi G}\]</span></p>
+<p>It is convenient to measure the the total energy density in terms of critical density by introducing the density parameters:</p>
+<p><span class="math display">\[\Omega\equiv\frac{\rho}{\rho_{crit}} = \left(\frac{8\pi G}{3H^2}\right)\rho\]</span></p>
+<p>In general the energy density will have contributions of distinct components so whe can defined:</p>
+<p><span class="math display">\[\Omega_i\equiv\frac{\rho_i}{\rho_{crit}} = \left(\frac{8\pi G}{3H^2}\right)\rho_i\]</span></p>
+<p>where <span class="math inline">\(i\)</span> stands for the different components of the energy density as we will see later: matter (or dust), radiation, cosmological density, curvature density.</p>
+<p>For the special case of <span class="math inline">\(a(t_0) = 1\)</span>, ie, today, we have the formula:</p>
+<p><span class="math display">\[H_0^2\Omega_0 = \frac{8\pi G}{3}\rho_0\]</span></p>
+<section id="the-cosmological-constant" class="level3">
+<h3 class="anchored" data-anchor-id="the-cosmological-constant">The Cosmological Constant</h3>
+<p>Einstein was interested in finding <span class="math inline">\(\dot{a} = 0\)</span> (ie static) solutions. This can be achieved if <span class="math inline">\(k= + 1\)</span> and <span class="math inline">\(\rho\)</span> is appropriately tuned. But <span class="math inline">\(\ddot a\)</span> will not vanish in this case. Einstein therefore modified his equations to:</p>
+<p><span class="math display">\[R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8 \pi GT_{\mu\nu} + \Lambda g_{\mu\nu},\]</span></p>
+<p>where the <span class="math inline">\(\lambda\)</span> term is put in the rhs of the equation as it is interpreted as an effective energy-momentum tensor for the vacuum. With this modification the Friedmann equations become:</p>
+<p><span class="math display">\[
+\begin{aligned}
+H^2  &amp;=  \left(\frac{\dot a}{a} \right)^2 = \frac{8\pi G}{3}\rho + \frac{\Lambda}{3} - \frac{kc^{2}}{a^2R^2_0} \\
+\frac{\ddot a}{a} &amp;= -\frac{4\pi G}{3}(\rho + 3p) +  \frac{\Lambda}{3}
+\end{aligned}
+\]</span></p>
+<p>The discovery by Hubble that the Universe is expanding eliminated the empirical need for a static world. However, we believe that <span class="math inline">\(\Lambda\)</span> is actually nonzero, so Einstein was right after all. Assuming that cosmological constant is due to the vacuum energy, most quantum field theories predict a <span class="math inline">\(\Lambda\)</span> that is 120 orders of magnitude larger than the observational values! this is so-called <strong>cosmological constant problem</strong>.</p>
+</section>
+<section id="evolution-of-the-cosmological-constants" class="level3">
+<h3 class="anchored" data-anchor-id="evolution-of-the-cosmological-constants">Evolution of the Cosmological Constants</h3>
+<p>In general the energy density will have contributions of distinct components which will evolve differently with the Universe expansion:</p>
+<ul>
+<li>Massive particles with negligible velocities are known in cosmology as <em>dust</em> or simply <em>matter</em>. Their density scales as the number density times their rest mass. Their number density scales as the inverse of the volume while the rest mass is constant: <span class="math inline">\(\rho_M \propto a^{-3}\)</span></li>
+<li>Relativistic particles are known as <em>radiation</em> (although it is not only photons) and their energy density is the number density times the particle energy, the latter is proportional to <span class="math inline">\(a^{-1}\)</span> (as they redshift with expansion) and so: <span class="math inline">\(\rho_r \propto a^{-4}\)</span></li>
+<li>Vacuum energy does not change as universe expand so we can define a <span class="math inline">\(\rho_\Lambda \equiv \frac{\Lambda}{8\pi G} \propto a^0\)</span></li>
+<li>It is useful to pretend that <span class="math inline">\(-ka^{-2}R_0^{-2}\)</span> represents an effective <em>curvature energy density</em> defining <span class="math inline">\(\rho_k \equiv -(3k/8\pi G R^2_0)a^{-2}\)</span>.</li>
+</ul>
+<p>Given this evolution it is possible to write:</p>
+<p><span class="math display">\[ H^2(t) = H^2_0 [\Omega^0_M(1+z)^3 + \Omega^0_r(1+z)^4 + \Omega^0_k(1+z)^2 +\Omega^0_\Lambda]\]</span></p>
+</section>
+</section>
+<section id="observational-cosmological-results" class="level2">
+<h2 class="anchored" data-anchor-id="observational-cosmological-results">Observational Cosmological Results</h2>
+<p>There are good reasons to believe that the energy density of radiation is much less than matter, as photon contrinute only to <span class="math inline">\(\Omega_r \sim 5 \times 10^{-5}\)</span> mostly in the CMB. Therefore is useful to parametrize the universe today as <span class="math inline">\(\Omega_k = 1 - \Omega_M - \Omega_\Lambda\)</span>.</p>
+<ul>
+<li><p><strong>Direct measures of the Hubble constant.</strong>. The most reliable result on the Hubble constant comes from the <a href="http://iopscience.iop.org/0004-637X/553/1/47">Hubble Space Telecope Key Project</a>. They use the Cepheids to obtain distances to 31 galaxies (They also use Type Ia Supernovae). A recent study with over 600 Cepheids yielded the number <span class="math inline">\(H_0 = 73.8 \pm 2.4 \mathrm{\;km\;s^{-1}\; Mpc^{-1}}\)</span>. The indirect measurement from <em>Planck</em> Collaboration gives somehow a lower value (this discrepancy as well as the comic distance-ladder method are under investigation).</p></li>
+<li><p><strong>Supernovae.</strong> Two major studies, the Supernova Cosmology Project and the High-<span class="math inline">\(z\)</span> Supernova Search Team, found evidence for an accelerating Universe. When combined with the CMB data indicating flatness (ie <span class="math inline">\(\Omega_k = 0 \rightarrow \Omega_M + \Omega_\Lambda = 1\)</span>), the best-fit values were <span class="math inline">\(\Omega_M \approx 0.3\)</span> and <span class="math inline">\(\Omega_\Lambda \approx 0.7\)</span>)</p></li>
+<li><p><strong>Cosmic Microwave Background.</strong> See next section.</p></li>
+</ul>
+</section>
+<section id="cosmic-microwave-background" class="level2">
+<h2 class="anchored" data-anchor-id="cosmic-microwave-background">Cosmic Microwave Background</h2>
+<p>The cosmic microwave background (CMB) is electromagnetic radiation that remains from the time when photons decoupled from matter shortly after the recombination of electrons and protons into neutral hydrogen atoms. Once photons decoupled from matter, they traveled freely through the universe without interacting with matter. For an observer today this CMB is observed as a distribution of temperatures (from black body radiation) at on a two-dimensional sphere. This temperature distribution, however, was shown to have anisotropies. If we denote <span class="math inline">\(\Delta T (\theta, \phi)\)</span> the temperature difference measured in the direction (<span class="math inline">\(\sin\theta \cos \theta, \sin\theta \sin\theta , \cos\theta\)</span>) with respect to <span class="math inline">\(T_0 =\)</span> 2.725 K, the average temperature we can decompose these anisotropies over the bases of spherical harmonics, the so called <span class="math inline">\(Y_{\ell m} (\theta, \phi)\)</span>, the same way a we can decompose a function in a curved space over sines and cosines by the Fourier transform:</p>
+<p><span class="math display">\[\frac{\Delta T}{T} = \sum_{\ell m} a_{\ell m} Y_{\ell m} (\theta, \phi)\]</span></p>
+<p>This decomposition tell us the amount of anisotropy at a given the multipole moment <span class="math inline">\(\ell\)</span> or angular scale <span class="math inline">\(\theta = \frac{180^{\circ}}{\ell}\)</span></p>
+<p><span class="math display">\[C_\ell = \langle |a_{\ell m}|^2 \rangle\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Source: ESA"><img src="http://sci.esa.int/science-e-media/img/63/Planck_power_spectrum_orig.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: ESA"></a></p>
+<figcaption>Source: ESA</figcaption>
+</figure>
+</div>
+<p>The power spectrum of the CMB represents the anisotropies of the CMB as a function of the angular scale. The typical spectrum features a plateu at large angular scales (small <span class="math inline">\(\ell\)</span>) followed by some oscillatory features (aka acoustic peaks or <em>Doppler peak</em>). These peaks represent the oscillation of photon-baryon fuild around the decoupling. The first peak at <span class="math inline">\(\ell \sim 200\)</span> probes the spatial geometry, while the relative heights probe the baryon density. The position of the first peak constrains the spatial geometry in a way consistent with a flat Universe (<span class="math inline">\(\Omega_k \sim 0\)</span>)</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Build your own Universe">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Build your own Universe
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can build your own Universe <a href="https://lambda.gsfc.nasa.gov/education/cmb_plotter/">here</a></p>
+</div>
+</div>
+<section id="before-planck" class="level4">
+<h4 class="anchored" data-anchor-id="before-planck">Before Planck</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/eso0419d.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/eso0419d.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="after-planck" class="level4">
+<h4 class="anchored" data-anchor-id="after-planck">After Planck</h4>
+<p>Planck showed that the amount of dark energy in the Universe is appreciably less than we had previously thought, while the amount of dark-and-normal matter is appreciably greater than we thought.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Lambda_Matter.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/Lambda_Matter.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="cosmography" class="level2">
+<h2 class="anchored" data-anchor-id="cosmography">Cosmography</h2>
+<p>Using the Huble equation we are going to derive some quantities related to the measurement of the Universe.</p>
+<section id="age-of-the-universe" class="level4">
+<h4 class="anchored" data-anchor-id="age-of-the-universe">Age of the Universe</h4>
+<p>We have shown the evolution of the Hubble expansion as a function of the redshift using the clousure parameters. We know that</p>
+<p><span class="math display">\[H(z) = \frac{\dot a}{a} = -\left(\frac{\mathrm{ d}z/\mathrm{ d}t}{(1+z)}\right) \rightarrow \mathrm{ d}t = -\frac{\mathrm{ d}z}{(1+z)H(z)}\]</span></p>
+<p>And so the age of the universe can be calculated as (where <span class="math inline">\(z=0\)</span> corresponds to today <span class="math inline">\(t_0\)</span>):</p>
+<p><span class="math display">\[\int_{0}^{t_0} \mathrm{ d} t = t_0 = \frac{1}{H_0} \int^\infty_0 \frac{\mathrm{ d}z}{E(z)}\]</span></p>
+<p>where we defined the following function:</p>
+<p><span class="math display">\[E(z)\equiv \sqrt{\Omega_M(1+z)^4 + \Omega_r(1+z)^5 + \Omega_k(1+z)^3 +\Omega_\Lambda(1+z)}.\]</span></p>
+<p>Assuming a flat Universe <span class="math inline">\(\Omega_k =0\)</span> and ignoring the radiation <span class="math inline">\(\Omega_r \ll \Omega_M\)</span> the integral gets simplified to:</p>
+<p><span class="math display">\[H_0 t_0 = \frac{1}{3\sqrt{1 - \Omega_M}}\mathrm{ In}\left(\frac{1+\sqrt{1 - \Omega_M}}{1 - \sqrt{1- \Omega_M}}\right)\]</span> where we used <span class="math inline">\(1 = \Omega_\Lambda + \Omega_M.\)</span></p>
+<p>For <span class="math inline">\(\Omega_M = 0.70\)</span> and <span class="math inline">\(\Omega_\Lambda = (1 - \Omega_M) = 0.30\)</span> one finds <span class="math inline">\(H_0 t_0 = 0.964\)</span> so that <span class="math inline">\(t_0 \approx \frac{0.96}{H_0} = 13.5\)</span> Gyr. Which is similar to the assumption we did with a constant <span class="math inline">\(H_0\)</span>.</p>
+</section>
+<section id="comoving-distance-line-of-sight" class="level3">
+<h3 class="anchored" data-anchor-id="comoving-distance-line-of-sight">Comoving distance (Line of Sight)</h3>
+<p>The comoving distance between two nearby objects in the Universe is the distance between them which remains constant with epoch if the two objects are moving with the <em>Hubble flow</em>. That an object follows the <em>Hubble flow</em> if there is no peculiar velocities, ie, the only reason the 2 objects separate is due to the expansion of the Universe and not because the have relative velocities among them. The comoving distance has the expansion factored out and therefore remains constant with epoch. You can think of it as the distance measured with a ruler that also expands with the Universe. Using the same argument as above with the age of the Universe we can multiplying by the speed of light we can derive:</p>
+<p><span class="math display">\[D_c(z) = \int_{t}^{t_0} c\mathrm{ d} t = \frac{c}{H_0} \int^z_0 \frac{\mathrm{ d}z^\prime}{E(z^\prime)}.\]</span></p>
+<p>This is the comoving distance along the <em>line of sight</em>. Ie, is the comoving distance from a galaxy at redshift <span class="math inline">\(z\)</span> from us. If we want to estimate, let’s say, the distance between 2 galaxies at the same redshift but separated in angle <span class="math inline">\(\Delta \theta\)</span>, then the distance is given by <span class="math inline">\(D_M \Delta \theta\)</span> where <span class="math inline">\(D_M\)</span> is the <em>transverse comoving distance</em>. For a flat Universe <span class="math inline">\(D_M = D_c\)</span> but if the curvature is not zero, the relationship depends on the trigonometric functions <span class="math inline">\(\sinh\)</span> (for a closed Universe) and <span class="math inline">\(\sin\)</span> (for an open Universe) to account for the curvature of spacetime.</p>
+</section>
+<section id="luminosity-distances" class="level3">
+<h3 class="anchored" data-anchor-id="luminosity-distances">Luminosity Distances</h3>
+<p>The luminosity distance defined in cosmology is defined as the distace in which an object with intrinsic luminosity <span class="math inline">\(L\)</span> is observed with flux <span class="math inline">\(f\)</span>, ie:</p>
+<p><span class="math display">\[ f = \frac{L}{4\pi d_L^2}.\]</span></p>
+<p>This in terms of bolometric values, however sometimes we only observe a given bandwidth in frequency, ie, we have to replace <span class="math inline">\(f\rightarrow f(\nu_o)\)</span> and <span class="math inline">\(L \rightarrow L(\nu_{e})\)</span> where <span class="math inline">\(\nu_o\)</span> and <span class="math inline">\(\nu_e\)</span> are the observed and emitted frequencies. Since the luminosity is defined as energy delivered over interval of time, we can approximate it as:</p>
+<p><span class="math display">\[ L(\nu_e) = \frac{Nh\nu_e}{\Delta t_e},\]</span> <span class="math display">\[ L(\nu_o) = \frac{Nh\nu_o}{\Delta t_o},\]</span></p>
+<p>being <span class="math inline">\(N\)</span> the number of photos. However the photons emitted are redshifted and photons observed at <span class="math inline">\(\nu_o\)</span> were emitted at <span class="math inline">\((1+z)\nu_o\)</span>. The time intervals are also related by the expansion of the Universe as:</p>
+<p><span class="math display">\[\frac{\Delta t_e}{\Delta t_o} = \frac{1}{(1+z)}.\]</span></p>
+<p>So we have that the emitted luminosity and the observed luminosity are related as:</p>
+<p><span class="math display">\[L(\nu_o) = \frac{L(\nu_e)}{(1+z)^2}.\]</span></p>
+<p>The observed luminosity is smaller than the emitted luminosity. On the other hand the relation between the observed flux and observed luminosity is the same as in a non-expanding Universe. ie:</p>
+<p><span class="math display">\[f(\nu_o) = \frac{L(\nu_o)}{4\pi D_c^2},\]</span></p>
+<p>where <span class="math inline">\(D_c\)</span> is the co-moving distance. Putting everything together we have that:</p>
+<p><span class="math display">\[f(\nu_o) = \frac{1}{(1+z)^2}\frac{L(\nu_e)}{4\pi D_c^2} = \frac{L(\nu_e)}{4\pi D_L^2},\]</span> so we have the relation between the luminosity distance and the co-moving distance as:</p>
+<p><span class="math display">\[D_L = D_c(1+z).\]</span></p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial IV: Age of the Universe">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial IV: Age of the Universe
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the about the age of the Universe we calculated an analytical solution for a given condition. No we are goign to use <code>python</code> to numerically solve the look-back time for any given set of cosmological parameters. For that we are going to rewrite the loopback formula in terms of the scale factor <span class="math inline">\(a\)</span> since we have the redshift scale relation:</p>
+<p><span class="math display">\[(1+z) = \frac{1}{a}\]</span></p>
+<p>we can prove that:</p>
+<p><span class="math display">\[\frac{\mathrm{ d}z}{1 +z} = -\frac{\mathrm{ d}a}{a}\]</span></p>
+<p>Therefore the equation above that relates <span class="math inline">\(\mathrm{d}t\)</span> with redshift we can rewrite it at:</p>
+<p><span class="math display">\[ \mathrm{ d}t = \frac{\mathrm{d}a}{H(a)a} \]</span></p>
+<p>with</p>
+<p><span class="math display">\[  H^2(a) = H^2_0 [\Omega^0_M a^{-3} + \Omega^0_r a^{-4} + \Omega^0_k a^{-2} +\Omega^0_\Lambda] \]</span></p>
+<p>We need to numerically integrate the right hand side of the equation. However, for some parameters this integration is circular, reaching a <span class="math inline">\(a_{max}\)</span> then the <span class="math inline">\(H^2(a_{max}) = 0\)</span></p>
+<div id="cell-fig-age" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Lets use the inline figure format as svg</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>config InlineBackend.figure_format <span class="op">=</span> <span class="st">'svg'</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#We take the current value of H0 from the astropy package</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.cosmology <span class="im">import</span> Planck13</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>H0 <span class="op">=</span> Planck13.H(<span class="dv">0</span>).value</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#We define the friedman equation ignoring the radiation component omega_r &lt;&lt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> friedman(a, omega_M, omega_lambda):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    omega_k <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> omega_M <span class="op">-</span> omega_lambda</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    H2 <span class="op">=</span> H0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> (omega_M <span class="op">*</span> a<span class="op">**-</span><span class="dv">3</span> <span class="op">+</span> omega_k <span class="op">*</span> a<span class="op">**-</span><span class="dv">2</span> <span class="op">+</span> omega_lambda)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> H2</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> integrate</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#This is a simple integration, it does not take into account a possible Big Crunch</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">def calculate_times(omega_m, omega_lambda):</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    t0 = integrate.quad(lambda x: 1/x * 1/np.sqrt(friedman(x,omega_m, omega_lambda)), 0, 1)[0]</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">    times = []</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">    scales = np.arange(0.1, 2, 0.01)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">    for a in scales:</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">        time = integrate.quad(lambda x: 1/x * 1/np.sqrt(friedman(x,omega_m, omega_lambda)), 0, a)[0]</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">        times.append(H0*(time - t0))  </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">    return np.array(times), np.array(scales)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">#This integration takes into account a Big Crunch</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_times(omega_m, omega_lambda):</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Lets check if there is a maximal, ie, if H^2(a) = 0</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    astep <span class="op">=</span> <span class="fl">0.001</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    amax <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    scales <span class="op">=</span> np.arange(<span class="fl">0.1</span>, amax, astep)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> friedman(scales, omega_m, omega_lambda)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    ia, <span class="op">=</span> np.where(np.diff(np.sign(f)))</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(ia) <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        amax <span class="op">=</span> scales[ia[<span class="dv">0</span>]]</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    tmax <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, amax <span class="op">-</span> astep)[<span class="dv">0</span>]</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="co">#time today a = 1</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    t0 <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, <span class="dv">1</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Empty x,y for the plots</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    times <span class="op">=</span> []</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    scale <span class="op">=</span> []</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> scales:</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="op">&lt;</span> amax: <span class="co">#If a &lt; amax we do the typical integral 0 -&gt; a</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>            time <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, a)[<span class="dv">0</span>]</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>            times.append(H0<span class="op">*</span>(time <span class="op">-</span> t0)) <span class="co">#We calibrate at -t0 to place all curves together</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>            scale.append(a)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="op">&gt;=</span> amax <span class="kw">and</span> <span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a <span class="op">&gt;</span> <span class="dv">0</span>: <span class="co">#If a &gt; amax we are out the domain we integrate backwards</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>            time <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>tmax <span class="op">-</span> integrate.quad(<span class="kw">lambda</span> x: <span class="dv">1</span><span class="op">/</span>x <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(friedman(x,omega_m, omega_lambda)), <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a)[<span class="dv">0</span>]</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>            times.append(H0<span class="op">*</span>(time <span class="op">-</span> t0))</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>            scale.append(<span class="dv">2</span><span class="op">*</span>amax <span class="op">-</span> a)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(times), np.array(scale)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">4</span>))</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>omega_M <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>omega_lambda <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> calculate_times(omega_M, omega_lambda)</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw <span class="op">=</span> <span class="dv">2</span>, label<span class="op">=</span><span class="vs">fr"$\Omega_M =$ </span><span class="sc">{</span>omega_M<span class="sc">:.2f}</span><span class="vs">, $\Omega_\Lambda =$ </span><span class="sc">{</span>omega_lambda<span class="sc">:.2f}</span><span class="vs">"</span>)</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"upper left"</span>)</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">1</span>,<span class="fl">1.5</span>)</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="fl">0.2</span>,<span class="dv">2</span>)</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$a(t)$"</span>)</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$H_0 (t - t_0)$"</span>)</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-age" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chap1_3_files/figure-html/fig-age-output-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8"><img src="chap1_3_files/figure-html/fig-age-output-1.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Age of the Universe
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="references" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="references">References</h4>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Yanez:2023lsy" class="csl-entry" role="listitem">
+Yañez, Juan Pablo, and Anatoli Fedynitch. 2023. <span>“<span class="nocase">daemonflux: DAta-drivEn MuOn-calibrated Neutrino
+Flux</span>,”</span> February. <a href="https://arxiv.org/abs/2303.00022">https://arxiv.org/abs/2303.00022</a>.
+</div>
+</div>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-4">Source: quantum-bits.org</span>
+<span class="glightbox-desc lightbox-desc-5">Source: ESA</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;4.1: Age of the Universe</span>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap1_2.html" class="pagination-link  aria-label=" &lt;span="" to="" special="" relativity&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap2.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>What are Cosmic Rays?</span>">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
