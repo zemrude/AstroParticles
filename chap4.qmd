@@ -8,7 +8,7 @@ Cosmic ray accelerated are typically surrounded by a radiation field and matter 
 
 A cosmic-ray source it is said to be opaque or **optically thick** if photons and protons cannot escape from the source without lossing all or most of their energy. Alternatively a transparent source it is said to be **optically thin**. A source that is very optically thick won't be visible in any messenger except neutrinos. We call those source *hidden sources*.
 
-## Gamma-ray Astronomy
+# Gamma-ray Astronomy
 
 As we saw, the origin of CR remains a mystery due to the deflection of CRs in their travel. Only CR astronomy at $10^{19}$ eV will be possible if the composition of these UHECR are protons, but even in this case the GZK limits the horizon. 
 
@@ -16,30 +16,30 @@ Gamma-ray astronomy provides an fundamental tool to observe the Universe using n
 
 ![Source: Wikipedia](images/EM_spectrum.svg)
 
-### Spectral Energy Distribution
+## Spectral Energy Distribution
 
 In gamma-ray astronomy is usual to study an object emission by its spectral energy distribution (SED).  The SED on an object is its energy emitted plotted against some measure of the photon - frequency or wavelength. The reason astronomers do this is to see how much energy is produced by the object as a function of frequency or wavelength. The SED is typically characterized by $\nu F_\nu$ and it is measured in units of ergs $\mathrm{cm}^{-2}\; \mathrm{s}\;^{-1}$, ie. it indicates the rate of energy emitted per surface. The function $F_\nu$ is the flux density which indicates the rate of energy emitted per surface and also per frequency, so it is expressed as ergs $\mathrm{cm^{-2}\; s^{-1}\; Hz^{-1}}$. All of this doesn't need to be confused with the spectrum! which is what we are being using to characterize CRs. In CR physics spectrum in the rate of particles per unit energy and surface and it is measured on $\mathrm{GeV^{-1}\; cm^{-2}\; s^{-1}}$. The spectrum multiply by energy, gives you the rate of particles per unit surface. Multiplying again by energy give use the energy rate per unit surface. Therefore we have the relation:
 
 $$\nu F_\nu = E^2 \frac{\mathrm{d}N}{\mathrm{d}E}$$
 
-### Gamma-ray production mechanism
+## Gamma-ray production mechanism
 Sources of CR can also produce gamma-rays by different mechanisms roughly divided in two main categories:
 
-#### Leptonic models: 
+### Leptonic models: 
 In this models only leptons (mostly electrons) will produce gamma-ray emission. The mechanismare mostly:
    * **Synchrotron radiation.** 
    * **Inverse Compton Scattering.**
 
-#### Hadronic model:
+### Hadronic model:
 In hadronic models, gamma-rays are produced as a result of acceleration to high energies of protons or other hadrons. The mechanism of gamma-ray production in hadronic models are mainly:
    * **$\pi^0$ decay.** 
    * **Proton synchrotron radiation.** 
 
 Another categories for gamma-ray production can some exotic models like dark matter annihilaiton, or matter-antimatter annihilation and nuclear transformation.
 
-### Leptonic models
+## Leptonic models
 
-#### Synchrotron radiation
+### Synchrotron radiation
 
 Synchrotron radiation is extremely important for astrophysics as it was realized by Shklovskii in 1957 when studing the non-thermal emission of the Crab remnant. In order to understand better the synchrotron radiation we will have to dig in a bit in electromagnetism. We already saw that a charge particle of charge $q$, for example an electron, moving with velocity $v$ in a magnetic field $\vec{B}$ feels an an external force:
 
@@ -100,7 +100,7 @@ In an uniform magnetic field, a high energy charged particle, for example an ele
 
 Its velocity along the field lines is constant $v_{\parallel} = v \cos\alpha = \mathrm{const.}$, but its circular component $v_\perp = v\sin\alpha$. Let's first attack the non-relativistic case.
 
-#### Non relativistic case: Cyclotron radiation
+### Non relativistic case: Cyclotron radiation
 
 From Newton's law and the Lorentz force we have that:
 
@@ -124,7 +124,7 @@ Note the Larmor formula does not tell us frequency spectrum, but if a particle i
 
 In particular since the power $P$ depends on  $|v^2|$ for a distance in the $x-y$ plane, power will varie as $\sin^2(\omega_{gyr}t)$ and so the electric field line will change as $E(t)\propto \sin(\omega_{gyr}t)$. The radiated emission will appear as *monochromatic* with an angular frequency given precisely by the particle circular frequency $\omega_{gyr}$. This is the known as the *cyclotron* radiation. In this case the dipole emission pattern is turning around with the particle and an observer in the laboratory frame will see the same frequency. As a consequence also the radiation is independent of the viewing angle. 
 
-#### Relativistic case: Synchrotron radiation.{#synchrotron}
+### Relativistic case: Synchrotron radiation.{#synchrotron}
 
 Things are slighly different when we consider the relativistic case where electrons move at $\beta \rightarrow 1$. Using again Newton's law with the Lorentz force we have:
 
@@ -381,8 +381,8 @@ In addition to the SED one could measure the light-curve or number of photons (o
 
 Sometimes it is possible to observe  a *flare* in high energy photon range but with no activity detected in soft/hard X-ray. These are called **orphan flare**. This is interesting since in the SSC scenarios the X-rays (due to synchrotron) and TeV gamma-rays (due IC scattering) must be correlated. An orphan flare is therefore an indication that SSC scenario might be excluded, while the EC is still possible. As we will see also an hadronic scenario in which TeV photons come from $\pi^0$ is still possible.
 
-### Hadronic models
-#### Pion decay
+## Hadronic models
+### Pion decay
 
 Accelerated protons in the source can produce charged and neutral pions via proton-proton interaction. In this context a CR proton with energy $E_p$ and momentum $p_p$ interacts with the ISM at rest in the process:
 
@@ -431,7 +431,7 @@ Then the distribution of photons $\mathrm{d}N/\mathrm{d}E = \mathrm{\; const.}$ 
 
 ![](images/pion_bump.png)
 
-### Pion bump in SNR with Molecular Cloud
+#### Pion bump in SNR with Molecular Cloud
 
 In 2013 Fermi (a gamma-ray satellite) confirmed the pion-bump in two old SNRs with Molecular Cloud. 
 
@@ -439,7 +439,7 @@ In 2013 Fermi (a gamma-ray satellite) confirmed the pion-bump in two old SNRs wi
 
 So did we find the sources of Galactic Cosmic Rays? No. The steep gamma-ray spectrum at high energies suggests that the acceleration is not very active any more (as expected from old SNRs) and hence, even though there might be some particle acceleration these are not the sources of Galactic Cosmic Rays. 
 
-### Galactic gamma-ray diffuse emission
+## Galactic gamma-ray diffuse emission
 
 Diffuse gamma-ray emission is that not associated with a particular source. 
 Fermi-LAT observed gamma-ray counts in the energy range from 200 MeV to 100 GeV. The signal is dominated by the diffuse Galactic emission, which is strongest in the plane of our Galaxy and toward the Galactic center but present all over the sky. The following shows the diffuse gamma-ray emission from 200 MeV to 100 GeV.
@@ -452,14 +452,14 @@ The gamma-ray diffuse emission are produced primarly the $\pi^0$ produced by int
 
 ![Source: Taken from [arXiv:1202.4039](http://arxiv.org/abs/1202.4039)](images/GalacticCenter_Fermi.jpg)
 
-### Extragalactic Background Light
+## Extragalactic Background Light
 
 As we saw, VHE gamma-rays ($E_\gamma =30$ GeV) have a limited horizon due to their interaction with the CMB and the [Extragalactic Background Light (EBL)](http://en.wikipedia.org/wiki/Extragalactic_background_light). The EBL is difficult to measure directly due to strong foregrounds from our solar system and the Galaxy. The TeV signal of distant AGNs are (partially) absorved at the highest energies by the ELB. The absortion is energy dependent and increases with distance. Observations of very far distant AGNs can be used to put constrains on the amount of EBL. However it is difficult to distinguish between an intrinsic softening of blazar spectra and a softening caused by the interaction with low energy EBL photons. The plot below shows the gamma-ray horizon and measurements from some Imaging Atmospheric Cherenkov Telescopes (IACTs) up to z=0.536.
 
 ![Source: Taken from [arXiv:0904.0774v2](http://arxiv.org/abs/0904.0774)](images/ELB.png)
 
-### Gamma-ray Detection
-#### The atmosphere
+## Gamma-ray Detection
+### The atmosphere
 
 
 The Earth's atmosphere is opaque to photons with energy above 10 eV, meaning that to observe gamma-rays directly we need to place the detector above the atmosphere. A turning point in gamma-ray astronomy was the launch of the first satellite-borne telescope, SAS-2, in 1972.
@@ -512,7 +512,7 @@ print(r"Cherenkov angle in the atmosphere: $\theta_C = %.2f^{\circ}$"%thetaatm)
 ```
 
 
-### Number of photons
+#### Number of photons
 
 The number of photons from Cherenkov radiation follows the *Frank-Tamn* formula:
 
@@ -534,7 +534,7 @@ ax.grid()
 plt.show()
 ```
 
-### Atmospheric extintion.
+#### Atmospheric extintion.
 
 Once in the atmosphere, the Cherenkov light can suffer absortion and scattering due to several processes:
 
@@ -551,9 +551,9 @@ where $R$ is the distance to the particle and $\theta$ the scattering angle.
 
 This processes change the Cherenkov spectrum dependending on the altitude. In ice on the other hand, there is no UV absorption and the Cherenkov spectrum keeps the $1/\lambda^2$ tendency.
 
-## Gamma-rays, Cosmic-Rays and Neutrinos
+# Gamma-rays, Cosmic-Rays and Neutrinos
 
-### Introduction
+## Introduction
 Both gamma-rays and neutrinos are produced as secondary products of Cosmic-Rays interactions. The dominant channels are:
 
 $$
@@ -579,7 +579,7 @@ $$\begin{aligned}
 
 Clearly the productions of neutrinos, cosmic-rays and $\gamma$-rays are closely related.
 
-### p-p interactions
+## $p-p$ interactions
 
 For environments where radiation density is low (too few photons) $pp$ interactions dominate over $p\gamma$ interactions. The cross section of $pp$ interactions is almost energy independent $\sigma_{pp} \sim 4 \times 10^{-26}$ cm$^2$ (See [Kelner et al.]("http://arxiv.org/abs/astro-ph/0606058")). The cross section of this process has a threshold given by:
 
@@ -593,7 +593,7 @@ Therefore most of accelerated protons can interact in the source if there is eno
 * If the proton spectrum is **harder** than $\mathrm{ d}N_p/\mathrm{ d}E \sim E^{-2}$, most of the energy ouput from proton interactions is at high energy. In this case the main contribution in gamma-ray comes from IC from secondary $e^-e^+$ pairs produced in $\pi^{\pm}$ decays. 
 
 
-### p-gamma interations
+## $p-\gamma$ interations
 
 The cross-section of this process has a higher energy threshold than $pp$ interactions given by:
 
@@ -602,7 +602,7 @@ $$E_{th} = \frac{m_p m_{\pi} + m_{\pi}^2}{\epsilon_{ph}} \simeq 7 \times 10^{16}
 
 where $\epsilon_{ph}$ is the target photon energy. Because this threshold only the highest energy protons can efficiently interact with the soft-photon fields. This process is the one typically considered for UHECR and extragalactic sources such as AGNs and Gamma-ray Bursts.
 
-### The Waxman-Bahcall neutrino flux
+## The Waxman-Bahcall Neutrino Flux
 
 The neutrino flux from an optical thin (ie transparent for nucleon-meson interactions) source is usually referred as the [Waxman-Bahcall flux](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.023002).
 
@@ -642,8 +642,8 @@ Using that the energy of the neutrinos will be a fraction $\langle x_{p\rightarr
 
 $$I_\nu (E_\nu) \sim n_{\nu/p} \frac{1}{\langle x_{p\rightarrow \nu} \rangle} I_p (E_p)$$
 
-### The neutrino and gamma connection 
-#### Extragalactic p-gamma: Energy fraction
+## The neutrino and gamma connection 
+### Extragalactic $p-\gamma$: Energy fraction
 
 Due to isospin the $\Delta^+$ decays more often to $p$ than $n$.
 $$
@@ -668,7 +668,7 @@ $$\begin{aligned}
 \langle x_{p\rightarrow\gamma}\rangle &= \frac{1}{2}\langle x_{p\rightarrow\pi}\rangle =\frac{1}{10}
 \end{aligned}$$
 
-####  Extragalactic p-gamma: Number of particles
+###  Extragalactic p-gamma: Number of particles
 
 If we consider only $\nu_\mu$ we have 2 $\nu_\mu$ per pion decay, as well as 2 $\gamma$'s per pion decay. So the spectra can be related as:
 
@@ -689,7 +689,7 @@ So:
 $$I_{\nu_\mu} (E_{\nu_\mu}) \sim \frac{1}{4} I_{\gamma}(E_\gamma)$$
 
 
-#### Galactic *pp*
+### Galactic *pp*
 
 In a matter dominated environtment such as Galactic SN shocks CRs interact with the H in the Galactic disk via pp interactions. As we saw these interactions have a lower threshold than $p\gamma$. Let's consider the reaction:
 
@@ -703,7 +703,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-#### Astrophysical Neutrino Oscillations
+### Astrophysical Neutrino Oscillations
 
 In the discussion above we focused on muon neutrinos, however we ignored the fact that neutrino oscillate. We saw that the probability of neutrino flavor for $\delta = 0$ can be written as: 
 
@@ -777,7 +777,7 @@ print (Earth)
 Thus, almost equal number of eletron, muon and tau astrophysical neutrinos are expected to be observed at Earth due to oscillations. More info at [arXiv:hep-ph/0005104](http://arxiv.org/abs/hep-ph/0005104)
 
 
-### Gamma-ray neutrino relation
+## Gamma-ray neutrino relation
 After oscillations the neutrino and gamma-rays relations are given by:
 
 $$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{2}\frac{\mathrm{ d}N_\gamma}{\mathrm{ d}E_\gamma} \mathrm{\; for\;} p + p$$
@@ -786,31 +786,28 @@ $$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{8}\frac{\mathrm{ d}N_\gam
 
 Assuming an $E^{-2}$ spectrum.
 
-###  Neutrino Astronomy
+#  Neutrino Astronomy
 
-### Diffuse flux of Astrophysical Neutrinos
+## Diffuse flux of Astrophysical Neutrinos
 
 The first detection of high-energy neutrinos of cosmic origin in 2013 by the IceCube Neutrino Observatory opened a new window to the non-thermal processes in our universe. The  first  strong  evidence  for  a  cosmic  neutrino  component  came  from a  search  using  data  from  May  2010  to  April  2012  [35],  where  two  shower-like events from interactions within the detector with energies above 1 PeV were discovered.  A follow-up search for events starting in the detector with more than 30 TeV deposited energy that utilized the same dataset identified 25 additional high-energy events.  The spectrum and zenith angle distribution of the events was incompatible with the hypothesis of an atmospheric  origin  at > $4\sigma$. IceCube  has  since  collected  independent  evidence for an astrophysical neutrino signal by analyzing different event signatures.
 
-#### Starting Events
+### Starting Events
 
 Neutrino interactions are identified in IceCube by searching for an interaction  vertex  within  the  instrumented  volume.   This  search  is  sensitive  to both shower-like and track-like events.  Since the main background for this
 search is comprised of muons from CR air showers, the rejection strategy is to identify Cherenkov photons from a track entering the detector.  For that, the outer parts of the instrumented volume are assigned to a “veto” region. An event is rejected if a certain number of Cherekov photons are found in this veto region at earlier times than the photons produced at the interaction vertex. The energy threshold for this analysis is about $E_\nu \sim 30$ TeV.
 
-#### Through-going muons
+### Through-going muons
 
 Muons  produced  in  CC  neutrino  interactions  far  outside  the  detector can still reach the instrumented volume to produce track-like events.  Even at  1  TeV  a  muon  can  penetrate  several  kilometers  of  ice  before  it  stops and  decays.   This  allows  observation  of  high-energy  neutrino  interactions from  a  much  larger  volume  than  the  instrumented  one,  thereby  substantially increasing the effective area of the detector.  
 
 
 
-#### The spectral fit
+### The spectral fit
 
-The results of a combined analysis fits the neutrino flux to a power-law between 27 TeV and 2 PeV consistent
-with an unbroken power law with a best-fit spectral index of $-2.49 \pm 0.08$ given by:
+The results of a combined analysis fits the neutrino flux to a power-law between 27 TeV and 2 PeV consistent with an unbroken power law with a best-fit spectral index given by:
 
 $$E^2\Phi(E) = 2.06^{+0.35}_{-0.26} \times 10^{-8} \left(\frac{E}{100\;\mathrm{TeV}}\right)^{-0.46\pm 0.12}\; \mathrm{GeV\;s}^{-1}\;\mathrm{sr}^{-1}\mathrm{ cm}^{-2}.$$
-
-
 
 However using only the high energy through-going muons (abouve 200 TeV) yields  a preferred spectral index of $-2.13\pm 0.13$
 

@@ -3,23 +3,35 @@ project:
   type: book
   output-dir: docs 
 book:
-  title: "AstroParticles"
+  title: "Astroparticle Physics"
   author: "J. A. Aguilar"
-  site-url: https://www.iihe.ac.be/~aguilar/docs/index.html
+  site-url: https://zemrude.github.io/AstroParticles/
   search: true
-  
   downloads: [pdf]
-  date: "1/31/2024"
+  date: "4/10/2024"
+  
   chapters:
     - index.qmd
-    - chap1.qmd
-    - chap2.qmd
-    - chap3.qmd
-    - chap4.qmd
-    - chap5.qmd
-    - references.qmd
+    - part: "Physics Introduction"
+      chapters:
+      - chap1.qmd
+    - part: "Cosmic Rays"
+      chapters:
+      - chap2.qmd
+      - chap3.qmd
+    - part: "Multimessenger Astronomy"
+      chapters:
+      - chap4.qmd
+    - part: "Dark Matter"
+      chapters:
+      - chap5.qmd
+    - part: "References"
+      chapters:
+      - references.qmd
+number-depth: 1
 
 bibliography: references.bib
+  
 
 jupyter: python3
 

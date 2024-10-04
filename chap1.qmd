@@ -1,10 +1,10 @@
-# Basic Concents and Notations 
 
-## The Computational Framework
 
-In this part we are going to review the concepts that we will use in the rest of the course. It will also serve to set up the conventions, units, etc.
 
-### Natural Units
+# Some Basic Concents and Notations
+
+# thwy ther no 2
+## Natural Units
 
 In high energy physics and astro-particle physics it is very common to use the natural units where $\hbar = c = 1$. The correspondence between natural units and physical units can be established by use of
 
@@ -80,8 +80,7 @@ display(Markdown (f"Average density of Milky Way is {rho_Gal.to(u.g/u.cm**3):.2e
 :::
 
 
-
-### Larmor Radius and Rigidity
+## Larmor Radius and Rigidity
 
 Larmor radius, or gyroradius, $r_L$, is the radius of the orbit of a charged particle moving in a uniform, perpendicular magnetic field, obtained by simply equating the Lorentz force with the centripetal force/
 
@@ -101,7 +100,7 @@ $$
 note that the rigidity, $R$ has units of Volts.
 
 
-### Superposition model
+## Superposition Model
 
 Another concept that we will use frecuently in cosmic-ray physics is the *superpositoin model*. In the superposition model, a nucleus with mass $A$ and energy $E(A)$ is considered as $A$ independent nucleons with energy $E_0$. In a spallation process the energy per nucleon is approximately cosnserved therefore:
 
@@ -115,7 +114,7 @@ $$\begin{alignedat}{2}
 &E(A_2) &= &A_2 E_0
 \end{alignedat}$$
 
-### Cross sections, number density, lifetime, and interaction lengths
+## Cross sections, number density, lifetime, and interaction lengths
 
 The **cross-section** of a reaction is a very important parameter. It can be considered as the effective area for a collision between a target and a projectile. The cross-section of an interaction depends on interaction force, the energy of the particle, etc...
 
@@ -154,11 +153,11 @@ Known as the **lifetime**. If several processes are taking place, we need to rep
 $$\frac{1}{\tau_{total}} = \frac{1}{\tau_1} + \frac{1}{\tau_2} + ... + \frac{1}{\tau_n}$$
 
 
-## Coordinates and Time
+# Time and Coordinate Systems in Astronomy
 
 In this section we are going to review a bit the geography around our Galaxy as well as the different systems in which we can reference to objects in the sky (coordinate systems) or events (time standards).
 
-
+## Astronomical Geography
 ### Milky Way
 
 The Sun is **7.6-8.7 kpc** from the Galactic Center where there appears to be a supermassive black hole of **1 million solar masses** ($M_{\odot} = 1.99\times 10^{30}$ Kg) which coincides with a radio source known as **Sagittarius A\***. 
@@ -178,7 +177,7 @@ The Milky Way is surrounded by 54 known satellite galaxies (most of them dwarf g
 
 The Local Group is itself contained within the _Virgo Supercluster_ or _Local Supercluster_ (LC) of galaxies extending out to about 33 Mpc.  It has a total mass of $10^{15}M_{\odot}$
 
-### Time scales and time standards
+## Time Scales and Time Standards
 
 There are several time standards or ways to specify time. A time standard can affect the rate (ie, how long is a day) or reference or point in time, or both. Some standards are:
 
@@ -190,7 +189,7 @@ There are several time standards or ways to specify time. A time standard can af
 
 * [Coordinated Universal Time (UTC)](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) is an atomic time scale designed to approximate Universal Time. UTC differs from TAI by an integral number of seconds. UTC is kept within 0.9 second of UT1 by the introduction of one-second steps to UTC. The difference with UT1 is known as DUT1.
 
-### Time representations: JD and MJD
+### Time Representations: JD and MJD
 
 These are not technically standards (or scales), they are just reprentations (formats) of the aforementioned standards typically used in Astronomy:
 
@@ -198,7 +197,7 @@ These are not technically standards (or scales), they are just reprentations (fo
 
 * [Modified Julian Date](http://en.wikipedia.org/wiki/Julian_day) Is defined as MJD = JD - 2400000.5. The half day is subtracted so that the day starts at midnight in conformance with civil time reckoning. There is a good reason for this modification and it has to do with how much precision one can represent in a double (IEEE 754) variable. Julian dates can be expressed in UT, TAI, TDT, etc. and so for precise applications the timescale should be specified, e.g. MJD 49135.3824 TAI.
 
-### Time in experiments
+### Time in Experiments
 
 Practically speaking, in experiments time comes from one or more of the following sources:
 
@@ -230,15 +229,15 @@ print(f"The time difference in seconds is {dt.sec:.2f}")
 ```
 :::
 
-### Coordinate System
+## Astronomical Coordinate System
 
 Coordinate systems are used to map objects position in the sky. They can divided into local coordiantes and celestial coordinate systems:
 
-#### Local coordinates
+### Local coordinates
 
 These are those that depend on from where on Earth you observe, ie they have the observer's local position as reference. For example the horizontal coordinate system is expressed in terms of **altitude** (or elevation or zenith) angle and **azimuth**. These coordinates are not useful to inequivocally identify the position of an object in the sky since celestials object local coordinates change with time.
 
-#### Celestial coordinate systems
+### Celestial coordinate systems
 
 Those systems are independent of the observer's local position. Two of the mostly used coordinates systems in astroparticle are:
 
@@ -314,11 +313,9 @@ plt.show()
 
 :::
 
-## Special Relativity
+# Introduction to Special Relativity
 
-### Introduction
-
-Why is it important?
+## Why is it important?
 
 $$\gamma = \sqrt{\frac{1}{1-\beta^2}}\;, \beta = \frac{v}{c}$$
 
@@ -335,7 +332,7 @@ Two principles:
 
 2. *The Principle of Invariant Light Speed*– "... light is always propagated in empty space with a definite velocity [speed] c which is independent of the state of motion of the emitting body."
 
-### Lorentz Transformations
+## Lorentz Transformations
 
 As a simple case, consider a reference frame *O* and and observer in another
 frame *O'* moving at constant speed $\beta$ along the $x$ axis:
@@ -381,7 +378,7 @@ $$g_{00} = + 1, g_{11} = g_{22} = g_{33} = - 1 , g_{\mu\nu} = 0, \;\mathrm{ for}
 is called the **Minkowski space**.
 
 
-### Consequences of Lorentz transformations
+## Consequences of Lorentz transformations
 
 Lorentz transformation have the following (some of them really bizarre) consequences:
 
@@ -416,8 +413,8 @@ Source: Minute Physics
 
 
 
-## Relativistic kinematics
-### Four-vectors
+# Relativistic kinematics
+## Four-vectors
 
 We saw that position vectors in Minkowski space become 4-vectors with zeroth component. $x^0 = t$, identified with time. Likewise momentum 4-vector has $p^0 = E$:
 
@@ -441,7 +438,7 @@ $$E_{kin} \equiv E - m_0 = (\gamma -1) m_0$$
 
 
 
-### Transformation to the Center-of-Momentum Frame (COM)
+## Transformation to the Center-of-Momentum Frame (COM)
 
 As a concrete example of how 4-vectors aid real calculations, let's take the classic
 case of a transformation to the center-of-momentum frame (COM), that is, a coordinate frame where the total three-momentum $\vec p = 0$.
@@ -470,7 +467,7 @@ The energy available for new particle creation is $\epsilon = E_{COM} - m_B - m_
    $$\epsilon^2 \approx 2 (E_A E_B - \vec{p}_A \vec{p}_B ).$$
 
 
-### Fixed-target experiment
+## Fixed-target Experiment
 
 If the target particle B is at rest in the laboratory system (as is the case in accelerator fixed-target experiments or UHE cosmic rays striking nucleons in the atmosphere, or ...) then $(E_B = m_B)$ and $(\vec{p}_B = 0)$. In this case,
 
@@ -499,7 +496,7 @@ $$E_\gamma \geq m_{\pi^0} + \frac{m^2_{\pi^0}}{2 m_p} \approx 145 \mathrm{ \; Me
 
 ::: 
 
-### Collider experiment
+## Collider Experiments
 
 In the case of a collider experiment where beam particles A and B are counter-circulating in an accelerator and collide head-on, then
 
@@ -523,7 +520,7 @@ $$E_{COM} = \sqrt{2 m_p^2 + 2 E_p m_p} \simeq 142\;\; \mathrm{ TeV} $$
 
 ::: 
 
-### Two-body decay in COM
+## Two-body Decay in COM
 
 The COM is also useful to estimate the energy of two particles from the decay of a particle with mass $M$.  If a particle A decays into  $m_1$ and $m_2$, we have that in the COM the particle A has ${\vec p_A} = {\vec p_{COM}} = 0$. Then the invariant is given by:
 
@@ -558,9 +555,9 @@ $${|\vec p_1|^2} = E_1^2 - m_1^2 = \frac{1}{4M^2}(M^4 - 2M^2(m_1^2 + m_2^2) + (m
 
 Energies and momentums are fixed, the only unknowns are the angles.
 
-## Cosmology
+# Introduction to Cosmology
 
-### Red-shift
+## What is Red-shift?
 
 Red-shift is the shift (towards red) in the electromagnetic spectrum and is defined as:
 
@@ -570,7 +567,7 @@ $$z=\frac{\lambda_{obs} - \lambda_{emit}}{\lambda_{emit}}$$
 
 If a source of the light is moving away from an observer, then redshift (z > 0) occurs; if the source moves towards the observer, then blueshift (z < 0) occurs. This is true for all electromagnetic waves and is explained by the Doppler effect. Consequently, this type of redshift is called the *Doppler redshift*.
 
-### Relativistic Redshift
+## Relativistic Redshift
 
 ![](images/redshift.svg){fig-align="center"}
 
@@ -614,9 +611,9 @@ $$\lambda_o = \sqrt{\frac{1+\beta}{1-\beta}}\lambda_s \simeq (1+\beta)\lambda_s$
 In the non-relativistic limit (when $v \ll c$) this redshift can be approximated by $z \simeq \beta = \frac{v}{c}$ corresponding to the classical Doppler effect.
 
 
-### Hubble expansion
+## Hubble Expansion
 
-When ploting their redshift (ie speed) as function of distance (measured with the techniques we saw, parallax, etc.) in 1929 Hubble found a correlation between redshift and radial distance from Earth:
+When plotting their redshift (ie speed) as function of distance (measured with the techniques we saw, parallax, etc.) in 1929 Hubble found a correlation between redshift and radial distance from Earth:
 
 ![](images/unnamed.png){fig-align="center"}
 
@@ -636,7 +633,7 @@ For small $v$ over distance $r$ the **velocity is proportional to the distance**
 
 For larger redshifts other relations with the distance need to be invoked.
 
-#### Age of the Universe (first approximation)
+### Age of the Universe (first approximation)
 
 If we assume that the rate of expansion (ie H) is essentially constant (it is not!) the age of the Universe can be estimated by this relation:
 
@@ -653,7 +650,7 @@ where Universe increases by a factor $e$ every $t_{\mathrm{Hubble}} = \frac{1}{H
 
 
 
-## Cosmological principle
+## Cosmological Principle
 
 The *cosmological principle* is the notion that the distribution of matter in the Universe is **homogeneous** and **isotropic** when viewed on a large enough scale.
 
@@ -668,7 +665,7 @@ The [End of Greatness](http://en.wikipedia.org/wiki/Observable_universe#End_of_G
 
 However, in 2013 a new structure **3 Gpc** wide has been discovered, the [Hercules–Corona Borealis Great Wall](http://arxiv.org/abs/1311.1104), which puts doubt on the validity of the cosmological principle.
 
-### Friedmann–Lemaître-Robertson-Walker
+## Friedmann–Lemaître-Robertson-Walker
 
 Despite seing all galaxies receding, we are not at the center of the Universe. The common interpretation of the expansion is that we are living in a Universe that can be thought of lying on the surface of a balloon.  Distances between objects (points on the ballon) on this manifold are expressed as:
 
@@ -707,7 +704,7 @@ and
 
 $$\frac{\ddot a}{a} = -\frac{4\pi G}{3}(\rho + 3p).$$
 
-### Cosmological Constants
+## Cosmological Constants
 
 Given the Friedmann equations we can calculate for any value of $H$ the critical density such as the geometry is flat ($k=0$):
 
@@ -759,9 +756,9 @@ Given this evolution it is possible to write:
 
 $$ H^2(t) = H^2_0 [\Omega^0_M(1+z)^3 + \Omega^0_r(1+z)^4 + \Omega^0_k(1+z)^2 +\Omega^0_\Lambda]$$
 
-### Observational results
+## Observational Cosmological Results
 
-* There are good reasons to believe that the energy density of radiation is much less than matter, as photon contrinute only to $\Omega_r \sim 5 \times 10^{-5}$ mostly in the CMB. Therefore is useful to parametrize the universe today as $\Omega_k = 1 - \Omega_M - \Omega_\Lambda$.
+There are good reasons to believe that the energy density of radiation is much less than matter, as photon contrinute only to $\Omega_r \sim 5 \times 10^{-5}$ mostly in the CMB. Therefore is useful to parametrize the universe today as $\Omega_k = 1 - \Omega_M - \Omega_\Lambda$.
 
 * **Direct measures of the Hubble constant.**. The most reliable result on the Hubble constant comes from the [Hubble Space Telecope Key Project](http://iopscience.iop.org/0004-637X/553/1/47). They use the Cepheids to obtain distances to 31 galaxies (They also use Type Ia Supernovae). A recent study with over 600 Cepheids yielded the number $H_0 = 73.8 \pm 2.4 \mathrm{\;km\;s^{-1}\; Mpc^{-1}}$. The indirect measurement from *Planck* Collaboration gives somehow a lower value (this discrepancy as well as the comic distance-ladder method are under investigation).
 
@@ -772,7 +769,7 @@ $$ H^2(t) = H^2_0 [\Omega^0_M(1+z)^3 + \Omega^0_r(1+z)^4 + \Omega^0_k(1+z)^2 +\O
 
 
 
-### Cosmic Microwave Background
+## Cosmic Microwave Background
 
 The cosmic microwave background (CMB) is electromagnetic radiation that remains from the time when photons decoupled from matter shortly after the recombination of electrons and protons into neutral hydrogen atoms. Once photons decoupled from matter, they traveled freely through the universe without interacting with matter. For an observer today this CMB is observed as a distribution of temperatures (from black body radiation) at on a two-dimensional sphere. This temperature distribution, however, was shown to have anisotropies. If we denote $\Delta T (\theta, \phi)$  the temperature difference measured in the direction ($\sin\theta \cos \theta, \sin\theta \sin\theta , \cos\theta$) with respect to $T_0 =$ 2.725 K, the average temperature we can decompose these anisotropies over the bases of spherical harmonics, the so called $Y_{\ell m} (\theta, \phi)$, the same way a we can decompose a function in a curved space over sines and cosines by the Fourier transform:
 
@@ -792,17 +789,17 @@ The power spectrum of the CMB represents the anisotropies of the CMB as a functi
 You can build your own Universe [here](https://lambda.gsfc.nasa.gov/education/cmb_plotter/)
 :::
 
-### Before Planck
+#### Before Planck
 
 ![](images/eso0419d.jpg){fig-align="center" width="50%"}
 
-### After Planck
+#### After Planck
 
 Planck showed that the amount of dark energy in the Universe is appreciably less than we had previously thought, while the amount of dark-and-normal matter is appreciably greater than we thought.
 
 ![](images/Lambda_Matter.jpg){fig-align="center" width="50%"}
 
-### Cosmography
+## Cosmography
 
 Using the Huble equation we are going to derive some quantities related to the measurement of the Universe.
 
@@ -830,7 +827,7 @@ where we used $1 = \Omega_\Lambda + \Omega_M.$
 For $\Omega_M = 0.70$ and $\Omega_\Lambda = (1 - \Omega_M) = 0.30$ one finds $H_0 t_0 = 0.964$ so that $t_0 \approx \frac{0.96}{H_0} = 13.5$ Gyr. Which is similar to the assumption we did with a constant $H_0$.
 
 
-#### Comoving distance (Line of Sight)
+### Comoving distance (Line of Sight)
 
 The comoving distance between two nearby objects in the Universe is the distance between them which remains constant with epoch if the two objects are moving with the *Hubble flow*. That an object follows the *Hubble flow* if there is no peculiar velocities, ie, the only reason the 2 objects separate is due to the expansion of the Universe and not because the have relative velocities among them. The comoving distance has the expansion factored out and therefore remains constant with epoch. You can think of it as the distance measured with a ruler that also expands with the Universe. Using the same argument as above with the age of the Universe we can multiplying by the speed of light we can derive:
 
@@ -838,7 +835,7 @@ $$D_c(z) = \int_{t}^{t_0} c\mathrm{ d} t = \frac{c}{H_0} \int^z_0 \frac{\mathrm{
 
 This is the comoving distance along the *line of sight*. Ie, is the comoving distance from a galaxy at redshift $z$ from us. If we want to estimate, let's say, the distance between 2 galaxies at the same redshift but separated in angle $\Delta \theta$, then the distance is given by $D_M \Delta \theta$ where $D_M$ is the *transverse comoving distance*. For a flat Universe $D_M = D_c$ but if the curvature is not zero, the relationship depends on the trigonometric functions $\sinh$ (for a closed Universe) and $\sin$ (for an open Universe) to account for the curvature of spacetime.
 
-#### Luminosity distances
+### Luminosity Distances
 
 The luminosity distance defined in cosmology is defined as the distace in which an object with intrinsic luminosity $L$ is observed with flux $f$, ie:
 

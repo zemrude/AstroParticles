@@ -1,1 +1,1 @@
-Sitemap: https://www.iihe.ac.be/~aguilar/docs/index.html/sitemap.xml
+Sitemap: https://zemrude.github.io/AstroParticles/sitemap.xml

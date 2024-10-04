@@ -1,7 +1,7 @@
 # Cosmic Rays in the Atmosphere 
 
 ## Interactions of CR particles in the atmosphere
-### Introduction
+### Cosmic Ray Air Shower
 
 In this lesson we will the different components of a cosmic air shower when cosmic rays interact with Earth's atmosphere. As seen in the figure below, we have 3 main components, the **electromagnetic component**, the **hadronic component** and muons and neutrinos which can be seen as the **muonic component**. 
 
@@ -16,7 +16,7 @@ $$X(h) =\int_h^{\infty} \rho(h^\prime)\mathrm{ d}h^\prime$$
 
 ![](images/x.svg){fig-align="center" width="50%"}
 
-#### The isothermal model of the Atmosphere
+#### The Isothermal Model of the Atmosphere
 
 In an isothermal hydrostatic atmosphere a particular layer of gas at some altitude is static. That means that the downward (towards the planet) force of its weight, plus the downward force exerted by pressure in the layer above it, and the upward force exerted by pressure in the layer below, all sum to zero. Assuming a segment of area $A$ and heigth $\mathrm{ d}h$ we can write this equilibrium of forces as:
 
@@ -107,7 +107,7 @@ so the threshold for production is $\beta > \frac{1}{n}$. Most of the components
 We will see more on Cherenkov radiation on the next lesson about $\gamma$-ray astronomy.
 
 
-#### Pair production
+#### Pair Production
 
 If a photon from bremsstrahlung has enougth energy $E_\gamma > 2 m_e$ it can produced a pair of electron positron. The cross-section rises quickly at the threshod of $2 m_e$ but in the high energy part it can be approximated to:
 
@@ -120,11 +120,11 @@ $$\frac{1}{X_{pair}} = \frac{7}{9}\frac{1}{X_0}$$
 
 Which means that the **radiation lengths for braking radiation and pair production are comparable**.
 
-### Electromagnetic Shower
+## Electromagnetic Shower
 
 When photons from radiation losses of electrons, have enough energy to produce pairs of positrons electrons, these hey also can produce photons which, in turn, can also produces pairs, etc, etc. This is called an **electromagnetic shower**.
 
-#### The Heitler Toy-Model 
+### The Heitler Toy-Model 
 
 The Heitler toy model explains very well the development of an electromagnetic shower.
 As we saw, in the ultrarelativistic limit the radiation lenghs for pair production and bremsstrahung are comparable. We can defined a distance $d_{split} = X_0 \log2$ where an electron will looses, on average, half of its energy. 
@@ -152,7 +152,7 @@ For air $\epsilon_e = 85$ MeV and the **radiation length** $X_0 = 36.7 \mathrm{ 
 
 The $X_{max}$ prediction of the Heitler model is in good agreement with Monte Carlo simulations. However, the electron to photon ratio of 2 is not in agreement given that the model predicts only one photon emitted by bremsstrahlung. Simulations show a ratio of 1/6 since in reality several photons are emitted and electrons lose energy much faster than photons do. 
 
-### Hadronic Showers
+## Hadronic Showers
 
 Before modeling the baryon-induced showers or hadronic showers, we need to estimate the *nuclean mean free path* in the atmosphere. We can write the **standard mean free path** for $\sigma^{air}_N$ nucleon-air cross section as:
 
@@ -171,7 +171,7 @@ For air $A$ is average mean the mass number of air nuclei components (mainly nit
 Note that this definition of the density mean free path is independent of the mass density of the medium, so if the density changes with altitude, like in the case of our atmosphere, the density mean free path is the same.
 
 
-#### The Heitler-Matthew Model
+### The Heitler-Matthew Model
 
 In the Heitler model can be adapted also for hadronic showers. This is what Matthew did. We can imagine a proton initiating the cascade instead of a photon/electron, in this case a hadronic air shower will develope:
 
@@ -226,7 +226,7 @@ ie, for a given energy $E_0$ the shower max depends on the mass of the CR primar
 :::
 
 
-## Muons and Neutrinos
+# Muons and Neutrinos
 
 The plot below shows the particle flux surviving after a certain altitude. 
 
@@ -243,7 +243,7 @@ We can extract different information from this plot:
 
 Electrons and nucleons fluxes above 1 GeV/$c$ are about 0.2 and 2 m$^{-2}$ s$^{-1}$ sr$^{-1}$ at sea level. Nucleons are the degraded remnants of the primary cosmic radiation. At sea level about 1/3 are neutrons.
 
-### Muons and Neutrinos Productions
+## Muons and Neutrinos Production
 
 The most important channels for muon and neutrino production are:
 
@@ -298,7 +298,7 @@ So we can distinguish two regimes.
 The same formulas can be derived for Kaons.
 :::
 
-### Muon Fluxes
+## Muon Fluxes
 
 The muon energy spectrum at sea level is a direct consequence of the meson source spectrum. Unlike electrons, muons will decay before reaching the ground in the GeV energy range. The muon decay length is given by:
 
@@ -320,7 +320,7 @@ print(f"d = {(energy/muon_mass)*lifetime*cspeed*1e-3:.2f} km")
 Compared to the typical atmospheric altitude of $h \sim 15$ km it means that at those energies, muons will not reach the ground.
 
 
-#### Energy regimes of muon fluxes
+### Energy Regimes of Muon Fluxes
 
 Three different regimes are distinguishable:
 
@@ -335,7 +335,7 @@ Three different regimes are distinguishable:
 At even highers energies, above 1 TeV in air, muons will also start to loose energie via other radiative process (we will see that below when talking about muons underground).
 
 
-#### Analytical approximation
+### Muon Flux Analytical Approximation
 
 An approximate extrapolation formula valid when muon decay is negligible ($E_\mu > 100/\cos\theta$ GeV) and the curvature of the Earth can be neglected ($\theta < 70^{\circ}$) is given by the Gaisser parametrization:
 
@@ -395,7 +395,7 @@ plt.show()
 
 :::
 
-#### Measured muon flux 
+### Measured Muon Flux 
 In reality below 10 GeV muon decay and energy loss become important and the Gaisser parametrization overestimates the muon flux as can be seen in the plot below:
 
 ![Source: Particle Data Group](images/atmmu.png){width="50%" fig-align="center"}
@@ -413,7 +413,7 @@ Sometimes muons also come in groups or **bundles** of parallel muons originated 
 
 ![](images/macro-bundle.png)
 
-#### Charge Ratio
+### Muon anti-Muon Charge Ratio
 
 The muon charge ratio reflects the excess of $\pi^+$ over $\pi^-$ and $K^+$ over $K^-$ and the fact that there are more protons than neutrons in the primary spectrum. 
 
@@ -432,7 +432,7 @@ $$ R = \frac{N(\pi^+)}{N(\pi^-)} = \frac{2k+1}{2k} = 1 + \frac{1}{2k} $$
 
 for low energies $k = 2$ and $R \sim 1.25$
 
-### Neutrinos Fluxes
+## Neutrinos Fluxes
 
 * Neutrinos are the most abundant CR product at sea level, yet they have only recently (compared to other particles) measured due to their extremely low cross-section.
 
@@ -480,7 +480,7 @@ ax_2.set_ylabel(r"$\Phi_{\nu_\mu} / \Phi_{\nu_e}$")
 In astrophysical sources the ration 2:1 persists. [Why pions don't decay in to electrons?](href="http://en.wikipedia.org/wiki/Pion#Charged_pion_decays)
 :::
 
-### Fluxes and Kinematics
+### Neutrino Fluxes and Kinematics
 
 As mentioned neutrinos and muons are strongly correlated. However due the two-body kinematics, the energy spectra of the $\nu$’s and $\mu$’s from mesons decay are different. For example, the energy of the muon in CoM is given by: 
 
@@ -495,7 +495,7 @@ For energies about $1\;\mathrm{TeV}< E_\nu <  10^3\;\mathrm{TeV}$, the angle ave
 
 $$\frac{\mathrm{d}N_{\nu_\mu + {\bar \nu_\mu}}}{\mathrm{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6}\mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}$$
 
-#### Fluxes as Function of Zenith
+### Fluxes as Function of Zenith
 
 Another difference with respect to the muon fluxes is their dependency with respect to the zenith angle. Since atmospheric muons are not absorved by the Earth, their spectrum spans to the whole sky. The following plot shows the calculated neutrino flux at 1,300 m depth with energies $E_\nu = 10$ GeV.
 
@@ -514,9 +514,9 @@ Apart from kaons and pions, charmed messons will also be produced in the atmosph
 It is important to note that the prompt fluxes have not been observed yet.
 
 
-## Particles Underground
+# Particles Underground
 
-### Muon Interactions
+## Muon Interactions
 When muon reaches the ground the will experience the following interactions when travelling through matter with a higher density than air. The will losse energy mostly through the following processes:
 
 * **Ionization.** The continuous energy loss of muons passing through a medium as it ionize the material along the path. We saw however that ionization is mostly independent of the material, as most of them have values of $Z/A \sim 0.5$.
@@ -574,8 +574,8 @@ The plot below shows the depth-intensity muons for vertical directions. The grey
 
 ![](images/muon-depth.png){fig-align="center"}
 
-### Neutrino Interactions
-#### Weak interaction
+## Neutrino Interactions
+### Weak interaction
 
 Neutrinos feel only the weak force thus interactions with matter mediated by $W$ and $Z$ bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:
 
@@ -591,7 +591,7 @@ Neutrinos will scatter from electrons as well as nuclear matter.
 * For energies $E_\nu \gg 1 \mathrm{GeV}$ neutrinos do not scatter on hadronds as a compound of quarks, they start to *see* and interact directly with the quarks, this is the so-called **Deep Inelastic Scattering**.
     
 
-### Neutrino cross-sections at GeV energies
+### Neutrino Cross-sections at GeV
 
 The anti-neutrino cross-section at GeV energies is a factor ~2 lower (naively should be 3, but the factor 2 comes from the structure function of the nucleus) than the neutrino cross-section due to the helicity. 
 
@@ -649,7 +649,7 @@ print (f"The mean free path is: {L.to(u.km):.2f}")
 ```
 :::
 
-### Neutrino cross-sections at TeV energies
+### Neutrino Cross-sections at TeV 
 
 * At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum is $q^2 \ll M_{W,Z}$ and so the propagator term is $\sim 1/M^2_{W,Z}$
 
@@ -657,7 +657,7 @@ print (f"The mean free path is: {L.to(u.km):.2f}")
 
 ![](images/break_cc_new.png)
 
-### High energy Cross-Sections
+### High energy Cross-sections
 
 The following shows the neutrino cross section:
 
@@ -677,7 +677,7 @@ The following shows the neutrino cross section:
 
 :::
 
-### Neutrino signatures in a neutrino detector
+## Neutrino Signatures in a Neutrino Detector
 
 ![](images/nu_signatures.png){fig-align="center"}
 
@@ -687,7 +687,7 @@ The following shows the neutrino cross section:
 * a) In NC only an hadronic shower is visible.
 
 
-### Event rate in an underground experiment.
+### Event Rate in an Underground Experiment
 
 An estimate of the detection rate of neutrino events is equivalent to calculate the rate of a neutrino-induced muon/cascades flux:
 
@@ -720,7 +720,7 @@ Where $X(\theta)$ is the column depth travelled by the neutrino through the Eart
 
 See **Exercises 2** for an evaluation of the event rate in an underground detector.
 
-### Neutrino Oscillations
+## Neutrino Oscillations
 
 Neutrinos are generated in flavor eingenstate however propagation is done in mass eingenstate, since each planar wave has a different frecuency given their different masses, the neutrino detected (also in flavor eingenstate) will have a different interference pattern than the one generated given rise to neutrino flavor oscillations.
 
@@ -872,7 +872,7 @@ cax.set_label("Probability")
 
 ::: 
 
-### General case
+### General Case for Oscillations
 
 Taking greek letters of the flavor eingenstates and latin letter the mass eingenstates we can write:
 
@@ -954,7 +954,7 @@ Where $\Delta m_{12}^2 = \Delta m_{Sol}^2$ and $\Delta m_{31(2)}^2 = \Delta m_{a
  $$\Delta m_{atm}^2  =\left| m_3^2 - \frac{(m_1^2 + m_2^2)}{2} \right|$$
 
 
- ### Measurements Status
+### Experimental Results on Oscillations
 Assuming $\Delta m_{21}^2 \ll \Delta m_{31}^2 \sim \Delta m_{32}^2$ and small $\theta_{13}$ different detectors can prove different sectors of the oscillation parameters:
 
 * **Atmospheric and Long Baseline Accelerators**:
@@ -974,7 +974,7 @@ $$\begin{pmatrix} c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 \end{
 
 If $\Delta m_{31}^2L/E \gg 1$ this experimetns are sensitive to the oscillation $$ P(\nu_e \rightarrow \nu_e) \simeq 1 - \sin^2 2\theta_{12}\sin^2\frac{\Delta m_{12}^2}{3E}L$$
 
-### Solar Neutrinos
+#### Solar Neutrinos
 
 Neutrinos from the Sun are produced by some of the fusion reactions in the $pp$ chain or the CNO cycle. The combined effect is:
 
@@ -987,7 +987,7 @@ In 1999 SNO in Canada started taking data. This experiment was able to detect $\
 $$\sin^2 \theta_{12} \simeq 0.30$$
 $$\Delta m_{12}^2 \equiv \Delta m_{\odot}^2 \simeq 8 \times 10^{-5} \mathrm{ \; eV^2}$$
 
-### Atmospheric Neutrinos
+#### Atmospheric Neutrinos
 
 First evidence of atmospheric neutrino oscillations came from Super-Kamiokande experiment in 1998. By scanning in zenith angle, is like changing the $L$.
 
@@ -996,7 +996,7 @@ First evidence of atmospheric neutrino oscillations came from Super-Kamiokande e
 If atmospheric mixing is non-maximal, it remains to determine in which “octant" the mixing angle $\theta_{23}$ lies. For a $\theta_{23}$ in the first octant ($< 45^{\circ}$) the mass eigenstate $\nu_3$ is **tau heavy**, i.e., the tau neutrino fraction is larger than the muon neutrino fraction. Conversely, for a $\theta_{23}$ in the second octant ($> 45^{\circ}$) the state $\nu_3$ is **muon heavy**.
 
 
-### Reactor Neutrinos
+#### Reactor Neutrinos
 
 
 * Double Chooz: $\sin^2 2\theta_{13} = 0.109 \pm 0.030 \pm 0.025 \neq 0$  at $2.9\sigma$
@@ -1013,7 +1013,7 @@ Without entering in the maths, what happens here is that a resonance effect occu
 This is known as the **MSW effect** for the theorists who discovered it - Mikheyev, Smirnov, and Wolfenstein.
 
 
-### Tutorial III: Calculate the probabilities of $\nu_e \rightarrow \nu_x$ as function of L/E
+#### Tutorial III: Calculate the probabilities of $\nu_e \rightarrow \nu_x$ as function of L/E
 
 ```{python}
 def PMNS_Factory(t12, t13, t23, d):
@@ -1067,10 +1067,4 @@ plt.legend(loc="best")
 plt.show()
 
 ```
-
-## What else?
-
-* Pressure and temperature effects in the muon and neutrino fluxes.
-
-* Sterile neutrinos, are there more than 3 neutrinos? What does cosmology tell us, what do experiements tell us? (LSND and reactor anomalies)
 
