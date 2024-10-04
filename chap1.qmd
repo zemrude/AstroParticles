@@ -3,7 +3,6 @@
 
 # Some Basic Concents and Notations
 
-# thwy ther no 2
 ## Natural Units
 
 In high energy physics and astro-particle physics it is very common to use the natural units where $\hbar = c = 1$. The correspondence between natural units and physical units can be established by use of

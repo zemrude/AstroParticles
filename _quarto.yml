@@ -28,7 +28,7 @@ book:
     - part: "References"
       chapters:
       - references.qmd
-number-depth: 1
+
 
 bibliography: references.bib
   
