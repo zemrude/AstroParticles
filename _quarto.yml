@@ -14,17 +14,23 @@ book:
     - index.qmd
     - part: "Physics Introduction"
       chapters:
-      - chap1.qmd
+      - chap1_0.qmd
       - chap1_1.qmd
       - chap1_2.qmd
       - chap1_3.qmd
     - part: "Cosmic Rays"
       chapters:
-      - chap2.qmd
-      - chap3.qmd
+      - chap2_0.qmd
+      - chap2_1.qmd
+      - chap3_0.qmd
+      - chap3_1.qmd
+      - chap3_2.qmd
     - part: "Multimessenger Astronomy"
       chapters:
-      - chap4.qmd
+      - chap4_0.qmd
+      - chap4_1.qmd
+      - chap4_2.qmd
+      - chap4_3.qmd
     - part: "Dark Matter"
       chapters:
       - chap5.qmd

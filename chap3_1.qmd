@@ -1,0 +1,288 @@
+# Muons and Neutrinos
+
+The plot below shows the particle flux surviving after a certain altitude. 
+
+![Source: Particle Data Group](images/cr_fig3_07.png)
+
+We can extract different information from this plot:
+
+* Primaries dominate up to 9 km, secondaries (electrons, pions) roughly follow the primary shape. Muons and neutrinos are continously produced.
+
+* Vertical fluxes for $E > 1$ GeV. Points show the $\mu^-$ measurements. Muons and neutrinos are produced in decays of mesons which are themselves produced by interactions of CR particles with air nuclei.
+
+* They are the dominant flux at sea level and the only ones that can penetrate deep underground.
+
+
+Electrons and nucleons fluxes above 1 GeV/$c$ are about 0.2 and 2 m$^{-2}$ s$^{-1}$ sr$^{-1}$ at sea level. Nucleons are the degraded remnants of the primary cosmic radiation. At sea level about 1/3 are neutrons.
+
+## Muons and Neutrinos Production
+
+The most important channels for muon and neutrino production are:
+
+* Two body decays
+$$\pi^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({ \bar \nu_\mu}) \mathrm{\;\; (\sim 100\%)}$$
+$$K^{\pm} \rightarrow \mu^{\pm} + \nu_{\mu}({\bar \nu_\mu}) \mathrm{\;\; (\sim 63.5\%)}$$
+
+* Three body decay
+    $$K_L \rightarrow \pi^{\pm} e^{\pm}\nu_e({\bar \nu_e}) \mathrm{\;\; (\sim 38.7\%)}$$
+
+At lower energies, the muon decay is also important: 
+
+$$ \mu^{\pm} \rightarrow e^{\pm} + \nu_{e}({\bar \nu_e}) + {\bar \nu_{\mu}}(\nu_\mu)$$
+
+For each of the 2-body decay channels, assuming the muon always decay the neutrino flavor ratio is: 
+
+$$\mathbf{ \nu_\mu : \nu_e = 2:1}$$
+
+:::{.callout-note title="Mean free path for mesons, $\pi$, $K$"}
+Charged pions and Kaons can interact or decay. Both processes have a mean free path and one or the other will dominate depending on which mean free path is larger.
+
+The **decay mean free path** of pions is given by $l^d_\pi =\gamma  c \tau_\pi$ where $\gamma$ is the Lorentz factor of the pion. Multiplying for density we have the **density decay mean free path** as:
+
+$$\lambda^d_\pi = \rho(X) \gamma  c \tau_\pi$$
+
+However the atmosphere density depends on the atmospheric depth as $\rho(X) = X/h_0$. In units of *slant depth*, $X_{sd} = X/\cos\theta$ and expanding $\gamma = E / m_\pi c^2$ we can rewrite the density decay free path as:
+
+$$\frac{1}{\lambda^d_\pi(E)} = \frac{m_\pi c^2 h_0}{E c \tau_\pi X_{sd} \cos \theta} = \frac{\epsilon_\pi}{E X_{sd} \cos\theta}$$
+
+where $E$, $m_\pi$, $\tau_\pi$ are the pion energy, mass and lifetime and we defined:
+
+$$\epsilon_\pi = \frac{c\tau_\pi}{m_\pi c^2 h_0}$$
+
+as a *critial energy*. The crital energy is such that the decay time equals the vertical atmospheric depth $\lambda^d_\pi(\epsilon_\pi) = X_{sd} \cos\theta = X$.
+
+
+The **interaction mean free path** is the same as nucleon $\lambda_\pi = A m_\pi/\sigma_\pi^{air}$ which as we saw is indenpendent of $X$.
+:::
+
+:::{.callout-note title="Critical energy  for mesons, $\pi$, $K$"}
+
+Decay or interaction dominates depending on whether $1/\lambda^d_\pi$ or $1/\lambda_\pi$ is larger. This in turns depends on the ratio between the energy $E$ and the critical energy $\epsilon_\pi$. For example, the value of the crital energy for pions is given by:
+
+$$\epsilon_\pi = \frac{c\tau_\pi}{m_\pi c^2 h_0} \approx 115 \;\mathrm{ GeV}$$
+
+So we can distinguish two regimes.
+
+   * For $E \gg \epsilon_\pi$ decay length is much larger than the atmospheric depth, so interaction dominates.
+    
+   * For $E \ll \epsilon_\pi$ decay dominates is much shorter than the atmospheric depth, so the pion will likely decay before interacting.
+
+The same formulas can be derived for Kaons.
+:::
+
+## Muon Fluxes
+
+The muon energy spectrum at sea level is a direct consequence of the meson source spectrum. Unlike electrons, muons will decay before reaching the ground in the GeV energy range. The muon decay length is given by:
+
+$$ d_\mu = \gamma \tau_\mu c$$
+
+Where $\tau_\mu$ is the muon lifetime of the order of $2.2\times 10^{-6}$ s. So for a muon of 1 GeV we have:
+
+```{python}
+lifetime = 2.1969811e-6 # muon lifetime in seconds
+import scipy.constants as cte
+cspeed = cte.c
+muon_mass = cte.value("muon mass energy equivalent in MeV") * 1e-3 # in GeV
+
+energy = 1 # GeV
+
+print(f"d = {(energy/muon_mass)*lifetime*cspeed*1e-3:.2f} km")
+```
+
+Compared to the typical atmospheric altitude of $h \sim 15$ km it means that at those energies, muons will not reach the ground.
+
+
+### Energy Regimes of Muon Fluxes
+
+Three different regimes are distinguishable:
+
+* $E_\mu \leq \epsilon_\mu$, where $\epsilon_\mu \sim 1$ GeV. This critical energy is when interaction probability and decay probability start to be comparable. Even more the muon energy losses become important. As we saw energy losses via ionization is almost constant, for muons is about $\sim 2$ MeV/(g/cm$^{2}$) in air (and mostly independent on the material). However this is true only above energies of 1 GeV, below ionization losses increase drastically as can be seen in the figure below.
+
+![](images/muon_energylosses_air.png){width="50%" fig-align="center"}
+
+* $\epsilon_\mu \leq E_\mu \leq \epsilon_{\pi,K}$, where $\epsilon_\pi = 115 \;\mathrm{GeV}$ and $\epsilon_K = 850 \;\mathrm{GeV}$. In this range all mesons decay and muons spectrum follows the same of the parent spectrum of mesons and hence that of the primary CRs. The muon is almost independent of the zenith angle.
+
+* $E_\mu \gg \epsilon_{\pi,K}$, Mesons interaction length starts to be comparable to their decay length. This happens first for inclined showers and so the muon flux gets suppressed while it also starts to depend on the zenith angle (ie on the density of the atmosphere).
+
+At even highers energies, above 1 TeV in air, muons will also start to loose energie via other radiative process (we will see that below when talking about muons underground).
+
+
+### Muon Flux Analytical Approximation
+
+An approximate extrapolation formula valid when muon decay is negligible ($E_\mu > 100/\cos\theta$ GeV) and the curvature of the Earth can be neglected ($\theta < 70^{\circ}$) is given by the Gaisser parametrization:
+
+$$\frac{\mathrm{d}N_\mu}{\mathrm{d}E_\mu \mathrm{d}\Omega} = \frac{0.14}{\mathrm{cm^2\;s\;sr\;GeV}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7}\left[F_\pi(E_\mu, \theta) + F_K(E_\mu,\theta)\right]$$
+
+
+where $F_\pi$ and $F_K$ represent the contributions from pions and kaons, respectively:
+
+$$F_\pi(E_\mu, \theta) = \frac{1}{1+\frac{1.1 E_\mu \cos\theta}{115 \;\mathrm{GeV}}}$$
+
+$$F_K(E_\mu, \theta) = \frac{0.054}{1+\frac{1.1 E_\mu \cos\theta}{850\;\mathrm{GeV}}}$$
+
+:::{.callout title="Tutorial I:  Plot the muon flux for two different angles"}
+
+```{python}
+import matplotlib.pylab as plt
+import numpy as np
+plt.rcParams['font.family'] = "STIXGeneral"
+plt.rcParams.update({'axes.labelsize': 20})
+plt.rcParams.update({'legend.fontsize': 20})
+plt.rcParams.update({'figure.figsize': [8, 6]})
+plt.rcParams['xtick.labelsize'] = 18
+plt.rcParams['ytick.labelsize'] = 18
+plt.rcParams['xtick.major.width'] = 1.5
+plt.rcParams['xtick.minor.width'] = 1
+plt.rcParams['xtick.major.pad'] = 8
+plt.rcParams['xtick.direction'] = 'in'
+plt.rcParams['ytick.major.size'] = 10
+plt.rcParams['ytick.minor.size'] = 5
+plt.rcParams['ytick.major.width'] = 1.5
+plt.rcParams['ytick.minor.width'] = 1
+plt.rcParams['ytick.major.pad'] = 8
+plt.rcParams['ytick.direction'] = 'in'
+plt.rcParams['legend.frameon'] = False
+plt.rcParams['lines.linewidth'] = 1.5
+plt.rcParams['axes.linewidth'] = 1.5
+
+def muons(cangle, E):
+    a = 1./(1.+ 1.1*E*cangle/115.)
+    b = 0.054/(1.+ 1.1*E*cangle/850.)
+    return 0.14 *E**-2.7 *(a + b)
+
+fig = plt.figure(figsize=(6,6))
+ax = plt.subplot(111)
+ax.set_xscale("log")
+ax.set_yscale("log")
+ax.set_ylim(1e-5, 3e-1)
+ax.set_ylabel(r"$E_\mu^{2.7} dN_\mu/dE_\mu [cm^{-2}s^{-1} (GeV)^{1.7}]$")
+ax.set_xlabel(r"$E_\mu(GeV)$")
+ax.grid()
+E = np.arange(1e0, 1e6, 10)
+ax.plot(E, E**2.7*muons(np.cos(75*np.pi/180.),E), label=r"$\theta = 75^{\circ}$")
+ax.plot(E, E**2.7*muons(np.cos(0*np.pi/180.),E), label=r"$\theta = 0^{\circ}$")
+plt.legend()
+plt.show()
+```
+
+:::
+
+### Measured Muon Flux 
+In reality below 10 GeV muon decay and energy loss become important and the Gaisser parametrization overestimates the muon flux as can be seen in the plot below:
+
+![Source: Particle Data Group](images/atmmu.png){width="50%" fig-align="center"}
+
+As can be seen from the measured muon flux has the following characteristics:
+
+* Muons are the most numerous charged particles at sea level
+* The mean energy of muons at the ground is $\sim$ 4 GeV.
+* The integral intensity of vertical muons above
+1 GeV/c at sea level is $\approx 70 \mathrm{m}^{-2} \mathrm{s}^{-1} \mathrm{sr}^{-1}$ or $\approx 1 \mathrm{cm}^{-2} \mathrm{min}^{-1}$.
+
+### Muon Bundles
+
+Sometimes muons also come in groups or **bundles** of parallel muons originated from the same primary CR. Muon bundles sometime look like a single high energy muon. The multiplicity (number of muons in the bundle) if can be measured is correlated with the mass of the orignal CR. The image belowe shows a muon-bundle event observed with the MACRO underground detector.
+
+![](images/macro-bundle.png)
+
+### Muon anti-Muon Charge Ratio
+
+The muon charge ratio reflects the excess of $\pi^+$ over $\pi^-$ and $K^+$ over $K^-$ and the fact that there are more protons than neutrons in the primary spectrum. 
+
+![Source: Allkofer et. al. Phys. Lett. B36, 425 (1971). Jokisch et. al. Phys. Rev. D19, 1368 (1979)](images/muon_ratio.png){width="50%"}
+
+The increase with energy of the ratio is due to an increasing importance of kaons coming from the process $ p + N \rightarrow \Lambda + K^+$.
+
+Assuming the following reactions for the production of $\pi^+$ and $\pi^{-}$:
+
+$$ p + N \rightarrow p^\prime + N^\prime  + k \pi^+ + k \pi^- + r\pi^0 $$
+$$ p + N \rightarrow n + N^\prime  + (k + 1) \pi^+ + k \pi^- + r\pi^0 $$
+
+where $k$ and $r$ are the multiplicity of the particle species. Assuming same cross sections we obtain:
+
+$$ R = \frac{N(\pi^+)}{N(\pi^-)} = \frac{2k+1}{2k} = 1 + \frac{1}{2k} $$
+
+for low energies $k = 2$ and $R \sim 1.25$
+
+## Neutrinos Fluxes
+
+* Neutrinos are the most abundant CR product at sea level, yet they have only recently (compared to other particles) measured due to their extremely low cross-section.
+
+* The process giving neutrino fluxes are the same as for the muons (we saw already) plus the muon decay. Taking into account the decay of pions, kaons and muons gives to a flavor ratio of: $\nu_\mu : \nu_e = 2:1$ and $\nu_e/{\bar \nu_e} \sim \mu^+/\mu^-$
+
+* At few GeV (> $\epsilon_\mu$) muons will not decay and $\nu_e$ will be supressed as the main source of $\nu_e$ is the muon decay.
+
+::: {.callout title="Tutorial II: Plot the $\nu_\mu$ and $\nu_e$ atmospheric flux using the package `DaemonFlux` @Yanez:2023lsy"}
+
+```{python}
+# | fig-caption: Neutrino Flux using DaemonFlux @Yanez:2023lsy
+
+from daemonflux import Flux
+fl = Flux(location='generic', use_calibration=True, debug=1)
+egrid = np.logspace(0,5)
+
+# Start with a square Figure.
+fig = plt.figure(figsize=(6, 6))
+gs = fig.add_gridspec(2, 1, 
+                      left=0.1, right=0.9, bottom=0.1, top=0.9,
+                      height_ratios = (4, 1), wspace=0.05, hspace=0.12)
+# Create the Axes.
+ax_1 = fig.add_subplot(gs[0])
+ax_2 = fig.add_subplot(gs[1], sharex=ax)
+
+ax_1.plot(egrid, fl.flux(egrid, "60", "numuflux")+fl.flux(egrid, "60", "antinumu"), label=r"$\nu_{\mu}$ at $\theta = 60^\circ$")
+ax_1.plot(egrid, fl.flux(egrid, "60", "nueflux"), label=r"$\nu_{e}$ at $\theta = 60^\circ$")
+ax_1.legend()
+ax_1.loglog()
+ax_1.grid()
+ax_2.plot(egrid, fl.flux(egrid, "60", "numuflux")/fl.flux(egrid, "60", "nueflux"), label=r"\nu_{\mu}", lw=2, color="black")
+ax_2.grid()
+ax_2.set_xscale("log")
+ax_2.set_ylim(0, 30)
+ax_2.set_xlim(1, 1e5)
+ax_1.set_xlim(1, 1e5)
+ax_2.set_xlabel(r"$E_\nu$/GeV")
+ax_1.set_ylabel(r"$(E_\nu/\mathrm{ GeV})^3 \Phi_\nu (\mathrm{ GeV}\mathrm{ \;cm}^2\mathrm{ s\; sr})^{-1}$")
+ax_2.set_ylabel(r"$\Phi_{\nu_\mu} / \Phi_{\nu_e}$")
+```
+:::
+
+
+:::{.callout-note}
+In astrophysical sources the ration 2:1 persists. [Why pions don't decay in to electrons?](href="http://en.wikipedia.org/wiki/Pion#Charged_pion_decays)
+:::
+
+### Neutrino Fluxes and Kinematics
+
+As mentioned neutrinos and muons are strongly correlated. However due the two-body kinematics, the energy spectra of the $\nu$’s and $\mu$’s from mesons decay are different. For example, the energy of the muon in CoM is given by: 
+
+$$E_\mu^{*} = (m_\pi^2 + m_\mu^2)/2m_\pi = 109.8\;\mathrm{MeV}$$
+
+and for the neutrino:
+
+$$E_\nu^{*} = (m_\pi^2 - m_\mu^2)/2m_\pi = 29.8\;\mathrm{MeV}$$
+
+In the laboratory system, the energies are boosted by the Lorentz factor $\gamma= E_\pi /m_\pi$, but as can be seen muon carry a much larger fraction of energy than neutrinos. 
+For energies about $1\;\mathrm{TeV}< E_\nu <  10^3\;\mathrm{TeV}$, the angle averaged atmospheric $\nu_\mu + {\bar \nu_\mu}$ can be approximated by a power law spectrum:
+
+$$\frac{\mathrm{d}N_{\nu_\mu + {\bar \nu_\mu}}}{\mathrm{d}E_\nu} = 7.8 \times 10^{-11}\left(\frac{E_\nu}{1\;\mathrm{TeV}}\right)^{-3.6}\mathrm{cm^2\;s^{-1}\;sr^{-1}\;GeV^{-1}}$$
+
+### Fluxes as Function of Zenith
+
+Another difference with respect to the muon fluxes is their dependency with respect to the zenith angle. Since atmospheric muons are not absorved by the Earth, their spectrum spans to the whole sky. The following plot shows the calculated neutrino flux at 1,300 m depth with energies $E_\nu = 10$ GeV.
+
+![Source: [arXiv:1210.5154](http://arxiv.org/abs/1210.5154)](images/nu_zenith.png){fig-align="center" width="60%"}
+
+
+The peak at the horizon in the atmospheric neutrino flux is due to the so-called *secant theta effect*. This effect occurs because pions and kaons that are produced nearly skimming the Earth have more flight time in less dense atmosphere, so they have more chance to decay than interact.
+
+### Prompt Fluxes
+Apart from kaons and pions, charmed messons will also be produced in the atmosphere. Charm particles have lifetimes so short ($10^{-12}$s) they almost alway decay before interacting. Muons and neutrinos from charm decay are called *prompt* muons/neutrinos. They have the following peculiarities:
+
+* The energy spectrum follows the one of the primary cosmic rays ie that of $\sim E^{-2.7}$.
+* Since there is no competition between decay and interaction of the charm particle, the *prompt* flux is fully **isotropic**.
+* Since neutrinos are produced in 3-body decays they produced the same amount of $\nu_\mu$ and $\nu_e$.
+
+It is important to note that the prompt fluxes have not been observed yet.
+
+

@@ -148,7 +148,7 @@ Assuming that Dark Matter exists, there are some conditions this matter must sat
 $$\Omega_{matter} = \Omega_{baryon} + \Omega_{\nu HDM} + \Omega_{CDM} \simeq 0.05 + 0.01 + 0.24 = 0.30 $$ 
 
 
-### The Boltzman equation
+### The Boltzman Equation
 
 Imagine that dark matter is a non-interacting, non-relativistic particle with number density given $n_\chi \propto a^{-3}$. As the universe expands the density is diluting according to:
 

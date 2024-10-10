@@ -1,0 +1,7 @@
+# Introduction
+
+Cosmic ray accelerated are typically surrounded by a radiation field and matter eventually interacting and producing secondary particles. The picture is similar to that of beam dumps in particle accelerators at Earth, where a beam of particles is aimed at a specific target. Among the secondary particles produced we have gamma-rays and neutrinos both of them will point to the accelerators.
+
+![](images/beam_dump.svg)
+
+A cosmic-ray source it is said to be opaque or **optically thick** if photons and protons cannot escape from the source without lossing all or most of their energy. Alternatively a transparent source it is said to be **optically thin**. A source that is very optically thick won't be visible in any messenger except neutrinos. We call those source *hidden sources*.

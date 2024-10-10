@@ -1,13 +1,3 @@
-# Multimessenger Astronomy 
-
-## The Beam Dump
-
-Cosmic ray accelerated are typically surrounded by a radiation field and matter eventually interacting and producing secondary particles. The picture is similar to that of beam dumps in particle accelerators at Earth, where a beam of particles is aimed at a specific target. Among the secondary particles produced we have gamma-rays and neutrinos both of them will point to the accelerators.
-
-![](images/beam_dump.svg)
-
-A cosmic-ray source it is said to be opaque or **optically thick** if photons and protons cannot escape from the source without lossing all or most of their energy. Alternatively a transparent source it is said to be **optically thin**. A source that is very optically thick won't be visible in any messenger except neutrinos. We call those source *hidden sources*.
-
 # Gamma-ray Astronomy
 
 As we saw, the origin of CR remains a mystery due to the deflection of CRs in their travel. Only CR astronomy at $10^{19}$ eV will be possible if the composition of these UHECR are protons, but even in this case the GZK limits the horizon. 
@@ -257,8 +247,7 @@ $$L(\nu) \propto T(\nu) \nu^2 B^{-1/2} \sim \nu^{1/2}\nu^{2}B^{-1/2} \sim \nu^{5
 
 A thing to note is that this part of the spectrum is independent of the orginal electron power-law spectral index.
 
-
-### Tutorial I. Working with SED
+:::{.callout title="Tutorial I: Working with SED using `naima`"}
 
 We are going to plot some SED using a python module called [```naima```](https://github.com/zblz/naima). This package allows for the calculation of non-thermal radiation from relativistic particle populations.
 
@@ -295,6 +284,8 @@ ax.grid()
 ax.legend(loc='upper right')
 plt.show()
 ```
+:::
+
 ### Inverse Compton scattering.{#inverse-compton}
 
 Compton discovered that photons can transfer part of their energy to electrons in a collision. In astrophysics the inverse Compton effect electrons accelerated to high energy collide with photons from the blackbody radiation (thermal photons) or starlight photons and transfer energy to them. 
@@ -343,7 +334,7 @@ because electrons losse energy by a factor $\gamma^2$ and the frequency of photo
 In some cases the synchrotron spectrum can interact with the same electron population that generated them via IC,  scenario is called *Synchrotron Self Compton* (SSC). When external photons are present IC does not need the synchrotron field. Such process is referred as *External Inverse Compton*
 :::
 
-### Tutorial II Working with SED
+:::{.callout title="Tutorial II: Adding the IC "}
 
 We are going now to calculate the IC spectrum using the CMB as the radiation field:
 
@@ -374,6 +365,7 @@ plt.show()
 #### Case of study: Active Galactic Nuclei
 
 As we saw, blazars are a particular classification of AGNs with their relativistic plasma jet oriented close to the line of sight. Because blazars have their jets pointing towards, the full emission comes from a relatively small region (the width of the jets) and so these objects can exhibit rapid variability (due to the smaller causally connected regions). The typical SED for AGNS is characterized by a synchrotron component extending from radio to X-ray frequencies, and a second component peaking at gamma-ray frequencies due to either inverse-Compton radiation (or from hadronic processes). The plot below shows the spectral energy distribution of nearby (z = 0.044) blazar 1ES 2344+514 during a flaring and a quiet state.
+:::
 
 #### Lightcurves and flares
 
@@ -485,7 +477,7 @@ $$n = 1 + \epsilon_0 e^{-h/h_0} $$
 
 where $\epsilon_0 \simeq 2.8 \times 10^{-4}$ at sea level. 
 
-### Tutorial II: Plot of the Cherenkov angle as funcion of the spectral index.
+:::{.callout title="Tutorial III: Plot of the Cherenkov angle as funcion of the spectral index"}
 
 ```{python}
 diffn = np.logspace(-5, 0, 100) #n - 1 form 0.0001 to 1
@@ -510,7 +502,7 @@ print(r"Cherenkov angle in the atmosphere: $\theta_C = %.2f^{\circ}$"%thetaatm)
 
 
 ```
-
+:::
 
 #### Number of photons
 
@@ -551,434 +543,4 @@ where $R$ is the distance to the particle and $\theta$ the scattering angle.
 
 This processes change the Cherenkov spectrum dependending on the altitude. In ice on the other hand, there is no UV absorption and the Cherenkov spectrum keeps the $1/\lambda^2$ tendency.
 
-# Gamma-rays, Cosmic-Rays and Neutrinos
 
-## Introduction
-Both gamma-rays and neutrinos are produced as secondary products of Cosmic-Rays interactions. The dominant channels are:
-
-$$
-\begin{aligned}
-p\gamma &\rightarrow \Delta^+ \rightarrow \begin{cases}
-  p \pi^0 & (2/3)\\
-  n \pi^+ & (1/3)
-  \end{cases}\\
-pp &\rightarrow \begin{cases}
-  pp \pi^0 & (2/3)\\
-  nn \pi^+ & (1/3)
-  \end{cases}
-  \end{aligned}$$
- 
-The same processes occur with neutrons instead of protons leading to $\pi^-$ production. The resulting neutrons can decay or interact. One assumption is that escaping neutrons decay as $n \rightarrow p + e^- + \nu_e$ producing the observed CRs. This is called the **magnetic confiment models** in which the protons are trapped in the magnetic fields and only neutrons escape. The **Waxman-Bachall models** on the other hand assume that some protons escape, and therefore the observed flux of cosmic rays is a lower-limit on the total number of accelerated protons. 
-In both scenarios the charged and neutral pions will decay as:
-
-$$\begin{aligned}
-\pi^+ &\rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu\\
-\pi^- &\rightarrow \mu^- \bar{\nu}_\mu \rightarrow e^- \bar{\nu}_e \nu_\mu\bar{\nu}_\mu \\
-\pi^0 &\rightarrow \gamma\gamma
-\end{aligned}$$
-
-Clearly the productions of neutrinos, cosmic-rays and $\gamma$-rays are closely related.
-
-## $p-p$ interactions
-
-For environments where radiation density is low (too few photons) $pp$ interactions dominate over $p\gamma$ interactions. The cross section of $pp$ interactions is almost energy independent $\sigma_{pp} \sim 4 \times 10^{-26}$ cm$^2$ (See [Kelner et al.]("http://arxiv.org/abs/astro-ph/0606058")). The cross section of this process has a threshold given by:
-
-$$E_{th} = m_p + m_\pi(m_\pi + 4m_p)/2m_p \sim 1.2 \mathrm{\; GeV}$$
-
-
-Therefore most of accelerated protons can interact in the source if there is enough material and the spectra of secondary particles closely follows that of the parent proton spectrum assuming the meson *cooling time* (we usually call *cooling* to any process of energy loss due to radiation) and interaction length are larger than decay time/length (in other words, if the meson decays before loosing energy or interacts).
-
-* If the proton spectrum is **softer** than $\mathrm{ d}N_p/\mathrm{ d}E \sim E^{-2}$, most of the electronmagnetic and neutrino power is in the energy band of 1 GeV. Gamma-ray emission is dominated by the $\pi^0$ decay.
-
-* If the proton spectrum is **harder** than $\mathrm{ d}N_p/\mathrm{ d}E \sim E^{-2}$, most of the energy ouput from proton interactions is at high energy. In this case the main contribution in gamma-ray comes from IC from secondary $e^-e^+$ pairs produced in $\pi^{\pm}$ decays. 
-
-
-## $p-\gamma$ interations
-
-The cross-section of this process has a higher energy threshold than $pp$ interactions given by:
-
-$$E_{th} = \frac{m_p m_{\pi} + m_{\pi}^2}{\epsilon_{ph}} \simeq 7 \times 10^{16} \left[\frac{\epsilon_{ph}}{1\mathrm{\; eV}}\right]^{-1}$$
-
-
-where $\epsilon_{ph}$ is the target photon energy. Because this threshold only the highest energy protons can efficiently interact with the soft-photon fields. This process is the one typically considered for UHECR and extragalactic sources such as AGNs and Gamma-ray Bursts.
-
-## The Waxman-Bahcall Neutrino Flux
-
-The neutrino flux from an optical thin (ie transparent for nucleon-meson interactions) source is usually referred as the [Waxman-Bahcall flux](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.023002).
-
-To derive it let's assume only the extragalactic CR contribution. The energy density is, as we calculated in Lecture 3 given by:
-
-$$\rho_{CR} = \int E n(E) \mathrm{ d} E =4\pi \int_{E_{min}}^{E_{max}} \frac{E}{c}I(E) \mathrm{ d} E \sim 3\times 10^{-19} \mathrm{\; ergs\; cm^{-3}}$$
-
-where assume the extreme energies of the accelerator to be $E_{max}/E_{min} \sim 10^{3}$. If the source is optically thin for $p\gamma$ and $pp$ interactions then the energy flux of neutrinos cannot be greater than that of cosmic-rays (this can only happen in an optically thick source where cosmic-rays do not escape but only neutrinos do). To estimate a bound then we can therefore assume that the same energy density of cosmic rays ends up in neutrinos and electromagnetic energy:
-
-$$\int E_\nu I_\nu (E_\nu) \mathrm{ d}E_\nu = c \frac{\rho_{CR}}{4\pi}$$
-
-Assuming that the neutrino follows a power law of spectrum with an differential spectral index of 2 and a maximum $E_{max} = 10^{8}$ GeV the produced neutrino flux is:
-
-$$E_\nu^2 I_\nu (E_\nu) \sim 5 \times 10^{-8} \mathrm{ \; GeV\; cm^{-2}\; s^{-1}\; sr^{-1}}$$
-
-The Waxman-Bahcall flux is sometimes referred as a bound, in part because more energy is transfer to the neutron than the charged pion (roughtly a factor 4 times more) and so:
-
-$$E_{\nu_\mu}^2 I_{\nu_\mu} (E_{\nu_\mu}) \sim 1 - 5 \times 10^{-8} \mathrm{ \; GeV\; cm^{-2}\; s^{-1}\; sr^{-1}}$$
-
-The value derived above does not account for several things:
-
-* There are more CR than observed at Earth due to the GZK-effect. It also ignores the evolution of the sources as red-shift $\rightarrow$ **increase the neutrino flux.**
-* In $p\gamma$ muon neutrinos (and antineutrinos) from the pion decay $\pi^+ \rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu$ only receive 1/2 of the energy of the charged pion (assuming each lepton carries the same energy) $\rightarrow$ **decrease the neutrino flux**.
-
-In practice these corrections compensate. The other uncertainty is from where to chose $E_{min}$ ie the transition to Galactic sources. In general we can construct a more generic relation between the CR and neutrino flux of the form of:
-
-$$\rho_{CR}(E_{min}) = n_{\nu/p} \rho_{\nu}(E_{min}) = n_{\nu/p}\int_{E_{min}} n_\nu (E_\nu) E_\nu \mathrm{d} E_\nu$$
-
-
-$$ n_{\nu/p} 4\pi \int_{E_{min}} \frac{I_\nu (E_\nu)}{c} E_\nu \mathrm{d} E_\nu = 4\pi \int_{E_{min}} \frac{I_p (E_p)}{c} E_p \mathrm{d} E_p $$
-
-where $n_{\nu/p}$ refers to the number of neutrinos per proton interaction. Ignoring the integrals we get the relation:
-
-$$E_\nu I_\nu (E_\nu) \sim n_{\nu/p} E_p I_p (E_p)$$
-
-Using that the energy of the neutrinos will be a fraction $\langle x_{p\rightarrow \nu} \rangle$ of the proton energy we can rewrite it as:
-
-$$I_\nu (E_\nu) \sim n_{\nu/p} \frac{1}{\langle x_{p\rightarrow \nu} \rangle} I_p (E_p)$$
-
-## The neutrino and gamma connection 
-### Extragalactic $p-\gamma$: Energy fraction
-
-Due to isospin the $\Delta^+$ decays more often to $p$ than $n$.
-$$
-p\gamma \rightarrow \Delta^+ \rightarrow \begin{cases}
-p \pi^0 & (2/3)\\
-  n \pi^+ & (1/3)
-  \end{cases}$$
-
-In both cases, the fraction of energy that goes to the pions is $\langle x_{p\rightarrow\pi}\rangle \sim 0.20$
-. Assuming the pion decays:
-
-$$\pi^0 \rightarrow \gamma\gamma, \mathrm{\;and\;} \pi^+ \rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu$$
-
-We have that:
-1. $\gamma$'s take 1/2 of the neutral pion energy. 
-2. Leptons take 1/4 of the charge pion energy.
-
-And so:
-
-$$\begin{aligned}
-\langle x_{p\rightarrow\nu}\rangle &= \frac{1}{4}\langle x_{p\rightarrow\pi}\rangle =\frac{1}{20}\\
-\langle x_{p\rightarrow\gamma}\rangle &= \frac{1}{2}\langle x_{p\rightarrow\pi}\rangle =\frac{1}{10}
-\end{aligned}$$
-
-###  Extragalactic p-gamma: Number of particles
-
-If we consider only $\nu_\mu$ we have 2 $\nu_\mu$ per pion decay, as well as 2 $\gamma$'s per pion decay. So the spectra can be related as:
-
-$$\begin{aligned}
-    I_{\nu_\mu}(E_{\nu_\mu}) &= 2 \times \frac{1}{3} \frac{1}{\langle x_{p\rightarrow\nu}\rangle} I_{p}(E_{p})\\
-    I_{\gamma}(E_{\gamma}) &= 2\times \frac{2}{3} \frac{1}{\langle x_{p\rightarrow\gamma}\rangle}I_{p}(E_{p})
-\end{aligned}$$
-
-Let's assume a proton spectrum $I_p(E_p) \propto E_p^{-2}$ and so $I_p(E_p)\propto E_{\nu_\mu}^{-2}\langle x_{p\rightarrow\nu}\rangle^2$
-
-$$\begin{aligned}
-    I_{\nu_\mu}(E_{\nu_\mu}) \propto 2 \times \frac{1}{3} \langle x_{p\rightarrow\nu}\rangle E_{\nu_\mu}^{-2} \rightarrow 2 \times \frac{1}{3} \times \frac{1}{20} E_{\nu_\mu}^{-2}\\
-    I_\gamma(E_\gamma) \propto 2 \times \frac{2}{3}\langle x_{p\rightarrow\gamma}\rangle  E_\gamma^{-2} \rightarrow  2 \times \frac{2}{3} \times \frac{1}{10} E_{\gamma}^{-2}
-\end{aligned}$$
-
-So:
-
-$$I_{\nu_\mu} (E_{\nu_\mu}) \sim \frac{1}{4} I_{\gamma}(E_\gamma)$$
-
-
-### Galactic *pp*
-
-In a matter dominated environtment such as Galactic SN shocks CRs interact with the H in the Galactic disk via pp interactions. As we saw these interactions have a lower threshold than $p\gamma$. Let's consider the reaction:
-
-$$p + p \rightarrow p + p + \pi^0 + \pi^+ \pi^-$$
-  
-where we assume that pions are produced with the same probability (1/3). Doing the same calculation as before we get that:
-
-$$\begin{aligned}
-    I_{\nu_\mu}(E_{\nu_\mu}) &\propto 2 \times \frac{1}{3} \langle x_{p\rightarrow\nu}\rangle E_{\nu_\mu}^{-2} \rightarrow 2 \times \frac{2}{3} \times \frac{1}{20} E_{\nu_\mu}^{-2}\\
-    I_\gamma(E_\gamma) &\propto 2 \times \frac{2}{3}\langle x_{p\rightarrow\gamma}\rangle  E_\gamma^{-2} \rightarrow  2 \times \frac{1}{3} \times \frac{1}{10} E_{\gamma}^{-2}
-\end{aligned}$$
-
-
-### Astrophysical Neutrino Oscillations
-
-In the discussion above we focused on muon neutrinos, however we ignored the fact that neutrino oscillate. We saw that the probability of neutrino flavor for $\delta = 0$ can be written as: 
-
-$$\begin{aligned}
-P(\nu_\alpha \rightarrow \nu_\beta) &=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}U^*_{\alpha  j}U_{\beta j}e^{-i\frac{\Delta m^2L}{2E}}\\
-&= \delta_{\alpha\beta}  -  4{\sum_{i>j}\mathrm{ Re}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*}})\sin^{2}(\frac{\Delta m_{ij}^{2}L}{4E})
-\end{aligned}$$
-
-For a non-monochromatic neutrino beam, the probability has to be averaged over the spectrum. The $\sin$ term will be averaged to 0.5 for large distances $L$. And thus the probability does not depend on time and can be written as a matrix:
-
-$$P(\nu_\alpha \rightarrow \nu_\beta) = \sum_j |U_{\alpha  j}|^2 |U_{\beta j}|^2 $$
-
-### Tutorial II: Calculation of astrophysical neutrino oscillations
-
-```{python}
-import numpy as np
-import scipy as sp
-
-def PMNS_Factory(t12, t13, t23, d):
-    s12 = np.sin(t12)
-    c12 = np.cos(t12)
-    s23 = np.sin(t23)
-    c23 = np.cos(t23)
-    s13 = np.sin(t13)
-    c13 = np.cos(t13)
-    cp  = np.exp(1j*d)
-    return np.array([[ c12*c13, s12*c13, s13*np.conj(cp) ],
-                  [-s12*c23 - c12*s23*s13*cp, c12*c23 - s12*s23*s13*cp, s23*c13],
-                  [ s12*s23 - c12*s23*s13*cp,-c12*s23 - s12*c23*s13*cp, c23*c13]])
-
-##Probability of flavor change when L->inf
-def Prob(a, b, U):
-    """
-    Gives the oscillation probability for nu(a) -> nu(b)
-    for PMNS matrix U, and L in km and E in GeV
-    """
-    s = 0
-    for i in range(3):
-            s += (np.conj(U[a,i])*U[b,i]*U[a,i]*np.conj(U[b,i])).real
-    return s
-
-
-def ProbMatrix(U):
-    return np.array([[Prob(0, 0, U), Prob(0, 1, U), Prob(0,2,U)],
-                     [Prob(1, 0, U), Prob(1, 1, U), Prob(1,2,U)],
-                     [Prob(2, 0, U), Prob(2, 1, U), Prob(2,2,U)]])
-                     
-
-t12 = np.arcsin(0.306**0.5)
-t13 = np.arcsin(0.0251**0.5)
-t23 = np.arcsin(0.42**0.5)
-U = PMNS_Factory(t12, t13, t23, 0)
-```
-The probability of a neutrino flavor fector of $(\nu^{source}_e, \nu^{source}_\mu, \nu^{source}_\tau)$ to change into a flavor vector $(\nu^{Earth}_e, \nu^{Earth}_\mu, \nu^{Earth}_\tau)$ is given by:
-
-$$\left(\nu^{Earth}_e \\ \nu^{Earth}_\mu \\ \nu^{Earth}_\tau\right) = P_{\alpha\beta} \left(\nu^{Source}_e \\ \nu^{Source}_\mu \\ \nu^{Source}_\tau\right)$$
-
-Assuming at the source the flavor ratio is (1:2:0) we have that:
-
-```{python}
-Prob(0, 0, U) + Prob(1, 0, U) + Prob(2, 0, U)
-```
-
-```{python}
-source = np.array([1, 1, 1])
-P = ProbMatrix(U)
-Earth = np.dot(P, source)
-print (Earth)
-```
-
-Thus, almost equal number of eletron, muon and tau astrophysical neutrinos are expected to be observed at Earth due to oscillations. More info at [arXiv:hep-ph/0005104](http://arxiv.org/abs/hep-ph/0005104)
-
-
-## Gamma-ray neutrino relation
-After oscillations the neutrino and gamma-rays relations are given by:
-
-$$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{2}\frac{\mathrm{ d}N_\gamma}{\mathrm{ d}E_\gamma} \mathrm{\; for\;} p + p$$
-
-$$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{8}\frac{\mathrm{ d}N_\gamma}{\mathrm{ d}E_\gamma} \mathrm{\; for\;} p + \gamma$$
-
-Assuming an $E^{-2}$ spectrum.
-
-#  Neutrino Astronomy
-
-## Diffuse flux of Astrophysical Neutrinos
-
-The first detection of high-energy neutrinos of cosmic origin in 2013 by the IceCube Neutrino Observatory opened a new window to the non-thermal processes in our universe. The  first  strong  evidence  for  a  cosmic  neutrino  component  came  from a  search  using  data  from  May  2010  to  April  2012  [35],  where  two  shower-like events from interactions within the detector with energies above 1 PeV were discovered.  A follow-up search for events starting in the detector with more than 30 TeV deposited energy that utilized the same dataset identified 25 additional high-energy events.  The spectrum and zenith angle distribution of the events was incompatible with the hypothesis of an atmospheric  origin  at > $4\sigma$. IceCube  has  since  collected  independent  evidence for an astrophysical neutrino signal by analyzing different event signatures.
-
-### Starting Events
-
-Neutrino interactions are identified in IceCube by searching for an interaction  vertex  within  the  instrumented  volume.   This  search  is  sensitive  to both shower-like and track-like events.  Since the main background for this
-search is comprised of muons from CR air showers, the rejection strategy is to identify Cherenkov photons from a track entering the detector.  For that, the outer parts of the instrumented volume are assigned to a “veto” region. An event is rejected if a certain number of Cherekov photons are found in this veto region at earlier times than the photons produced at the interaction vertex. The energy threshold for this analysis is about $E_\nu \sim 30$ TeV.
-
-### Through-going muons
-
-Muons  produced  in  CC  neutrino  interactions  far  outside  the  detector can still reach the instrumented volume to produce track-like events.  Even at  1  TeV  a  muon  can  penetrate  several  kilometers  of  ice  before  it  stops and  decays.   This  allows  observation  of  high-energy  neutrino  interactions from  a  much  larger  volume  than  the  instrumented  one,  thereby  substantially increasing the effective area of the detector.  
-
-
-
-### The spectral fit
-
-The results of a combined analysis fits the neutrino flux to a power-law between 27 TeV and 2 PeV consistent with an unbroken power law with a best-fit spectral index given by:
-
-$$E^2\Phi(E) = 2.06^{+0.35}_{-0.26} \times 10^{-8} \left(\frac{E}{100\;\mathrm{TeV}}\right)^{-0.46\pm 0.12}\; \mathrm{GeV\;s}^{-1}\;\mathrm{sr}^{-1}\mathrm{ cm}^{-2}.$$
-
-However using only the high energy through-going muons (abouve 200 TeV) yields  a preferred spectral index of $-2.13\pm 0.13$
-
-
-### The Search for Point Sources
-
-In the case where the cosmic neutrino flux is dominated by bright individual sources, they should be detectable as a local excess of events on the sky  with  respect  to  the  atmospheric  neutrino  and  diffuse  cosmic  neutrino
-background.  The sensitivity of a search for such features depends crucially on the precision by which the direction of the neutrinos can be reconstructed from the data, i.e.  on the detector angular resolution. No indication for a neutrino point source has been found in the IceCube data so far. The null result of a point-source of neutrinos, can be transformed into an flux upper limit at a given confidence level. This upper limits represents the neutrino flux that we can be certain to exclude, since IceCube did not see a point source.
-
-![Source: IceCube](images/upperlimits.png)
-
-### The Olbers' Paradox
-
-Altough the most famous formulation of the problem comes from Henrich Olbers (1826), probably it was Kepler in 1610 the first to note that the most obvious observation, the night sky is dark, has very important consequences.
-
-![](images/olber.svg)
-
-The idea is quite simple, suppose there is a source population with typical luminosity $L$ in ergs/s and a number density of $n$, then the total power emitted per unit area will be:
-
-$$ F = \int L n \frac{dV}{4\pi^2} = \frac{1}{4\pi}\int L n \mathrm{ d}\Omega \mathrm{ d}r$$
-
-Integrating over all distances we can obtain the energy per steradian per second, and assuming the luminosity is independent of distance as well as number density we have that:
-
-$$\frac{\mathrm{ d} F}{\mathrm{ d}\Omega} = \frac{1}{4\pi} L n \int_0^{\infty} \mathrm{ d}r \rightarrow \infty$$
-
-The sky should be bright! The solution of this puzzle is the fact the Universe is dynamic and time dependent! In other words, if the Universe is expanding the radiation from increasingly distant sources is increasingly less. Also stars seems to have had a cosmological evolution, for example, there are more quasars per unit volume at $z \sim 2$ than now.
-
-Although the Olbers' paradox is no more a paradox, it represents the *problem* that arises with neutrino astronomy. Since the extragalactic space is completely transparent for neutrinos, the flux of neutrinos that might arrive at Earth will have a significant contribution from very distant and faint sources. Let's assume now a source population with typical neutrino luminosity $L\nu(E)$ and with a number density population given by:
-
-$$n(z) = n_0 (1+z)^m$$
-
-where $n_0$ is the *local density* of the source population, (ie the population close to our epoch $z = 0$). The parameter $m$ describes the source cosmological evolution (ie, when sources to appear in the history of the Universe, and how they evolved). Typical values are $m= 3$ for star–formation–like evolution and $m=0$ for no evolution.
-
-Since the Universe expands and sources move with the *Huble flow* we are going to use the comoving line of sight distance, defined as (see Lecture 2):
-
-$$D_c(z) = \int_{t}^{t_0} c\mathrm{ d} t = \frac{c}{H_0} \int^z_0 \frac{\mathrm{ d}z^\prime}{E(z^\prime)}$$
-
-where we introduced the function:
-
-$$E(z)\equiv \sqrt{\Omega_M(1+z)^4 + \Omega_r(1+z)^5 + \Omega_k(1+z)^3 +\Omega_\Lambda(1+z)}$$
-
-revisiting the formula of the energy rate of neutrinos per steroradian we have:
-
-$$\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \frac{1}{4\pi} \frac{c}{H_0}\int_0^{\infty} \frac{L_\nu(E_\nu) n_0(1+z)^m}{E(z)} \mathrm{ d}z$$
-
-The expresion above needs an extra correction. We assumed that energy emitted by the source will be the same at the arrival, however energy will be red-shifted according to $E_\nu (1 + z)$ so the formula it's technically:
-
-$$\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \frac{1}{4\pi} \frac{c}{H_0}\int_0^{\infty} \frac{L_\nu(E_\nu(1+z)) n_0(1+z)^m}{E(z)} \mathrm{ d}z$$
-
-Assuming the luminosity follows a power law with, $L_\nu \propto E^{-\gamma}$, we can rewrite the expression as:
-
-$$\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} $$
-
-where the unit-less parameter $\xi$ is the integral that contains information on the expansion and cosmological evolution of the sources and the spectral index of the sources defined as:
-
-$$\xi = \int_0^{\infty}\frac{(1+z)^{(m - \gamma)}\mathrm{ d} z}{E(z)}$$
-
-Assuming an spectral index of 2, and expressing it as function of the scale factor knowing that:
-
-$$\frac{\mathrm{ d}z}{1+z} = - \frac{\mathrm{ d}a}{a} \rightarrow \mathrm{ d}z = -\frac{\mathrm{ d}a}{a^2}$$ 
-
-and that $z = \infty \rightarrow a = 0$,  $z = 0 \rightarrow a = 1$, we can rewrite the integral as:
-
-$$\xi = \int_0^{1}\frac{a^{-m} \mathrm{ d} a}{E(a)}$$
-
-Where it will depend on the cosmic evolution of the sources. Typical star forming rate evolution  (SFR) has an evolution of $m = 3.4$ in our local universe $z<1 $ and $m=-0.3$ for $ 1< z< 4$ and $m=-3.5$ elsewhere.
-
-
-### Tutorial III: Calculate the value of $\xi$ 
-
-We are going to calculate the value of the parameter $\xi$ for different cosmological evolution of the sources. The SFR evolution is given by the following broken power law formula:
-
-```{python}
-def rho(z):
-    if z < 1.:
-        return (1. + z)**3.4
-    elif z >= 1. and z <= 4.:
-        return (1+1.)**3.4 * ((1.+z)/(1.+1.))**-0.3
-    else:
-        return (1.+1.)**3.4*((1.+4.)/(1.+1.))**-0.3*((1.+z)/(1.+4.))**-3.5
-    
-ax = plt.subplot(111)
-
-z = np.linspace(0, 7, 1000)
-vrho = np.vectorize(rho)
-
-ax.plot(z, vrho(z))
-ax.set_xlabel("z")
-ax.set_ylabel("$n_{SFR}(z)/n_0$")
-ax.grid()
-
-from astropy.cosmology import Planck13 as cosmo
-from scipy import integrate
-
-def xi(z):
-    return cosmo.H0.value/cosmo.H(z).value * rho(z) * (1 + z)**(-2)
-
-integral = integrate.quad(lambda z: xi(z), 0., np.inf)[0]
-
-print(r"$\xi$ = %.2f for an evolution of SFR" %(integral))
-
-integral = integrate.quad(lambda z: cosmo.H0.value/cosmo.H(z).value  * (1 + z)**(-2), 0., 2)[0]
-
-print(r"$\xi$ = %.2f for no cosmological evolution up to redshift z < 2" %(integral))
-
-
-```
-
-
-Therefore the parameter $\xi$ varies between $0.5\sim 3$. We can equate this total neutrino flux per steroradian to the flux observed by IceCube (assuming an spectral index of 2):
-
-$$\xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} = E^2 \Phi_\nu \sim 2.06 \times 10^{-8} \frac{\mathrm{ GeV}}{\mathrm{ cm}^2\mathrm{ s\;} \mathrm{ sr}}$$
-
-```{python}
-#I'm going to use units to avoid stupid mistakes
-import astropy.units as u
-from astropy import constants as const
-from IPython.display import display, Markdown
-
-xi = 0.48
-
-icecube_flux = 2.06e-8 * u.GeV/u.cm**2/u.s/u.sr
-
-Ln = icecube_flux * cosmo.H0.to(1/u.s)/const.c.to(u.Mpc/u.s) * 4 * np.pi * u.sr * xi
-Ln = Ln.to(u.erg/u.Mpc**3/u.yr)
-
-display(Markdown(r"$n_0 L_\nu \sim$ {0:.1e} {1}".format(Ln.value, Ln.unit.to_string("latex"))))
-```
-
-ie, it reaches the value of:
-
-$$n_0 L_\nu \sim 10^{43} \frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}$$
-
-note that this is almost independent of the value of $xi$. We can represent this relation in a diagram now called Kowalski's plot:
-
-![Source: Taken from [arxiv:1411.4385](https://arxiv.org/pdf/1411.4385.pdf)](images/kowalski2.png)
-
-Constrains can also be obtained from the point-source limits. The argument is as follows, if the source population that is responsible of the diffuse astrophysical flux observed in IceCube, is rate (has a low density) then the closest of these sources should have provided a signal in the point-source analysis. 
-Let's assume that $d$ is the distance to the nearest source for a source population with local density $n_0$ so:
-
-$$n_0 \frac{4}{3} \pi d^3 = 1$$
-
-since there is 1 source in an sphere of radius $d$. We can estimate the closest distance to a source of this population as:
-
-$$ d = \left(\frac{1}{\frac{4}{3}\pi n_0}\right)^{1/3} \propto n_0^{-1/3}$$
-
-and thus the estimated neutrino flux for this single point-source is: 
-
-$$E^2 \Phi^{ps}_\nu = \frac{L_\nu}{4\pi d^2} \sim L_\nu n_0^{2/3}$$
-
-A typical value of the neutrino point-source upper limits can be obtained for the Northern sky as:
-
-$$E^2 \Phi^{u.l.}_\nu \leq 2 \times 10^{-9} \mathrm{ GeV} \mathrm{ cm}^{-2}\mathrm{ s}^{-1} $$
-
-so we have the 2 constrains together:
-
-
-$$n_0^{-1/3} \leq \frac{\Phi^{u.l.}}{10^{43}\frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}}$$
-
-which leads to the following condition on the local density of sources from the point-source upper limits:
-
-```{python}
-flux_upperlimit = 2e-9 * u.GeV/u.cm**2 / u.s
-
-n0 = np.power(flux_upperlimit/Ln, -3)
-n0 = n0.to(u.Mpc**-3)
-
-display(Markdown(r"$n_0 \geq$ {0:.1e} {1}".format(n0.value, n0.unit.to_string("latex_inline"))))
-```
-
-#### References
-* High energy neutrinos in the context of multimessenger astrophysics. J. Becker [arXiv:0710.1557v2](https://arxiv.org/abs/0710.1557)
-* Cosmic Neutrinos from the Sources of Galactic and Extragalactic Cosmic Rays. F. Halzen
-[arxiv:0611915](https://arxiv.org/pdf/astro-ph/0611915.pdf)

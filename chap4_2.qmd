@@ -1,0 +1,237 @@
+# Gamma-rays, Cosmic-Rays and Neutrinos
+
+## Introduction
+Both gamma-rays and neutrinos are produced as secondary products of Cosmic-Rays interactions. The dominant channels are:
+
+$$
+\begin{aligned}
+p\gamma &\rightarrow \Delta^+ \rightarrow \begin{cases}
+  p \pi^0 & (2/3)\\
+  n \pi^+ & (1/3)
+  \end{cases}\\
+pp &\rightarrow \begin{cases}
+  pp \pi^0 & (2/3)\\
+  nn \pi^+ & (1/3)
+  \end{cases}
+  \end{aligned}$$
+ 
+The same processes occur with neutrons instead of protons leading to $\pi^-$ production. The resulting neutrons can decay or interact. One assumption is that escaping neutrons decay as $n \rightarrow p + e^- + \nu_e$ producing the observed CRs. This is called the **magnetic confiment models** in which the protons are trapped in the magnetic fields and only neutrons escape. The **Waxman-Bachall models** on the other hand assume that some protons escape, and therefore the observed flux of cosmic rays is a lower-limit on the total number of accelerated protons. 
+In both scenarios the charged and neutral pions will decay as:
+
+$$\begin{aligned}
+\pi^+ &\rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu\\
+\pi^- &\rightarrow \mu^- \bar{\nu}_\mu \rightarrow e^- \bar{\nu}_e \nu_\mu\bar{\nu}_\mu \\
+\pi^0 &\rightarrow \gamma\gamma
+\end{aligned}$$
+
+Clearly the productions of neutrinos, cosmic-rays and $\gamma$-rays are closely related.
+
+## $p-p$ interactions
+
+For environments where radiation density is low (too few photons) $pp$ interactions dominate over $p\gamma$ interactions. The cross section of $pp$ interactions is almost energy independent $\sigma_{pp} \sim 4 \times 10^{-26}$ cm$^2$ (See [Kelner et al.]("http://arxiv.org/abs/astro-ph/0606058")). The cross section of this process has a threshold given by:
+
+$$E_{th} = m_p + m_\pi(m_\pi + 4m_p)/2m_p \sim 1.2 \mathrm{\; GeV}$$
+
+
+Therefore most of accelerated protons can interact in the source if there is enough material and the spectra of secondary particles closely follows that of the parent proton spectrum assuming the meson *cooling time* (we usually call *cooling* to any process of energy loss due to radiation) and interaction length are larger than decay time/length (in other words, if the meson decays before loosing energy or interacts).
+
+* If the proton spectrum is **softer** than $\mathrm{ d}N_p/\mathrm{ d}E \sim E^{-2}$, most of the electronmagnetic and neutrino power is in the energy band of 1 GeV. Gamma-ray emission is dominated by the $\pi^0$ decay.
+
+* If the proton spectrum is **harder** than $\mathrm{ d}N_p/\mathrm{ d}E \sim E^{-2}$, most of the energy ouput from proton interactions is at high energy. In this case the main contribution in gamma-ray comes from IC from secondary $e^-e^+$ pairs produced in $\pi^{\pm}$ decays. 
+
+
+## $p-\gamma$ interations
+
+The cross-section of this process has a higher energy threshold than $pp$ interactions given by:
+
+$$E_{th} = \frac{m_p m_{\pi} + m_{\pi}^2}{\epsilon_{ph}} \simeq 7 \times 10^{16} \left[\frac{\epsilon_{ph}}{1\mathrm{\; eV}}\right]^{-1}$$
+
+
+where $\epsilon_{ph}$ is the target photon energy. Because this threshold only the highest energy protons can efficiently interact with the soft-photon fields. This process is the one typically considered for UHECR and extragalactic sources such as AGNs and Gamma-ray Bursts.
+
+## The Waxman-Bahcall Neutrino Flux
+
+The neutrino flux from an optical thin (ie transparent for nucleon-meson interactions) source is usually referred as the [Waxman-Bahcall flux](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.023002).
+
+To derive it let's assume only the extragalactic CR contribution. The energy density is, as we calculated in Lecture 3 given by:
+
+$$\rho_{CR} = \int E n(E) \mathrm{ d} E =4\pi \int_{E_{min}}^{E_{max}} \frac{E}{c}I(E) \mathrm{ d} E \sim 3\times 10^{-19} \mathrm{\; ergs\; cm^{-3}}$$
+
+where assume the extreme energies of the accelerator to be $E_{max}/E_{min} \sim 10^{3}$. If the source is optically thin for $p\gamma$ and $pp$ interactions then the energy flux of neutrinos cannot be greater than that of cosmic-rays (this can only happen in an optically thick source where cosmic-rays do not escape but only neutrinos do). To estimate a bound then we can therefore assume that the same energy density of cosmic rays ends up in neutrinos and electromagnetic energy:
+
+$$\int E_\nu I_\nu (E_\nu) \mathrm{ d}E_\nu = c \frac{\rho_{CR}}{4\pi}$$
+
+Assuming that the neutrino follows a power law of spectrum with an differential spectral index of 2 and a maximum $E_{max} = 10^{8}$ GeV the produced neutrino flux is:
+
+$$E_\nu^2 I_\nu (E_\nu) \sim 5 \times 10^{-8} \mathrm{ \; GeV\; cm^{-2}\; s^{-1}\; sr^{-1}}$$
+
+The Waxman-Bahcall flux is sometimes referred as a bound, in part because more energy is transfer to the neutron than the charged pion (roughtly a factor 4 times more) and so:
+
+$$E_{\nu_\mu}^2 I_{\nu_\mu} (E_{\nu_\mu}) \sim 1 - 5 \times 10^{-8} \mathrm{ \; GeV\; cm^{-2}\; s^{-1}\; sr^{-1}}$$
+
+The value derived above does not account for several things:
+
+* There are more CR than observed at Earth due to the GZK-effect. It also ignores the evolution of the sources as red-shift $\rightarrow$ **increase the neutrino flux.**
+* In $p\gamma$ muon neutrinos (and antineutrinos) from the pion decay $\pi^+ \rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu$ only receive 1/2 of the energy of the charged pion (assuming each lepton carries the same energy) $\rightarrow$ **decrease the neutrino flux**.
+
+In practice these corrections compensate. The other uncertainty is from where to chose $E_{min}$ ie the transition to Galactic sources. In general we can construct a more generic relation between the CR and neutrino flux of the form of:
+
+$$\rho_{CR}(E_{min}) = n_{\nu/p} \rho_{\nu}(E_{min}) = n_{\nu/p}\int_{E_{min}} n_\nu (E_\nu) E_\nu \mathrm{d} E_\nu$$
+
+
+$$ n_{\nu/p} 4\pi \int_{E_{min}} \frac{I_\nu (E_\nu)}{c} E_\nu \mathrm{d} E_\nu = 4\pi \int_{E_{min}} \frac{I_p (E_p)}{c} E_p \mathrm{d} E_p $$
+
+where $n_{\nu/p}$ refers to the number of neutrinos per proton interaction. Ignoring the integrals we get the relation:
+
+$$E_\nu I_\nu (E_\nu) \sim n_{\nu/p} E_p I_p (E_p)$$
+
+Using that the energy of the neutrinos will be a fraction $\langle x_{p\rightarrow \nu} \rangle$ of the proton energy we can rewrite it as:
+
+$$I_\nu (E_\nu) \sim n_{\nu/p} \frac{1}{\langle x_{p\rightarrow \nu} \rangle} I_p (E_p)$$
+
+## The neutrino and gamma connection 
+### Extragalactic $p-\gamma$: Energy fraction
+
+Due to isospin the $\Delta^+$ decays more often to $p$ than $n$.
+$$
+p\gamma \rightarrow \Delta^+ \rightarrow \begin{cases}
+p \pi^0 & (2/3)\\
+  n \pi^+ & (1/3)
+  \end{cases}$$
+
+In both cases, the fraction of energy that goes to the pions is $\langle x_{p\rightarrow\pi}\rangle \sim 0.20$
+. Assuming the pion decays:
+
+$$\pi^0 \rightarrow \gamma\gamma, \mathrm{\;and\;} \pi^+ \rightarrow \mu^+ \nu_\mu \rightarrow e^+ \nu_e \bar{\nu}_\mu \nu_\mu$$
+
+We have that:
+1. $\gamma$'s take 1/2 of the neutral pion energy. 
+2. Leptons take 1/4 of the charge pion energy.
+
+And so:
+
+$$\begin{aligned}
+\langle x_{p\rightarrow\nu}\rangle &= \frac{1}{4}\langle x_{p\rightarrow\pi}\rangle =\frac{1}{20}\\
+\langle x_{p\rightarrow\gamma}\rangle &= \frac{1}{2}\langle x_{p\rightarrow\pi}\rangle =\frac{1}{10}
+\end{aligned}$$
+
+###  Extragalactic p-gamma: Number of particles
+
+If we consider only $\nu_\mu$ we have 2 $\nu_\mu$ per pion decay, as well as 2 $\gamma$'s per pion decay. So the spectra can be related as:
+
+$$\begin{aligned}
+    I_{\nu_\mu}(E_{\nu_\mu}) &= 2 \times \frac{1}{3} \frac{1}{\langle x_{p\rightarrow\nu}\rangle} I_{p}(E_{p})\\
+    I_{\gamma}(E_{\gamma}) &= 2\times \frac{2}{3} \frac{1}{\langle x_{p\rightarrow\gamma}\rangle}I_{p}(E_{p})
+\end{aligned}$$
+
+Let's assume a proton spectrum $I_p(E_p) \propto E_p^{-2}$ and so $I_p(E_p)\propto E_{\nu_\mu}^{-2}\langle x_{p\rightarrow\nu}\rangle^2$
+
+$$\begin{aligned}
+    I_{\nu_\mu}(E_{\nu_\mu}) \propto 2 \times \frac{1}{3} \langle x_{p\rightarrow\nu}\rangle E_{\nu_\mu}^{-2} \rightarrow 2 \times \frac{1}{3} \times \frac{1}{20} E_{\nu_\mu}^{-2}\\
+    I_\gamma(E_\gamma) \propto 2 \times \frac{2}{3}\langle x_{p\rightarrow\gamma}\rangle  E_\gamma^{-2} \rightarrow  2 \times \frac{2}{3} \times \frac{1}{10} E_{\gamma}^{-2}
+\end{aligned}$$
+
+So:
+
+$$I_{\nu_\mu} (E_{\nu_\mu}) \sim \frac{1}{4} I_{\gamma}(E_\gamma)$$
+
+
+### Galactic *pp*
+
+In a matter dominated environtment such as Galactic SN shocks CRs interact with the H in the Galactic disk via pp interactions. As we saw these interactions have a lower threshold than $p\gamma$. Let's consider the reaction:
+
+$$p + p \rightarrow p + p + \pi^0 + \pi^+ \pi^-$$
+  
+where we assume that pions are produced with the same probability (1/3). Doing the same calculation as before we get that:
+
+$$\begin{aligned}
+    I_{\nu_\mu}(E_{\nu_\mu}) &\propto 2 \times \frac{1}{3} \langle x_{p\rightarrow\nu}\rangle E_{\nu_\mu}^{-2} \rightarrow 2 \times \frac{2}{3} \times \frac{1}{20} E_{\nu_\mu}^{-2}\\
+    I_\gamma(E_\gamma) &\propto 2 \times \frac{2}{3}\langle x_{p\rightarrow\gamma}\rangle  E_\gamma^{-2} \rightarrow  2 \times \frac{1}{3} \times \frac{1}{10} E_{\gamma}^{-2}
+\end{aligned}$$
+
+
+### Astrophysical Neutrino Oscillations
+
+In the discussion above we focused on muon neutrinos, however we ignored the fact that neutrino oscillate. We saw that the probability of neutrino flavor for $\delta = 0$ can be written as: 
+
+$$\begin{aligned}
+P(\nu_\alpha \rightarrow \nu_\beta) &=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}U^*_{\alpha  j}U_{\beta j}e^{-i\frac{\Delta m^2L}{2E}}\\
+&= \delta_{\alpha\beta}  -  4{\sum_{i>j}\mathrm{ Re}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*}})\sin^{2}(\frac{\Delta m_{ij}^{2}L}{4E})
+\end{aligned}$$
+
+For a non-monochromatic neutrino beam, the probability has to be averaged over the spectrum. The $\sin$ term will be averaged to 0.5 for large distances $L$. And thus the probability does not depend on time and can be written as a matrix:
+
+$$P(\nu_\alpha \rightarrow \nu_\beta) = \sum_j |U_{\alpha  j}|^2 |U_{\beta j}|^2 $$
+
+:::{.callout title="Tutorial I: Calculation of astrophysical neutrino oscillations"}
+
+```{python}
+import numpy as np
+import scipy as sp
+
+def PMNS_Factory(t12, t13, t23, d):
+    s12 = np.sin(t12)
+    c12 = np.cos(t12)
+    s23 = np.sin(t23)
+    c23 = np.cos(t23)
+    s13 = np.sin(t13)
+    c13 = np.cos(t13)
+    cp  = np.exp(1j*d)
+    return np.array([[ c12*c13, s12*c13, s13*np.conj(cp) ],
+                  [-s12*c23 - c12*s23*s13*cp, c12*c23 - s12*s23*s13*cp, s23*c13],
+                  [ s12*s23 - c12*s23*s13*cp,-c12*s23 - s12*c23*s13*cp, c23*c13]])
+
+##Probability of flavor change when L->inf
+def Prob(a, b, U):
+    """
+    Gives the oscillation probability for nu(a) -> nu(b)
+    for PMNS matrix U, and L in km and E in GeV
+    """
+    s = 0
+    for i in range(3):
+            s += (np.conj(U[a,i])*U[b,i]*U[a,i]*np.conj(U[b,i])).real
+    return s
+
+
+def ProbMatrix(U):
+    return np.array([[Prob(0, 0, U), Prob(0, 1, U), Prob(0,2,U)],
+                     [Prob(1, 0, U), Prob(1, 1, U), Prob(1,2,U)],
+                     [Prob(2, 0, U), Prob(2, 1, U), Prob(2,2,U)]])
+                     
+
+t12 = np.arcsin(0.306**0.5)
+t13 = np.arcsin(0.0251**0.5)
+t23 = np.arcsin(0.42**0.5)
+U = PMNS_Factory(t12, t13, t23, 0)
+```
+The probability of a neutrino flavor fector of $(\nu^{source}_e, \nu^{source}_\mu, \nu^{source}_\tau)$ to change into a flavor vector $(\nu^{Earth}_e, \nu^{Earth}_\mu, \nu^{Earth}_\tau)$ is given by:
+
+$$\left(\nu^{Earth}_e \\ \nu^{Earth}_\mu \\ \nu^{Earth}_\tau\right) = P_{\alpha\beta} \left(\nu^{Source}_e \\ \nu^{Source}_\mu \\ \nu^{Source}_\tau\right)$$
+
+Assuming at the source the flavor ratio is (1:2:0) we have that:
+
+```{python}
+Prob(0, 0, U) + Prob(1, 0, U) + Prob(2, 0, U)
+```
+
+```{python}
+source = np.array([1, 1, 1])
+P = ProbMatrix(U)
+Earth = np.dot(P, source)
+print (Earth)
+```
+
+Thus, almost equal number of eletron, muon and tau astrophysical neutrinos are expected to be observed at Earth due to oscillations. More info at [arXiv:hep-ph/0005104](http://arxiv.org/abs/hep-ph/0005104)
+
+:::
+
+
+## Gamma-ray neutrino relation
+After oscillations the neutrino and gamma-rays relations are given by:
+
+$$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{2}\frac{\mathrm{ d}N_\gamma}{\mathrm{ d}E_\gamma} \mathrm{\; for\;} p + p$$
+
+$$\frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu} = \frac{1}{8}\frac{\mathrm{ d}N_\gamma}{\mathrm{ d}E_\gamma} \mathrm{\; for\;} p + \gamma$$
+
+Assuming an $E^{-2}$ spectrum.
+
