@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 6&nbsp; Extra-Galactic Cosmic Rays: The Knee and Beyond</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap3_0.html" rel="next">
+<link href="./chap2_0.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap2_1.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gamma-ray Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gamma-rays, Cosmic-Rays and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-knee" id="toc-sec-knee" class="nav-link active" data-scroll-target="#sec-knee">The Knee</a></li>
+  <li><a href="#the-ankle-and-the-end-of-the-spectrum" id="toc-the-ankle-and-the-end-of-the-spectrum" class="nav-link" data-scroll-target="#the-ankle-and-the-end-of-the-spectrum">The Ankle and the End of the Spectrum</a></li>
+  <li><a href="#high-energy-cosmic-ray-composition" id="toc-high-energy-cosmic-ray-composition" class="nav-link" data-scroll-target="#high-energy-cosmic-ray-composition">High Energy Cosmic Ray Composition</a></li>
+  <li><a href="#sources-of-extra-galactic-cosmic-rays" id="toc-sources-of-extra-galactic-cosmic-rays" class="nav-link" data-scroll-target="#sources-of-extra-galactic-cosmic-rays">Sources of Extra Galactic Cosmic Rays</a>
+  <ul class="collapse">
+  <li><a href="#the-disk-dynamo" id="toc-the-disk-dynamo" class="nav-link" data-scroll-target="#the-disk-dynamo">The Disk Dynamo</a></li>
+  <li><a href="#candidates-of-extra-galactic-cosmic-rays-sources" id="toc-candidates-of-extra-galactic-cosmic-rays-sources" class="nav-link" data-scroll-target="#candidates-of-extra-galactic-cosmic-rays-sources">Candidates of Extra Galactic Cosmic Rays Sources</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap2_1.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-knee" class="level2">
+<h2 class="anchored" data-anchor-id="sec-knee">The Knee</h2>
+<p>At energies of about 5 <span class="math inline">\(\times 10^{15}\; \mathrm{eV}\)</span> a steepening in the spectrum from <span class="math inline">\(\gamma \sim 1.7 \rightarrow \gamma \sim 2\)</span> known as the <em>knee</em> takes place. Already Peters in 1959 concluded that it could be due to:</p>
+<ul>
+<li>Consequence of the breakdown of an acceleration mechanism.</li>
+<li>Increased rate of escape from the galaxy at high energies.</li>
+</ul>
+<div id="5bd24524" class="cell" data-fig-label="fig-knee" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> crdb</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'axes.labelsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'legend.fontsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'figure.figsize'</span>: [<span class="dv">8</span>, <span class="dv">6</span>]})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.size'</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.size'</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'legend.frameon'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'lines.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> crdb.experimental <span class="im">import</span> convert_energy</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>elements <span class="op">=</span> (<span class="st">"H"</span>, <span class="st">"He"</span>, <span class="st">"C"</span>, <span class="st">"N"</span>, <span class="st">"O"</span>, <span class="st">"Si"</span>, <span class="st">"Fe"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>elements <span class="op">+=</span> (<span class="st">"1H-bar"</span>, <span class="st">"e-+e+"</span>, <span class="st">"AllParticles"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>tabs <span class="op">=</span> []</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> energy_type <span class="kw">in</span> (<span class="st">"EKN"</span>, <span class="st">"ETOT"</span>):</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        tab <span class="op">=</span> crdb.query(</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>            elem,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>            energy_type<span class="op">=</span>energy_type,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>            energy_convert_level<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> energy_type <span class="op">==</span> <span class="st">"EKN"</span>:</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            tab <span class="op">=</span> convert_energy(tab, <span class="st">"EK"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        tabs.append(tab)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> np.concatenate(tabs).view(np.recarray)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> np.errstate(divide<span class="op">=</span><span class="st">"ignore"</span>):</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> (tab.err_sys[:, <span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (tab.err_sta[:, <span class="dv">0</span>] <span class="op">/</span> tab.value <span class="op">&lt;</span> <span class="fl">0.5</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> tab[mask]</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>xlim <span class="op">=</span> <span class="fl">1e4</span>, <span class="fl">1e11</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">5</span>))</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem <span class="kw">in</span> elements:</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    tab <span class="op">=</span> tab[(xlim[<span class="dv">0</span>] <span class="op">&lt;</span> tab.e) <span class="op">&amp;</span> (tab.e <span class="op">&lt;</span> xlim[<span class="dv">1</span>])]</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    ma <span class="op">=</span> tab.quantity <span class="op">==</span> elem</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(tab) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span>  </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">"k"</span> <span class="cf">if</span> elem <span class="op">==</span> <span class="st">"AllParticles"</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> tab[ma]</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(t) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> t.e<span class="op">**</span><span class="fl">2.7</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    sta <span class="op">=</span> np.transpose(t.err_sta)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">"k"</span> <span class="cf">if</span> elem <span class="op">==</span> <span class="st">"AllParticles"</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    ax.errorbar(t.e, t.value <span class="op">*</span> f, sta<span class="op">*</span>f, fmt<span class="op">=</span><span class="st">"."</span>, color<span class="op">=</span>color, label<span class="op">=</span>elem)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>ax.loglog()</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$E_k^</span><span class="sc">{2.7}</span><span class="vs">$ d$J$/d$E_k$ [GeV$^</span><span class="sc">{1.7}</span><span class="vs">$ / (m$^2$ s sr)]"</span>)</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_k$ [GeV]"</span>)</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="chap2_1_files/figure-html/cell-2-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="The Knee of the CR spectrum"><img src="chap2_1_files/figure-html/cell-2-output-1.png" width="551" height="453" alt="The Knee of the CR spectrum" class="figure-img"></a></p>
+<figcaption>The Knee of the CR spectrum</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>A third explanation could be a change in CR interactions at <span class="math inline">\({\sqrt s}\sim\)</span> few TeV. The first two explanantions produce a rigidity dependent <em>knee</em>, ie the position of the <em>knee</em> for different nuclei depends on <span class="math inline">\(Z\)</span>, while the third explanation will depend on <span class="math inline">\(A\)</span>. Experimentally the rigidity dependence is favored.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/knee.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/knee.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<p>Experimentally at these energies we cannot observe cosmic-rays in a direct way. We need to start looking at their interactions with the atmosphere (see lecture 3 on air-shower physics). This imposses limitation on the precision of the cosmic ray composition. In particular different models of hadronic interactions have to be assumed.</p>
+</section>
+<section id="the-ankle-and-the-end-of-the-spectrum" class="level2">
+<h2 class="anchored" data-anchor-id="the-ankle-and-the-end-of-the-spectrum">The Ankle and the End of the Spectrum</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/ankle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/ankle.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><p>A proton of energies <span class="math inline">\(10^{18}\)</span> eV has a gyroradious of a kpc in a typical magnetic field which hints at an extra-Galactic origin for these energies.</p></li>
+<li><p>Greissen-Zatsepin and Kuz-min predicted that at energies of <span class="math inline">\(\sim 10^{19}\)</span> eV will interact with the low energy photons of the CMB. This interaction leads to a supression of flux above <span class="math inline">\(5\times10^{19}\)</span> eV unless the sources are within a few tens of Mpc. This supression is referred as GZK cutoff.</p></li>
+</ul>
+</section>
+<section id="high-energy-cosmic-ray-composition" class="level2">
+<h2 class="anchored" data-anchor-id="high-energy-cosmic-ray-composition">High Energy Cosmic Ray Composition</h2>
+<ul>
+<li>Composition of the high energy CR spectrum involves only two archetypes: light nuclei (protons) and heavy nuclei (iron).</li>
+<li>The plots above show Auger / HiRes measurements near GZK cutoff, all favoring at least a mixed composition tending toward heavy at the higher energies.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/AugerUHECRComp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/AugerUHECRComp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="sources-of-extra-galactic-cosmic-rays" class="level2">
+<h2 class="anchored" data-anchor-id="sources-of-extra-galactic-cosmic-rays">Sources of Extra Galactic Cosmic Rays</h2>
+<p>As we shaw, CR in supernova remmants or blast waves can only accelerate CR <strong>up to 100 Z TeV</strong>. In order to explain CR beyond this energy, one has to invoke other processes such as Non-Linear Diffusion Acceleration, or extremely high magnetic fields (as suggested in Hillas plot).</p>
+<p>Binary systems in which a compact object (black hole, neutrino star, pulsar) is permanentely dragging material for an accompaying object (normal star or galaxy) and whirled into an accreation disk can generate enourmouse plasma motions with very strong electromagnetic fields. The image belowe shows an artistic representation of 4U 0614+091, a X-ray binary.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="http://2.bp.blogspot.com/_viputHRpZ2A/TB9vhOAIFJI/AAAAAAAADnk/TiLb5xiigM0/s1600/REFLECTION_4_B.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="http://2.bp.blogspot.com/_viputHRpZ2A/TB9vhOAIFJI/AAAAAAAADnk/TiLb5xiigM0/s1600/REFLECTION_4_B.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<section id="the-disk-dynamo" class="level3">
+<h3 class="anchored" data-anchor-id="the-disk-dynamo">The Disk Dynamo</h3>
+<p>Black holes or neutrino stars will have matter acretting around them. Due to the gravitational pull, matter will be ripped of in molecules, atoms, and ultimately elementary charge particles. The energy gain of infalling protons will correspond to the variation in the gravitational potential. If we equal the variation of gravitational potential to the kinetic energy of the accretting matter we have in the classical approach:</p>
+<p><span class="math display">\[\frac{1}{2}m_p v^2 = \Delta E = -\int^{R}_\infty G\frac{m_p M}{r^2} = G\frac{m_p M}{R}  \rightarrow v =\sqrt{\frac{2 GM}{R}},\]</span></p>
+<p>where <span class="math inline">\(M\)</span>, <span class="math inline">\(R\)</span>, are the mass and radius of the central compact object.</p>
+<ul>
+<li><p>For a neutron star (<span class="math inline">\(M\approx 2\times10^{30}\)</span> kg, <span class="math inline">\(R= 10\)</span> km): <span class="math inline">\(\frac{\Delta E}{m_p} \sim 1.32\times 10^{20} \;\mathrm{erg/g}\)</span></p></li>
+<li><p>For a black hole (<span class="math inline">\(M\approx 10^8 M_\odot\)</span>, <span class="math inline">\(R = R_S = 2\frac{GM}{c^2}\)</span>): <span class="math inline">\(\frac{\Delta E}{m_p} \sim 5 \times 10^{20} \;\mathrm{erg/g}\)</span></p></li>
+</ul>
+<p>The variable magnetic field of the neutron stars or black holes are perpendicular to the direction of the accreation disk generating a Lorentz force:</p>
+<p><span class="math display">\[\vec{F} = e (\vec{v} \times \vec{B}) = e\vec{E}\]</span></p>
+<p>So the energy obtained is</p>
+<p><span class="math display">\[E=\int \vec{F}d\vec{s} = e v B\Delta s,\]</span></p>
+<p>where <span class="math inline">\(\Delta s\)</span> is the distance over which the force acts. Under plausible assumptions (<span class="math inline">\(v \sim c\)</span>, <span class="math inline">\(B= 10^6\)</span> T, <span class="math inline">\(\Delta s = 10^5\)</span> m) energies of <span class="math inline">\(3\times 10^{19}\)</span> eV are possible.</p>
+</section>
+<section id="candidates-of-extra-galactic-cosmic-rays-sources" class="level3">
+<h3 class="anchored" data-anchor-id="candidates-of-extra-galactic-cosmic-rays-sources">Candidates of Extra Galactic Cosmic Rays Sources</h3>
+<p>The two main candidates for ExtraGalactic Cosmic Rays are:</p>
+<ul>
+<li><strong>Active Galactic Nuclei (AGN)</strong></li>
+<li><strong>Gamma Ray Bursts</strong></li>
+</ul>
+<section id="active-galactic-nuclei-agns" class="level4">
+<h4 class="anchored" data-anchor-id="active-galactic-nuclei-agns">Active Galactic Nuclei (AGNs)</h4>
+<ul>
+<li><p>Discovered in 1932 by K. Jansky looking for noise in transatlantic radio transmission for the Bell Telephone Labs. He found a persistent noise in the radio from the centre of the Galaxy too loud to be due to thermal black body radiation.</p></li>
+<li><p>1953 Ginzburg &amp; Shklovski suggested it was due to synchrotron radiation from highly relativistic electrons, confirmed with discovery of predicted polarization in M87 light.</p></li>
+<li><p>Sandange labeled 3C48 a quasar or quasi-stellar object (it appeared pointlike).</p></li>
+<li><p>In 1962 3C273 radio source position was found with precision of 1 arcsec, which allowed to find the optical counterpart at z = 0.158 (not 1 star but a galaxy).</p></li>
+<li><p>In 1963 Hoyle and Fowler speculated that the tremendous emitted energy is due to the gravitational collapse of a very massive object.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="AGN Classification">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+AGN Classification
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>There is two broad classes: <strong>Radio quiet</strong> (90%) and <strong>Radio Loud</strong> (10%) depending on the pressence of jets or not.</li>
+<li>The unified model of ANGs suggests that different AGNs are infact the same object seen from different angles.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/agn_model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/agn_model.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gamma-ray-bursts" class="level4">
+<h4 class="anchored" data-anchor-id="gamma-ray-bursts">Gamma-Ray Bursts</h4>
+<ul>
+<li><p>GRBs are short bursts lasting a few seconds of <span class="math inline">\(\gamma\)</span>-ray photons from 0.1 - 1 MeV.</p></li>
+<li><p>They were discovered in the 60s by the U.S. Vela satellites, which were built to detect gamma radiation pulses emitted by nuclear weapons tested in space as the US suspected the URSS might carry on secret nuclear tests despite the <a href="http://en.wikipedia.org/wiki/Nuclear_Test_Ban_Treaty">Nuclear Test Ban Treaty</a>.</p></li>
+<li><p>They have been hypothesed (given their occurence) to have caused mass extintions events (thousand times since life begun), in particular they are associated with the <a href="http://en.wikipedia.org/wiki/Ordovician%E2%80%93Silurian_extinction_event">Ordovician–Silurian extinction</a>.</p></li>
+<li><p>There is some observational evidence suggesting that progenitor of a GRB are stars undergoing a catastrophic energy release by the end of their lifes <span class="math inline">\(\rightarrow\)</span> Hypernovas</p></li>
+</ul>
+<p>The accepted phenomenological pictured of GRBs is of an expanding relativistic wind <em>fireball</em> dissipating kinetic energy. The observed <em>afterglow</em> on some GRBs result from the collision of the expanding fireball and the surroundings.</p>
+<p>In the fireball, the observed radiation is produced by synchrotron emission of shock accelerated electrons, similar to SNRs. Hence, it is likely that protons will be also shock accelerated. The two conditition for GRBs to be sources of UHECR are:</p>
+<ol type="1">
+<li><p>The proton acceleration time must be smaller that the wind expansion time, ie, you need to accelerate protons during the burst duration.</p></li>
+<li><p>The proton synchrotron loss time must exceed the acceleration time, otherwise you loose energy before you accelerate them.</p></li>
+</ol>
+<p>These two conditions lead to a constrain in the Lorentz boost factor for GRBs:</p>
+<p><span class="math display">\[\gamma \geq 130\left(\frac{E}{10^{20}\mathrm{\; eV}}\right)^{3/4}\left(\frac{0.01\mathrm{\; s}}{\Delta t}\right)^{1/4}\]</span></p>
+<p>which matches what we see from GRBs. However IceCube has <a href="http://arxiv.org/abs/1204.4219">not seen any neutrino associated with GRBs</a> which puts in tension the idea that GRBs can be the only sources of UHECR.</p>
+</section>
+</section>
+<section id="references" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Claus" class="csl-entry" role="listitem">
+Grupen, Claus. n.d. <em>Astro Particle Physics</em>.
+</div>
+<div id="ref-kachelriess2008lecture" class="csl-entry" role="listitem">
+Kachelriess, M. 2008. <span>“Lecture Notes on High Energy Cosmic Rays.”</span> <a href="https://arxiv.org/abs/0801.4376">https://arxiv.org/abs/0801.4376</a>.
+</div>
+<div id="ref-Kampert_2014" class="csl-entry" role="listitem">
+Kampert, Karl-Heinz, and Peter Tinyakov. 2014. <span>“Cosmic Rays from the Ankle to the Cutoff.”</span> <em>Comptes Rendus. Physique</em> 15 (4): 318–28. <a href="https://doi.org/10.1016/j.crhy.2014.04.006">https://doi.org/10.1016/j.crhy.2014.04.006</a>.
+</div>
+<div id="ref-72925f46-3bcd-305f-ad05-7b07a9fbcf25" class="csl-entry" role="listitem">
+Melia, Fulvio. 2009. <em>High-Energy Astrophysics</em>. Vol. 14. Princeton University Press. <a href="http://www.jstor.org/stable/j.ctv21r3q4z">http://www.jstor.org/stable/j.ctv21r3q4z</a>.
+</div>
+<div id="ref-Workman:2022ynf" class="csl-entry" role="listitem">
+Workman, R. L., and Others. 2022. <span>“<span class="nocase">Review of Particle Physics</span>.”</span> <em>PTEP</em> 2022: 083C01. <a href="https://doi.org/10.1093/ptep/ptac097">https://doi.org/10.1093/ptep/ptac097</a>.
+</div>
+</div>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">The Knee of the CR spectrum</span>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap2_0.html" class="pagination-link  aria-label=" &lt;span="" are="" cosmic="" rays?&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap3_0.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>Cosmic Rays in the Atmosphere</span>">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

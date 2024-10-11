@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 9&nbsp; Particles Underground</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap4_0.html" rel="next">
+<link href="./chap3_1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap3_2.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gamma-ray Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gamma-rays, Cosmic-Rays and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#muon-interactions" id="toc-muon-interactions" class="nav-link active" data-scroll-target="#muon-interactions">Muon Interactions</a>
+  <ul class="collapse">
+  <li><a href="#muon-energy-losses" id="toc-muon-energy-losses" class="nav-link" data-scroll-target="#muon-energy-losses">Muon Energy losses</a></li>
+  <li><a href="#muon-range" id="toc-muon-range" class="nav-link" data-scroll-target="#muon-range">Muon Range</a></li>
+  </ul></li>
+  <li><a href="#neutrino-interactions" id="toc-neutrino-interactions" class="nav-link" data-scroll-target="#neutrino-interactions">Neutrino Interactions</a>
+  <ul class="collapse">
+  <li><a href="#weak-interaction" id="toc-weak-interaction" class="nav-link" data-scroll-target="#weak-interaction">Weak interaction</a></li>
+  <li><a href="#neutrino-cross-sections-at-gev" id="toc-neutrino-cross-sections-at-gev" class="nav-link" data-scroll-target="#neutrino-cross-sections-at-gev">Neutrino Cross-sections at GeV</a></li>
+  <li><a href="#neutrino-cross-sections-at-tev" id="toc-neutrino-cross-sections-at-tev" class="nav-link" data-scroll-target="#neutrino-cross-sections-at-tev">Neutrino Cross-sections at TeV</a></li>
+  <li><a href="#high-energy-cross-sections" id="toc-high-energy-cross-sections" class="nav-link" data-scroll-target="#high-energy-cross-sections">High energy Cross-sections</a></li>
+  </ul></li>
+  <li><a href="#neutrino-signatures-in-a-neutrino-detector" id="toc-neutrino-signatures-in-a-neutrino-detector" class="nav-link" data-scroll-target="#neutrino-signatures-in-a-neutrino-detector">Neutrino Signatures in a Neutrino Detector</a>
+  <ul class="collapse">
+  <li><a href="#event-rate-in-an-underground-experiment" id="toc-event-rate-in-an-underground-experiment" class="nav-link" data-scroll-target="#event-rate-in-an-underground-experiment">Event Rate in an Underground Experiment</a></li>
+  </ul></li>
+  <li><a href="#neutrino-oscillations" id="toc-neutrino-oscillations" class="nav-link" data-scroll-target="#neutrino-oscillations">Neutrino Oscillations</a>
+  <ul class="collapse">
+  <li><a href="#the-pmns-matrix" id="toc-the-pmns-matrix" class="nav-link" data-scroll-target="#the-pmns-matrix">The PMNS Matrix</a></li>
+  <li><a href="#the-2-flavor-mixing-case" id="toc-the-2-flavor-mixing-case" class="nav-link" data-scroll-target="#the-2-flavor-mixing-case">The 2-flavor mixing case</a></li>
+  <li><a href="#general-case-for-oscillations" id="toc-general-case-for-oscillations" class="nav-link" data-scroll-target="#general-case-for-oscillations">General Case for Oscillations</a></li>
+  <li><a href="#about-symmetries." id="toc-about-symmetries." class="nav-link" data-scroll-target="#about-symmetries.">About symmetries.</a></li>
+  <li><a href="#mass-hierarchy" id="toc-mass-hierarchy" class="nav-link" data-scroll-target="#mass-hierarchy">Mass hierarchy</a></li>
+  <li><a href="#experimental-results-on-oscillations" id="toc-experimental-results-on-oscillations" class="nav-link" data-scroll-target="#experimental-results-on-oscillations">Experimental Results on Oscillations</a></li>
+  <li><a href="#neutrino-oscillations-in-matter." id="toc-neutrino-oscillations-in-matter." class="nav-link" data-scroll-target="#neutrino-oscillations-in-matter.">Neutrino oscillations in matter.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap3_2.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="muon-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="muon-interactions">Muon Interactions</h2>
+<p>When muon reaches the ground the will experience the following interactions when travelling through matter with a higher density than air. The will losse energy mostly through the following processes:</p>
+<ul>
+<li><strong>Ionization.</strong> The continuous energy loss of muons passing through a medium as it ionize the material along the path. We saw however that ionization is mostly independent of the material, as most of them have values of <span class="math inline">\(Z/A \sim 0.5\)</span>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_ionization.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/muon_ionization.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><strong>Bremsstrahlung.</strong> Also called braking radiation. In the electric field of a nucleus or atomic electrons, muons can radiate high energy photons. If the photon has energy enough it can initiate an electromagnetic shower.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_bremsstrahlung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/muon_bremsstrahlung.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><strong>Pair production.</strong> A muon can radiate a virtual photon which, again in the electric field of a nucleus, can convert into a real <span class="math inline">\(e^+e^-\)</span> pair. As in the case of bremsstrahlung, the pair production will initate an electromagnetic shower.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_pair-production.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/muon_pair-production.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><strong>Photonuclear interactions.</strong> A muon can radiate a virtual photon which directly interacts with a nucleus in the muon propagation medium. The interaction is either electromagnetic or following the fluctuation of the photon into a quark-antiquark pair (i.e.&nbsp;a virtual vector meson). This interaction will generate an hadronic shower.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_photonuclear.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/muon_photonuclear.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<section id="muon-energy-losses" class="level3">
+<h3 class="anchored" data-anchor-id="muon-energy-losses">Muon Energy losses</h3>
+<p>The energy losses due to ionization are continuous while in radiation processes the energy is lost in bursts along the muon path. When a muon is travelling through a dielectric medium like ice or water, it will emit cherenkov photons as wells, but due to the stochastics energy losses electromagnetic and hadronic showers are generated along the muon track. The following figure illustrates this process:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon_energylosses.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/muon_energylosses.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+</figure>
+</div>
+<p>It is worth noting that photonuclear interactions are subdominant when compared to bremsstrahlung and pair-production, so most of the showers will be electromagnetic showers. The equation that describes the energy loss for muons at high energy can be simplified to:</p>
+<p><span class="math display">\[\frac{\mathrm{ d}E_\mu}{\mathrm{ d}X} = -\alpha -\beta E_\mu\]</span></p>
+<p>where <span class="math inline">\(X\)</span> is the thickness of the material (in <span class="math inline">\(\mathrm{ g/cm}^2\)</span>), <span class="math inline">\(\alpha\)</span> is the energy loss due to ionization and <span class="math inline">\(\beta = \beta_{br} + \beta_{pair} + \beta_{ph}\)</span> are the three discrete energy loss processes: bremsstrahlung, electron-positron production and electromagnetic interaction with the nuclei. Thickness is also given sometimes in units of meters water equivalent (1 m.w.e. = <span class="math inline">\(10^2 \mathrm{\; g/cm^2}\)</span>). Due to the energy dependency of the radiative processes, higher energy muons will have more stochastic energy losses than lower energy muons.</p>
+<p>The <strong>critical energy</strong> is when both losses are equal, ie <span class="math inline">\(\epsilon_\mu = \alpha/\beta\)</span>. Typical values are <span class="math inline">\(\alpha \simeq 2 \mathrm{ \;MeV\;g}^{-1} \mathrm{ \;cm}^2\)</span> and <span class="math inline">\(\beta \simeq 4 \times 10^{-6} \;\mathrm{ g^{-1}\;cm^2}\)</span>, so <span class="math inline">\(\epsilon_\mu \approx 500\)</span> GeV.</p>
+<p>The following plots showd simulated muons bundles in <a href="https:icecube.wisc.edu">IceCube</a>. The stochastic energy losses are particular clear in the right figure.</p>
+<div class="{.layout-ncol=2}">
+<p><img src="images/musmooth.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"> <img src="images/mustochastic.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</div>
+</section>
+<section id="muon-range" class="level3">
+<h3 class="anchored" data-anchor-id="muon-range">Muon Range</h3>
+<p>By solving the energy loss equation we can estimate the range <span class="math inline">\(R\)</span> for a muon <span class="math inline">\(E_\mu\)</span>, ie the underground depth this muon will reach until its energy is 0 (in reality the muon when reaching low energies will decay):</p>
+<p><span class="math display">\[ R(E_\mu) = \frac{1}{\beta}\log\left( 1 + \frac{E_\mu}{\epsilon_\mu}\right)\]</span></p>
+<p>Assuming the muon spectrum at sea level can be approximated to a power law <span class="math inline">\(I_\mu(&gt;E_\mu) = AE_\mu^{-\gamma}\)</span> and using the relationship between range and energy we can write the <em>depth-intensity relation</em> (DIR):</p>
+<p><span class="math display">\[I_\mu(&gt;E_\mu, R) = A\left[\frac{\alpha}{\beta}(e^{\beta R} - 1)\right]^{-\gamma}\]</span></p>
+<p>The plot below shows the depth-intensity muons for vertical directions. The grey-area are neutrino-induced muons (horizontal, up-wards)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/muon-depth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/muon-depth.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="neutrino-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="neutrino-interactions">Neutrino Interactions</h2>
+<section id="weak-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="weak-interaction">Weak interaction</h3>
+<p>Neutrinos feel only the weak force thus interactions with matter mediated by <span class="math inline">\(W\)</span> and <span class="math inline">\(Z\)</span> bosons with cross-sections typical of weak processes. Feynman diagrams factor along two lines:</p>
+<ul>
+<li>Neutral current (NC) interactions - exchange of <span class="math inline">\(Z\)</span></li>
+<li>Charged current (CC) interaction - exchange of <span class="math inline">\(W^{\pm}\)</span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/neutrino-interactions.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/neutrino-interactions.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>Neutrinos will scatter from electrons as well as nuclear matter.</p>
+<ul>
+<li><p>For energies <span class="math inline">\(E_\nu &lt; 1 \mathrm{GeV}\)</span> neutrinos interact with hadronds via <strong>elastic</strong> or <strong>quasielastic scattering</strong>.</p></li>
+<li><p>For energies <span class="math inline">\(E_\nu \gg 1 \mathrm{GeV}\)</span> neutrinos do not scatter on hadronds as a compound of quarks, they start to <em>see</em> and interact directly with the quarks, this is the so-called <strong>Deep Inelastic Scattering</strong>.</p></li>
+</ul>
+</section>
+<section id="neutrino-cross-sections-at-gev" class="level3">
+<h3 class="anchored" data-anchor-id="neutrino-cross-sections-at-gev">Neutrino Cross-sections at GeV</h3>
+<p>The anti-neutrino cross-section at GeV energies is a factor ~2 lower (naively should be 3, but the factor 2 comes from the structure function of the nucleus) than the neutrino cross-section due to the helicity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/pdg_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/pdg_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>At <span class="math inline">\(E_\nu \gg 1 \mathrm{GeV}\)</span> the total DIS cross-section (ie, assuming CC and NC together) can be approximated to:</p>
+<p><span class="math display">\[\sigma_{\nu p} \simeq 0.69 \times 10^{-38} \left(\frac{E_\nu}{ 1 \mathrm{\; GeV}}\right) \mathrm{ \; cm}^2\]</span> <span class="math display">\[\sigma_{\bar{\nu} p} \simeq 0.35 \times 10^{-38}\left(\frac{E_\nu}{ 1 \mathrm{\; GeV}}\right) \mathrm{ \; cm}^2\]</span></p>
+<p>Sometimes the cross-section is expressed as <span class="math inline">\(\nu + N\)</span> where <span class="math inline">\(N\)</span> is the nucleon definition as:</p>
+<p><span class="math display">\[N = \frac{n+p}{2}\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Earth is transparent to GeV neutrinos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Earth is transparent to GeV neutrinos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are going to calculate the mean free path of neutrinos of energies of <span class="math inline">\(\sim GeV\)</span>. Note that mean free path can be expressed as:</p>
+<p><span class="math display">\[l = \frac{1}{n_N \sigma_{\nu N}}\]</span></p>
+<p>where <span class="math inline">\(n_N\)</span> is the number density of <em>nucleons</em> and not atoms. As we saw in lecture 2 we can re-express the number density as:</p>
+<p><span class="math display">\[n_N = \frac{N_A}{\mathcal{M}}\rho\]</span></p>
+<p>where <span class="math inline">\(\mathcal{M}\)</span> is the molar mass of one mole of nucleons and <span class="math inline">\(\rho\)</span> is the mass density of the medium. However, by definition a mol of nucleons has a mass of 1 g (Remember that a mol of <span class="math inline">\(^{12}C\)</span> atoms has a mass of 12 g). So, we can rewrite as <span class="math inline">\(n_N = N_A \rho\)</span>. Below there is another way to estimate the mean free path:</p>
+<div id="03cc232a" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> ct</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Earth mass</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (ct.M_earth)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Neutron/proton mass</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (ct.m_n)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Earth radius</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (ct.R_earth)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#number of nucleons</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> ct.M_earth<span class="op">/</span>ct.m_n </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Earth volume</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Ve <span class="op">=</span> <span class="dv">4</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span>np.pi<span class="op">*</span>ct.R_earth<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Nucleon density</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Nd <span class="op">=</span> N<span class="op">/</span>Ve</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Cross section</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="fl">1e-38</span> <span class="op">*</span> u.cm<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#Mean free path:</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(s <span class="op">*</span> Nd.to(<span class="dv">1</span><span class="op">/</span>u.cm<span class="op">**</span><span class="dv">3</span>))</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f"The mean free path is: </span><span class="sc">{</span>L<span class="sc">.</span>to(u.km)<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Name   = Earth mass
+  Value  = 5.972167867791379e+24
+  Uncertainty  = 1.3422009501651213e+20
+  Unit  = kg
+  Reference = IAU 2015 Resolution B 3 + CODATA 2018
+  Name   = Neutron mass
+  Value  = 1.67492749804e-27
+  Uncertainty  = 9.5e-37
+  Unit  = kg
+  Reference = CODATA 2018
+  Name   = Nominal Earth equatorial radius
+  Value  = 6378100.0
+  Uncertainty  = 0.0
+  Unit  = m
+  Reference = IAU 2015 Resolution B 3
+The mean free path is: 304808158.92 km</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="neutrino-cross-sections-at-tev" class="level3">
+<h3 class="anchored" data-anchor-id="neutrino-cross-sections-at-tev">Neutrino Cross-sections at TeV</h3>
+<ul>
+<li><p>At low energies the valence quark parton distribution dominates and both the neutrino NC and CC cross-section grows linear with energy since the transfer momemtum is <span class="math inline">\(q^2 \ll M_{W,Z}\)</span> and so the propagator term is <span class="math inline">\(\sim 1/M^2_{W,Z}\)</span></p></li>
+<li><p>Above 10<span class="math inline">\(^{4}\)</span> GeV where the gauge-boson propagator restricts the momentum transfer to values near <span class="math inline">\(M_{W,Z}\)</span> (<span class="math inline">\(\sim 1/(q^2 - M^2_{W,Z})\)</span>) and damps the cross-section increase.</p></li>
+</ul>
+<p><a href="images/break_cc_new.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/break_cc_new.png" class="img-fluid"></a></p>
+</section>
+<section id="high-energy-cross-sections" class="level3">
+<h3 class="anchored" data-anchor-id="high-energy-cross-sections">High energy Cross-sections</h3>
+<p>The following shows the neutrino cross section:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/uhenucx.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Calculated neutrino cross sections taken from arXiv:1309.1764"><img src="images/uhenucx.png" class="img-fluid figure-img" alt="Calculated neutrino cross sections taken from arXiv:1309.1764"></a></p>
+<figcaption>Calculated neutrino cross sections taken from <a href="http://arxiv.org/abs/1309.1764">arXiv:1309.1764</a></figcaption>
+</figure>
+</div>
+<ul>
+<li><p>At high energies the asymetry between neutrinos and antineutrinos is lost due to the interaction with <em>sea quarks</em> (<span class="math inline">\(q\bar{q}\)</span>)</p></li>
+<li><p>Neutrinos interact mostly with hadrons (quarks) instead of electrons due the their larger target mass. However at <span class="math inline">\(E_\nu \approx 6.3\)</span> PeV the Glashow resonance appears: <span class="math inline">\({\hbar \nu_e} + e \rightarrow W\)</span> making the cross-section higher than the one with hadrons.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Earth is opaque to PeV neutrinos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Earth is opaque to PeV neutrinos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>At about 100 TeV the mean free path for neutrino-nucleus scattering is about 10<span class="math inline">\(^{10}\)</span> c.m.w.e. which is about the matter thickness along the Earth diameter.</p></li>
+<li><p>This means that UHE neutrino observatories (like IceCube) the flux of neutrinos comming from the nadir is stronly suppressed.</p></li>
+<li><p>There is only one exception. A very high energy beam of <span class="math inline">\(\nu_\tau\)</span> at one side of the Earth <span class="math inline">\(E\gg 1\)</span> PeV can end up at the other side as lower energy <span class="math inline">\(\nu_\tau, \nu_e,\nu_\mu\)</span> thought the <strong>tau regeneration</strong> effect: <span class="math inline">\(\nu_\tau \rightarrow \tau \rightarrow \nu_\tau\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="neutrino-signatures-in-a-neutrino-detector" class="level2">
+<h2 class="anchored" data-anchor-id="neutrino-signatures-in-a-neutrino-detector">Neutrino Signatures in a Neutrino Detector</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/nu_signatures.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/nu_signatures.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><ol start="2" type="a">
+<li>In CC <span class="math inline">\(\nu_e\)</span> interactions an hadronic and EM shower initiated by the <span class="math inline">\(e\)</span> is produced. About 20% of the energy goes in the hadronic shower and 80% to the lepton and therfore to the EM shower.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>In CC <span class="math inline">\(\nu_\tau\)</span> d) interaction again an hadronic and EM shower are produced as the <span class="math inline">\(\tau\)</span> decays almost inmediately to pions or other charge leptons. In the decay another <span class="math inline">\(\nu_\tau\)</span> is produced <strong>tau regeneration effect</strong>. At very high energyes the two showers can be separated giving a <em>double bang</em> signature or a <em>lollipop</em> if the first shower happens outside the detector.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>In CC <span class="math inline">\(\nu_\mu\)</span> the muon only undergoes radiation losses (not ionization) and hence the track of the muon can be reconstructed.</li>
+</ol></li>
+<li><ol type="a">
+<li>In NC only an hadronic shower is visible.</li>
+</ol></li>
+</ul>
+<section id="event-rate-in-an-underground-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="event-rate-in-an-underground-experiment">Event Rate in an Underground Experiment</h3>
+<p>An estimate of the detection rate of neutrino events is equivalent to calculate the rate of a neutrino-induced muon/cascades flux:</p>
+<p><span class="math display">\[R(E_{vis}, \theta) = \int_{E_{vis}} P_{\nu\rightarrow l} (E_\nu, E_{vis}) P_{shadow}(\theta, E_\nu) \frac{\mathrm{ d}N_\nu}{\mathrm{ d}E_\nu}\mathrm{ d}E_\nu\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(P_{\nu\rightarrow l}(E_\nu, E_{vis})\)</span> is the probability that a neutrino interacts with an nucleus to produce a <span class="math inline">\(\mu\)</span> or an EM or hadronic cascade with a minimum energy <span class="math inline">\(E_{vis}\)</span> <em>visible</em> in the detector.</li>
+<li><span class="math inline">\(P_{shadow} (\theta, E_\nu)\)</span>. Probability of neutrino with zenith angle <span class="math inline">\(\theta\)</span> and energy <span class="math inline">\(E_\nu\)</span> of being absorved by Earth.</li>
+<li><span class="math inline">\({\mathrm{ d}N_\nu}/{\mathrm{ d}E_\nu}\)</span>. Neutrino flux at the surface.</li>
+</ul>
+<section id="interaction-probability-p_nurightarrow-l" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interaction-probability-p_nurightarrow-l">Interaction probability: <span class="math inline">\(P_{\nu\rightarrow l}\)</span></h4>
+<p>The probability of a neutrino to produce a lepton or shower visible in the detector can be writen as:</p>
+<p><span class="math display">\[P_{\nu \rightarrow l} = N_A \int_{E_{min}}^{E_\nu} \mathrm{ d}E_l \frac{\mathrm{ d}\sigma}{\mathrm{ d}E_l}r_l(E_l, E_{vis})\]</span></p>
+<p>where <span class="math inline">\(r_l\)</span> is the detection range of the produced lepton/cascade with energy <span class="math inline">\(E_l\)</span> ending with the minimal energy <span class="math inline">\(E_{vis}\)</span>, and <span class="math inline">\({\mathrm{ d}\sigma}/{\mathrm{ d}E_l}\)</span> is the neutrino cross-section to produce a lepton/cascade with energy <span class="math inline">\(E_l\)</span>.</p>
+<p>At high energy the event rate is dominated by neutrino-induced muons due to the long range of the high energy muons.</p>
+</section>
+<section id="earth-shadow-p_shadow" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="earth-shadow-p_shadow">Earth Shadow: <span class="math inline">\(P_{shadow}\)</span></h4>
+<p>The mean free path of neutrinos can be expressed as <span class="math inline">\(\lambda = (N_A \sigma_{tot})^{-1}\)</span>. The shadow fact then can be expressed as:</p>
+<p><span class="math display">\[P_{shadow} = e^{-N_A \sigma_{tot} X(\theta)}\]</span></p>
+<p>Where <span class="math inline">\(X(\theta)\)</span> is the column depth travelled by the neutrino through the Earth with a zenith angle <span class="math inline">\(\theta\)</span>.</p>
+<p>See <strong>Exercises 2</strong> for an evaluation of the event rate in an underground detector.</p>
+</section>
+</section>
+</section>
+<section id="neutrino-oscillations" class="level2">
+<h2 class="anchored" data-anchor-id="neutrino-oscillations">Neutrino Oscillations</h2>
+<p>Neutrinos are generated in flavor eingenstate however propagation is done in mass eingenstate, since each planar wave has a different frecuency given their different masses, the neutrino detected (also in flavor eingenstate) will have a different interference pattern than the one generated given rise to neutrino flavor oscillations.</p>
+<ul>
+<li><p>As a result of these changes in relative phases, neutrinos oscillate from one flavor to another as they travel. Low-energy neutrinos oscillate in a shorter distance than high-energy neutrinos.</p></li>
+<li><p>A curious aspect of quantum physics is that only the <strong>probability of the flavor of neutrino changes as it travels</strong>.</p></li>
+<li><p>The neutrino <em>only becomes a definite flavor when it interacts</em> in a detector - by finding whether an electron, muon, tau is created.</p></li>
+</ul>
+<section id="the-pmns-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="the-pmns-matrix">The PMNS Matrix</h3>
+<p>The Pontecorvo-Maki-Nakagawa-Sakata matrix is the one that relates the mass eingenstates with the flavor eingenstates:</p>
+<p><span class="math display">\[\begin{pmatrix} \nu_e \\ \nu_\mu \\ \nu_\tau \end{pmatrix} = U_{PMNS} \begin{pmatrix} \nu_1 \\ \nu_2 \\ \nu_1 \end{pmatrix}\]</span></p>
+<p>with:</p>
+<p><span class="math display">\[
+\begin{aligned}
+U_{PMNS} &amp;=
+\begin{pmatrix}
+c_{12}c_{13} &amp; s_{12}c_{13} &amp; s_{13}e^{-i\delta} \\
+-s_{12}c_{23} - c_{12}s_{23}s_{13}e^{i\delta} &amp; c_{12}c_{23} - s_{12}s_{23}s_{13}e^{i\delta} &amp; s_{23}c_{13} \\
+s_{12}s_{23} - c_{12}c_{23}s_{13}e^{i\delta} &amp; -c_{12}s_{23} - s_{12}c_{23}s_{13}e^{i\delta} &amp; c_{23}c_{13} \end{pmatrix} \\
+&amp;= \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\ 0 &amp; c_{23} &amp; s_{23} \\ 0 &amp; -s_{23} &amp; c_{23}
+\end{pmatrix}
+\begin{pmatrix}
+c_{13} &amp; 0 &amp; s_{13}e^{-i\delta} \\ 0 &amp; 1 &amp; 0 \\ -s_{13}e^{i\delta} &amp; 0 &amp; c_{13}
+\end{pmatrix}
+\begin{pmatrix}
+c_{12} &amp; s_{12} &amp; 0 \\ -s_{12} &amp; c_{12} &amp; 0 \\ 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(s_{ij} = \sin \theta_{ij}\)</span>, <span class="math inline">\(c_{ij} = \cos \theta_{ij}\)</span>. The term <span class="math inline">\(\delta\)</span> is a CP violation term, if <span class="math inline">\(s_{13} = 0\)</span> we won’t be able to measure <span class="math inline">\(\delta\)</span> as it always multiplies <span class="math inline">\(s_{13}\)</span></p>
+</section>
+<section id="the-2-flavor-mixing-case" class="level3">
+<h3 class="anchored" data-anchor-id="the-2-flavor-mixing-case">The 2-flavor mixing case</h3>
+<p>Let’s assume 2 flavor eigenstates identified as rotations of 2 mass eigenstates:</p>
+<p><span class="math display">\[\begin{pmatrix} \nu_e \\ \nu_\mu \end{pmatrix} = \begin{pmatrix} \cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} \nu_1 \\ \nu_2 \end{pmatrix}.\]</span></p>
+<p>The angle <span class="math inline">\(\theta\)</span> is called the mixing angle.</p>
+<p>The mass eigenstates evolve as plane waves with fixed momemtum <span class="math inline">\(p\)</span>:</p>
+<p><span class="math display">\[|\nu_{i}(t, x)\rangle = e^{ -i (E_{i} t - p_i x) }|\nu_{i}(0,0)\rangle\]</span></p>
+<p>Let’s imagine we start at <span class="math inline">\((x,t) = (0,0)\)</span> with a pure beam of <span class="math inline">\(\nu_e\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} \cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} \nu_1(0,0) \\ \nu_2(0,0) \end{pmatrix}.\]</span></p>
+<p><span class="math display">\[|\nu_{1}(0,0)\rangle = \cos \theta\]</span> <span class="math display">\[|\nu_{2}(0,0)\rangle = \sin \theta\]</span></p>
+<p>and as they evolved:</p>
+<p><span class="math display">\[|\nu_{1}(t,x)\rangle = \cos \theta e^{ -i (E_{1} t - p_1 x)  }\]</span> <span class="math display">\[|\nu_{2}(t,x)\rangle = \sin \theta e^{ -i (E_{2} t - p_2 x) }\]</span></p>
+<p>So after a while the wave form of the <span class="math inline">\(\nu_\alpha\)</span> is given by:</p>
+<p><span class="math display">\[|\nu_{e}(t, x)\rangle = \cos^2 \theta e^{ -i (E_{1} t - p_1 x)  } + \sin^2 \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span> <span class="math display">\[|\nu_{\mu}(t, x)\rangle = -\sin\theta\cos \theta e^{ -i (E_{1} t - p_1 x)  } + \cos\theta\sin \theta e^{ -i (E_{2} t - p_2 x) } = A_e\]</span></p>
+<section id="example-of-survival-probability-for-the-2-flavor-mixing" class="level4">
+<h4 class="anchored" data-anchor-id="example-of-survival-probability-for-the-2-flavor-mixing">Example of survival probability for the 2-flavor mixing</h4>
+<p><span class="math display">\[\begin{aligned}
+P(\nu_e \rightarrow \nu_\mu) = \left|\langle \nu_{\mu}(t,x)|\nu_{e}(0,0)\rangle\right|^2 &amp;=\left|\cos\theta \sin\theta (e^{i(E_2 t - p_2 x)} - e^{i(E_1 t -p_1 x)})\right|^2\\
+&amp;=
+\cos^2\theta\sin^2\theta \left|e^{i(E_2 t - p_2 x)} - e^{i(E_1 t -p_1 x)}\right|^2
+\end{aligned}
+\]</span></p>
+<p>using <span class="math inline">\(e^{\pm ix} = \cos x \pm i\sin x\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+P(\nu_e \rightarrow \nu_\mu)&amp;= 2 \cos^2\theta\sin^2\theta ( 1 - \cos (E_2t - p_2x - E_1 t - p_1 x))\\
+&amp;= \sin^2 2\theta \sin^2 \left(\frac{(E_2 - E_1)t - (p_2 - p_1)x }{2}\right) \\
+&amp;=\sin^2 2\theta \sin^2 \left(\frac{\Delta m_{12}^2 L}{4E}\right)
+\end{aligned}
+\]</span></p>
+<p>using <span class="math inline">\(p_i = \sqrt{E^2_i -m_i^2}\sim E_i(1-\frac{m^2_i}{E_i^2})\)</span>, and in natural units <span class="math inline">\(t = x = L\)</span> we can write the phase difference as:</p>
+<p><span class="math display">\[(E_2 - E_1)t - (p_2 - p_1)x = (\frac{m_1^2}{2E_1}-\frac{m_2^2}{2E_2})L = \frac{\Delta m_{12}^2L}{2E}\]</span></p>
+<p>And the survival probability is:</p>
+<p><span class="math display">\[P(\nu_e \rightarrow \nu_e)  = 1 - P(\nu_e \rightarrow \nu_\mu) = 1- \sin^2 2\theta \sin^2\left(\frac{\Delta m_{12}^2 L}{4E}\right)\]</span></p>
+<p>Replacing <span class="math inline">\(\hbar\)</span> and <span class="math inline">\(c\)</span> the expression can be written as:</p>
+<p><span class="math display">\[P(\nu_e \rightarrow \nu_e)  = 1 - \sin^2 2\theta \sin^2\left[1.27 \left(\frac{\Delta m^2_{12}}{\mathrm{eV}^2}\right)\frac{L/\mathrm{km}}{E/\mathrm{GeV}}\right]\]</span></p>
+<p>We assumed that the mass eigenstates are created with the same energy or momentum and so <span class="math inline">\(E_i = E_j\)</span>.This assumption is not necessary and it comes from the fact we use the plane wave approximation. Using the correct formalism of wave packets the result is the same.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial I: Plot the survival probability of $\nu_e \rightarrow \nu_e$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial I: Plot the survival probability of <span class="math inline">\(\nu_e \rightarrow \nu_e\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="21c280b1" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'axes.labelsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'legend.fontsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'figure.figsize'</span>: [<span class="dv">8</span>, <span class="dv">6</span>]})</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.size'</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.size'</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'legend.frameon'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'lines.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">180</span> <span class="co"># km</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>delta_m_sun <span class="op">=</span> <span class="fl">7.0e-5</span> <span class="co"># eV^2</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>sin_square_theta_12 <span class="op">=</span> <span class="fl">0.84</span> <span class="co">#maximum mixing</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prob_survival(E, L):</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">-</span> sin_square_theta_12 <span class="op">*</span> np.sin(<span class="fl">1.27</span><span class="op">*</span>delta_m_sun <span class="op">*</span> L <span class="op">/</span> E)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">4</span>))</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_\nu (\mathrm{ MeV})$"</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$P_</span><span class="sc">{ee}</span><span class="st">$"</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">15</span>, <span class="dv">1000</span>) <span class="co">#in MeV</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.plot(E, prob_survival(E<span class="op">*</span><span class="fl">1e-3</span>,L), lw<span class="op">=</span><span class="dv">2</span>, </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">"L = </span><span class="sc">%i</span><span class="st"> km</span><span class="ch">\n</span><span class="st">"</span><span class="op">%</span>L<span class="op">+</span><span class="vs">r"$P_</span><span class="sc">{ee}</span><span class="vs"> = 1 -\sin^2 2\theta\sin^2(\Delta m^2L/4E_\nu)$"</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"best"</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="chap3_2_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="chap3_2_files/figure-html/cell-3-output-1.png" width="835" height="387" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Eventually at low enough E / long baselines, neutrino beam becomes fully mixed and energy resolution and source extent conspire to produce 50/50 beam.</p>
+<div id="a90056c8" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y, x <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">50</span>,<span class="dv">180</span>,<span class="dv">100</span>), np.linspace(<span class="fl">0.1</span>, <span class="dv">15</span>, <span class="dv">100</span>) )</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> prob_survival(x<span class="op">*</span><span class="fl">1e-3</span>,y)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> ax.pcolormesh(x, y, z, cmap <span class="op">=</span> <span class="st">'RdBu'</span>, shading<span class="op">=</span><span class="st">'auto'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> fig.colorbar(img)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Distance (km)"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$E_\nu (\mathrm{ MeV})$"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>cax.set_label(<span class="st">"Probability"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="chap3_2_files/figure-html/cell-4-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="chap3_2_files/figure-html/cell-4-output-1.png" width="817" height="459" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="general-case-for-oscillations" class="level3">
+<h3 class="anchored" data-anchor-id="general-case-for-oscillations">General Case for Oscillations</h3>
+<p>Taking greek letters of the flavor eingenstates and latin letter the mass eingenstates we can write:</p>
+<p><span class="math display">\[|\nu_\alpha(x,t)\rangle = \sum_{k=1,2,3} U_{\alpha k} |\nu_k (x,t)\rangle = \sum_{k=1,2,3} U_{\alpha k} e^{-i\Phi_k}|\nu_k (0,0)\rangle\]</span></p>
+<p>inverting the mixing matrix we have:</p>
+<p><span class="math display">\[|\nu_k (0,0)\rangle =\sum_\gamma U^*_{\gamma  k} |\nu_\gamma(0,0)\rangle\]</span></p>
+<p>putting it in the equation above:</p>
+<p><span class="math display">\[|\nu_\alpha(x,t)\rangle =\sum_{k=1,2,3} U_{\alpha k} e^{-i\Phi_k}\sum_\gamma U^*_{\gamma  k} |\nu_\gamma(0,0)\rangle\]</span></p>
+<p>If we want to evaluate the probability of finding a neutrino <span class="math inline">\(\beta\)</span> when we had <span class="math inline">\(\alpha\)</span> is the transition amplitude is given by:</p>
+<p><span class="math display">\[\begin{aligned}
+\mathcal{A}(\nu_\alpha(0,0)\rightarrow \nu_\beta(x,t)) &amp;= \langle \nu_\beta(x,t)|\nu_\alpha(0,0)\rangle \\
+&amp;= \sum_\gamma \sum_k U_{\gamma k}e^{i\Phi_k}U^*_{\beta k}\langle \nu_\gamma(0,0)|\nu_\alpha(0,0)\rangle \\
+&amp;= \sum_k U_{\alpha  k}e^{i\Phi_k}U^*_{\beta k}
+\end{aligned}\]</span></p>
+<p>where we used the fact that flavor eingenstates are ortogonal and hence <span class="math inline">\(\langle \nu_\gamma(0,0)|\nu_\alpha(0,0)\rangle = \delta_{\gamma,\alpha}\)</span>.</p>
+<p>The oscillation probability is then:</p>
+<p><span class="math display">\[\begin{aligned}
+P(\nu_\alpha \rightarrow \nu_\beta) = |\mathcal{A}(\nu_\alpha(0,0)\rightarrow \nu_\beta(x,t))|^2 &amp;= \left|\sum_k U_{\alpha i}e^{i\Phi_i}U^*_{\beta i}\right|^2\\
+&amp;=\sum_i U_{\alpha i}e^{i\Phi_i}U^*_{\beta i}\sum_j U^*_{\alpha j}e^{-i\Phi_j}U_{\beta j}\\
+&amp;=\sum_j\sum_i U_{\alpha i}U^*_{\beta i}U^*_{\alpha j}U_{\beta j}e^{-i(\Phi_j-\Phi_i)}
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(\Phi_i = E_i t- p_i x\)</span> and so:</p>
+<p><span class="math display">\[\Phi_i - \Phi_j = (E_i - E_j)t - (p_i -p_j)x\]</span></p>
+<p>using <span class="math inline">\(p_i = \sqrt{E^2_i -m_i^2}\sim E_i(1-\frac{m^2_i}{E_i^2})\)</span> we can write the phase difference as:</p>
+<p><span class="math display">\[\Phi_i - \Phi_j = (\frac{m_i^2}{2E_i}-\frac{m_j^2}{2E_j})L = \frac{\Delta m_{ij}^2L}{2E}\]</span></p>
+<p>where we used the fact that at relativistic speeds <span class="math inline">\(t = x = L\)</span> and a dodgy approximation where we assumed that the mass eigenstates are created with the same energy or momentum and so <span class="math inline">\(E_i = E_j\)</span>.This assumption is not necessary, but we find that whatever assumption is made you get the the same result. The fact that we have to make such an approximation comes from the way that we are modelling the mass eigenstates as plane waves. If we were to do the analysis assuming that the mass states were wavepackets instead we would not need the equal momentum (equal energy) assumption and would still get the same answer.</p>
+<p>With this we can rewrite the oscillation probability as:</p>
+<p><span class="math display">\[\begin{matrix}P(\nu_\alpha \rightarrow \nu_\beta)=\delta_{\alpha\beta} &amp; - &amp; 4{\displaystyle \sum_{i&gt;j}\mathrm{ Re}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*}})\sin^{2}(\frac{\Delta m_{ij}^{2}L}{4E})\\ &amp; + &amp; {\displaystyle 2\sum_{i&gt;j}\mathrm{ Im}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(}\frac{\Delta m_{ij}^{2}L}{2E}),\end{matrix}\]</span></p>
+<p>For <span class="math inline">\(\delta = 0\)</span> the last term is 0.</p>
+</section>
+<section id="about-symmetries." class="level3">
+<h3 class="anchored" data-anchor-id="about-symmetries.">About symmetries.</h3>
+<ul>
+<li>Consequences of CPT invariance:</li>
+</ul>
+<p><span class="math display">\[P(\nu_\alpha \rightarrow \nu_\beta) = P({\bar \nu_\beta} \rightarrow {\bar \nu_\alpha})\]</span></p>
+<ul>
+<li>Conditions of CP invariance:</li>
+</ul>
+<p><span class="math display">\[P(\nu_\alpha \rightarrow \nu_\beta) = P({\bar \nu_\alpha} \rightarrow {\bar \nu_\beta}) \]</span></p>
+<ul>
+<li>Condition os T invariance:</li>
+</ul>
+<p><span class="math display">\[P({\nu_\alpha} \rightarrow {\nu_\beta}) = P({\nu_\beta} \rightarrow {\nu_\alpha})\mathrm{\; and\; }P({\bar \nu_\alpha} \rightarrow {\bar \nu_\beta}) = P({\bar \nu_\beta} \rightarrow {\bar\nu_\alpha})\]</span></p>
+<p>Only if <span class="math inline">\(U\)</span> is not real we can have CP violation effects ie:</p>
+<p><span class="math display">\[P(\nu_\alpha \rightarrow \nu_\beta) - P({\bar \nu_\alpha} \rightarrow {\bar \nu_\beta}) ={ 4 \sum_{i&gt;j}\mathrm{ Im}(U_{\alpha i}^{*}U_{\beta i}U_{\alpha j}U_{\beta j}^{*})\sin(}\frac{\Delta m_{ij}^{2}L}{2E})\]</span></p>
+</section>
+<section id="mass-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="mass-hierarchy">Mass hierarchy</h3>
+<p>But this means that neutrinos oscillations can be described in terms of 6 parameters: <span class="math inline">\(\theta_{12}\)</span>, <span class="math inline">\(\theta_{13}\)</span> and <span class="math inline">\(\theta_{23}\)</span> plus 2 mass-squared differences, <span class="math inline">\(\Delta m_{12}^2\)</span> and <span class="math inline">\(\Delta m_{32}^2\)</span> and one CP violating phase <span class="math inline">\(\delta_{CP}\)</span>. Althought we can measured the mass-squared differences in neutrino oscillation experiments, we cannot know the absolute scales nor the mass hierarchy.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://inspirehep.net/files/ce8abf20fa840b880444095bc363c6b2.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14" title="Source: arXiv:1205.2671"><img src="https://inspirehep.net/files/ce8abf20fa840b880444095bc363c6b2.png" class="img-fluid figure-img" alt="Source: arXiv:1205.2671"></a></p>
+<figcaption>Source: <a href="https://inspirehep.net/record/1114323">arXiv:1205.2671</a></figcaption>
+</figure>
+</div>
+<p>Where <span class="math inline">\(\Delta m_{12}^2 = \Delta m_{Sol}^2\)</span> and <span class="math inline">\(\Delta m_{31(2)}^2 = \Delta m_{atm}^2\)</span>. Sometimes <span class="math inline">\(\Delta m_{atm}^2\)</span> is defined as: <span class="math display">\[\Delta m_{atm}^2  =\left| m_3^2 - \frac{(m_1^2 + m_2^2)}{2} \right|\]</span></p>
+</section>
+<section id="experimental-results-on-oscillations" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-results-on-oscillations">Experimental Results on Oscillations</h3>
+<p>Assuming <span class="math inline">\(\Delta m_{21}^2 \ll \Delta m_{31}^2 \sim \Delta m_{32}^2\)</span> and small <span class="math inline">\(\theta_{13}\)</span> different detectors can prove different sectors of the oscillation parameters:</p>
+<ul>
+<li><strong>Atmospheric and Long Baseline Accelerators</strong>:</li>
+</ul>
+<p><span class="math display">\[\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; c_{23} &amp; s_{23} \\ 0 &amp; -s_{23} &amp; c_{23} \end{pmatrix}\]</span></p>
+<p>If <span class="math inline">\(\Delta m_{21}^2L/E \ll 1\)</span> this experiments are sensitive to the oscillation <span class="math inline">\(P(\nu_\mu \rightarrow \nu_\tau) \simeq \sin^2 2\theta_{23}\sin^2\frac{\Delta m_{31}^2}{3E}L\)</span></p>
+<ul>
+<li><strong>Short Baseline Reactors</strong>: <span class="math display">\[\begin{pmatrix} c_{13} &amp; 0 &amp; s_{13}e^{-i\delta}\\ 0 &amp; 1 &amp; 0\\ -s_{13}e^{i\delta} &amp; 0 &amp; c_{13}\end{pmatrix}\]</span></li>
+</ul>
+<p>If <span class="math inline">\(\Delta m_{21}^2L/E \ll 1\)</span> this experiments are sensitive to the oscillation <span class="math display">\[ P(\nu_e \rightarrow \nu_e) \simeq 1 - \sin^2 2\theta_{13}\sin^2\frac{\Delta m_{31}^2}{3E}L\]</span></p>
+<ul>
+<li><strong>Solar and Long Baseline</strong>:</li>
+</ul>
+<p><span class="math display">\[\begin{pmatrix} c_{12} &amp; s_{12} &amp; 0 \\ -s_{12} &amp; c_{12} &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\]</span></p>
+<p>If <span class="math inline">\(\Delta m_{31}^2L/E \gg 1\)</span> this experimetns are sensitive to the oscillation <span class="math display">\[ P(\nu_e \rightarrow \nu_e) \simeq 1 - \sin^2 2\theta_{12}\sin^2\frac{\Delta m_{12}^2}{3E}L\]</span></p>
+<section id="solar-neutrinos" class="level4">
+<h4 class="anchored" data-anchor-id="solar-neutrinos">Solar Neutrinos</h4>
+<p>Neutrinos from the Sun are produced by some of the fusion reactions in the <span class="math inline">\(pp\)</span> chain or the CNO cycle. The combined effect is:</p>
+<p><span class="math display">\[4p \rightarrow ^4He + 2e^+ 2\nu_e\]</span></p>
+<p>From the beginning of the solar-neutrino observation a deficit of the electron neutrino predicted by the Standard Solar Model was observed: <em>the solar-neutrino problem</em></p>
+<p>In 1999 SNO in Canada started taking data. This experiment was able to detect <span class="math inline">\(\nu_e\)</span> by CC interactions and <span class="math inline">\(\nu_x\)</span> by NC interaction solving the mistery of the solar-neutrino problem. It is now understood as a neutrino flavor oscillation. The results of SNO together with KamLAND (a long baseline neutrino detector) confirmed the Large Mixing Angle solution (LMA) of the solar sector:</p>
+<p><span class="math display">\[\sin^2 \theta_{12} \simeq 0.30\]</span> <span class="math display">\[\Delta m_{12}^2 \equiv \Delta m_{\odot}^2 \simeq 8 \times 10^{-5} \mathrm{ \; eV^2}\]</span></p>
+</section>
+<section id="atmospheric-neutrinos" class="level4">
+<h4 class="anchored" data-anchor-id="atmospheric-neutrinos">Atmospheric Neutrinos</h4>
+<p>First evidence of atmospheric neutrino oscillations came from Super-Kamiokande experiment in 1998. By scanning in zenith angle, is like changing the <span class="math inline">\(L\)</span>.</p>
+<p><a href="http://www.quantumdiaries.org/wp-content/uploads/2014/06/IC86Multi_NuMuOsc_results_Pscan_V1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="http://www.quantumdiaries.org/wp-content/uploads/2014/06/IC86Multi_NuMuOsc_results_Pscan_V1.png" class="img-fluid"></a></p>
+<p>If atmospheric mixing is non-maximal, it remains to determine in which “octant” the mixing angle <span class="math inline">\(\theta_{23}\)</span> lies. For a <span class="math inline">\(\theta_{23}\)</span> in the first octant (<span class="math inline">\(&lt; 45^{\circ}\)</span>) the mass eigenstate <span class="math inline">\(\nu_3\)</span> is <strong>tau heavy</strong>, i.e., the tau neutrino fraction is larger than the muon neutrino fraction. Conversely, for a <span class="math inline">\(\theta_{23}\)</span> in the second octant (<span class="math inline">\(&gt; 45^{\circ}\)</span>) the state <span class="math inline">\(\nu_3\)</span> is <strong>muon heavy</strong>.</p>
+</section>
+<section id="reactor-neutrinos" class="level4">
+<h4 class="anchored" data-anchor-id="reactor-neutrinos">Reactor Neutrinos</h4>
+<ul>
+<li>Double Chooz: <span class="math inline">\(\sin^2 2\theta_{13} = 0.109 \pm 0.030 \pm 0.025 \neq 0\)</span> at <span class="math inline">\(2.9\sigma\)</span></li>
+<li>Daya Bay: <span class="math inline">\(\sin^2 2\theta_{13} = 0.089 \pm 0.010 \pm 0.005 \neq 0\)</span> at <span class="math inline">\(7.7\sigma\)</span></li>
+<li>RENO: <span class="math inline">\(\sin^2 2\theta_{13} = 0.113 \pm 0.013 \pm 0.019 \neq 0\)</span> at <span class="math inline">\(4.9\sigma\)</span></li>
+</ul>
+</section>
+</section>
+<section id="neutrino-oscillations-in-matter." class="level3">
+<h3 class="anchored" data-anchor-id="neutrino-oscillations-in-matter.">Neutrino oscillations in matter.</h3>
+<p>The <span class="math inline">\(U_{PMNS}\)</span> matrix must be modified to account for the the fact that electron neutrinos have an extra interaction not present for <span class="math inline">\(\nu_\mu\)</span> and <span class="math inline">\(\nu_\tau\)</span> when travelling through matter. Elastic scattering of <span class="math inline">\(\nu_e\)</span> on electron can occur via exchange of a charged <span class="math inline">\(W\)</span>-boson as well as by exchange of the neutral <span class="math inline">\(Z\)</span>-boson adding a term <span class="math inline">\(V_e = G_F \sqrt{2}N_e\)</span> in the mass differences for electrons.</p>
+<p>Without entering in the maths, what happens here is that a resonance effect occurs, ie, even if the mixing angle is small in vacuum it can get amplified in matter. This resonance can be expressed as a condition on the electron density <span class="math inline">\(N_e\)</span> which is appropriate for systems such as stellar interiors (Sun or supernovae too) where provided the core density is high enough, there is always a region in the neutrinos’ path exiting the star where it passes through resonance.</p>
+<p>This is known as the <strong>MSW effect</strong> for the theorists who discovered it - Mikheyev, Smirnov, and Wolfenstein.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial II: Calculate the probabilities of $\nu_e \rightarrow \nu_x$ as function of L/E">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial II: Calculate the probabilities of <span class="math inline">\(\nu_e \rightarrow \nu_x\)</span> as function of L/E
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="25d34c0c" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PMNS_Factory(t12, t13, t23, d):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    s12 <span class="op">=</span> np.sin(t12)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    c12 <span class="op">=</span> np.cos(t12)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    s23 <span class="op">=</span> np.sin(t23)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    c23 <span class="op">=</span> np.cos(t23)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    s13 <span class="op">=</span> np.sin(t13)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    c13 <span class="op">=</span> np.cos(t13)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    cp  <span class="op">=</span> np.exp(<span class="ot">1j</span><span class="op">*</span>d)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([[ c12<span class="op">*</span>c13, s12<span class="op">*</span>c13, s13<span class="op">*</span>np.conj(cp) ],</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                  [<span class="op">-</span>s12<span class="op">*</span>c23 <span class="op">-</span> c12<span class="op">*</span>s23<span class="op">*</span>s13<span class="op">*</span>cp, c12<span class="op">*</span>c23 <span class="op">-</span> s12<span class="op">*</span>s23<span class="op">*</span>s13<span class="op">*</span>cp, s23<span class="op">*</span>c13],</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                  [ s12<span class="op">*</span>s23 <span class="op">-</span> c12<span class="op">*</span>s23<span class="op">*</span>s13<span class="op">*</span>cp,<span class="op">-</span>c12<span class="op">*</span>s23 <span class="op">-</span> s12<span class="op">*</span>c23<span class="op">*</span>s13<span class="op">*</span>cp, c23<span class="op">*</span>c13]])</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> posc(a, b, U, dm2, LEratio):</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">    Gives the oscillation probability for nu(a) -&gt; nu(b)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">    for PMNS matrix U, and L in km and E in GeV, and dm2 in eV^2</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j<span class="op">+</span><span class="dv">1</span>, <span class="dv">3</span>):</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            arg <span class="op">=</span> <span class="fl">5.068</span><span class="op">*</span>dm2[i<span class="op">+</span>j<span class="op">-</span><span class="dv">1</span>]<span class="op">*</span>LEratio</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            mxe <span class="op">=</span> np.conj(U[a,i])<span class="op">*</span>U[b,i]<span class="op">*</span>U[a,j]<span class="op">*</span>np.conj(U[b,j])</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            s <span class="op">+=</span> <span class="op">-</span><span class="dv">4</span><span class="op">*</span>mxe.real<span class="op">*</span>np.sin(<span class="fl">0.25</span><span class="op">*</span>arg)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>mxe.imag<span class="op">*</span>np.sin(<span class="fl">0.50</span><span class="op">*</span>arg)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">==</span> b: s <span class="op">+=</span> <span class="fl">1.0</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>t12 <span class="op">=</span> np.arcsin(<span class="fl">0.312</span><span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>t13 <span class="op">=</span> np.arcsin(<span class="fl">0.0251</span><span class="op">**</span><span class="fl">0.5</span>) <span class="co">#Controlls the size of the small wiggles.</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co">#t13 = np.arcsin(0.0)</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>t23 <span class="op">=</span> np.arcsin(<span class="fl">0.42</span><span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>dm2 <span class="op">=</span> [ <span class="fl">7.58E-05</span>, <span class="fl">2.27E-03</span>, <span class="fl">2.35E-03</span>]</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> PMNS_Factory(t12, t13, t23, delta)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>LE <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">36000</span>, <span class="dv">3600</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>Pe <span class="op">=</span> posc(<span class="dv">0</span>, <span class="dv">0</span>, U, dm2, LE)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>Pm <span class="op">=</span> posc(<span class="dv">0</span>, <span class="dv">1</span>, U, dm2, LE)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>Pt <span class="op">=</span> posc(<span class="dv">0</span>, <span class="dv">2</span>, U, dm2, LE)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>ax.plot(LE, Pe, <span class="st">'-'</span>, label<span class="op">=</span><span class="vs">r'$\nu_e \rightarrow \nu_e$'</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>ax.plot(LE, Pm, <span class="st">'k'</span>, label<span class="op">=</span><span class="vs">r'$\nu_e\rightarrow\nu_\mu$'</span>)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>ax.plot(LE, Pt, <span class="st">'r'</span>, label<span class="op">=</span><span class="vs">r'$\nu_e\rightarrow\nu_\tau$'</span>)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"L/E (km/GeV)"</span>)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"Probability $\nu_e \rightarrow \nu_x$"</span>)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"best"</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="chap3_2_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="chap3_2_files/figure-html/cell-5-output-1.png" width="985" height="385" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-10">Calculated neutrino cross sections taken from <a href="http://arxiv.org/abs/1309.1764">arXiv:1309.1764</a></span>
+<span class="glightbox-desc lightbox-desc-14">Source: <a href="https://inspirehep.net/record/1114323">arXiv:1205.2671</a></span>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap3_1.html" class="pagination-link  aria-label=" &lt;span="" and="" neutrinos&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap4_0.html" class="pagination-link" aria-label="<span class='chapter-number'>10</span>&nbsp; <span class='chapter-title'>Introduction</span>">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

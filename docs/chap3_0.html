@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 7&nbsp; Cosmic Rays in the Atmosphere</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap3_1.html" rel="next">
+<link href="./chap2_1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap3_0.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_0.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gamma-ray Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gamma-rays, Cosmic-Rays and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#interactions-of-cr-particles-in-the-atmosphere" id="toc-interactions-of-cr-particles-in-the-atmosphere" class="nav-link active" data-scroll-target="#interactions-of-cr-particles-in-the-atmosphere">Interactions of CR particles in the atmosphere</a>
+  <ul class="collapse">
+  <li><a href="#cosmic-ray-air-shower" id="toc-cosmic-ray-air-shower" class="nav-link" data-scroll-target="#cosmic-ray-air-shower">Cosmic Ray Air Shower</a></li>
+  <li><a href="#the-atmosphere" id="toc-the-atmosphere" class="nav-link" data-scroll-target="#the-atmosphere">The Atmosphere</a></li>
+  <li><a href="#energy-losses-in-the-atmosphere" id="toc-energy-losses-in-the-atmosphere" class="nav-link" data-scroll-target="#energy-losses-in-the-atmosphere">Energy Losses in the Atmosphere</a></li>
+  </ul></li>
+  <li><a href="#electromagnetic-shower" id="toc-electromagnetic-shower" class="nav-link" data-scroll-target="#electromagnetic-shower">Electromagnetic Shower</a>
+  <ul class="collapse">
+  <li><a href="#the-heitler-toy-model" id="toc-the-heitler-toy-model" class="nav-link" data-scroll-target="#the-heitler-toy-model">The Heitler Toy-Model</a></li>
+  </ul></li>
+  <li><a href="#hadronic-showers" id="toc-hadronic-showers" class="nav-link" data-scroll-target="#hadronic-showers">Hadronic Showers</a>
+  <ul class="collapse">
+  <li><a href="#the-heitler-matthew-model" id="toc-the-heitler-matthew-model" class="nav-link" data-scroll-target="#the-heitler-matthew-model">The Heitler-Matthew Model</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap2_0.html">Cosmic Rays</a></li><li class="breadcrumb-item"><a href="./chap3_0.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="interactions-of-cr-particles-in-the-atmosphere" class="level2">
+<h2 class="anchored" data-anchor-id="interactions-of-cr-particles-in-the-atmosphere">Interactions of CR particles in the atmosphere</h2>
+<section id="cosmic-ray-air-shower" class="level3">
+<h3 class="anchored" data-anchor-id="cosmic-ray-air-shower">Cosmic Ray Air Shower</h3>
+<p>In this lesson we will the different components of a cosmic air shower when cosmic rays interact with Earth’s atmosphere. As seen in the figure below, we have 3 main components, the <strong>electromagnetic component</strong>, the <strong>hadronic component</strong> and muons and neutrinos which can be seen as the <strong>muonic component</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/air-shower.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/air-shower.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="the-atmosphere" class="level3">
+<h3 class="anchored" data-anchor-id="the-atmosphere">The Atmosphere</h3>
+<p>Before studying the interactions of cosmic rays in the atmosphere we need to setup a model that will describe our atmosphere. To study the cosmic rays interactions in the atmosphere it is useful to define a parameter that we will call the <strong>vertical atmospheric depth</strong> (sometimes also called column density) defined as the integral in altitude of the atmospheric density <span class="math inline">\(\rho\)</span> above the observation level <span class="math inline">\(h\)</span>:</p>
+<p><span class="math display">\[X(h) =\int_h^{\infty} \rho(h^\prime)\mathrm{ d}h^\prime\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/x.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/x.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<section id="the-isothermal-model-of-the-atmosphere" class="level4">
+<h4 class="anchored" data-anchor-id="the-isothermal-model-of-the-atmosphere">The Isothermal Model of the Atmosphere</h4>
+<p>In an isothermal hydrostatic atmosphere a particular layer of gas at some altitude is static. That means that the downward (towards the planet) force of its weight, plus the downward force exerted by pressure in the layer above it, and the upward force exerted by pressure in the layer below, all sum to zero. Assuming a segment of area <span class="math inline">\(A\)</span> and heigth <span class="math inline">\(\mathrm{ d}h\)</span> we can write this equilibrium of forces as:</p>
+<p><span class="math display">\[P\cdot A - (P + \mathrm{ d}P)\cdot A - (\rho A \mathrm{ d}h)g_0  =0\]</span></p>
+<p><span class="math display">\[\mathrm{ d}P = -g_0\rho(h) \mathrm{ d}h\]</span></p>
+<p>Using the ideal gas law:</p>
+<p><span class="math display">\[ P = \frac{\rho R T}{M}\]</span></p>
+<p>where <span class="math inline">\(R\)</span> is the ideal gas constant, <span class="math inline">\(T\)</span> is temperature, <span class="math inline">\(M\)</span> is average molecular weight, and <span class="math inline">\(g_0\)</span> is the gravitational acceleration at the planet’s surface. We get</p>
+<p><span class="math display">\[\frac{\mathrm{ d}P}{P} = -\frac{g_0 M}{R T} \mathrm{ d} h\]</span></p>
+<p>assuming a constant and isothermal gas (const <span class="math inline">\(T\)</span>) we can integrate a pressure decreases exponentially with increasing height as:</p>
+<p><span class="math display">\[P = P_0 e^{-\frac{g_0 M}{R T} h} \]</span></p>
+<p>where the we can define the <strong>scale height</strong> as:</p>
+<p><span class="math display">\[ h_0 = \frac{R T}{M g_0} \]</span></p>
+<p>Since the temperature is assumed to be constant it follows that <span class="math inline">\(\rho\)</span> also changes exponentially as <span class="math inline">\(\rho = \rho_0 e^{-h/h_0}\)</span> and therefore the column density can be written as:</p>
+<p><span class="math display">\[X = X_0 \mathrm{ e}^{-h/h_0}\]</span></p>
+<p>where <span class="math inline">\(X_0\)</span> is 1030 g/cm<span class="math inline">\(^{2}\)</span> is the atmospheric depth at sea level, h = 0. In particular for the isothermal model we have that the relation between atmospheric depth (aka column density) and density is:</p>
+<p><span class="math display">\[ \rho(X) = \frac{X}{h_0} \]</span></p>
+<section id="the-scale-height" class="level5">
+<h5 class="anchored" data-anchor-id="the-scale-height">The Scale Height</h5>
+<p>Using typical values (<span class="math inline">\(T = 273\)</span> K and <span class="math inline">\(M = 29\)</span> g/mol) we get that <span class="math inline">\(h_0 \sim 8\)</span> km which coincidentally is the approximate height of Mt. Everest.</p>
+<p>In reality the temperature changes and hence the scale height decreases with increasing altitude until the tropopause.</p>
+<p>This equations are valid for vertical particles, for zenith angles &lt; 60<span class="math inline">\(^\circ\)</span> (for which we can ignore the Earth’s curvature) the formula is scaled with <span class="math inline">\(1/\cos{\theta}\)</span> giving the <em>slant depth</em></p>
+<p><span class="math display">\[X_{slant-depth} = \frac{X}{\cos \theta} \]</span></p>
+</section>
+</section>
+</section>
+<section id="energy-losses-in-the-atmosphere" class="level3">
+<h3 class="anchored" data-anchor-id="energy-losses-in-the-atmosphere">Energy Losses in the Atmosphere</h3>
+<p>Charge particles when entering in the atmosphere will suffer different process of energy losses. We are going to review some of them</p>
+<section id="ionization-losses" class="level4">
+<h4 class="anchored" data-anchor-id="ionization-losses">Ionization Losses</h4>
+<p>The <strong>ionization energy loss</strong> of high energy charged particles with colission with atomic electrons is given by the Bethe-Block formula:</p>
+<p><span class="math display">\[\left(\frac{\mathrm{ d} E}{\mathrm{ d} x}\right)_{ion}= -\left(\frac{4\pi N_0z^2e^4}{mv^2}\right)\left(\frac{Z}{A}\right)\left\{\log\left[\frac{2mv^2\gamma^2}{I}\right]-\beta^2\right\}\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the mass of the electron, <span class="math inline">\(v\)</span> and <span class="math inline">\(ze\)</span> are the velocity and charge of the incoming particle, <span class="math inline">\(N_0\)</span> is the Avogadro’s number, <span class="math inline">\(Z\)</span> and <span class="math inline">\(A\)</span> are the atomic and mass numbers of the atmos in the medium and <span class="math inline">\(x\)</span> the path travelled, and <span class="math inline">\(I\)</span> is the ionization potential of the medium is approximatively 10 Z eV.</p>
+<ul>
+<li>Since <span class="math inline">\(Z/A \sim \frac{1}{2}\)</span> in most materials it depends little on the medium.</li>
+<li>It varies as <span class="math inline">\(1/v^2\)</span> at low speed and independent of the incident particle mass.</li>
+<li>It reaches a minimum at about <span class="math inline">\(3Mc^2\)</span> and it increases logarithmically until it reaches a plateu value.</li>
+</ul>
+</section>
+<section id="radiation-losses" class="level4">
+<h4 class="anchored" data-anchor-id="radiation-losses">Radiation Losses</h4>
+<p>In addition to ionization losses, charge particles also undergo <strong>bremsstrahlung</strong> or braking radiation when travelling through a material given by:</p>
+<p><span class="math display">\[\left(\frac{\mathrm{ d} E}{\mathrm{ d} x}\right)_{rad} = -\frac{E}{X_0}\]</span> where for electrons the <strong>radiation length</strong> is:</p>
+<p><span class="math display">\[\frac{1}{X_0} = 4 \alpha\left(\frac{Z}{A}\right)(Z + 1)^2r_e^2N_0\log\left(\frac{183}{Z^{1/3}}\right)\]</span></p>
+<p>where <span class="math inline">\(r_e = e^2/4\pi m_e c^2\)</span> is the classical electron radius and <span class="math inline">\(\alpha = \frac{1}{137}\)</span> is the fine structure constant.</p>
+<ul>
+<li>Bremsstrahlung is proportional to <span class="math inline">\(\frac{1}{X_0} \propto r^2_{e} \propto 1/m_e^2\)</span>. The radiation length of a muon will be <span class="math inline">\((m_\mu/m_e)^2\)</span> times that for an electron.</li>
+<li>Bremsstrahlung is proportional to the energy.</li>
+</ul>
+<p>The critical energy is the energy at <span class="math inline">\((\mathrm{ d}E/\mathrm{ d}x)_{ion} = (\mathrm{ d}E/\mathrm{ d}x)_{rad}\)</span>. Above this energy the radiation process dominates, below the ionization. For electrons this is roughly <span class="math inline">\(\epsilon_c \sim 600/Z\)</span> MeV, and for the atmosphere this is <span class="math inline">\(\epsilon_e \sim 85\)</span> MeV.</p>
+</section>
+<section id="cherenkov-radiation" class="level4">
+<h4 class="anchored" data-anchor-id="cherenkov-radiation">Cherenkov Radiation</h4>
+<p>When relativistic particles traverse a medium at a speed greater than the speed of light in that medium it can induce Cherenkov radiation.</p>
+<p><a href="images/Cherenkov.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/Cherenkov.svg" class="img-fluid"></a></p>
+<p>Cherenkov light is emitted in the UV and blue region in a narrow cone with angle:</p>
+<p><span class="math display">\[\cos \theta = \frac{ct/n}{\beta c t} = \frac{1}{\beta n}\]</span></p>
+<p>so the threshold for production is <span class="math inline">\(\beta &gt; \frac{1}{n}\)</span>. Most of the components in the air shower will produced abundant Cherenkov light.</p>
+<p>We will see more on Cherenkov radiation on the next lesson about <span class="math inline">\(\gamma\)</span>-ray astronomy.</p>
+</section>
+<section id="pair-production" class="level4">
+<h4 class="anchored" data-anchor-id="pair-production">Pair Production</h4>
+<p>If a photon from bremsstrahlung has enougth energy <span class="math inline">\(E_\gamma &gt; 2 m_e\)</span> it can produced a pair of electron positron. The cross-section rises quickly at the threshod of <span class="math inline">\(2 m_e\)</span> but in the high energy part it can be approximated to:</p>
+<p><span class="math display">\[\sigma = \frac{7}{9} r_0^2 Z (Z+ 1)\log \left(\frac{183}{3\sqrt{Z}}\right)\]</span></p>
+<p>The pair production cannot occure in vacum, a photon desintegrated to the pair <span class="math inline">\(e^-e^+\)</span> will have a null momentum in the CoM system, therefore a nucleus has to be present to absorb the momemtum. As can be seen the radiation length <span class="math inline">\(X_0\)</span> is very similar to the one from radiation losses. In fact we can write:</p>
+<p><span class="math display">\[\frac{1}{X_{pair}} = \frac{7}{9}\frac{1}{X_0}\]</span></p>
+<p>Which means that the <strong>radiation lengths for braking radiation and pair production are comparable</strong>.</p>
+</section>
+</section>
+</section>
+<section id="electromagnetic-shower" class="level2">
+<h2 class="anchored" data-anchor-id="electromagnetic-shower">Electromagnetic Shower</h2>
+<p>When photons from radiation losses of electrons, have enough energy to produce pairs of positrons electrons, these hey also can produce photons which, in turn, can also produces pairs, etc, etc. This is called an <strong>electromagnetic shower</strong>.</p>
+<section id="the-heitler-toy-model" class="level3">
+<h3 class="anchored" data-anchor-id="the-heitler-toy-model">The Heitler Toy-Model</h3>
+<p>The Heitler toy model explains very well the development of an electromagnetic shower. As we saw, in the ultrarelativistic limit the radiation lenghs for pair production and bremsstrahung are comparable. We can defined a distance <span class="math inline">\(d_{split} = X_0 \log2\)</span> where an electron will looses, on average, half of its energy.</p>
+<p>An electron with inital energy <span class="math inline">\(E_0\)</span> in a medium will generate a photon in a <span class="math inline">\(d_{split}\)</span> length of energy <span class="math inline">\(E_0/2\)</span>, in the next radiation length the photon can convert into <span class="math inline">\(e^+e^-\)</span> each with energies <span class="math inline">\(E_0/4\)</span>. After <span class="math inline">\(t\)</span> steps the electrons, positrons will have energies of <span class="math inline">\(E(t)=E_0/2^t\)</span>. This continues until the electrons, positrons fall below the critical energy of electrons, <span class="math inline">\(\epsilon_e\)</span>, and ionization dominates. The process is illustrated in the figure below, where each step <span class="math inline">\(n\)</span> corresponds to one <span class="math inline">\(d_{split}\)</span> length.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/em-shower.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/em-shower.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>The Heitler model has the following properties:</p>
+<ul>
+<li>The shower has maximum at:</li>
+</ul>
+<p><span class="math display">\[t_{max} = \frac{\log(E_0/\epsilon_e)}{\log2}\]</span></p>
+<ul>
+<li>The maximum number of particles is:</li>
+</ul>
+<p><span class="math display">\[N_{max} = 2^{t_{max}} = \frac{E_0}{\epsilon_e}\]</span></p>
+<ul>
+<li>The shower maximum will be at a depth <span class="math inline">\(X_{max}\)</span>:</li>
+</ul>
+<p><span class="math display">\[X_{max}=d_{split} \frac{\log(E_0/\epsilon_e)}{\log2} = X_0 \log(E_0/\epsilon_e)\]</span></p>
+<p>For air <span class="math inline">\(\epsilon_e = 85\)</span> MeV and the <strong>radiation length</strong> <span class="math inline">\(X_0 = 36.7 \mathrm{ g/cm}^2\)</span>. Actual showers also spread laterally mostly due to Coulomb scattering. The lateral spread is a few times the so-called <strong>Moliere unit</strong> equal to <span class="math inline">\(21/\epsilon_e\)</span> (MeV).</p>
+<p>The <span class="math inline">\(X_{max}\)</span> prediction of the Heitler model is in good agreement with Monte Carlo simulations. However, the electron to photon ratio of 2 is not in agreement given that the model predicts only one photon emitted by bremsstrahlung. Simulations show a ratio of 1/6 since in reality several photons are emitted and electrons lose energy much faster than photons do.</p>
+</section>
+</section>
+<section id="hadronic-showers" class="level2">
+<h2 class="anchored" data-anchor-id="hadronic-showers">Hadronic Showers</h2>
+<p>Before modeling the baryon-induced showers or hadronic showers, we need to estimate the <em>nuclean mean free path</em> in the atmosphere. We can write the <strong>standard mean free path</strong> for <span class="math inline">\(\sigma^{air}_N\)</span> nucleon-air cross section as:</p>
+<p><span class="math display">\[l_N = \frac{1}{n \sigma_N^{air}}\]</span></p>
+<p>where as we saw in the introduction <span class="math inline">\(n\)</span> is the <strong>number density</strong> of targets, in our case air nuclei. This number density can be expresed as $n = N_T/V $ where <span class="math inline">\(N_T\)</span>is the total number of air nuclei in volume <span class="math inline">\(V\)</span>.</p>
+<p>The <strong>density mean free path</strong>, is defined as <span class="math inline">\(\lambda_N = \rho_{air} l_N\)</span>, where <span class="math inline">\(\rho_{air} = n \cdot m_{air}\)</span> where <span class="math inline">\(m_{air}\)</span> is the mass of air nuclei, that can be written as <span class="math inline">\(m_{air} \sim A m_p\)</span>. Puttin everything together we have that:</p>
+<p><span class="math display">\[\lambda^{air}_N = \rho_{air} l_N = n A m_p\frac{1}{n\sigma_N^{air}} = \frac{A m_{p}}{\sigma_N^{air}}\]</span></p>
+<p>For air <span class="math inline">\(A\)</span> is average mean the mass number of air nuclei components (mainly nitrogen, oxygen) and we can assume it to be <span class="math inline">\(A \sim 14.5\)</span> and <span class="math inline">\(\sigma_N^{air} \approx\)</span> 300 mb, which corresponds to <span class="math inline">\(\lambda_N^{air} \approx 80\)</span>g/cm<span class="math inline">\(^{2}\)</span>.</p>
+<p>Note that this definition of the density mean free path is independent of the mass density of the medium, so if the density changes with altitude, like in the case of our atmosphere, the density mean free path is the same.</p>
+<section id="the-heitler-matthew-model" class="level3">
+<h3 class="anchored" data-anchor-id="the-heitler-matthew-model">The Heitler-Matthew Model</h3>
+<p>In the Heitler model can be adapted also for hadronic showers. This is what Matthew did. We can imagine a proton initiating the cascade instead of a photon/electron, in this case a hadronic air shower will develope:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/proton_eas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/proton_eas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>We can assume that the first interaction is defined by the proton mean free path <span class="math inline">\(\lambda^{air}_N\)</span>. Defining the first interaction point where the proton will lose (on average) half of its energy this first interaction length is given as <span class="math inline">\(\lambda^{air}_{N} \log 2\)</span> where for protons <span class="math inline">\(\lambda^{air}_N \approx 80\)</span>g/cm. The following general interaction is expected:</p>
+<p><span class="math display">\[ p + p/n \rightarrow p + n/p + \pi^0 + \pi^{\pm} + K^0 + K^{\pm} + .. \]</span></p>
+<p>We will focus only on pion production (same argument can be done for kaons). After the first interaction we can use the simplified assumption that the hadronic interaction produces only <span class="math inline">\(3N_\pi\)</span> pions. Of those $ 2 N_$ will be charged pions and <span class="math inline">\(N_\pi\)</span> will be <span class="math inline">\(\pi^0\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/hadronic-shower.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/hadronic-shower.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+</figure>
+</div>
+<p>We also assume the energy is equally distributed among them, so <span class="math inline">\(2/3E_0\)</span> will go to charge pions and <span class="math inline">\(1/3E_0\)</span> will go to the neutral pions. The <span class="math inline">\(\pi^0\)</span> has a very short decay time, so it will decay and produce an electromagnetic shower. Charge pions will continue generating hadronic shower in each <span class="math inline">\(d_{split} = \lambda_{\pi}^{air} \log 2\)</span> with the mean free path of pions <span class="math inline">\(\lambda_\pi^{air} \sim 120\)</span>g/cm<span class="math inline">\(^2\)</span> until they reach the critical energy where pions decay is more probable than interactions <span class="math inline">\(\epsilon_\pi\)</span>. On each step we assume that energy is equally divided among the <span class="math inline">\(3 N_\pi\)</span> pions. Thefore at each step <span class="math inline">\(t\)</span> the energy of the pions is:</p>
+<p><span class="math display">\[E_\pi = \frac{E_0}{(3N_\pi)^t} \]</span></p>
+<p>The number of radiation lengths <span class="math inline">\(t\)</span> to reach the critical energy ie <span class="math inline">\(E_\pi = \epsilon_\pi\)</span>, and is given (as in the case of EM showers):</p>
+<p><span class="math display">\[t_{max} = \frac{\log(E_0/\epsilon_\pi)}{\log(3N_\pi)}\]</span></p>
+<p>Assuming that after that energy all charged pions (ie <span class="math inline">\(2N_\pi\)</span>) decay to muons, the number of muons is given by:</p>
+<p><span class="math display">\[N_\mu =(2N_\pi)^{t_{max}}\]</span></p>
+<p>introducing <span class="math inline">\(\beta = \log(2N_\pi)/\log(3N_\pi)\)</span> we have:</p>
+<p><span class="math display">\[N_\mu =(E_0/\epsilon_\pi)^\beta \]</span></p>
+<p>This is also called the <em>multiplicity</em> and corresponds to the muon bundles as we will see later. For pions between 1 GeV and 10 TeV an appropiate number is <span class="math inline">\(N_\pi = 5\)</span> and in that case <span class="math inline">\(\beta = 0.85\)</span>. Therefore the number of muons doesn’t grow linearly with the intial energy but a slower rate.</p>
+<p>The definition of <span class="math inline">\(X_{max}\)</span> is somehow less clear than in an EM shower. Hadronic showers are still dominated by electromagnetic processes, so we can assume that <span class="math inline">\(X_{max}\)</span> depends dominantly on the first generation of <span class="math inline">\(\pi^0\)</span> EM subshowers. For proton primaries, the first interaction will be given by the nucleon mean free path where in this first interaction the proton splits in <span class="math inline">\(3N_\pi\)</span> particles, so <span class="math inline">\(pi^0\)</span> with initial energy <span class="math inline">\(E_0/3N_\pi\)</span> will initiate an EM shower. The depth of maximum is then obtained as the sum of the first proton interaction length and the shower maximum of the first EM sub-shower:</p>
+<p><span class="math display">\[X_{max} = \lambda^{air}_N \log2 + X_0 \log\left(\frac{E_0}{3N_\pi\epsilon_e}\right) \]</span></p>
+<p>where again <span class="math inline">\(\epsilon_e\)</span> is the critical energy of electrons. The expected values of this formula are low when compared to detailed simulations because it neglects the contributions of the next one or two generation of <span class="math inline">\(\pi^0\)</span> production.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Superposition model for heavy nuclei air showers">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Superposition model for heavy nuclei air showers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can extend the discussion to heavy nuclei by adopting the <em>Superposition model</em> in which a nucleus of mass A and energy <span class="math inline">\(E_0\)</span> essentially generates <span class="math inline">\(A\)</span> subshowers of energy <span class="math inline">\(E_0/A\)</span>. In that case the muon multiplicity will be:</p>
+<p><span class="math display">\[N_\mu = A \left(\frac{E_0}{A\epsilon_\pi}\right)^\beta \propto E_0^\beta A^{1 - \beta} \]</span></p>
+<p>therefore the muon multiplicity will depend on the CR composition. Likewise the shower maximum is given by:</p>
+<p><span class="math display">\[X^{A}_{max}(E_0) = X_{max}^{p}(E_0) - X_0\log{A}\]</span></p>
+<p>ie, for a given energy <span class="math inline">\(E_0\)</span> the shower max depends on the mass of the CR primary and it is typicall smaller than for protons (ie reach the maximum sooner in the atmosphere). For composition studies therefore it is necessary to measure <span class="math inline">\(X_{max}\)</span> and the energy of the shower, which can be estimated from fluorescence techniques.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap2_1.html" class="pagination-link  aria-label=" &lt;span="" cosmic="" rays:="" the="" knee="" and="" beyond&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap3_1.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>Muons and Neutrinos</span>">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

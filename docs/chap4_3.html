@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Astroparticle Physics - 13&nbsp; Neutrino Astronomy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chap5.html" rel="next">
+<link href="./chap4_2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap4_0.html">Multimessenger Astronomy</a></li><li class="breadcrumb-item"><a href="./chap4_3.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Astroparticle Physics</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Astroparticle-Physics.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Physics Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction to Cosmology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What are Cosmic Rays?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muons and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap3_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Particles Underground</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Multimessenger Astronomy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gamma-ray Astronomy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gamma-rays, Cosmic-Rays and Neutrinos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap4_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Dark Matter</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dark Matter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#diffuse-flux-of-astrophysical-neutrinos" id="toc-diffuse-flux-of-astrophysical-neutrinos" class="nav-link active" data-scroll-target="#diffuse-flux-of-astrophysical-neutrinos">Diffuse flux of Astrophysical Neutrinos</a>
+  <ul class="collapse">
+  <li><a href="#starting-events" id="toc-starting-events" class="nav-link" data-scroll-target="#starting-events">Starting Events</a></li>
+  <li><a href="#through-going-muons" id="toc-through-going-muons" class="nav-link" data-scroll-target="#through-going-muons">Through-going muons</a></li>
+  <li><a href="#the-spectral-fit" id="toc-the-spectral-fit" class="nav-link" data-scroll-target="#the-spectral-fit">The spectral fit</a></li>
+  <li><a href="#the-search-for-point-sources" id="toc-the-search-for-point-sources" class="nav-link" data-scroll-target="#the-search-for-point-sources">The Search for Point Sources</a></li>
+  <li><a href="#the-olbers-paradox" id="toc-the-olbers-paradox" class="nav-link" data-scroll-target="#the-olbers-paradox">The Olbers’ Paradox</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap4_0.html">Multimessenger Astronomy</a></li><li class="breadcrumb-item"><a href="./chap4_3.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neutrino Astronomy</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="diffuse-flux-of-astrophysical-neutrinos" class="level2">
+<h2 class="anchored" data-anchor-id="diffuse-flux-of-astrophysical-neutrinos">Diffuse flux of Astrophysical Neutrinos</h2>
+<p>The first detection of high-energy neutrinos of cosmic origin in 2013 by the IceCube Neutrino Observatory opened a new window to the non-thermal processes in our universe. The first strong evidence for a cosmic neutrino component came from a search using data from May 2010 to April 2012 [35], where two shower-like events from interactions within the detector with energies above 1 PeV were discovered. A follow-up search for events starting in the detector with more than 30 TeV deposited energy that utilized the same dataset identified 25 additional high-energy events. The spectrum and zenith angle distribution of the events was incompatible with the hypothesis of an atmospheric origin at &gt; <span class="math inline">\(4\sigma\)</span>. IceCube has since collected independent evidence for an astrophysical neutrino signal by analyzing different event signatures.</p>
+<section id="starting-events" class="level3">
+<h3 class="anchored" data-anchor-id="starting-events">Starting Events</h3>
+<p>Neutrino interactions are identified in IceCube by searching for an interaction vertex within the instrumented volume. This search is sensitive to both shower-like and track-like events. Since the main background for this search is comprised of muons from CR air showers, the rejection strategy is to identify Cherenkov photons from a track entering the detector. For that, the outer parts of the instrumented volume are assigned to a “veto” region. An event is rejected if a certain number of Cherekov photons are found in this veto region at earlier times than the photons produced at the interaction vertex. The energy threshold for this analysis is about <span class="math inline">\(E_\nu \sim 30\)</span> TeV.</p>
+</section>
+<section id="through-going-muons" class="level3">
+<h3 class="anchored" data-anchor-id="through-going-muons">Through-going muons</h3>
+<p>Muons produced in CC neutrino interactions far outside the detector can still reach the instrumented volume to produce track-like events. Even at 1 TeV a muon can penetrate several kilometers of ice before it stops and decays. This allows observation of high-energy neutrino interactions from a much larger volume than the instrumented one, thereby substantially increasing the effective area of the detector.</p>
+</section>
+<section id="the-spectral-fit" class="level3">
+<h3 class="anchored" data-anchor-id="the-spectral-fit">The spectral fit</h3>
+<p>The results of a combined analysis fits the neutrino flux to a power-law between 27 TeV and 2 PeV consistent with an unbroken power law with a best-fit spectral index given by:</p>
+<p><span class="math display">\[E^2\Phi(E) = 2.06^{+0.35}_{-0.26} \times 10^{-8} \left(\frac{E}{100\;\mathrm{TeV}}\right)^{-0.46\pm 0.12}\; \mathrm{GeV\;s}^{-1}\;\mathrm{sr}^{-1}\mathrm{ cm}^{-2}.\]</span></p>
+<p>However using only the high energy through-going muons (abouve 200 TeV) yields a preferred spectral index of <span class="math inline">\(-2.13\pm 0.13\)</span></p>
+</section>
+<section id="the-search-for-point-sources" class="level3">
+<h3 class="anchored" data-anchor-id="the-search-for-point-sources">The Search for Point Sources</h3>
+<p>In the case where the cosmic neutrino flux is dominated by bright individual sources, they should be detectable as a local excess of events on the sky with respect to the atmospheric neutrino and diffuse cosmic neutrino background. The sensitivity of a search for such features depends crucially on the precision by which the direction of the neutrinos can be reconstructed from the data, i.e.&nbsp;on the detector angular resolution. No indication for a neutrino point source has been found in the IceCube data so far. The null result of a point-source of neutrinos, can be transformed into an flux upper limit at a given confidence level. This upper limits represents the neutrino flux that we can be certain to exclude, since IceCube did not see a point source.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/upperlimits.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Source: IceCube"><img src="images/upperlimits.png" class="img-fluid figure-img" alt="Source: IceCube"></a></p>
+<figcaption>Source: IceCube</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-olbers-paradox" class="level3">
+<h3 class="anchored" data-anchor-id="the-olbers-paradox">The Olbers’ Paradox</h3>
+<p>Altough the most famous formulation of the problem comes from Henrich Olbers (1826), probably it was Kepler in 1610 the first to note that the most obvious observation, the night sky is dark, has very important consequences.</p>
+<p><a href="images/olber.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/olber.svg" class="img-fluid"></a></p>
+<p>The idea is quite simple, suppose there is a source population with typical luminosity <span class="math inline">\(L\)</span> in ergs/s and a number density of <span class="math inline">\(n\)</span>, then the total power emitted per unit area will be:</p>
+<p><span class="math display">\[ F = \int L n \frac{dV}{4\pi^2} = \frac{1}{4\pi}\int L n \mathrm{ d}\Omega \mathrm{ d}r\]</span></p>
+<p>Integrating over all distances we can obtain the energy per steradian per second, and assuming the luminosity is independent of distance as well as number density we have that:</p>
+<p><span class="math display">\[\frac{\mathrm{ d} F}{\mathrm{ d}\Omega} = \frac{1}{4\pi} L n \int_0^{\infty} \mathrm{ d}r \rightarrow \infty\]</span></p>
+<p>The sky should be bright! The solution of this puzzle is the fact the Universe is dynamic and time dependent! In other words, if the Universe is expanding the radiation from increasingly distant sources is increasingly less. Also stars seems to have had a cosmological evolution, for example, there are more quasars per unit volume at <span class="math inline">\(z \sim 2\)</span> than now.</p>
+<p>Although the Olbers’ paradox is no more a paradox, it represents the <em>problem</em> that arises with neutrino astronomy. Since the extragalactic space is completely transparent for neutrinos, the flux of neutrinos that might arrive at Earth will have a significant contribution from very distant and faint sources. Let’s assume now a source population with typical neutrino luminosity <span class="math inline">\(L\nu(E)\)</span> and with a number density population given by:</p>
+<p><span class="math display">\[n(z) = n_0 (1+z)^m\]</span></p>
+<p>where <span class="math inline">\(n_0\)</span> is the <em>local density</em> of the source population, (ie the population close to our epoch <span class="math inline">\(z = 0\)</span>). The parameter <span class="math inline">\(m\)</span> describes the source cosmological evolution (ie, when sources to appear in the history of the Universe, and how they evolved). Typical values are <span class="math inline">\(m= 3\)</span> for star–formation–like evolution and <span class="math inline">\(m=0\)</span> for no evolution.</p>
+<p>Since the Universe expands and sources move with the <em>Huble flow</em> we are going to use the comoving line of sight distance, defined as (see Lecture 2):</p>
+<p><span class="math display">\[D_c(z) = \int_{t}^{t_0} c\mathrm{ d} t = \frac{c}{H_0} \int^z_0 \frac{\mathrm{ d}z^\prime}{E(z^\prime)}\]</span></p>
+<p>where we introduced the function:</p>
+<p><span class="math display">\[E(z)\equiv \sqrt{\Omega_M(1+z)^4 + \Omega_r(1+z)^5 + \Omega_k(1+z)^3 +\Omega_\Lambda(1+z)}\]</span></p>
+<p>revisiting the formula of the energy rate of neutrinos per steroradian we have:</p>
+<p><span class="math display">\[\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \frac{1}{4\pi} \frac{c}{H_0}\int_0^{\infty} \frac{L_\nu(E_\nu) n_0(1+z)^m}{E(z)} \mathrm{ d}z\]</span></p>
+<p>The expresion above needs an extra correction. We assumed that energy emitted by the source will be the same at the arrival, however energy will be red-shifted according to <span class="math inline">\(E_\nu (1 + z)\)</span> so the formula it’s technically:</p>
+<p><span class="math display">\[\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \frac{1}{4\pi} \frac{c}{H_0}\int_0^{\infty} \frac{L_\nu(E_\nu(1+z)) n_0(1+z)^m}{E(z)} \mathrm{ d}z\]</span></p>
+<p>Assuming the luminosity follows a power law with, <span class="math inline">\(L_\nu \propto E^{-\gamma}\)</span>, we can rewrite the expression as:</p>
+<p><span class="math display">\[\frac{\mathrm{ d} F_\nu}{\mathrm{ d}\Omega} = \xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} \]</span></p>
+<p>where the unit-less parameter <span class="math inline">\(\xi\)</span> is the integral that contains information on the expansion and cosmological evolution of the sources and the spectral index of the sources defined as:</p>
+<p><span class="math display">\[\xi = \int_0^{\infty}\frac{(1+z)^{(m - \gamma)}\mathrm{ d} z}{E(z)}\]</span></p>
+<p>Assuming an spectral index of 2, and expressing it as function of the scale factor knowing that:</p>
+<p><span class="math display">\[\frac{\mathrm{ d}z}{1+z} = - \frac{\mathrm{ d}a}{a} \rightarrow \mathrm{ d}z = -\frac{\mathrm{ d}a}{a^2}\]</span></p>
+<p>and that <span class="math inline">\(z = \infty \rightarrow a = 0\)</span>, <span class="math inline">\(z = 0 \rightarrow a = 1\)</span>, we can rewrite the integral as:</p>
+<p><span class="math display">\[\xi = \int_0^{1}\frac{a^{-m} \mathrm{ d} a}{E(a)}\]</span></p>
+<p>Where it will depend on the cosmic evolution of the sources. Typical star forming rate evolution (SFR) has an evolution of <span class="math inline">\(m = 3.4\)</span> in our local universe $z&lt;1 $ and <span class="math inline">\(m=-0.3\)</span> for $ 1&lt; z&lt; 4$ and <span class="math inline">\(m=-3.5\)</span> elsewhere.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="Tutorial I: Calculate the value of $\xi$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutorial I: Calculate the value of <span class="math inline">\(\xi\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are going to calculate the value of the parameter <span class="math inline">\(\xi\)</span> for different cosmological evolution of the sources. The SFR evolution is given by the following broken power law formula:</p>
+<div id="3903d393" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'axes.labelsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'legend.fontsize'</span>: <span class="dv">20</span>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'figure.figsize'</span>: [<span class="dv">8</span>, <span class="dv">6</span>]})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.size'</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.size'</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.width'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.minor.width'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.major.pad'</span>] <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.direction'</span>] <span class="op">=</span> <span class="st">'in'</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'legend.frameon'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'lines.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.linewidth'</span>] <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rho(z):</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> z <span class="op">&lt;</span> <span class="fl">1.</span>:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="fl">1.</span> <span class="op">+</span> z)<span class="op">**</span><span class="fl">3.4</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> z <span class="op">&gt;=</span> <span class="fl">1.</span> <span class="kw">and</span> z <span class="op">&lt;=</span> <span class="fl">4.</span>:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="dv">1</span><span class="op">+</span><span class="fl">1.</span>)<span class="op">**</span><span class="fl">3.4</span> <span class="op">*</span> ((<span class="fl">1.</span><span class="op">+</span>z)<span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span><span class="fl">1.</span>))<span class="op">**-</span><span class="fl">0.3</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="fl">1.</span><span class="op">+</span><span class="fl">1.</span>)<span class="op">**</span><span class="fl">3.4</span><span class="op">*</span>((<span class="fl">1.</span><span class="op">+</span><span class="fl">4.</span>)<span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span><span class="fl">1.</span>))<span class="op">**-</span><span class="fl">0.3</span><span class="op">*</span>((<span class="fl">1.</span><span class="op">+</span>z)<span class="op">/</span>(<span class="fl">1.</span><span class="op">+</span><span class="fl">4.</span>))<span class="op">**-</span><span class="fl">3.5</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>vrho <span class="op">=</span> np.vectorize(rho)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax.plot(z, vrho(z))</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"z"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$n_</span><span class="sc">{SFR}</span><span class="st">(z)/n_0$"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.cosmology <span class="im">import</span> Planck13 <span class="im">as</span> cosmo</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> integrate</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> xi(z):</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cosmo.H0.value<span class="op">/</span>cosmo.H(z).value <span class="op">*</span> rho(z) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> z)<span class="op">**</span>(<span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>integral <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> z: xi(z), <span class="fl">0.</span>, np.inf)[<span class="dv">0</span>]</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="vs">r"$\xi$ = </span><span class="sc">%.2f</span><span class="vs"> for an evolution of SFR"</span> <span class="op">%</span>(integral))</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>integral <span class="op">=</span> integrate.quad(<span class="kw">lambda</span> z: cosmo.H0.value<span class="op">/</span>cosmo.H(z).value  <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> z)<span class="op">**</span>(<span class="op">-</span><span class="dv">2</span>), <span class="fl">0.</span>, <span class="dv">2</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="vs">r"$\xi$ = </span><span class="sc">%.2f</span><span class="vs"> for no cosmological evolution up to redshift z &lt; 2"</span> <span class="op">%</span>(integral))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$\xi$ = 2.39 for an evolution of SFR
+$\xi$ = 0.48 for no cosmological evolution up to redshift z &lt; 2</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="chap4_3_files/figure-html/cell-2-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="chap4_3_files/figure-html/cell-2-output-2.png" width="681" height="525" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Therefore the parameter <span class="math inline">\(\xi\)</span> varies between <span class="math inline">\(0.5\sim 3\)</span>. We can equate this total neutrino flux per steroradian to the flux observed by IceCube (assuming an spectral index of 2):</p>
+<p><span class="math display">\[\xi \frac{c}{H_0} \frac{L_\nu(E_\nu) n_0}{4\pi} = E^2 \Phi_\nu \sim 2.06 \times 10^{-8} \frac{\mathrm{ GeV}}{\mathrm{ cm}^2\mathrm{ s\;} \mathrm{ sr}}\]</span></p>
+<div id="4718c1da" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I'm going to use units to avoid stupid mistakes</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> astropy.units <span class="im">as</span> u</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> constants <span class="im">as</span> const</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> <span class="fl">0.48</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>icecube_flux <span class="op">=</span> <span class="fl">2.06e-8</span> <span class="op">*</span> u.GeV<span class="op">/</span>u.cm<span class="op">**</span><span class="dv">2</span><span class="op">/</span>u.s<span class="op">/</span>u.sr</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Ln <span class="op">=</span> icecube_flux <span class="op">*</span> cosmo.H0.to(<span class="dv">1</span><span class="op">/</span>u.s)<span class="op">/</span>const.c.to(u.Mpc<span class="op">/</span>u.s) <span class="op">*</span> <span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> u.sr <span class="op">*</span> xi</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Ln <span class="op">=</span> Ln.to(u.erg<span class="op">/</span>u.Mpc<span class="op">**</span><span class="dv">3</span><span class="op">/</span>u.yr)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="vs">r"$n_0 L_\nu \sim$ </span><span class="sc">{0:.1e}</span><span class="vs"> </span><span class="sc">{1}</span><span class="vs">"</span>.<span class="bu">format</span>(Ln.value, Ln.unit.to_string(<span class="st">"latex"</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p><span class="math inline">\(n_0 L_\nu \sim\)</span> 1.4e+43 <span class="math inline">\(\mathrm{\frac{erg}{yr\,Mpc^{3}}}\)</span></p>
+</div>
+</div>
+<p>ie, it reaches the value of:</p>
+<p><span class="math display">\[n_0 L_\nu \sim 10^{43} \frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}\]</span></p>
+<p>note that this is almost independent of the value of <span class="math inline">\(xi\)</span>. We can represent this relation in a diagram now called Kowalski’s plot:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/kowalski2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Source: Taken from arxiv:1411.4385"><img src="images/kowalski2.png" class="img-fluid figure-img" alt="Source: Taken from arxiv:1411.4385"></a></p>
+<figcaption>Source: Taken from <a href="https://arxiv.org/pdf/1411.4385.pdf">arxiv:1411.4385</a></figcaption>
+</figure>
+</div>
+<p>Constrains can also be obtained from the point-source limits. The argument is as follows, if the source population that is responsible of the diffuse astrophysical flux observed in IceCube, is rate (has a low density) then the closest of these sources should have provided a signal in the point-source analysis. Let’s assume that <span class="math inline">\(d\)</span> is the distance to the nearest source for a source population with local density <span class="math inline">\(n_0\)</span> so:</p>
+<p><span class="math display">\[n_0 \frac{4}{3} \pi d^3 = 1\]</span></p>
+<p>since there is 1 source in an sphere of radius <span class="math inline">\(d\)</span>. We can estimate the closest distance to a source of this population as:</p>
+<p><span class="math display">\[ d = \left(\frac{1}{\frac{4}{3}\pi n_0}\right)^{1/3} \propto n_0^{-1/3}\]</span></p>
+<p>and thus the estimated neutrino flux for this single point-source is:</p>
+<p><span class="math display">\[E^2 \Phi^{ps}_\nu = \frac{L_\nu}{4\pi d^2} \sim L_\nu n_0^{2/3}\]</span></p>
+<p>A typical value of the neutrino point-source upper limits can be obtained for the Northern sky as:</p>
+<p><span class="math display">\[E^2 \Phi^{u.l.}_\nu \leq 2 \times 10^{-9} \mathrm{ GeV} \mathrm{ cm}^{-2}\mathrm{ s}^{-1} \]</span></p>
+<p>so we have the 2 constrains together:</p>
+<p><span class="math display">\[n_0^{-1/3} \leq \frac{\Phi^{u.l.}}{10^{43}\frac{\mathrm{erg}}{\mathrm{Mpc}^3\mathrm{yr}}}\]</span></p>
+<p>which leads to the following condition on the local density of sources from the point-source upper limits:</p>
+<div id="5f95a074" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>flux_upperlimit <span class="op">=</span> <span class="fl">2e-9</span> <span class="op">*</span> u.GeV<span class="op">/</span>u.cm<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> u.s</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>n0 <span class="op">=</span> np.power(flux_upperlimit<span class="op">/</span>Ln, <span class="op">-</span><span class="dv">3</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>n0 <span class="op">=</span> n0.to(u.Mpc<span class="op">**-</span><span class="dv">3</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="vs">r"$n_0 \geq$ </span><span class="sc">{0:.1e}</span><span class="vs"> </span><span class="sc">{1}</span><span class="vs">"</span>.<span class="bu">format</span>(n0.value, n0.unit.to_string(<span class="st">"latex_inline"</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown">
+<p><span class="math inline">\(n_0 \geq\)</span> 2.8e-06 <span class="math inline">\(\mathrm{Mpc^{-3}}\)</span></p>
+</div>
+</div>
+<section id="references" class="level4">
+<h4 class="anchored" data-anchor-id="references">References</h4>
+<ul>
+<li>High energy neutrinos in the context of multimessenger astrophysics. J. Becker <a href="https://arxiv.org/abs/0710.1557">arXiv:0710.1557v2</a></li>
+<li>Cosmic Neutrinos from the Sources of Galactic and Extragalactic Cosmic Rays. F. Halzen <a href="https://arxiv.org/pdf/astro-ph/0611915.pdf">arxiv:0611915</a></li>
+</ul>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Source: IceCube</span>
+<span class="glightbox-desc lightbox-desc-4">Source: Taken from <a href="https://arxiv.org/pdf/1411.4385.pdf">arxiv:1411.4385</a></span>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chap4_2.html" class="pagination-link  aria-label=" &lt;span="" cosmic-rays="" and="" neutrinos&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gamma-rays, Cosmic-Rays and Neutrinos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chap5.html" class="pagination-link" aria-label="<span class='chapter-number'>14</span>&nbsp; <span class='chapter-title'>Dark Matter</span>">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dark Matter</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
