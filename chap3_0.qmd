@@ -1,7 +1,5 @@
-# Cosmic Rays in the Atmosphere 
-
-## Interactions of CR particles in the atmosphere
-### Cosmic Ray Air Shower
+# Interactions of CR particles in the atmosphere
+## Cosmic Ray Air Shower
 
 In this lesson we will the different components of a cosmic air shower when cosmic rays interact with Earth's atmosphere. As seen in the figure below, we have 3 main components, the **electromagnetic component**, the **hadronic component** and muons and neutrinos which can be seen as the **muonic component**. 
 

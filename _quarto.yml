@@ -22,6 +22,7 @@ book:
       chapters:
       - chap2_0.qmd
       - chap2_1.qmd
+    - part: "Cosmic Rays in the Atmosphere"
       - chap3_0.qmd
       - chap3_1.qmd
       - chap3_2.qmd
