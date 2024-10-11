@@ -237,10 +237,21 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Extra-Galactic Cosmic Rays: The Knee and Beyond</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Cosmic Rays in the Atmosphere</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap3_0.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cosmic Rays in the Atmosphere</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interactions of CR particles in the atmosphere</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,13 +270,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Multimessenger Astronomy</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap4_0.html" class="sidebar-item-text sidebar-link">
@@ -294,13 +305,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Dark Matter</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap5.html" class="sidebar-item-text sidebar-link">
@@ -311,13 +322,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">References</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -441,7 +452,7 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 </div>
 <div class="callout-body-container callout-body">
 <p>Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use <code>Astropy</code>. The <a href="http://www.astropy.org/">Astropy Project</a> is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.</p>
-<div id="e23f0657" class="cell" data-execution_count="1">
+<div id="3f388c18" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.time <span class="im">import</span> Time</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> datetime.datetime.now()</span>
@@ -455,11 +466,11 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in mjd is </span><span class="sc">{</span>dt<span class="sc">.</span>value<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in seconds is </span><span class="sc">{</span>dt<span class="sc">.</span>sec<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Today's date and time: 2024-10-11T08:37:27.779712
-Today's julian date (UTC) is 2460594.86
-Today's modified julian date (UTC) is 60594.36
-The time difference in mjd is 9415.36
-The time difference in seconds is 813487052.66</code></pre>
+<pre><code>Today's date and time: 2024-10-11T11:03:24.692208
+Today's julian date (UTC) is 2460594.96
+Today's modified julian date (UTC) is 60594.46
+The time difference in mjd is 9415.46
+The time difference in seconds is 813495809.57</code></pre>
 </div>
 </div>
 </div>
@@ -543,16 +554,16 @@ Tutorial III: Coordinate Transformations
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.plot(ll, bb, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[-1.50551983 -0.00658814]
- [-0.10562519 -0.02660249]
- [ 1.58351313  0.04130363]
- [-0.26066827 -0.04290305]
- [-0.27072615  0.01462232]
- [-0.39294718  0.02787308]
- [-0.87421641 -0.02543598]
- [ 0.27756498 -0.00184947]
- [-0.76413933  0.02945769]
- [-0.27007124 -0.00233801]]</code></pre>
+<pre><code>[[ 5.16202160e-01  7.49873914e-02]
+ [ 8.21698613e-01 -1.06880058e-02]
+ [-1.29310882e+00  1.84054447e-02]
+ [ 1.22528668e+00  1.39512938e-02]
+ [-5.32213518e-01  9.69576964e-03]
+ [-1.08284098e+00  2.23113750e-02]
+ [ 1.76871049e+00  7.72626519e-03]
+ [ 1.15476156e-02  5.10550023e-03]
+ [ 3.61791717e-01 -4.26335941e-02]
+ [ 7.73250264e-01 -6.11236881e-04]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -564,7 +575,7 @@ Tutorial III: Coordinate Transformations
 </div>
 </div>
 <p>Now let’s plot it in equatorial coordinates (right ascension, declination).</p>
-<div id="9e1f99b0" class="cell" data-execution_count="3">
+<div id="7b597e1d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.coordinates <span class="im">import</span> SkyCoord</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -572,7 +583,7 @@ Tutorial III: Coordinate Transformations
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>c_gal_icrs <span class="op">=</span> c_gal.icrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Because <code>matplotlib</code> needs the coordinates in radians and between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>, not 0 and <span class="math inline">\(2\pi\)</span>, we have to convert them.</p>
-<div id="bdd25f15" class="cell" data-execution_count="4">
+<div id="b262e291" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ra_rad <span class="op">=</span> c_gal_icrs.ra.wrap_at(<span class="dv">180</span> <span class="op">*</span> u.deg).radian</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dec_rad <span class="op">=</span> c_gal_icrs.dec.radian</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1005,7 +1016,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
