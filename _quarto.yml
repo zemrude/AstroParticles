@@ -43,7 +43,7 @@ number-depth: 1
 
 bibliography: references.bib
   
-
+from: markdown+emoji
 jupyter: python3
 
 format:

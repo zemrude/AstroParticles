@@ -229,7 +229,7 @@ $$C_\ell = \langle |a_{\ell m}|^2 \rangle$$
 The power spectrum of the CMB represents the anisotropies of the CMB as a function of the angular scale. The typical spectrum features a plateu at large angular scales (small $\ell$) followed by some oscillatory features (aka acoustic peaks or *Doppler peak*). These peaks represent the oscillation of photon-baryon fuild around the decoupling. The first peak at $\ell \sim 200$ probes the spatial geometry, while the relative heights probe the baryon density. The position of the first peak constrains the spatial geometry in a way consistent with a flat Universe ($\Omega_k \sim 0$)  
 
 :::{.callout-note title="Build your own Universe"}
-You can build your own Universe [here](https://lambda.gsfc.nasa.gov/education/cmb_plotter/)
+You can build your own Universe [here](https://plancksatellite.org.uk/cmb-sim/)
 :::
 
 #### Before Planck

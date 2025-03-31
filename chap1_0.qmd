@@ -10,7 +10,7 @@ In high energy physics and astro-particle physics it is very common to use the n
 $$\hbar = 6.58 \times 10^{-16} {\;\mathrm{GeV}\cdot \mathrm{ ns}} = 1\;\Rightarrow 1\;\mathrm{GeV} = 1.52 \times 10^{15}\;{\mathrm{ns}^{-1}}$$
 
 
-$$c = 30.0\;\mathrm{cm/ns} = 1 \Rightarrow 30\;\mathrm{cm} = 1\;\mathrm{ns}$$
+$$c = 30.0\;\mathrm{cm/ns} = 1 \Rightarrow 30\;\mathrm{cm} = 1\;\mathrm{ns}.$$
 
 In these units there is then only one fundamental dimension:
 
@@ -81,22 +81,20 @@ display(Markdown (f"Average density of Milky Way is {rho_Gal.to(u.g/u.cm**3):.2e
 
 ## Larmor Radius and Rigidity
 
-Larmor radius, or gyroradius, $r_L$, is the radius of the orbit of a charged particle moving in a uniform, perpendicular magnetic field, obtained by simply equating the Lorentz force with the centripetal force/
-
-It is defined as:
-$$q v B = \frac{mv^2}{r_L} \rightarrow r_L = \frac{p}{ZeB}$$
+Larmor radius, or gyroradius, $r_L$, is the radius of the orbit of a charged particle moving in a uniform, perpendicular magnetic field, obtained by simply equating the Lorentz force with the centripetal force. It is defined as:
+$$q v B = \frac{mv^2}{r_L} \rightarrow r_L = \frac{p}{ZeB},$$
 
 where $p$ has replaced $mv$ in the classical limit.  However, this also holds for the relativistic generalization by considering $p$ to be the relativistic 3-momentum. There are several adaptations of this formula, tuned to units natural to various scenarios. One such is
 
-$$r_L \simeq  1 \;\mathrm{ kpc} \left(\frac{p}{10^{18}\;\mathrm{ eV}\cdot{c}}\right)\left(\frac{1}{Z}\right)\left(\frac{\mu\mathrm{ G}}{B}\right)$$
+$$r_L \simeq  1 \;\mathrm{ kpc} \left(\frac{p}{10^{18}\;\mathrm{ eV}\cdot{c}}\right)\left(\frac{1}{Z}\right)\left(\frac{\mu\mathrm{ G}}{B}\right).$$
 
 In cosmic ray physics, one often sees references in the literature to the **rigidity** of a particle, defined as:
 
 $$
-R \equiv r_L B c = \frac{pc}{Ze}
+R \equiv r_L B c = \frac{pc}{Ze}.
 $$
 
-note that the rigidity, $R$ has units of Volts.
+:rightfinger: Note that the rigidity, $R$ has units of Volts.
 
 
 ## Superposition Model
@@ -111,7 +109,7 @@ $$\begin{alignedat}{2}
 &E(A) &= &A E_0,\\
 &E(A_1) &= &A_1 E_0,\\
 &E(A_2) &= &A_2 E_0
-\end{alignedat}$$
+\end{alignedat}.$$
 
 ## Cross sections, number density, lifetime, and interaction lengths
 
@@ -125,7 +123,7 @@ The unit barn comes from the expression "big as a barn" as in the past physisits
 
 If a flux of *projectile* particles are crossing a volume of *target* particles with cross section $\sigma_N$ then the disapperance of flux  will be proportional to the initial number, the length travelled and number of target particles:
 
-$$ \mathrm{d} I = -I n \sigma_N \mathrm{d} x $$
+$$ \mathrm{d} I = -I n \sigma_N \mathrm{d} x ,$$
 
 where $n$ is the **number density**, ie, the number of particles per volume unit:
 
@@ -141,7 +139,7 @@ $$I = I_0 e^{-\frac{x}{n\sigma_N}}$$
 
 where we can define:
 
-$$\lambda = \frac{1}{n\sigma_N}$$
+$$\lambda = \frac{1}{n\sigma_N},$$
 
 as the **interaction length**. Likewise if projectile particles are travelling at speed $v$, the length travelled can be expressed as $\mathrm{d}x = v \mathrm{d} t$ giving a similar expression with a time constant:
 

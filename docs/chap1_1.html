@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Astroparticle Physics - 2&nbsp; Time and Coordinate Systems in Astronomy</title>
+<title>2&nbsp; Time and Coordinate Systems in Astronomy – Astroparticle Physics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -144,13 +144,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap1_0.html">Physics Introduction</a></li><li class="breadcrumb-item"><a href="./chap1_1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Time and Coordinate Systems in Astronomy</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -183,9 +183,9 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Physics Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -218,9 +218,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Cosmic Rays</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -241,9 +241,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Cosmic Rays in the Atmosphere</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,9 +270,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Multimessenger Astronomy</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -305,9 +305,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Dark Matter</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,9 +322,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">References</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -396,7 +396,11 @@ window.Quarto = {
 <p>The Sun is <strong>7.6-8.7 kpc</strong> from the Galactic Center where there appears to be a supermassive black hole of <strong>1 million solar masses</strong> (<span class="math inline">\(M_{\odot} = 1.99\times 10^{30}\)</span> Kg) which coincides with a radio source known as <strong>Sagittarius A*</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/Galactic_centre_orbits.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Source: Wikipedia"><img src="images/Galactic_centre_orbits.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/Galactic_centre_orbits.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Source: Wikipedia"><img src="images/Galactic_centre_orbits.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+</figure>
+</div>
 <figcaption>Source: Wikipedia</figcaption>
 </figure>
 </div>
@@ -407,7 +411,11 @@ window.Quarto = {
 <p>The Milky Way is surrounded by 54 known satellite galaxies (most of them dwarf galaxies) in a group known as the <strong>Local Group</strong> (A dwarf galaxy has <span class="math inline">\(\sim\)</span> billion stars compared to our Milky Ways 200-400 billion stars). The most notably are the Large Magellanic Cloud (50 kpc) and the Small Magellanic Cloud (60 kpc). The LMC mass is <span class="math inline">\(10^{10} M_{\odot}\)</span>. Next nearest full-fledged galaxy is Andromeda or M31 (<span class="math inline">\(1.5\times 10^{12} M_{\odot}\)</span>) at a distance of approximately <strong>780 kpc</strong>. The group contains also other galaxies MW, M31, M33 (Triangulum Galaxy) and it has volume of diameter of about <strong>3 Mpc</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/5_Local_Galactic_Group_(ELitU).png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Source: Wikipedia"><img src="images/5_Local_Galactic_Group_(ELitU).png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/5_Local_Galactic_Group_(ELitU).png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Source: Wikipedia"><img src="images/5_Local_Galactic_Group_(ELitU).png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Source: Wikipedia"></a></p>
+</figure>
+</div>
 <figcaption>Source: Wikipedia</figcaption>
 </figure>
 </div>
@@ -452,7 +460,7 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 </div>
 <div class="callout-body-container callout-body">
 <p>Time conversions and coordinate conversions are best left to well-tested libraries. SLALIB is a famous set of Fortran libraries that do several transformation. For python I will use <code>Astropy</code>. The <a href="http://www.astropy.org/">Astropy Project</a> is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Is included by default in the Anaconda distribution.</p>
-<div id="3f388c18" class="cell" data-execution_count="1">
+<div id="f793b7ad" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.time <span class="im">import</span> Time</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> datetime.datetime.now()</span>
@@ -466,11 +474,11 @@ Tutorial II: Using Time Standards in <code>Astropy</code>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in mjd is </span><span class="sc">{</span>dt<span class="sc">.</span>value<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The time difference in seconds is </span><span class="sc">{</span>dt<span class="sc">.</span>sec<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Today's date and time: 2024-10-11T11:03:24.692208
-Today's julian date (UTC) is 2460594.96
-Today's modified julian date (UTC) is 60594.46
-The time difference in mjd is 9415.46
-The time difference in seconds is 813495809.57</code></pre>
+<pre><code>Today's date and time: 2025-03-31T12:58:54.240534
+Today's julian date (UTC) is 2460766.04
+Today's modified julian date (UTC) is 60765.54
+The time difference in mjd is 9586.54
+The time difference in seconds is 828277139.12</code></pre>
 </div>
 </div>
 </div>
@@ -492,7 +500,11 @@ The time difference in seconds is 813495809.57</code></pre>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/eq_coordinates.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Equatorial coordinate system"><img src="images/eq_coordinates.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-with="50%" alt="Equatorial coordinate system"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/eq_coordinates.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Equatorial coordinate system"><img src="images/eq_coordinates.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-with="50%" alt="Equatorial coordinate system"></a></p>
+</figure>
+</div>
 <figcaption>Equatorial coordinate system</figcaption>
 </figure>
 </div>
@@ -554,28 +566,28 @@ Tutorial III: Coordinate Transformations
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.plot(ll, bb, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">2</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[ 5.16202160e-01  7.49873914e-02]
- [ 8.21698613e-01 -1.06880058e-02]
- [-1.29310882e+00  1.84054447e-02]
- [ 1.22528668e+00  1.39512938e-02]
- [-5.32213518e-01  9.69576964e-03]
- [-1.08284098e+00  2.23113750e-02]
- [ 1.76871049e+00  7.72626519e-03]
- [ 1.15476156e-02  5.10550023e-03]
- [ 3.61791717e-01 -4.26335941e-02]
- [ 7.73250264e-01 -6.11236881e-04]]</code></pre>
+<pre><code>[[ 0.01586641  0.01368719]
+ [-0.02153147  0.02811968]
+ [-0.28449052 -0.04026096]
+ [ 0.12181021 -0.04714044]
+ [-0.74740969  0.03439634]
+ [-0.94267025 -0.04566893]
+ [-1.52567978  0.03605865]
+ [ 1.15884847 -0.00930621]
+ [ 1.01310874  0.02886336]
+ [ 0.02084778  0.03122753]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="chap1_1_files/figure-html/gal-eq-output-2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Galaxy in Galactic Coordiantes"><img src="chap1_1_files/figure-html/gal-eq-output-2.svg" class="img-fluid figure-img" alt="Galaxy in Galactic Coordiantes"></a></p>
+<p><a href="chap1_1_files/figure-html/gal-eq-output-2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Galaxy in Galactic Coordiantes"><img src="chap1_1_files/figure-html/gal-eq-output-2.svg" class="img-fluid figure-img" alt="Galaxy in Galactic Coordiantes"></a></p>
 <figcaption>Galaxy in Galactic Coordiantes</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Now let’s plot it in equatorial coordinates (right ascension, declination).</p>
-<div id="7b597e1d" class="cell" data-execution_count="3">
+<div id="9db4086d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy <span class="im">import</span> units <span class="im">as</span> u</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> astropy.coordinates <span class="im">import</span> SkyCoord</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -583,7 +595,7 @@ Tutorial III: Coordinate Transformations
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>c_gal_icrs <span class="op">=</span> c_gal.icrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Because <code>matplotlib</code> needs the coordinates in radians and between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>, not 0 and <span class="math inline">\(2\pi\)</span>, we have to convert them.</p>
-<div id="b262e291" class="cell" data-execution_count="4">
+<div id="0892e08a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ra_rad <span class="op">=</span> c_gal_icrs.ra.wrap_at(<span class="dv">180</span> <span class="op">*</span> u.deg).radian</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dec_rad <span class="op">=</span> c_gal_icrs.dec.radian</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -606,12 +618,6 @@ Tutorial III: Coordinate Transformations
 </div>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Source: Wikipedia</span>
-<span class="glightbox-desc lightbox-desc-2">Source: Wikipedia</span>
-<span class="glightbox-desc lightbox-desc-3">Equatorial coordinate system</span>
-<span class="glightbox-desc lightbox-desc-4">Galaxy in Galactic Coordiantes</span>
-</div>
 </section>
 </section>
 
@@ -651,18 +657,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -694,7 +689,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/zemrude\.github\.io\/AstroParticles\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -729,7 +762,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -777,7 +814,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -1005,41 +1041,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chap1_0.html" class="pagination-link  aria-label=" &lt;span="" basic="" concents="" and="" notations&lt;="" span&gt;"="">
+      <a href="./chap1_0.html" class="pagination-link" aria-label="Some Basic Concents and Notations">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Some Basic Concents and Notations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chap1_2.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Introduction to Special Relativity</span>">
+      <a href="./chap1_2.html" class="pagination-link" aria-label="Introduction to Special Relativity">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Special Relativity</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 
